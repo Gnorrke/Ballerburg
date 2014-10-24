@@ -1,0 +1,17 @@
+INPUT(
+./release\main.o
+./release\game.o
+./release\graphic.o
+./release\sprite.o
+./release\animatedsprite.o
+./release\input.o
+./release\player.o
+./release\map.o
+./release\tracer.o
+./release\backdrop.o
+./release\koopa.o
+./release\interface.o
+./release\mushroom.o
+./release\timer.o
+./release\questionblock.o
+);
