@@ -1,10 +1,12 @@
+#include "SDL/SDL.h"
 #include <iostream>
+#include "game.h"
 
-using namespace std;
-
-int main()
+int main(int, char**)
 {
-    cout << "Hello World!" << endl;
+
+    freopen("CON", "wt", stdout);
+    Game game;
+
     return 0;
 }
-

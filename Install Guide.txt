@@ -1,0 +1,5 @@
+Just copy the "Resources" folder to C:/
+
+Auﬂerdem in den Projekteinstellungen bitte noch "Shadow Build" deaktivieren. Ansonsten legt der zuviele Ordner an
+
+THX Max
