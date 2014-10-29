@@ -65,7 +65,7 @@ bool Input::isButtonHeld(Uint8 button)
 }
 
 void Input::checkInput(SDL_Event& event)
-{
+{    
     switch (event.type) {
     case SDL_KEYDOWN:
         keyDownEvent(event);

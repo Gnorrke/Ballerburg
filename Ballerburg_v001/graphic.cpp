@@ -45,7 +45,7 @@ Graphic::SurfaceID Graphic::loadImage(const std::string &filePath)
     TRACE;
     //if the sheet isn't loaded yet
     if (spriteSheets.count(filePath) == 0) {
-        spriteSheets[filePath] = SDL_LoadBMP(filePath.c_str());
+        spriteSheets[filePath] = SDL_DisplayFormat( SDL_LoadBMP(filePath.c_str()) );
         const Uint32 colorKey = SDL_MapRGB(spriteSheets[filePath]->format, 255, 0, 255);
         SDL_SetColorKey(spriteSheets[filePath], SDL_SRCCOLORKEY, colorKey);
     }

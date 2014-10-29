@@ -5,12 +5,6 @@
 
 class Sprite;
 class Graphic;
-class Player;
-class Koopa;
-class Map;
-class Interface;
-class Mushroom;
-class QuestionBlock;
 
 class Game
 {
@@ -30,6 +24,8 @@ private:
     void gameLoop();
     void update();
     void draw(Graphic& graphics);
+
+    std::unique_ptr<Sprite> background;
 
 
 };

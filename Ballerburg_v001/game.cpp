@@ -2,21 +2,21 @@
 #include "graphic.h"
 #include "input.h"
 #include "timer.h"
+#include "sprite.h"
 
 #include "SDL/SDL.h"
 
 #include <iostream>
 
 const int kFramesPerSecond = 60;
-int Game::kScreenWidth = 512;
-int Game::kScreenHeight = 384;
+int Game::kScreenWidth = 640;
+int Game::kScreenHeight = 400;
 
 const unsigned int kMaxFrameTime = 5 * 1000/ 60;
 
 Game::Game()
 {
-    SDL_Init(SDL_INIT_EVERYTHING);
-    gameLoop();
+    if (SDL_Init(SDL_INIT_EVERYTHING) != -1) gameLoop();
 }
 
 Game::~Game()
@@ -30,8 +30,9 @@ void Game::gameLoop()
     Input input;
     SDL_Event event;
 
+    background.reset(new Sprite(graphics, "img/background1.bmp", 0, 0, 640, 400));
     bool running = true;
-    int lastUpdatedTime = SDL_GetTicks();
+    int lastUpdatedTime = 0;
 
     while (running)
     {
@@ -73,5 +74,6 @@ void::Game::update()
 void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
+    background->draw(graphics, 0, 0);
     graphics.flip();
 }
