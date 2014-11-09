@@ -8,30 +8,33 @@ void Input::beginNewFrame()
     pressedKeys.clear();
     releasedKeys.clear();
 
-    pressedButtons.clear();
-    releasedButtons.clear();
+    mouseButtonWasPressed = false;
 }
 
 void Input::keyDownEvent(const SDL_Event &event)
 {
-    if(controllerIsActive){
-        pressedButtons[event.jbutton.button] = true;
-        heldButtons[event.jbutton.button] = true;
-    } else {
-        pressedKeys[event.key.keysym.sym] = true;
-        heldKeys[event.key.keysym.sym] = true;
-    }
+     pressedKeys[event.key.keysym.sym] = true;
+     heldKeys[event.key.keysym.sym] = true;
 }
 
 void Input::keyUpEvent(const SDL_Event &event)
 {
-    if(controllerIsActive){
-        releasedButtons[event.jbutton.button] = true;
-        heldButtons[event.jbutton.button] = false;
-    } else {
-        releasedKeys[event.key.keysym.sym] = true;
-        heldKeys[event.key.keysym.sym] = false;
-    }
+     releasedKeys[event.key.keysym.sym] = true;
+     heldKeys[event.key.keysym.sym] = false;
+ }
+
+void Input::mouseEvent(const SDL_Event &event)
+{
+    offsetX = event.motion.x;
+    offsetY = event.motion.y;
+
+    //delete after Sprint #1
+    std::cout << "offsetX: " << offsetX << "  -  offsetY: " << offsetY  << std::endl;
+}
+
+bool Input::wasLeftMouseButtonPressed()
+{
+    return mouseButtonWasPressed;
 }
 
 bool Input::wasKeyPressed(SDLKey key)
@@ -49,21 +52,6 @@ bool Input::isKeyHeld(SDLKey key)
     return heldKeys[key];
 }
 
-bool Input::wasButtonPressed(Uint8 button)
-{
-    return pressedButtons[button];
-}
-
-bool Input::wasButtonReleased(Uint8 button)
-{
-    return releasedButtons[button];
-}
-
-bool Input::isButtonHeld(Uint8 button)
-{
-    return heldButtons[button];
-}
-
 void Input::checkInput(SDL_Event& event)
 {    
     switch (event.type) {
@@ -73,6 +61,17 @@ void Input::checkInput(SDL_Event& event)
 
     case SDL_KEYUP:
         keyUpEvent(event);
+        break;
+
+    case SDL_MOUSEMOTION:
+        mouseEvent(event);
+        break;
+
+    case SDL_MOUSEBUTTONDOWN:
+        if(event.button.button == SDL_BUTTON_LEFT){
+            mouseButtonWasPressed = true;
+            std::cout << "Left Mouse Button was pressed!" << std::endl;
+        }
         break;
 
     case SDL_JOYBUTTONDOWN:
@@ -88,20 +87,6 @@ void Input::checkInput(SDL_Event& event)
     }
 }
 
-void Input::initController()
-{
-    if (SDL_NumJoysticks() < 1)
-    {
-        controllerIsActive = false;
-    }
-    stick = SDL_JoystickOpen(0);
-
-    if (stick == NULL) {
-        return;
-    } else{
-        controllerIsActive = true;
-    }
-}
 
 
 
