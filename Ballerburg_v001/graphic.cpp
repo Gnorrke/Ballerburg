@@ -6,6 +6,7 @@
 namespace {
 
 const int kBitsPerPixel = 32;
+
 }
 
 Graphic::Graphic()
@@ -15,7 +16,7 @@ Graphic::Graphic()
                 Game::kScreenHeight,
                 kBitsPerPixel,
                 0);
-    SDL_ShowCursor(SDL_DISABLE);
+    SDL_ShowCursor(SDL_ENABLE);
 }
 Graphic::~Graphic()
 {

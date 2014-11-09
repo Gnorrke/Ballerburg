@@ -12,7 +12,6 @@ SOURCES += main.cpp \
     animatedsprite.cpp \
     input.cpp \
     tracer.cpp \
-    timer.cpp \
 
 LIBS += -lmingw32 -lSDLmain -lSDL -mwindows
 
@@ -27,6 +26,5 @@ HEADERS += \
     input.h \
     rectangle.h \
     tracer.h \
-    timer.h \
 
 
