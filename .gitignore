@@ -16,6 +16,7 @@ local.properties
 .settings/
 .loadpath
 .o
+.user
 
 # External tool builders
 .externalToolBuilders/
@@ -215,3 +216,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.user
+Ballerburg_v001/StudienprojektBallerburg.pro.user
