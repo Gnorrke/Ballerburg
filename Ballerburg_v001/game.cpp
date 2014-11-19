@@ -2,6 +2,8 @@
 #include "graphic.h"
 #include "input.h"
 #include "sprite.h"
+#include "sound.h"
+
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
 #include <iostream>
@@ -12,6 +14,8 @@ int Game::kScreenHeight = 400;
 
 Game::Game()
 {
+    SDL_WM_SetCaption("Ballerburg! <3", NULL);
+
     if (SDL_Init(SDL_INIT_EVERYTHING) != -1) gameLoop();
 }
 
@@ -27,6 +31,7 @@ void Game::gameLoop()
     SDL_Event event;
 
     background.reset(new Sprite(graphics, "img/background1.bmp", 0, 0, 640, 400));
+    backgroundMusic.reset(new Sound());
     bool running = true;
 
     while (running)

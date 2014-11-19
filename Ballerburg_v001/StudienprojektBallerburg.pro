@@ -12,10 +12,11 @@ SOURCES += main.cpp \
     animatedsprite.cpp \
     input.cpp \
     tracer.cpp \
+    sound.cpp
 
-LIBS += -lmingw32 -lSDLmain -lSDL -mwindows
+LIBS += -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_mixer
 
-LIBS += -LC:/Resources/SDL-1.2.15/lib libSDLmain libSDL.dll
+LIBS += -LC:/Resources/SDL-1.2.15/lib libSDLmain libSDL.dll SDL_mixer.dll
 INCLUDEPATH += "C:/Resources/SDL-1.2.15/include"
 
 HEADERS += \
@@ -26,5 +27,6 @@ HEADERS += \
     input.h \
     rectangle.h \
     tracer.h \
+    sound.h
 
 

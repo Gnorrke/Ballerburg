@@ -5,6 +5,7 @@
 
 class Sprite;
 class Graphic;
+class Sound;
 
 class Game
 {
@@ -26,8 +27,7 @@ private:
     void draw(Graphic& graphics);
 
     std::unique_ptr<Sprite> background;
-
-
+    std::unique_ptr<Sound> backgroundMusic;
 };
 
 #endif // GAME_H
