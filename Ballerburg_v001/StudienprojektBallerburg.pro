@@ -12,7 +12,8 @@ SOURCES += main.cpp \
     animatedsprite.cpp \
     input.cpp \
     tracer.cpp \
-    sound.cpp
+    sound.cpp \
+    backdrop.cpp
 
 LIBS += -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_mixer
 
@@ -27,6 +28,7 @@ HEADERS += \
     input.h \
     rectangle.h \
     tracer.h \
-    sound.h
+    sound.h \
+    backdrop.h
 
 

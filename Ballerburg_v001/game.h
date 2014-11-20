@@ -6,6 +6,7 @@
 class Sprite;
 class Graphic;
 class Sound;
+class Backdrop;
 
 class Game
 {
@@ -23,10 +24,11 @@ public:
 
 private:
     void gameLoop();
-    void update();
+    void update(int elapsedTime);
     void draw(Graphic& graphics);
 
-    std::unique_ptr<Sprite> background;
+    std::unique_ptr<Backdrop> background;
+
     std::unique_ptr<Sound> backgroundMusic;
 };
 

@@ -1,0 +1,24 @@
+#ifndef BACKLOG_H
+#define BACKLOG_H
+
+#include <memory>
+
+class Sprite;
+class Graphic;
+
+class Backlog
+{
+public:
+    Backlog(Graphic& graphics);
+
+    void draw(Graphic& grapics);
+    void update();
+
+private:
+    int posCloudX, posCloudY;
+
+    std::unique_ptr<Sprite> background;
+    std::unique_ptr<Sprite> backgroundCloud;
+};
+
+#endif // BACKLOG_H

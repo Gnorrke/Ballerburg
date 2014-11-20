@@ -3,6 +3,7 @@
 #include "input.h"
 #include "sprite.h"
 #include "sound.h"
+#include "backdrop.h"
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
@@ -10,7 +11,7 @@
 
 const int kFramesPerSecond = 60;
 int Game::kScreenWidth = 640;
-int Game::kScreenHeight = 400;
+int Game::kScreenHeight = 360;
 
 Game::Game()
 {
@@ -30,9 +31,12 @@ void Game::gameLoop()
     Input input;
     SDL_Event event;
 
-    background.reset(new Sprite(graphics, "img/background1.bmp", 0, 0, 640, 400));
+    background.reset(new Backdrop(graphics));
+
     backgroundMusic.reset(new Sound());
     bool running = true;
+
+    int lastUpdatedTime = SDL_GetTicks();
 
     while (running)
     {
@@ -48,7 +52,11 @@ void Game::gameLoop()
         //exit game
         if (input.wasKeyPressed(SDLK_ESCAPE) || event.type == SDL_QUIT) running = false;
 
-        update();
+        const int curTime = SDL_GetTicks();
+        const unsigned int elapsedTime = curTime - lastUpdatedTime;
+
+        update(elapsedTime);
+        lastUpdatedTime = curTime;
 
         draw(graphics);
 
@@ -63,13 +71,15 @@ void Game::gameLoop()
     }
 }
 
-void::Game::update()
+void::Game::update(int elapsedTime)
 {
+    background->update(elapsedTime);
 }
 
 void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
-    background->draw(graphics, 0, 0);
+    background->draw(graphics);
+
     graphics.flip();
 }
