@@ -81,6 +81,14 @@ void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
     background->draw(graphics);
-    testblock->draw(graphics, 300, 200);
+    testblock->draw(graphics,260,340);
+    testblock->draw(graphics,280,340);
+    testblock->draw(graphics,300,340);
+    testblock->draw(graphics,320,340);
+    testblock->draw(graphics,340,340);
+    testblock->draw(graphics,280,320);
+    testblock->draw(graphics,300,320);
+    testblock->draw(graphics,320,320);
+    testblock->draw(graphics,290,300);
     graphics.flip();
 }
