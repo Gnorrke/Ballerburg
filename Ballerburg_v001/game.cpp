@@ -32,6 +32,7 @@ void Game::gameLoop()
     SDL_Event event;
 
     background.reset(new Backdrop(graphics));
+    testblock.reset(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
 
     backgroundMusic.reset(new Sound());
     bool running = true;
@@ -80,6 +81,6 @@ void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
     background->draw(graphics);
-
+    testblock->draw(graphics, 300, 200);
     graphics.flip();
 }
