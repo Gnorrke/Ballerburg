@@ -33,6 +33,8 @@ void Game::gameLoop()
 
     background.reset(new Backdrop(graphics));
     testblock.reset(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
+    testcastle.reset(new Sprite(graphics, "img/castle_block1.bmp", 0, 0, 15, 8));
+    testcastle2.reset(new Sprite(graphics, "img/castle_block2.bmp", 0, 0, 15, 8));
 
     backgroundMusic.reset(new Sound());
     bool running = true;
@@ -90,5 +92,22 @@ void Game::draw(Graphic &graphics)
     testblock->draw(graphics,300,320);
     testblock->draw(graphics,320,320);
     testblock->draw(graphics,290,300);
+
+
+    testcastle->draw(graphics, 50, 343);
+    testcastle->draw(graphics, 65, 343);
+    testcastle->draw(graphics, 80, 343);
+    testcastle->draw(graphics, 95, 343);
+
+    testcastle2->draw(graphics, 50, 352);
+    testcastle2->draw(graphics, 65, 352);
+    testcastle2->draw(graphics, 80, 352);
+    testcastle2->draw(graphics, 95, 352);
+
+    testcastle2->draw(graphics, 50, 334);
+    testcastle2->draw(graphics, 65, 334);
+    testcastle2->draw(graphics, 80, 334);
+    testcastle2->draw(graphics, 95, 334);
+
     graphics.flip();
 }

@@ -29,6 +29,8 @@ private:
 
     std::unique_ptr<Backdrop> background;
     std::unique_ptr<Sprite> testblock;
+    std::unique_ptr<Sprite> testcastle;
+    std::unique_ptr<Sprite> testcastle2;
 
     std::unique_ptr<Sound> backgroundMusic;
 };
