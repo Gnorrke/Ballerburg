@@ -1,19 +1,19 @@
 #include "mountain.h"
+#include "graphic.h"
+#include "sprite.h"
 
 
-mountain::mountain(Graphic& graphics)
+Mountain::Mountain(Graphic& graphics)
 {
-    testblock.reset(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
-    mountain::draw(graphics);
+    testblock = std::unique_ptr<Sprite>(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
+}
+
+void Mountain::update(int elapsedTime){
+
 
 }
 
-void mountain::update(int elapsedTime){
-
-
-}
-
-void mountain::draw(Graphic& graphics){
+void Mountain::draw(Graphic& graphics){
 
 
 

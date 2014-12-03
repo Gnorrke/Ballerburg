@@ -2,17 +2,17 @@
 #define MOUNTAIN_H
 
 #include <memory>
-#include "graphic.h"
-#include "sprite.h"
+class Sprite;
+class Graphic;
 
 
-
-class mountain
+class Mountain
 {
 public:
-    mountain(Graphic& graphics);
+    Mountain(Graphic& graphics);
     void update(int elapsedTime);
     void draw(Graphic& graphics);
+private:
     std::unique_ptr<Sprite> testblock;
 };
 

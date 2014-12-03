@@ -35,6 +35,7 @@ void Game::gameLoop()
     background.reset(new Backdrop(graphics));
     testcastle.reset(new Sprite(graphics, "img/castle_block1.bmp", 0, 0, 15, 8));
     testcastle2.reset(new Sprite(graphics, "img/castle_block2.bmp", 0, 0, 15, 8));
+    testblock.reset(new Mountain(graphics));
 
     backgroundMusic.reset(new Sound());
     bool running = true;
@@ -86,7 +87,7 @@ void Game::draw(Graphic &graphics)
 
     background->draw(graphics);
 
-    mountain  test(graphics);
+    testblock->draw(graphics);
 
     testcastle->draw(graphics, 50, 343);
     testcastle->draw(graphics, 65, 343);
