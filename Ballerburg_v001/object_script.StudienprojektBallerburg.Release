@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\game.o
+./release\graphic.o
+./release\sprite.o
+./release\animatedsprite.o
+./release\input.o
+./release\tracer.o
+./release\sound.o
+./release\backdrop.o
+./release\mountain.o
+);

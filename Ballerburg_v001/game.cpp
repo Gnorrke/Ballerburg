@@ -4,6 +4,7 @@
 #include "sprite.h"
 #include "sound.h"
 #include "backdrop.h"
+#include "mountain.h"
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
@@ -32,7 +33,6 @@ void Game::gameLoop()
     SDL_Event event;
 
     background.reset(new Backdrop(graphics));
-    testblock.reset(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
     testcastle.reset(new Sprite(graphics, "img/castle_block1.bmp", 0, 0, 15, 8));
     testcastle2.reset(new Sprite(graphics, "img/castle_block2.bmp", 0, 0, 15, 8));
 
@@ -82,17 +82,11 @@ void::Game::update(int elapsedTime)
 void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
-    background->draw(graphics);
-    testblock->draw(graphics,260,340);
-    testblock->draw(graphics,280,340);
-    testblock->draw(graphics,300,340);
-    testblock->draw(graphics,320,340);
-    testblock->draw(graphics,340,340);
-    testblock->draw(graphics,280,320);
-    testblock->draw(graphics,300,320);
-    testblock->draw(graphics,320,320);
-    testblock->draw(graphics,290,300);
 
+
+    background->draw(graphics);
+
+    mountain  test(graphics);
 
     testcastle->draw(graphics, 50, 343);
     testcastle->draw(graphics, 65, 343);

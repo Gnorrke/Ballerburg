@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\game.o
+./debug\graphic.o
+./debug\sprite.o
+./debug\animatedsprite.o
+./debug\input.o
+./debug\tracer.o
+./debug\sound.o
+./debug\backdrop.o
+./debug\mountain.o
+);
