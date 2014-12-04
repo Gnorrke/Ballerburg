@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <memory>
+#include <vector>
 
 class Sprite;
 class Graphic;
@@ -9,6 +10,7 @@ class Sound;
 class Backdrop;
 class Mountain;
 class Cannonball;
+class SDL_Rect;
 
 class Game
 {
@@ -26,7 +28,7 @@ public:
 
 private:
     void gameLoop();
-    void update(int elapsedTime);
+    void update(int elapsedTime, std::vector<SDL_Rect>& map);
     void draw(Graphic& graphics);
 
     std::unique_ptr<Backdrop> background;

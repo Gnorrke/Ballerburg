@@ -17,7 +17,7 @@ class Cannonball
 public:
     Cannonball(Graphic &graphic, int posX, int posY);
 
-    void update();
+    void update(int elapsedTime, std::vector<SDL_Rect> &map);
     void draw(Graphic& graphics);
 
 private:
@@ -25,7 +25,10 @@ private:
     double distance(int x1, int y1, int x2, int y2);
     bool checkCollision(Circle& A, std::vector<SDL_Rect> &B);
 
+    void updateY(int elapsedTime, std::vector<SDL_Rect> &map);
+
     int posX, posY;
+    bool collided;
     float velocityX, velocityY;
 
     Circle collisionCircle;

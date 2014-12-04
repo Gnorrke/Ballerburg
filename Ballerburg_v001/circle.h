@@ -4,9 +4,9 @@
 class Circle
 {
 public:
-    Circle(int offsetX, int offsetY, int radius) : offsetX(offsetX), offsetY(offsetY), radius(radius) {}
+    Circle(int offsetX, int offsetY, int radius) : x(offsetX), y(offsetY), r(radius) {}
 
-    int offsetX, offsetY, radius; //Offset von der Mitte des Kreises
+    int x, y, r; //Offset von der Mitte des Kreises
 };
 
 #endif // CIRCLE_H

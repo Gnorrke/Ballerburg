@@ -33,11 +33,18 @@ void Game::gameLoop()
     Input input;
     SDL_Event event;
 
+    std::vector<SDL_Rect> box(1);
+
+    box[0].x = 0;
+    box[0].y = 360;
+    box[0].w = 640;
+    box[0].h = 0;
+
     background.reset(new Backdrop(graphics));
     testcastle.reset(new Sprite(graphics, "img/castle_block1.bmp", 0, 0, 15, 8));
     testcastle2.reset(new Sprite(graphics, "img/castle_block2.bmp", 0, 0, 15, 8));
     testblock.reset(new Mountain(graphics));
-    cannonball.reset(new Cannonball(graphics, 200, 150));
+    cannonball.reset(new Cannonball(graphics, 120, 0));
 
     backgroundMusic.reset(new Sound());
     bool running = true;
@@ -61,7 +68,7 @@ void Game::gameLoop()
         const int curTime = SDL_GetTicks();
         const unsigned int elapsedTime = curTime - lastUpdatedTime;
 
-        update(elapsedTime);
+        update(elapsedTime, box);
         lastUpdatedTime = curTime;
 
         draw(graphics);
@@ -77,9 +84,10 @@ void Game::gameLoop()
     }
 }
 
-void::Game::update(int elapsedTime)
+void::Game::update(int elapsedTime, std::vector<SDL_Rect>& map)
 {
     background->update(elapsedTime);
+    cannonball->update(elapsedTime, map);
 }
 
 void Game::draw(Graphic &graphics)
