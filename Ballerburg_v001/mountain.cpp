@@ -8,7 +8,7 @@ Mountain::Mountain(Graphic& graphics)
     testblock = std::unique_ptr<Sprite>(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
 }
 
-void Mountain::update(int elapsedTime){
+void Mountain::update(){
 
 
 }

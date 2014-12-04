@@ -14,7 +14,8 @@ SOURCES += main.cpp \
     tracer.cpp \
     sound.cpp \
     backdrop.cpp \
-    mountain.cpp
+    mountain.cpp \
+    cannonball.cpp
 
 LIBS += -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_mixer
 
@@ -31,6 +32,8 @@ HEADERS += \
     tracer.h \
     sound.h \
     backdrop.h \
-    mountain.h
+    mountain.h \
+    cannonball.h \
+    circle.h
 
 

@@ -5,6 +5,7 @@
 #include "sound.h"
 #include "backdrop.h"
 #include "mountain.h"
+#include "cannonball.h"
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
@@ -36,6 +37,7 @@ void Game::gameLoop()
     testcastle.reset(new Sprite(graphics, "img/castle_block1.bmp", 0, 0, 15, 8));
     testcastle2.reset(new Sprite(graphics, "img/castle_block2.bmp", 0, 0, 15, 8));
     testblock.reset(new Mountain(graphics));
+    cannonball.reset(new Cannonball(graphics, 200, 150));
 
     backgroundMusic.reset(new Sound());
     bool running = true;
@@ -103,6 +105,8 @@ void Game::draw(Graphic &graphics)
     testcastle2->draw(graphics, 65, 334);
     testcastle2->draw(graphics, 80, 334);
     testcastle2->draw(graphics, 95, 334);
+
+    cannonball->draw(graphics);
 
     graphics.flip();
 }

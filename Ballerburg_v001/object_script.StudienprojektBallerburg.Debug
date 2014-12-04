@@ -9,4 +9,5 @@ INPUT(
 ./debug\sound.o
 ./debug\backdrop.o
 ./debug\mountain.o
+./debug\cannonball.o
 );

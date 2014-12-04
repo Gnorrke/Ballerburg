@@ -9,4 +9,5 @@ INPUT(
 ./release\sound.o
 ./release\backdrop.o
 ./release\mountain.o
+./release\cannonball.o
 );
