@@ -1,11 +1,11 @@
 #include "mountainblock.h"
 
 
-Mountainblock::Mountainblock(Graphic& graphics, int posx, int posy)
+Mountainblock::Mountainblock(Graphic& graphics, int posX, int posY) : hit(false)
 {
-    mblock=std::unique_ptr<Sprite>(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
-    x=posx;
-    y=posy;
+    mblock = std::unique_ptr<Sprite>(new Sprite(graphics, "img/rock.bmp", 0, 0, 20, 20));
+    x = posX;
+    y = posY;
 }
 
 Mountainblock::~Mountainblock()

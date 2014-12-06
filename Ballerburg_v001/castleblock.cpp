@@ -1,11 +1,11 @@
 #include "castleblock.h"
 
 
-Castleblock::Castleblock(Graphic& graphics, int posx, int posy, const std::string& filePath)
+Castleblock::Castleblock(Graphic& graphics, int posX, int posY, const std::string& filePath) : hit(false)
 {
-    cblock=std::unique_ptr<Sprite>(new Sprite(graphics, filePath, 0, 0, 15, 8));
-    x=posx;
-    y=posy;
+    cblock = std::unique_ptr<Sprite>(new Sprite(graphics, filePath, 0, 0, 15, 8));
+    x = posX;
+    y = posY;
 }
 
 Castleblock::~Castleblock()

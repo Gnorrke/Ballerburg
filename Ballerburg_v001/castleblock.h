@@ -9,7 +9,7 @@
 class Castleblock
 {
 public:
-    Castleblock(Graphic& graphics, int posx, int posy, const std::string& filePath);
+    Castleblock(Graphic& graphics, int posX, int posY, const std::string& filePath);
     ~Castleblock();
 
     //onHit erkennt, ob der entsprechende Block angeklickt wurde; muss in späteren Sprints entfernt werden
@@ -23,7 +23,7 @@ private:
     //isHit kann später entfernt werden, da Kollisionserkennung über Cannonball realisiert wird
     bool isHit(Input in);
     //wird hit auf true gesetzt, wird der entsprechende Block nicht mehr gezeichnet
-    bool hit=false;
+    bool hit;
 
     int x,y;
 
