@@ -6,6 +6,7 @@
 #include "backdrop.h"
 #include "mountain.h"
 #include "cannonball.h"
+#include "castle.h"
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
@@ -41,8 +42,8 @@ void Game::gameLoop()
     box[0].h = 0;
 
     background.reset(new Backdrop(graphics));
-    testcastle.reset(new Sprite(graphics, "img/castle_block1.bmp", 0, 0, 15, 8));
-    testcastle2.reset(new Sprite(graphics, "img/castle_block2.bmp", 0, 0, 15, 8));
+    testcastle.reset(new Castle(graphics, 50));
+    testcastle2.reset(new Castle(graphics, 515));
     testblock.reset(new Mountain(graphics));
     cannonball.reset(new Cannonball(graphics, 120, 0));
 
@@ -70,6 +71,10 @@ void Game::gameLoop()
 
         update(elapsedTime, box);
         lastUpdatedTime = curTime;
+
+        testblock->checkHit(input);
+        testcastle->checkHit(input);
+        testcastle2->checkHit(input);
 
         draw(graphics);
 
@@ -99,20 +104,9 @@ void Game::draw(Graphic &graphics)
 
     testblock->draw(graphics);
 
-    testcastle->draw(graphics, 50, 343);
-    testcastle->draw(graphics, 65, 343);
-    testcastle->draw(graphics, 80, 343);
-    testcastle->draw(graphics, 95, 343);
+    testcastle->draw(graphics);
 
-    testcastle2->draw(graphics, 50, 352);
-    testcastle2->draw(graphics, 65, 352);
-    testcastle2->draw(graphics, 80, 352);
-    testcastle2->draw(graphics, 95, 352);
-
-    testcastle2->draw(graphics, 50, 334);
-    testcastle2->draw(graphics, 65, 334);
-    testcastle2->draw(graphics, 80, 334);
-    testcastle2->draw(graphics, 95, 334);
+    testcastle2->draw(graphics);
 
     cannonball->draw(graphics);
 

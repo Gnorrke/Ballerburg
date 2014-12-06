@@ -87,7 +87,14 @@ void Input::checkInput(SDL_Event& event)
     }
 }
 
+int Input::getoffsetX()const
+{
+    return offsetX;
+}
 
-
+int Input::getoffsetY()const
+{
+    return offsetY;
+}
 
 

@@ -23,6 +23,9 @@ public:
 
     void checkInput(SDL_Event &event);
 
+    int getoffsetX()const;
+    int getoffsetY()const;
+
 private:
     int offsetX = 0;
     int offsetY = 0;

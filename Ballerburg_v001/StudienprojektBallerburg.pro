@@ -15,7 +15,10 @@ SOURCES += main.cpp \
     sound.cpp \
     backdrop.cpp \
     mountain.cpp \
-    cannonball.cpp
+    cannonball.cpp \
+    mountainblock.cpp \
+    castleblock.cpp \
+    castle.cpp
 
 LIBS += -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_mixer
 
@@ -34,6 +37,9 @@ HEADERS += \
     backdrop.h \
     mountain.h \
     cannonball.h \
-    circle.h
+    circle.h \
+    mountainblock.h \
+    castleblock.h \
+    castle.h
 
 

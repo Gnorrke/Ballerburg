@@ -10,4 +10,7 @@ INPUT(
 ./release\backdrop.o
 ./release\mountain.o
 ./release\cannonball.o
+./release\mountainblock.o
+./release\castleblock.o
+./release\castle.o
 );

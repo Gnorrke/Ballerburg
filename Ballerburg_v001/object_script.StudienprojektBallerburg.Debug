@@ -10,4 +10,7 @@ INPUT(
 ./debug\backdrop.o
 ./debug\mountain.o
 ./debug\cannonball.o
+./debug\mountainblock.o
+./debug\castleblock.o
+./debug\castle.o
 );

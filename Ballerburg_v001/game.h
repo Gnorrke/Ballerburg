@@ -10,6 +10,7 @@ class Sound;
 class Backdrop;
 class Mountain;
 class Cannonball;
+class Castle;
 class SDL_Rect;
 
 class Game
@@ -32,8 +33,8 @@ private:
     void draw(Graphic& graphics);
 
     std::unique_ptr<Backdrop> background;
-    std::unique_ptr<Sprite> testcastle;
-    std::unique_ptr<Sprite> testcastle2;
+    std::unique_ptr<Castle> testcastle;
+    std::unique_ptr<Castle> testcastle2;
     std::unique_ptr<Mountain> testblock;
     std::unique_ptr<Cannonball> cannonball;
 
