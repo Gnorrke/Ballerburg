@@ -15,9 +15,9 @@ public:
     Castle(Graphic& graphics, int startposX);
     ~Castle();
 
-    void update();
+    void update(Input &input, Sound &sound);
     void draw(Graphic& graphics);
-    void checkHit(Input& in);
+    void checkHit(Input& in, Sound &sound);
 
 private:
     std::unique_ptr<Castleblock> cblocks[11];

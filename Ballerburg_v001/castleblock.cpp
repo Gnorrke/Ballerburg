@@ -1,4 +1,7 @@
 #include "castleblock.h"
+#include "sprite.h"
+#include "input.h"
+#include "sound.h"
 
 
 Castleblock::Castleblock(Graphic& graphics, int posX, int posY, const std::string& filePath) : hit(false)
@@ -14,24 +17,15 @@ Castleblock::~Castleblock()
 }
 
 
-bool Castleblock::isHit(Input in)
-{
-    if(x<=in.getoffsetX() && in.getoffsetX()<=(x+20))
-    {
-        if(y<=in.getoffsetY() && in.getoffsetY()<=(y+20))
-            return true;
-        else
-            return false;
-    }
-    else
-        return false;
-}
 
 //To be deleted after Sprint#2
-void Castleblock::onHit(Input in)
+void Castleblock::onHit(Input& in, Sound& sound)
 {
-    if(isHit(in) && in.wasLeftMouseButtonPressed())
+    if(isHit(in) && in.wasLeftMouseButtonPressed()) {
         hit=true;
+        sound.playSound(1);
+    }
+
 }
 
 void Castleblock::draw(Graphic& graphics)
@@ -43,13 +37,20 @@ void Castleblock::draw(Graphic& graphics)
 
 }
 
-int Castleblock::getX() const
+void Castleblock::update(Input &input)
 {
-    return x;
+
 }
 
-int Castleblock::getY() const
+bool Castleblock::isHit(Input &in)
 {
-    return y;
+    if(x<=in.getoffsetX() && in.getoffsetX()<=(x+20))
+    {
+        if(y<=in.getoffsetY() && in.getoffsetY()<=(y+20))
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
 }
-

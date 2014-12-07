@@ -1,6 +1,7 @@
 #include "castle.h"
 #include "graphic.h"
 #include "sprite.h"
+#include "sound.h"
 #include <string>
 
 namespace  {
@@ -42,10 +43,9 @@ Castle::~Castle()
 
 }
 
-void Castle::update()
+void Castle::update(Input& input, Sound& sound)
 {
-
-
+    checkHit(input, sound);
 }
 
 void Castle::draw(Graphic& graphics)
@@ -56,11 +56,11 @@ void Castle::draw(Graphic& graphics)
     }
 }
 
-void Castle::checkHit(Input &in)
+void Castle::checkHit(Input &in, Sound& sound)
 {
     for(int j = 0; j < 11;j++)
     {
-        cblocks[j]->onHit(in);
+        cblocks[j]->onHit(in, sound);
     }
 }
 

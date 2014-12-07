@@ -1,10 +1,12 @@
 #ifndef CASTLEBLOCK_H
 #define CASTLEBLOCK_H
 
-#include <graphic.h>
-#include <input.h>
-#include <sprite.h>
 #include <memory>
+
+class Graphic;
+class Input;
+class Sprite;
+class Sound;
 
 class Castleblock
 {
@@ -13,15 +15,14 @@ public:
     ~Castleblock();
 
     //onHit erkennt, ob der entsprechende Block angeklickt wurde; muss in späteren Sprints entfernt werden
-    void onHit(Input in);
+    void onHit(Input &in, Sound &sound);
     void draw(Graphic& draw);
+    void update(Input& input);
 
-    int getX() const;
-    int getY() const;
 
 private:
     //isHit kann später entfernt werden, da Kollisionserkennung über Cannonball realisiert wird
-    bool isHit(Input in);
+    bool isHit(Input& in);
     //wird hit auf true gesetzt, wird der entsprechende Block nicht mehr gezeichnet
     bool hit;
 

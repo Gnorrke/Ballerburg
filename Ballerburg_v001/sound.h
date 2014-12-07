@@ -9,8 +9,10 @@ public:
     Sound();
     ~Sound();
 
+    void playSound(int soundNumber);
 private:
     Mix_Music* backgroundMusic = NULL;
+    Mix_Chunk* explosionSound = NULL;
 };
 
 #endif // SOUND_H

@@ -1,6 +1,8 @@
 #include "mountain.h"
 #include "graphic.h"
 #include "sprite.h"
+#include "input.h"
+#include "sound.h"
 
 
 Mountain::Mountain(Graphic& graphics)
@@ -46,10 +48,9 @@ Mountain::~Mountain()
 
 }
 
-void Mountain::update()
+void Mountain::update(Input& input, Sound& sound)
 {
-
-
+    checkHit(input, sound);
 }
 
 void Mountain::draw(Graphic& graphics)
@@ -60,11 +61,11 @@ void Mountain::draw(Graphic& graphics)
     }
 }
 
-void Mountain::checkHit(Input in)
+void Mountain::checkHit(Input& in, Sound& sound)
 {
     for(int j=0; j<28;j++)
     {
-        mblocks[j]->onHit(in);
+        mblocks[j]->onHit(in, sound);
     }
 }
 

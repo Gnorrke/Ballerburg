@@ -1,4 +1,7 @@
 #include "mountainblock.h"
+#include "sprite.h"
+#include "input.h"
+#include "sound.h"
 
 
 Mountainblock::Mountainblock(Graphic& graphics, int posX, int posY) : hit(false)
@@ -14,7 +17,7 @@ Mountainblock::~Mountainblock()
 }
 
 
-bool Mountainblock::isHit(Input in)
+bool Mountainblock::isHit(Input &in)
 {
     if(x<=in.getoffsetX() && in.getoffsetX()<=(x+20))
     {
@@ -28,10 +31,11 @@ bool Mountainblock::isHit(Input in)
 }
 
 //To be deleted after Sprint#2
-void Mountainblock::onHit(Input in)
+void Mountainblock::onHit(Input& in, Sound& sound)
 {
-    if(isHit(in) && in.wasLeftMouseButtonPressed())
+    if(isHit(in) && in.wasLeftMouseButtonPressed()) {
         hit=true;
+    }
 }
 
 void Mountainblock::draw(Graphic& graphics)
@@ -43,12 +47,4 @@ void Mountainblock::draw(Graphic& graphics)
 
 }
 
-int Mountainblock::getX() const
-{
-    return x;
-}
 
-int Mountainblock::getY() const
-{
-    return y;
-}
