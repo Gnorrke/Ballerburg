@@ -43,7 +43,7 @@ void Game::gameLoop()
 
     background.reset(new Backdrop(graphics));
     testcastle.reset(new Castle(graphics, 50));
-    testcastle2.reset(new Castle(graphics, 515));
+    testcastle2.reset(new Castle(graphics, 420));
     mountain.reset(new Mountain(graphics));
     cannonball.reset(new Cannonball(graphics, 120, 0));
 

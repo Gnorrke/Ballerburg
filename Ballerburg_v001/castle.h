@@ -3,6 +3,7 @@
 
 #include "castleblock.h"
 #include <memory>
+#include <vector>
 
 class Sprite;
 class Graphic;
@@ -20,7 +21,7 @@ public:
     void checkHit(Input& in, Sound &sound);
 
 private:
-    std::unique_ptr<Castleblock> cblocks[11];
+    std::vector<std::unique_ptr<Castleblock>> cblocks;
 };
 
 
