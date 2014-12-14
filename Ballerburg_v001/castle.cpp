@@ -126,7 +126,7 @@ void Castle::update(Input& input, Sound& sound)
 
 void Castle::draw(Graphic& graphics)
 {
-    for(int i = 0; i < cblocks.size();i++)
+    for(unsigned int i = 0; i < cblocks.size();i++)
     {
         cblocks[i]->draw(graphics);
     }
@@ -134,7 +134,7 @@ void Castle::draw(Graphic& graphics)
 
 void Castle::checkHit(Input &in, Sound& sound)
 {
-    for(int j = 0; j < cblocks.size();j++)
+    for(unsigned int j = 0; j < cblocks.size();j++)
     {
         cblocks[j]->onHit(in, sound);
     }

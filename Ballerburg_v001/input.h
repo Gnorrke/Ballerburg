@@ -5,6 +5,7 @@
 #include <SDL/SDL.h>
 
 class Player;
+class Cannonball;
 
 class Input
 {
@@ -22,6 +23,7 @@ public:
     bool isKeyHeld(SDLKey key);
 
     void checkInput(SDL_Event &event);
+    void moveCannonball(Cannonball& ball);
 
     int getoffsetX()const;
     int getoffsetY()const;

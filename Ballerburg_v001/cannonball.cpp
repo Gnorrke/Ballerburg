@@ -11,6 +11,7 @@
 namespace {
     const int kDotWidth = 20;
     const float kGravity = 0.0012f;
+    const float kMaxSpeedX = 0.150f;
     const float kMaxSpeedY = 0.150f;
     const Circle kCollisionCircle(10, 10, 10);
 }
@@ -19,6 +20,7 @@ Cannonball::Cannonball(Graphic &graphic, int posX, int posY) :
     posX(posX),
     posY(posY),
     collided(false),
+    accelerationX(0.0f),
     velocityX(0.0f),
     velocityY(0.0f),
     collisionCircle(kCollisionCircle)
@@ -30,6 +32,7 @@ Cannonball::Cannonball(Graphic &graphic, int posX, int posY) :
 void Cannonball::update(int elapsedTime, std::vector<SDL_Rect>& map)
 {
     //Physik
+    updateX(elapsedTime, map);
     updateY(elapsedTime, map);
 }
 
@@ -38,6 +41,15 @@ void Cannonball::draw(Graphic& graphics)
     spriteDot->draw(graphics, posX, posY);
 }
 
+void Cannonball::moveRight()
+{
+    accelerationX = kMaxSpeedX;
+}
+
+void Cannonball::moveLeft()
+{
+    accelerationX = -kMaxSpeedX;
+}
 
 double Cannonball::distance(int x1, int y1, int x2, int y2)
 {
@@ -91,6 +103,27 @@ bool Cannonball::checkCollision(Circle &A, std::vector<SDL_Rect>& B)
 
     //If the shapes have not collided
     return false;
+}
+
+void Cannonball::updateX(int elapsedTime, std::vector<SDL_Rect> &map)
+{
+    if(!collided) {
+        if(checkCollision(collisionCircle, map)) {
+            velocityX = 0.0f;
+            collided = true;
+        }
+        else {
+            if (accelerationX < 0.0f) {
+                velocityX = std::max(accelerationX * elapsedTime, -kMaxSpeedX);
+            }
+            else {
+                velocityX = std::min(accelerationX * elapsedTime, kMaxSpeedX);
+            }
+            posX += (int)round(velocityX * elapsedTime);
+            collisionCircle.x = posX;
+        }
+    }
+
 }
 
 void Cannonball::updateY(int elapsedTime, std::vector<SDL_Rect> &map)

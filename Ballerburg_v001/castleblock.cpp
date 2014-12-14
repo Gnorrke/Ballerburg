@@ -37,10 +37,6 @@ void Castleblock::draw(Graphic& graphics)
 
 }
 
-void Castleblock::update(Input &input)
-{
-
-}
 
 bool Castleblock::isHit(Input &in)
 {

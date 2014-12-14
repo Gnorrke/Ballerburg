@@ -17,7 +17,6 @@ public:
     //onHit erkennt, ob der entsprechende Block angeklickt wurde; muss in späteren Sprints entfernt werden
     void onHit(Input &in, Sound &sound);
     void draw(Graphic& draw);
-    void update(Input& input);
 
 
 private:

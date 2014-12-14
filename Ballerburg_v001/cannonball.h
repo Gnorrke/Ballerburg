@@ -20,16 +20,22 @@ public:
     void update(int elapsedTime, std::vector<SDL_Rect> &map);
     void draw(Graphic& graphics);
 
+    void moveRight();
+    void moveLeft();
+
 private:
 
     double distance(int x1, int y1, int x2, int y2);
     bool checkCollision(Circle& A, std::vector<SDL_Rect> &B);
 
+    void updateX(int elapsedTime, std::vector<SDL_Rect> &map);
     void updateY(int elapsedTime, std::vector<SDL_Rect> &map);
 
     int posX, posY;
     bool collided;
+    float accelerationX;
     float velocityX, velocityY;
+
 
     Circle collisionCircle;
 

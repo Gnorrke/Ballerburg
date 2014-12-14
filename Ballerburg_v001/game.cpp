@@ -61,6 +61,7 @@ void Game::gameLoop()
         while(SDL_PollEvent(&event))
         {
             input.checkInput(event);
+            input.moveCannonball(*cannonball);
         }
 
         //exit game

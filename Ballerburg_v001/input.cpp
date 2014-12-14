@@ -1,5 +1,6 @@
 #include "input.h"
 #include "SDL/SDL.h"
+#include "cannonball.h"
 
 #include <iostream>
 
@@ -84,6 +85,17 @@ void Input::checkInput(SDL_Event& event)
 
     default:
         break;
+    }
+}
+
+void Input::moveCannonball(Cannonball &ball)
+{
+    if (isKeyHeld(SDLK_LEFT)) {
+        ball.moveLeft();
+    }
+
+    else if (isKeyHeld(SDLK_RIGHT)) {
+        ball.moveRight();
     }
 }
 
