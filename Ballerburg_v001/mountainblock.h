@@ -1,34 +1,18 @@
 #ifndef MOUNTAINBLOCK_H
 #define MOUNTAINBLOCK_H
 
+#include "block.h"
 #include <memory>
 
-class Sprite;
-class Sound;
 class Graphic;
-class Input;
 
-class Mountainblock
+class MountainBlock : public Block
 {
 public:
-    Mountainblock(Graphic& graphics, int posX, int posY);
-    ~Mountainblock();
+    // Param: typeNumber, defines which sprite is taken, only 1 and 2 are valid numbers
+    MountainBlock(Graphic &graphics, int posX, int posY);
 
-    //onHit erkennt, ob der entsprechende Block angeklickt wurde; muss in späteren Sprints entfernt werden
-    void onHit(Input &in, Sound &sound);
-    void draw(Graphic& draw);
-
-
-
-private:
-    //isHit kann später entfernt werden, da Kollisionserkennung über Cannonball realisiert wird
-    bool isHit(Input& in);
-    //wird hit auf true gesetzt, wird der entsprechende Block nicht mehr gezeichnet
-    bool hit;
-
-    int x,y;
-
-    std::unique_ptr<Sprite> mblock;
+    void destroy() { delete this; }
 };
 
 #endif // MOUNTAINBLOCK_H

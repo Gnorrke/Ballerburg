@@ -4,10 +4,9 @@
 #include "sprite.h"
 #include "sound.h"
 #include "backdrop.h"
-#include "mountain.h"
 #include "cannonball.h"
 #include "castle.h"
-
+#include "mountain.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
 #include <iostream>
@@ -44,8 +43,8 @@ void Game::gameLoop()
     background.reset(new Backdrop(graphics));
     testcastle.reset(new Castle(graphics, 50));
     testcastle2.reset(new Castle(graphics, 420));
-    mountain.reset(new Mountain(graphics));
     cannonball.reset(new Cannonball(graphics, 120, 0));
+    mountain.reset(new Mountain(graphics));
 
     sounds.reset(new Sound());
     bool running = true;
@@ -99,12 +98,11 @@ void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
 
-
     background->draw(graphics);
-    mountain->draw(graphics);
     testcastle->draw(graphics);
     testcastle2->draw(graphics);
     cannonball->draw(graphics);
+    mountain->draw(graphics);
 
     graphics.flip();
 }

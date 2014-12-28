@@ -18,7 +18,7 @@ public:
     void draw(Graphic& graphics);
     void checkHit(Input &in, Sound &sound);
 private:
-    std::unique_ptr<Mountainblock> mblocks[28];
+    std::unique_ptr<MountainBlock> mblocks[28];
 };
 
 #endif // MOUNTAIN_H

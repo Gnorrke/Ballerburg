@@ -11,6 +11,7 @@ INPUT(
 ./release\mountain.o
 ./release\cannonball.o
 ./release\mountainblock.o
-./release\castleblock.o
 ./release\castle.o
+./release\block.o
+./release\castleblock.o
 );

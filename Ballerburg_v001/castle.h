@@ -21,7 +21,7 @@ public:
     void checkHit(Input& in, Sound &sound);
 
 private:
-    std::vector<std::unique_ptr<Castleblock>> cblocks;
+    std::vector<std::unique_ptr<CastleBlock>> cblocks;
 };
 
 

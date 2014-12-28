@@ -11,6 +11,7 @@ INPUT(
 ./debug\mountain.o
 ./debug\cannonball.o
 ./debug\mountainblock.o
-./debug\castleblock.o
 ./debug\castle.o
+./debug\block.o
+./debug\castleblock.o
 );

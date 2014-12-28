@@ -11,103 +11,99 @@ const std::string kblock2 = "img/castle_block2.bmp";
 
 Castle::Castle(Graphic& graphics, int startposX)
 {
-
-
-
     int tmp = startposX;
 
     for(int i = 0;i<=10;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 352, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 352)));
         tmp += 15;
     }
 
     tmp = startposX;
 
     for(int i = 0;i<=10;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 344, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 344)));
         tmp += 15;
     }
     tmp = startposX;
     for(int i = 0;i<=10;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 336, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 336)));
         tmp += 15;
     }
 
     tmp = startposX;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 328, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 328)));
         tmp += 15;
     }
     tmp = startposX + 105;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 328, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 328)));
         tmp += 15;
     }
     tmp = startposX + 105;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 320, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 320)));
         tmp += 15;
     }
     tmp = startposX;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 320, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 320)));
         tmp += 15;
     }
     tmp = startposX + 105;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 312, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 312)));
         tmp += 15;
     }
     tmp = startposX;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 312, kblock2)));
-        tmp += 15;
-    }
-
-
-    tmp = startposX;
-    for(int i = 0;i<=10;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 304, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 312)));
         tmp += 15;
     }
 
     tmp = startposX;
     for(int i = 0;i<=10;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 298, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 304)));
+        tmp += 15;
+    }
+
+    tmp = startposX;
+    for(int i = 0;i<=10;i++){
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 298)));
         tmp += 15;
     }
 
     tmp = startposX;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 290, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 290)));
         tmp += 15;
     }
 
     tmp = startposX;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 282, kblock2)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 2, tmp, 282)));
         tmp += 15;
     }
 
     tmp = startposX;
     for(int i = 0;i<=3;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 276, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 276)));
         tmp += 15;
     }
     tmp = startposX + 10 ;
     for(int i = 0;i<=2;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 268, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 268)));
         tmp += 15;
     }
     tmp = startposX + 15 ;
     for(int i = 0;i<=1;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 260, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 260)));
         tmp += 15;
     }
 
     tmp = startposX + 30;
     for(int i = 0;i<=4;i++){
-        cblocks.push_back(std::unique_ptr<Castleblock>(new Castleblock(graphics, tmp, 290, kBlock1)));
+        cblocks.push_back(std::unique_ptr<CastleBlock>(new CastleBlock(graphics, 1, tmp, 290)));
         tmp += 30;
     }
 
@@ -122,13 +118,17 @@ Castle::~Castle()
 void Castle::update(Input& input, Sound& sound)
 {
     checkHit(input, sound);
+    for(unsigned int i = 0; i < cblocks.size();i++)
+    {
+        if (!cblocks[i]->hit) cblocks[i]->update();
+    }
 }
 
 void Castle::draw(Graphic& graphics)
 {
     for(unsigned int i = 0; i < cblocks.size();i++)
     {
-        cblocks[i]->draw(graphics);
+        if (!cblocks[i]->hit) cblocks[i]->draw(graphics);
     }
 }
 
@@ -136,7 +136,7 @@ void Castle::checkHit(Input &in, Sound& sound)
 {
     for(unsigned int j = 0; j < cblocks.size();j++)
     {
-        cblocks[j]->onHit(in, sound);
+        if (!cblocks[j]->hit) cblocks[j]->onHit(in, sound);
     }
 }
 

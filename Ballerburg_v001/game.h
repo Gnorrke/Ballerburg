@@ -8,11 +8,12 @@ class Sprite;
 class Graphic;
 class Sound;
 class Backdrop;
-class Mountain;
 class Cannonball;
 class Castle;
 class SDL_Rect;
 class Input;
+class CastleBlock;
+class Mountain;
 
 class Game
 {
@@ -36,8 +37,8 @@ private:
     std::unique_ptr<Backdrop> background;
     std::unique_ptr<Castle> testcastle;
     std::unique_ptr<Castle> testcastle2;
-    std::unique_ptr<Mountain> mountain;
     std::unique_ptr<Cannonball> cannonball;
+    std::unique_ptr<Mountain> mountain;
 
     std::unique_ptr<Sound> sounds;
 };

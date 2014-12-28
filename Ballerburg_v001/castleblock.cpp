@@ -1,52 +1,23 @@
 #include "castleblock.h"
+#include "graphic.h"
+#include "block.h"
 #include "sprite.h"
-#include "input.h"
-#include "sound.h"
+#include <iostream>
 
+namespace{
+const std::string kFilePathCastleBlock1 = "img/castle_block1.bmp";
+const std::string kFilePathCastleBlock2 = "img/castle_block2.bmp";
 
-Castleblock::Castleblock(Graphic& graphics, int posX, int posY, const std::string& filePath) : hit(false)
-{
-    cblock = std::unique_ptr<Sprite>(new Sprite(graphics, filePath, 0, 0, 15, 8));
-    x = posX;
-    y = posY;
+const int kCastleBlockWidth = 15;
+const int kCastleBlockHeight = 8;
 }
 
-Castleblock::~Castleblock()
+CastleBlock::CastleBlock(Graphic& graphics, int typeNumber, int X, int Y) : Block(X, Y)
 {
-
-}
-
-
-
-//To be deleted after Sprint#2
-void Castleblock::onHit(Input& in, Sound& sound)
-{
-    if(isHit(in) && in.wasLeftMouseButtonPressed()) {
-        hit=true;
-        sound.playSound(1);
+    if (typeNumber == 1) {
+        blockSprite = std::unique_ptr<Sprite>(new Sprite(graphics, kFilePathCastleBlock1, 0, 0, kCastleBlockWidth, kCastleBlockHeight));
     }
-
-}
-
-void Castleblock::draw(Graphic& graphics)
-{
-    if(!hit)
-    {
-        cblock->draw(graphics, x, y);
-    }
-
+    else blockSprite = std::unique_ptr<Sprite>(new Sprite(graphics, kFilePathCastleBlock2, 0, 0, kCastleBlockWidth, kCastleBlockHeight));
 }
 
 
-bool Castleblock::isHit(Input &in)
-{
-    if(x<=in.getoffsetX() && in.getoffsetX()<=(x+20))
-    {
-        if(y<=in.getoffsetY() && in.getoffsetY()<=(y+20))
-            return true;
-        else
-            return false;
-    }
-    else
-        return false;
-}
