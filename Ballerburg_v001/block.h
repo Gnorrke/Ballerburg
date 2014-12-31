@@ -7,6 +7,7 @@ class Graphic;
 class Input;
 class Sprite;
 class Sound;
+class SDL_Rect;
 
 class Block
 {
@@ -20,10 +21,13 @@ public:
     void onHit(Input& in, Sound& sound);
     bool isHit(Input& in);
 
+    SDL_Rect &getCollisionRectangle();
+
     int posX, posY;
     bool hit;
 
     std::unique_ptr<Sprite> blockSprite;
+    std::unique_ptr<SDL_Rect> collisionRectangle;
 
 };
 

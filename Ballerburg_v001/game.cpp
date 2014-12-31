@@ -33,18 +33,24 @@ void Game::gameLoop()
     Input input;
     SDL_Event event;
 
-    std::vector<SDL_Rect> box(1);
-
-    box[0].x = 0;
-    box[0].y = 360;
-    box[0].w = 640;
-    box[0].h = 0;
 
     background.reset(new Backdrop(graphics));
     testcastle.reset(new Castle(graphics, 50));
     testcastle2.reset(new Castle(graphics, 420));
     cannonball.reset(new Cannonball(graphics, 120, 0));
     mountain.reset(new Mountain(graphics));
+
+    std::vector<SDL_Rect> map(mountain->getMap().size() + testcastle->getMap().size() + testcastle2->getMap().size());
+    std::vector<SDL_Rect> mapmountain(mountain->getMap().size());
+    std::vector<SDL_Rect> maptestcastle1(testcastle->getMap().size());
+    std::vector<SDL_Rect> maptestcastle2(testcastle2->getMap().size());
+
+    mapmountain = mountain->getMap();
+    maptestcastle1 = testcastle->getMap();
+    maptestcastle2 = testcastle2->getMap();
+    map.insert(map.end(), mapmountain.begin(), mapmountain.end() );
+    map.insert(map.end(), maptestcastle1.begin(), maptestcastle1.end() );
+    map.insert(map.end(), maptestcastle2.begin(), maptestcastle2.end() );
 
     sounds.reset(new Sound());
     bool running = true;
@@ -69,7 +75,7 @@ void Game::gameLoop()
         const int curTime = SDL_GetTicks();
         const unsigned int elapsedTime = curTime - lastUpdatedTime;
 
-        update(elapsedTime, box, input, *sounds);
+        update(elapsedTime, map, input, *sounds);
         lastUpdatedTime = curTime;
 
         draw(graphics);
@@ -88,10 +94,10 @@ void Game::gameLoop()
 void::Game::update(int elapsedTime, std::vector<SDL_Rect>& map, Input& input, Sound& sound)
 {
     background->update(elapsedTime);
-    cannonball->update(elapsedTime, map);
     testcastle->update(input, sound);
     testcastle2->update(input, sound);
     mountain->update(input, sound);
+    cannonball->update(elapsedTime, map);
 }
 
 void Game::draw(Graphic &graphics)
@@ -101,8 +107,8 @@ void Game::draw(Graphic &graphics)
     background->draw(graphics);
     testcastle->draw(graphics);
     testcastle2->draw(graphics);
-    cannonball->draw(graphics);
     mountain->draw(graphics);
+    cannonball->draw(graphics);
 
     graphics.flip();
 }

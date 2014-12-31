@@ -3,11 +3,13 @@
 
 #include "mountainblock.h"
 #include <memory>
+#include <vector>
 
 class Sprite;
 class Graphic;
 class Input;
 class Sound;
+class SDL_Rect;
 
 class Mountain
 {
@@ -17,8 +19,11 @@ public:
     void update(Input &input, Sound &sound);
     void draw(Graphic& graphics);
     void checkHit(Input &in, Sound &sound);
+
+    std::vector<SDL_Rect> getMap();
+
 private:
-    std::unique_ptr<MountainBlock> mblocks[28];
+    std::vector<std::unique_ptr<MountainBlock>> mblocks;
 };
 
 #endif // MOUNTAIN_H

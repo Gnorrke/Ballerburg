@@ -140,4 +140,13 @@ void Castle::checkHit(Input &in, Sound& sound)
     }
 }
 
+std::vector<SDL_Rect> Castle::getMap()
+{
+    std::vector<SDL_Rect> tmp(cblocks.size());
+
+    for (unsigned int var = 0; var < cblocks.size(); ++var) {
+        tmp[var] = *(new SDL_Rect(cblocks[var]->getCollisionRectangle()));
+    }
+    return tmp;
+}
 

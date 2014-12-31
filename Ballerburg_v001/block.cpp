@@ -1,7 +1,7 @@
 #include "block.h"
 #include "input.h"
-#include <sprite.h>
 #include "sound.h"
+#include <sprite.h>
 
 namespace {
 
@@ -17,6 +17,9 @@ Block::Block(int posX, int posY) :
     posY(posY),
     hit(false)
 {
+    collisionRectangle = std::unique_ptr<SDL_Rect>(new SDL_Rect());
+    collisionRectangle->x = posX;
+    collisionRectangle->y = posY;
 }
 
 
@@ -49,4 +52,9 @@ bool Block::isHit(Input &in)
     }
     else
         return false;
+}
+
+SDL_Rect& Block::getCollisionRectangle()
+{
+    return *collisionRectangle;
 }

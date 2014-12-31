@@ -2,6 +2,7 @@
 #define CASTLE_H
 
 #include "castleblock.h"
+#include "SDL/SDL.h"
 #include <memory>
 #include <vector>
 
@@ -20,7 +21,9 @@ public:
     void draw(Graphic& graphics);
     void checkHit(Input& in, Sound &sound);
 
-private:
+    std::vector<SDL_Rect> getMap();
+
+    private:
     std::vector<std::unique_ptr<CastleBlock>> cblocks;
 };
 
