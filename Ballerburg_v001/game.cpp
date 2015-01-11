@@ -9,6 +9,7 @@
 #include "map.h"
 #include "mountain.h"
 #include "cannon.h"
+#include "king.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
 #include <iostream>
@@ -40,6 +41,7 @@ void Game::gameLoop()
     map.reset(Map::createMap(graphics));
     cannon.reset(new Cannon(graphics, 70, 235));
     sounds.reset(new Sound());
+
 
     bool running = true;
 

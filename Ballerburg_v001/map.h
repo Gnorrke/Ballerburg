@@ -12,6 +12,7 @@ class Graphic;
 class Castle;
 class Block;
 class Mountain;
+class King;
 
 class Map
 {
@@ -31,6 +32,12 @@ public:
     std::unique_ptr<Castle> testcastle;
     std::unique_ptr<Castle> testcastle2;
     std::unique_ptr<Mountain> mountain;
+
+    std::unique_ptr<King> king1;
+    std::unique_ptr<King> king2;
+
+
+
 };
 
 #endif // MAP_H

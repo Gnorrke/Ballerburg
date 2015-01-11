@@ -16,4 +16,5 @@ INPUT(
 ./debug\castleblock.o
 ./debug\cannon.o
 ./debug\map.o
+./debug\king.o
 );

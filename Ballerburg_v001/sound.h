@@ -13,6 +13,7 @@ public:
 private:
     Mix_Music* backgroundMusic = NULL;
     Mix_Chunk* explosionSound = NULL;
+    Mix_Chunk* winSound = NULL;
 };
 
 #endif // SOUND_H

@@ -7,6 +7,7 @@ Sound::Sound()
     if (Mix_OpenAudio( 44000, MIX_DEFAULT_FORMAT, 2, 4096 ) == -1) std::cout << "Fehler" << std::endl;
     backgroundMusic = Mix_LoadMUS("sounds/theme.mp3");
     explosionSound = Mix_LoadWAV("sounds/explosion.wav");
+    winSound = Mix_LoadWAV("sounds/win.wav");
 
     Mix_FadeInMusic(backgroundMusic, 10, 2000 );
 }
@@ -24,6 +25,9 @@ void Sound::playSound(int soundNumber)
     case 1:
         Mix_PlayChannel(-1, explosionSound, 0);
         break;
+    case 2:
+            Mix_PlayChannel(-1,winSound,0);
+            break;
     default:
         break;
     }

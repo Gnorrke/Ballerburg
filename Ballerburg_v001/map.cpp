@@ -5,6 +5,7 @@
 #include "input.h"
 #include "sound.h"
 #include "sprite.h"
+#include "king.h"
 #include <iostream>
 
 Map* Map::createMap(Graphic& graphics)
@@ -14,6 +15,8 @@ Map* Map::createMap(Graphic& graphics)
     newMap->testcastle.reset(new Castle(graphics, 50));
     newMap->testcastle2.reset(new Castle(graphics, 420));
     newMap->mountain.reset(new Mountain(graphics));
+    newMap->king1.reset(new King(graphics,120,314));
+    newMap->king2.reset(new King(graphics,490,314));
 
     newMap->mapCollision = std::vector<SDL_Rect>(0);
     std::vector<SDL_Rect> mapmountain(newMap->mountain->getMap().size());
@@ -35,6 +38,8 @@ void Map::draw(Graphic &graphics)
     testcastle->draw(graphics);
     testcastle2->draw(graphics);
     mountain->draw(graphics);
+    king1->draw(graphics);
+    king2->draw(graphics);
 }
 
 void Map::update(Input &input, Sound &sound)
@@ -42,6 +47,8 @@ void Map::update(Input &input, Sound &sound)
     testcastle->update(input, sound);
     testcastle2->update(input, sound);
     mountain->update(input, sound);
+    king1->update(input, sound);
+    king2->update(input,sound);
 }
 
 void Map::deleteBlock(int index)

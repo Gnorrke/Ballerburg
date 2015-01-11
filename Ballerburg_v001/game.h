@@ -15,6 +15,7 @@ class Input;
 class CastleBlock;
 class Mountain;
 class Map;
+class King;
 
 class Game
 {
@@ -39,6 +40,8 @@ private:
     std::unique_ptr<Cannon> cannon;
     std::unique_ptr<Sound> sounds;
     std::unique_ptr<Map> map;
+
+
 };
 
 #endif // GAME_H

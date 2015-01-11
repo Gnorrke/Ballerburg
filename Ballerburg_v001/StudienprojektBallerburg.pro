@@ -21,7 +21,8 @@ SOURCES += main.cpp \
     block.cpp \
     castleblock.cpp \
     cannon.cpp \
-    map.cpp
+    map.cpp \
+    king.cpp
 
 LIBS += -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_mixer
 
@@ -46,6 +47,7 @@ HEADERS += \
     block.h \
     castleblock.h \
     cannon.h \
-    map.h
+    map.h \
+    king.h
 
 

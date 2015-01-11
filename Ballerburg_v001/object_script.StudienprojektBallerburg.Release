@@ -16,4 +16,5 @@ INPUT(
 ./release\castleblock.o
 ./release\cannon.o
 ./release\map.o
+./release\king.o
 );
