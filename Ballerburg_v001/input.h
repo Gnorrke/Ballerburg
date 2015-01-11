@@ -6,6 +6,8 @@
 
 class Player;
 class Cannonball;
+class Cannon;
+class Graphic;
 
 class Input
 {
@@ -23,7 +25,7 @@ public:
     bool isKeyHeld(SDLKey key);
 
     void checkInput(SDL_Event &event);
-    void moveCannonball(Cannonball& ball);
+    void moveCannonball(Cannon& ball, Graphic &graphics);
 
     int getoffsetX()const;
     int getoffsetY()const;

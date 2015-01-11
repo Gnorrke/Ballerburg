@@ -150,3 +150,8 @@ std::vector<SDL_Rect> Castle::getMap()
     return tmp;
 }
 
+void Castle::deleteBlock(int index)
+{
+    cblocks.erase(cblocks.begin() + index);
+}
+

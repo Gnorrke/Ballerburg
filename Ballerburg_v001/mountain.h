@@ -22,6 +22,8 @@ public:
 
     std::vector<SDL_Rect> getMap();
 
+    void deleteBlock(int index);
+
 private:
     std::vector<std::unique_ptr<MountainBlock>> mblocks;
 };

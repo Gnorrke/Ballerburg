@@ -57,7 +57,9 @@ SOURCES       = main.cpp \
 		mountainblock.cpp \
 		castle.cpp \
 		block.cpp \
-		castleblock.cpp 
+		castleblock.cpp \
+		cannon.cpp \
+		map.cpp 
 OBJECTS       = release/main.o \
 		release/game.o \
 		release/graphic.o \
@@ -72,7 +74,9 @@ OBJECTS       = release/main.o \
 		release/mountainblock.o \
 		release/castle.o \
 		release/block.o \
-		release/castleblock.o
+		release/castleblock.o \
+		release/cannon.o \
+		release/map.o
 
 DIST          = 
 QMAKE_TARGET  = StudienprojektBallerburg
@@ -113,7 +117,7 @@ dist:
 	$(ZIP) StudienprojektBallerburg.zip $(SOURCES) $(DIST) StudienprojektBallerburg.pro C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\spec_pre.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\qdevice.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\device_config.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\common\shell-win32.conf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\qconfig.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axbase.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axbase_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axcontainer.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axserver.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axserver_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_bluetooth.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_clucene_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_concurrent.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_core.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_core_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_declarative.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_declarative_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_designer.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_designer_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_enginio.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_enginio_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_gui.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_gui_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_help.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_help_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimedia.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_network.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_network_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_nfc.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_nfc_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_opengl.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_opengl_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_openglextensions.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_platformsupport_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_positioning.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_positioning_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_printsupport.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qml.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qml_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qmltest.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quick.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quick_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quickwidgets.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_script.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_script_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_scripttools.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sensors.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sensors_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_serialport.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_serialport_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sql.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sql_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_svg.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_svg_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_testlib.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_testlib_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_uitools.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_uitools_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkit.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkit_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkitwidgets.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_websockets.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_websockets_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_widgets.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_widgets_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_winextras.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_winextras_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xml.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xml_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\qt_functions.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\qt_config.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\win32\qt_config.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\win32-g++\qmake.conf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\spec_post.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\exclusive_builds.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\default_pre.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\win32\default_pre.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\resolve_config.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\exclusive_builds_post.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\default_post.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\build_pass.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\win32\console.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\win32\rtti.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\precompile_header.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\warn_on.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\testcase_targets.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\exceptions.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\yacc.prf C:\Programme\Qt\Qt5.3.1\5.3\mingw482_32\mkspecs\features\lex.prf StudienprojektBallerburg.pro  NO_PCH_SOURCES YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\game.o release\graphic.o release\sprite.o release\animatedsprite.o release\input.o release\tracer.o release\sound.o release\backdrop.o release\mountain.o release\cannonball.o release\mountainblock.o release\castle.o release\block.o release\castleblock.o
+	-$(DEL_FILE) release\main.o release\game.o release\graphic.o release\sprite.o release\animatedsprite.o release\input.o release\tracer.o release\sound.o release\backdrop.o release\mountain.o release\cannonball.o release\mountainblock.o release\castle.o release\block.o release\castleblock.o release\cannon.o release\map.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -202,6 +206,13 @@ release/game.o: game.cpp game.h \
 		backdrop.h \
 		cannonball.h \
 		circle.h \
+		castle.h \
+		castleblock.h \
+		block.h \
+		map.h \
+		mountain.h \
+		mountainblock.h \
+		cannon.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_mixer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\game.o game.cpp
 
@@ -328,8 +339,7 @@ release/input.o: input.cpp input.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
-		cannonball.h \
-		circle.h
+		cannon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\input.o input.cpp
 
 release/tracer.o: tracer.cpp tracer.h
@@ -387,6 +397,7 @@ release/backdrop.o: backdrop.cpp backdrop.h \
 
 release/mountain.o: mountain.cpp mountain.h \
 		mountainblock.h \
+		block.h \
 		graphic.h \
 		sprite.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
@@ -453,46 +464,12 @@ release/cannonball.o: cannonball.cpp cannonball.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
 		graphic.h \
-		tracer.h
+		tracer.h \
+		block.h \
+		cannon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cannonball.o cannonball.cpp
 
 release/mountainblock.o: mountainblock.cpp mountainblock.h \
-		sprite.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_config.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_platform.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_config_win32.h \
-		C:/Resources/SDL-1.2.15/include/SDL/begin_code.h \
-		C:/Resources/SDL-1.2.15/include/SDL/close_code.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_audio.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_error.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_endian.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_mutex.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_thread.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_rwops.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_cdrom.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_cpuinfo.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_events.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_active.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_keyboard.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_keysym.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_mouse.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_video.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_joystick.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
-		input.h \
-		sound.h \
-		C:/Resources/SDL-1.2.15/include/sdl/SDL_mixer.h \
-		C:/Resources/SDL-1.2.15/include/sdl/SDL_types.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mountainblock.o mountainblock.cpp
-
-release/castle.o: castle.cpp castle.h \
-		castleblock.h \
 		block.h \
 		graphic.h \
 		sprite.h \
@@ -522,7 +499,41 @@ release/castle.o: castle.cpp castle.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mountainblock.o mountainblock.cpp
+
+release/castle.o: castle.cpp castle.h \
+		castleblock.h \
+		block.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_platform.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config_win32.h \
+		C:/Resources/SDL-1.2.15/include/SDL/begin_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/close_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_audio.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_error.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_endian.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mutex.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_thread.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_rwops.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cdrom.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cpuinfo.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_events.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_active.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keyboard.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keysym.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mouse.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_video.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_joystick.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
+		graphic.h \
+		sprite.h \
 		sound.h \
 		C:/Resources/SDL-1.2.15/include/sdl/SDL_mixer.h \
 		C:/Resources/SDL-1.2.15/include/sdl/SDL_types.h
@@ -557,10 +568,10 @@ release/block.o: block.cpp block.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
-		sprite.h \
 		sound.h \
 		C:/Resources/SDL-1.2.15/include/sdl/SDL_mixer.h \
-		C:/Resources/SDL-1.2.15/include/sdl/SDL_types.h
+		C:/Resources/SDL-1.2.15/include/sdl/SDL_types.h \
+		sprite.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\block.o block.cpp
 
 release/castleblock.o: castleblock.cpp castleblock.h \
@@ -595,6 +606,77 @@ release/castleblock.o: castleblock.cpp castleblock.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\castleblock.o castleblock.cpp
+
+release/cannon.o: cannon.cpp cannon.h \
+		graphic.h \
+		block.h \
+		sprite.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_platform.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config_win32.h \
+		C:/Resources/SDL-1.2.15/include/SDL/begin_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/close_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_audio.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_error.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_endian.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mutex.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_thread.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_rwops.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cdrom.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cpuinfo.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_events.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_active.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keyboard.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keysym.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mouse.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_video.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_joystick.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
+		cannonball.h \
+		circle.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cannon.o cannon.cpp
+
+release/map.o: map.cpp map.h \
+		castle.h \
+		castleblock.h \
+		block.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_platform.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config_win32.h \
+		C:/Resources/SDL-1.2.15/include/SDL/begin_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/close_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_audio.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_error.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_endian.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mutex.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_thread.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_rwops.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cdrom.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cpuinfo.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_events.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_active.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keyboard.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keysym.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mouse.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_video.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_joystick.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
+		mountain.h \
+		mountainblock.h \
+		graphic.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\map.o map.cpp
 
 ####### Install
 

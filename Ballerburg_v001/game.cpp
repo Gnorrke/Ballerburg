@@ -6,7 +6,9 @@
 #include "backdrop.h"
 #include "cannonball.h"
 #include "castle.h"
+#include "map.h"
 #include "mountain.h"
+#include "cannon.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
 #include <iostream>
@@ -35,24 +37,10 @@ void Game::gameLoop()
 
 
     background.reset(new Backdrop(graphics));
-    testcastle.reset(new Castle(graphics, 50));
-    testcastle2.reset(new Castle(graphics, 420));
-    cannonball.reset(new Cannonball(graphics, 120, 0));
-    mountain.reset(new Mountain(graphics));
-
-    std::vector<SDL_Rect> map(mountain->getMap().size() + testcastle->getMap().size() + testcastle2->getMap().size());
-    std::vector<SDL_Rect> mapmountain(mountain->getMap().size());
-    std::vector<SDL_Rect> maptestcastle1(testcastle->getMap().size());
-    std::vector<SDL_Rect> maptestcastle2(testcastle2->getMap().size());
-
-    mapmountain = mountain->getMap();
-    maptestcastle1 = testcastle->getMap();
-    maptestcastle2 = testcastle2->getMap();
-    map.insert(map.end(), mapmountain.begin(), mapmountain.end() );
-    map.insert(map.end(), maptestcastle1.begin(), maptestcastle1.end() );
-    map.insert(map.end(), maptestcastle2.begin(), maptestcastle2.end() );
-
+    map.reset(Map::createMap(graphics));
+    cannon.reset(new Cannon(graphics, 70, 235));
     sounds.reset(new Sound());
+
     bool running = true;
 
     int lastUpdatedTime = SDL_GetTicks();
@@ -66,7 +54,7 @@ void Game::gameLoop()
         while(SDL_PollEvent(&event))
         {
             input.checkInput(event);
-            input.moveCannonball(*cannonball);
+            input.moveCannonball(*cannon, graphics);
         }
 
         //exit game
@@ -75,7 +63,7 @@ void Game::gameLoop()
         const int curTime = SDL_GetTicks();
         const unsigned int elapsedTime = curTime - lastUpdatedTime;
 
-        update(elapsedTime, map, input, *sounds);
+        update(elapsedTime, *map, input, *sounds);
         lastUpdatedTime = curTime;
 
         draw(graphics);
@@ -91,24 +79,18 @@ void Game::gameLoop()
     }
 }
 
-void::Game::update(int elapsedTime, std::vector<SDL_Rect>& map, Input& input, Sound& sound)
+void::Game::update(int elapsedTime, Map& mapParam, Input& input, Sound& sound)
 {
     background->update(elapsedTime);
-    testcastle->update(input, sound);
-    testcastle2->update(input, sound);
-    mountain->update(input, sound);
-    cannonball->update(elapsedTime, map);
+    map->update(input, sound);
+    cannon->update(elapsedTime, mapParam);
 }
 
 void Game::draw(Graphic &graphics)
 {
     graphics.cleanUp();
-
     background->draw(graphics);
-    testcastle->draw(graphics);
-    testcastle2->draw(graphics);
-    mountain->draw(graphics);
-    cannonball->draw(graphics);
-
+    cannon->draw(graphics);
+    map->draw(graphics);
     graphics.flip();
 }

@@ -10,6 +10,8 @@ class Map;
 class Sprite;
 class Graphic;
 class SDL_Rect;
+class Block;
+class Map;
 
 
 class Cannonball
@@ -17,25 +19,28 @@ class Cannonball
 public:
     Cannonball(Graphic &graphic, int posX, int posY);
 
-    void update(int elapsedTime, std::vector<SDL_Rect> &map);
+    void update(int elapsedTime, Map &map);
+    void update(int elapsedTime, std::vector<Block> &map);
     void draw(Graphic& graphics);
 
     void moveRight();
     void moveLeft();
+    void moveUp();
+    void moveDown();
+
+    bool hasCollided() { return collided; }
 
 private:
 
     double distance(int x1, int y1, int x2, int y2);
-    bool checkCollision(Circle& A, std::vector<SDL_Rect> &B);
+    bool checkCollision(Circle& A, Map &B);
 
-    void updateX(int elapsedTime, std::vector<SDL_Rect> &map);
-    void updateY(int elapsedTime, std::vector<SDL_Rect> &map);
+    void updateX(int elapsedTime, Map &map);
+    void updateY(int elapsedTime, Map &map);
 
     int posX, posY;
     bool collided;
-    float accelerationX;
     float velocityX, velocityY;
-
 
     Circle collisionCircle;
 

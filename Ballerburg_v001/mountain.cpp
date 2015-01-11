@@ -78,3 +78,8 @@ std::vector<SDL_Rect> Mountain::getMap()
     }
     return tmp;
 }
+
+void Mountain::deleteBlock(int index)
+{
+    mblocks.erase(mblocks.begin() + index);
+}

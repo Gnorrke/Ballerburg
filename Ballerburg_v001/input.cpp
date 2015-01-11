@@ -1,6 +1,6 @@
 #include "input.h"
 #include "SDL/SDL.h"
-#include "cannonball.h"
+#include "cannon.h"
 
 #include <iostream>
 
@@ -88,7 +88,7 @@ void Input::checkInput(SDL_Event& event)
     }
 }
 
-void Input::moveCannonball(Cannonball &ball)
+void Input::moveCannonball(Cannon &ball, Graphic& graphics)
 {
     if (isKeyHeld(SDLK_LEFT)) {
         ball.moveLeft();
@@ -96,6 +96,18 @@ void Input::moveCannonball(Cannonball &ball)
 
     else if (isKeyHeld(SDLK_RIGHT)) {
         ball.moveRight();
+    }
+
+    else if (isKeyHeld(SDLK_UP)) {
+        ball.moveUp();
+    }
+
+    else if (isKeyHeld(SDLK_DOWN)) {
+        ball.moveDown();
+    }
+
+    else if (isKeyHeld(SDLK_SPACE)) {
+        ball.shoot(graphics);
     }
 }
 
