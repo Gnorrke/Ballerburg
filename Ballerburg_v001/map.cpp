@@ -55,13 +55,13 @@ void Map::deleteBlock(int index)
 {
     mapCollision.erase(mapCollision.begin() + index);
 
-    int sizeMountain = mountain->getMap().size() - 1;
-    int sizeTestCastle = testcastle->getMap().size() - 1;
-    int sizeTestCastle2 = testcastle2->getMap().size() - 1;
+    int sizeMountain = mountain->getMap().size();
+    int sizeTestCastle = testcastle->getMap().size();
+    int sizeTestCastle2 = testcastle2->getMap().size();
 
-    if (0 <= index && index < sizeMountain) mountain->deleteBlock(index - (sizeTestCastle - sizeTestCastle2));
-    else if (sizeMountain <= index && index < sizeMountain + sizeTestCastle) testcastle->deleteBlock(index - (sizeTestCastle2));
-    else if (sizeMountain + sizeTestCastle <= index && index < sizeTestCastle + sizeMountain + sizeTestCastle2) testcastle2->deleteBlock(index - (sizeMountain - sizeTestCastle));
+    if (0 <= index && index < sizeMountain) mountain->deleteBlock(index);
+    else if (sizeMountain <= index && index < sizeMountain + sizeTestCastle) testcastle->deleteBlock(index - sizeMountain);
+    else if (sizeMountain + sizeTestCastle <= index && index < sizeTestCastle + sizeMountain + sizeTestCastle2) testcastle2->deleteBlock(index - (sizeMountain + sizeTestCastle));
 
     std::cout << mapCollision.size() << std::endl;
     std::cout << mountain->getMap().size() + testcastle->getMap().size() + testcastle2->getMap().size()<< std::endl;
