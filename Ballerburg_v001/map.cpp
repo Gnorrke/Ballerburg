@@ -30,6 +30,9 @@ Map* Map::createMap(Graphic& graphics)
     newMap->mapCollision.insert(newMap->mapCollision.end(), maptestcastle1.begin(), maptestcastle1.end() );
     newMap->mapCollision.insert(newMap->mapCollision.end(), maptestcastle2.begin(), maptestcastle2.end() );
 
+    newMap->mapCollision.insert(newMap->mapCollision.end(), newMap->king1->getCollisionRectangle());
+    newMap->mapCollision.insert(newMap->mapCollision.end(), newMap->king2->getCollisionRectangle());
+
     return newMap;
 }
 
@@ -62,7 +65,8 @@ void Map::deleteBlock(int index)
     if (0 <= index && index < sizeMountain) mountain->deleteBlock(index);
     else if (sizeMountain <= index && index < sizeMountain + sizeTestCastle) testcastle->deleteBlock(index - sizeMountain);
     else if (sizeMountain + sizeTestCastle <= index && index < sizeTestCastle + sizeMountain + sizeTestCastle2) testcastle2->deleteBlock(index - (sizeMountain + sizeTestCastle));
-
+    else if ((int) mapCollision.size() - 1 == index) king1->disable();
+    else if ((int) mapCollision.size() == index) king2->disable();
     std::cout << mapCollision.size() << std::endl;
     std::cout << mountain->getMap().size() + testcastle->getMap().size() + testcastle2->getMap().size()<< std::endl;
 

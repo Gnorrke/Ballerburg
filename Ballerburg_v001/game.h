@@ -23,14 +23,11 @@ public:
     Game();
     ~Game();
 
-    static int kTileSize;
-    static int kSmallPlayerWidth;
-    static int kSmallPlayerHeight;
-    static int kBigPlayerWidth;
-    static int kBigPlayerHeight;
     static int kScreenWidth;
     static int kScreenHeight;
+    static bool running;
 
+    static void endGame() { Game::running = false; }
 private:
     void gameLoop();
     void update(int elapsedTime, Map &map, Input &input, Sound &sound);
@@ -40,7 +37,6 @@ private:
     std::unique_ptr<Cannon> cannon;
     std::unique_ptr<Sound> sounds;
     std::unique_ptr<Map> map;
-
 
 };
 

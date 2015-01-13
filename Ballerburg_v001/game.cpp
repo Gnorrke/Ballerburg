@@ -17,6 +17,7 @@
 const int kFramesPerSecond = 60;
 int Game::kScreenWidth = 640;
 int Game::kScreenHeight = 360;
+bool Game::running = true;
 
 Game::Game()
 {
@@ -36,18 +37,14 @@ void Game::gameLoop()
     Input input;
     SDL_Event event;
 
-
     background.reset(new Backdrop(graphics));
     map.reset(Map::createMap(graphics));
     cannon.reset(new Cannon(graphics, 70, 235));
     sounds.reset(new Sound());
 
-
-    bool running = true;
-
     int lastUpdatedTime = SDL_GetTicks();
 
-    while (running)
+    while (Game::running)
     {
         const int startTime = SDL_GetTicks();
         input.beginNewFrame();

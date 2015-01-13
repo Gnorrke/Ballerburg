@@ -7,6 +7,7 @@ class Sprite;
 class Graphic;
 class Input;
 class Sound;
+class SDL_Rect;
 
 class King
 {
@@ -17,12 +18,17 @@ public:
     void destroy() { delete this; }
 
     void onHit(Input& in, Sound &sound);
+    void disable();
+    SDL_Rect& getCollisionRectangle() { return *collisionRectangle; }
+
+private:
     bool isHit(Input& in);
 
     int posX, posY;
     bool hit;
 
-     std::unique_ptr<Sprite> king;
+    std::unique_ptr<Sprite> king;
+    SDL_Rect* collisionRectangle;
 };
 
 #endif // KING_H

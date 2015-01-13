@@ -36,8 +36,6 @@ public:
     std::unique_ptr<King> king1;
     std::unique_ptr<King> king2;
 
-
-
 };
 
 #endif // MAP_H
