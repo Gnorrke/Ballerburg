@@ -10,6 +10,7 @@ class Input;
 class Sound;
 class Graphic;
 class Castle;
+class Sprite;
 class Block;
 class Mountain;
 class King;

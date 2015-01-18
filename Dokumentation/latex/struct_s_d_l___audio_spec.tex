@@ -1,0 +1,102 @@
+\section{S\+D\+L\+\_\+\+Audio\+Spec Struct Reference}
+\label{struct_s_d_l___audio_spec}\index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+audio.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$callback)(void $\ast$userdata
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf freq}
+\item 
+Uint16 {\bf format}
+\item 
+Uint8 {\bf channels}
+\item 
+Uint8 {\bf silence}
+\item 
+Uint16 {\bf samples}
+\item 
+Uint16 {\bf padding}
+\item 
+Uint32 {\bf size}
+\item 
+Uint8 $\ast$ {\bfseries stream}\label{struct_s_d_l___audio_spec_aacbebdd2696a8abec7ac5bed473eb5c5}
+
+\item 
+Uint8 int {\bfseries len}\label{struct_s_d_l___audio_spec_ab6f999b1bf0ee080b42f4f6a5f59ee47}
+
+\item 
+{\bf void} $\ast$ {\bfseries userdata}\label{struct_s_d_l___audio_spec_aeec9481666f5f0982c98d3878f175d9b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When filling in the desired audio spec structure,
+\begin{DoxyItemize}
+\item \textquotesingle{}desired-\/$>$freq\textquotesingle{} should be the desired audio frequency in samples-\/per-\/second.
+\item \textquotesingle{}desired-\/$>$format\textquotesingle{} should be the desired audio format.
+\item \textquotesingle{}desired-\/$>$samples\textquotesingle{} is the desired size of the audio buffer, in samples. This number should be a power of two, and may be adjusted by the audio driver to a value more suitable for the hardware. Good values seem to range between 512 and 8096 inclusive, depending on the application and C\+P\+U speed. Smaller values yield faster response time, but can lead to underflow if the application is doing heavy processing and cannot fill the audio buffer in time. A stereo sample consists of both right and left channels in L\+R ordering. Note that the number of samples is directly related to time by the following formula\+: ms = (samples$\ast$1000)/freq
+\item \textquotesingle{}desired-\/$>$size\textquotesingle{} is the size in bytes of the audio buffer, and is calculated by \doxyref{S\+D\+L\+\_\+\+Open\+Audio()}{p.}{_s_d_l__audio_8h_a2edf30e7747584e28041b4986f89f440}.
+\item \textquotesingle{}desired-\/$>$silence\textquotesingle{} is the value used to set the buffer to silence, and is calculated by \doxyref{S\+D\+L\+\_\+\+Open\+Audio()}{p.}{_s_d_l__audio_8h_a2edf30e7747584e28041b4986f89f440}.
+\item \textquotesingle{}desired-\/$>$callback\textquotesingle{} should be set to a function that will be called when the audio device is ready for more data. It is passed a pointer to the audio buffer, and the length in bytes of the audio buffer. This function usually runs in a separate thread, and so you should protect data structures that it accesses by calling S\+D\+L\+\_\+\+Lock\+Audio() and S\+D\+L\+\_\+\+Unlock\+Audio() in your code.
+\item \textquotesingle{}desired-\/$>$userdata\textquotesingle{} is passed as the first parameter to your callback function.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The calculated values in this structure are calculated by \doxyref{S\+D\+L\+\_\+\+Open\+Audio()}{p.}{_s_d_l__audio_8h_a2edf30e7747584e28041b4986f89f440} 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!void@{void}}
+\index{void@{void}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{void}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Audio\+Spec\+::void (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{callback}
+\end{DoxyParamCaption}
+)}\label{struct_s_d_l___audio_spec_ab8a359069a60f225ab6e35a55dfb3d92}
+This function is called when the audio device needs more data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em stream} & A pointer to the audio data buffer \\
+\hline
+\mbox{\tt in}  & {\em len} & The length of the audio buffer in bytes.\\
+\hline
+\end{DoxyParams}
+Once the callback returns, the buffer will no longer be valid. Stereo samples are stored in a L\+R\+L\+R\+L\+R ordering. 
+
+\subsection{Member Data Documentation}
+\index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!channels@{channels}}
+\index{channels@{channels}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{channels}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Audio\+Spec\+::channels}\label{struct_s_d_l___audio_spec_a31fe8b3710cf23bbef24be8a1749fe46}
+Number of channels\+: 1 mono, 2 stereo \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!format@{format}}
+\index{format@{format}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+Spec\+::format}\label{struct_s_d_l___audio_spec_a6eda133f50c3be8d0ba91f8dee830be8}
+Audio data format \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!freq@{freq}}
+\index{freq@{freq}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{freq}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+Spec\+::freq}\label{struct_s_d_l___audio_spec_a8b823ce46fc2e448cf7e6fc141aff6b2}
+D\+S\+P frequency -- samples per second \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!padding@{padding}}
+\index{padding@{padding}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{padding}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+Spec\+::padding}\label{struct_s_d_l___audio_spec_a738371fc13b54cefef4db16994abeeb6}
+Necessary for some compile environments \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!samples@{samples}}
+\index{samples@{samples}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{samples}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+Spec\+::samples}\label{struct_s_d_l___audio_spec_a2cdf5e885808c10bfa2810b706e69f95}
+Audio buffer size in samples (power of 2) \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!silence@{silence}}
+\index{silence@{silence}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{silence}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Audio\+Spec\+::silence}\label{struct_s_d_l___audio_spec_addc462c8a806e6c122eccf63482048f6}
+Audio buffer silence value (calculated) \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!size@{size}}
+\index{size@{size}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Audio\+Spec\+::size}\label{struct_s_d_l___audio_spec_a154cf44743ecec78c36dc6c827dd2fdb}
+Audio buffer size in bytes (calculated) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/{\bf S\+D\+L\+\_\+audio.\+h}\end{DoxyCompactItemize}

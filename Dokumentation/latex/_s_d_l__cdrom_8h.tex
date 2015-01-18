@@ -1,0 +1,262 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+cdrom.h File Reference}
+\label{_s_d_l__cdrom_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+cdrom.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+cdrom.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf S\+D\+L\+\_\+\+C\+Dtrack}
+\item 
+struct {\bf S\+D\+L\+\_\+\+C\+D}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S}~99
+\item 
+\#define {\bf C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E}(status)~((int)(status) $>$ 0)
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Track Types}\par
+{\em The types of C\+D-\/\+R\+O\+M track possible }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+A\+U\+D\+I\+O\+\_\+\+T\+R\+A\+C\+K}~0x00\label{_s_d_l__cdrom_8h_ad6442a4d4fceea628912110513f66bb4}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+A\+C\+K}~0x04\label{_s_d_l__cdrom_8h_a9ca198a0fb15cf28ca1b0516e8118a14}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Frames / M\+S\+F Conversion Functions}\par
+{\em Conversion functions from frames to Minute/\+Second/\+Frames and vice versa }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries C\+D\+\_\+\+F\+P\+S}~75\label{_s_d_l__cdrom_8h_a911576d3f90250544bf5376c52f9cb6f}
+
+\item 
+\#define {\bfseries F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F}(f,  M,  S,  F)
+\item 
+\#define {\bfseries M\+S\+F\+\_\+\+T\+O\+\_\+\+F\+R\+A\+M\+E\+S}(M,  S,  F)~((M)$\ast$60$\ast$C\+D\+\_\+\+F\+P\+S+(S)$\ast$C\+D\+\_\+\+F\+P\+S+(F))\label{_s_d_l__cdrom_8h_a4a715d6b5827deeae6629aaec24a3453}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+C\+Dtrack} {\bfseries S\+D\+L\+\_\+\+C\+Dtrack}\label{_s_d_l__cdrom_8h_af9d80a202083920dd939bbd7c7482581}
+
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+C\+D} {\bf S\+D\+L\+\_\+\+C\+D}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf C\+Dstatus} \{ \\*
+{\bfseries C\+D\+\_\+\+T\+R\+A\+Y\+E\+M\+P\+T\+Y}, 
+{\bfseries C\+D\+\_\+\+S\+T\+O\+P\+P\+E\+D}, 
+{\bfseries C\+D\+\_\+\+P\+L\+A\+Y\+I\+N\+G}, 
+{\bfseries C\+D\+\_\+\+P\+A\+U\+S\+E\+D}, 
+\\*
+{\bfseries C\+D\+\_\+\+E\+R\+R\+O\+R} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Num\+Drives} (void)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} const char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Name} (int drive)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+C\+D} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Open} (int drive)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf C\+Dstatus} {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Status} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Play\+Tracks} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom, int start\+\_\+track, int start\+\_\+frame, int ntracks, int nframes)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Play} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom, int start, int length)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Pause} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Resume} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Stop} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Eject} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+C\+D\+Close} ({\bf S\+D\+L\+\_\+\+C\+D} $\ast$cdrom)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the C\+D-\/audio control A\+P\+I for Simple Direct\+Media Layer
+
+In order to use these functions, \doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8} must have been called with the S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+D\+R\+O\+M flag. This causes S\+D\+L to scan the system for C\+D-\/\+R\+O\+M drives, and load appropriate drivers. 
+
+\subsection{Macro Definition Documentation}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E@{C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E}}
+\index{C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E@{C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+\_\+\+I\+N\+D\+R\+I\+V\+E(
+\begin{DoxyParamCaption}
+\item[{}]{status}
+\end{DoxyParamCaption}
+)~((int)(status) $>$ 0)}\label{_s_d_l__cdrom_8h_a124d20fb441acc8db9f838ddef5864f5}
+Given a status, returns true if there\textquotesingle{}s a disk in the drive \index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F@{F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F}}
+\index{F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F@{F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+M\+S\+F(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{M, }
+\item[{}]{S, }
+\item[{}]{F}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_adb3ec0ecef53497f305d77c66018dbfd}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                   \(\backslash\)
+    int value = f;                          \(\backslash\)
+    *(F) = value%CD\_FPS;                        \(\backslash\)
+    value /= CD\_FPS;                        \(\backslash\)
+    *(S) = value%60;                        \(\backslash\)
+    value /= 60;                            \(\backslash\)
+    *(M) = value;                           \(\backslash\)
+\}
+\end{DoxyCode}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S@{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S}}
+\index{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S@{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S~99}\label{_s_d_l__cdrom_8h_a39eb10e45614b6b607fe7649c9dd75da}
+The maximum number of C\+D-\/\+R\+O\+M tracks on a disk 
+
+\subsection{Typedef Documentation}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
+\index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+C\+D}  {\bf S\+D\+L\+\_\+\+C\+D}}\label{_s_d_l__cdrom_8h_a935dd4f32061b4ce72d9bf7c9175893a}
+This structure is only current as of the last call to \doxyref{S\+D\+L\+\_\+\+C\+D\+Status()}{p.}{_s_d_l__cdrom_8h_a696066cb9444206195dfad7f77f2b38c} 
+
+\subsection{Enumeration Type Documentation}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!C\+Dstatus@{C\+Dstatus}}
+\index{C\+Dstatus@{C\+Dstatus}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{C\+Dstatus}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf C\+Dstatus}}\label{_s_d_l__cdrom_8h_ae689551deb9bd434bce7e4c39e45e15d}
+The possible states which a C\+D-\/\+R\+O\+M drive can be in. 
+
+\subsection{Function Documentation}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Close@{S\+D\+L\+\_\+\+C\+D\+Close}}
+\index{S\+D\+L\+\_\+\+C\+D\+Close@{S\+D\+L\+\_\+\+C\+D\+Close}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Close (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_aa6e4eae7d3d48fc247e15abf7edcc246}
+Closes the handle for the C\+D-\/\+R\+O\+M drive \index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Eject@{S\+D\+L\+\_\+\+C\+D\+Eject}}
+\index{S\+D\+L\+\_\+\+C\+D\+Eject@{S\+D\+L\+\_\+\+C\+D\+Eject}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Eject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Eject (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a7af6a6e13e9994156995f836e2724ac1}
+Eject C\+D-\/\+R\+O\+M \begin{DoxyReturn}{Returns}
+returns 0, or -\/1 on error 
+\end{DoxyReturn}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Name@{S\+D\+L\+\_\+\+C\+D\+Name}}
+\index{S\+D\+L\+\_\+\+C\+D\+Name@{S\+D\+L\+\_\+\+C\+D\+Name}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} const char$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{drive}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a7aeb8d2057662eb65cc26d2fabc3897f}
+Returns a human-\/readable, system-\/dependent identifier for the C\+D-\/\+R\+O\+M. Example\+:
+\begin{DoxyItemize}
+\item \char`\"{}/dev/cdrom\char`\"{}
+\item \char`\"{}\+E\+:\char`\"{}
+\item \char`\"{}/dev/disk/ide/1/master\char`\"{} 
+\end{DoxyItemize}\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Num\+Drives@{S\+D\+L\+\_\+\+C\+D\+Num\+Drives}}
+\index{S\+D\+L\+\_\+\+C\+D\+Num\+Drives@{S\+D\+L\+\_\+\+C\+D\+Num\+Drives}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Num\+Drives}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Num\+Drives (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a1d068354396e0f955b181dbf368bdd2f}
+Returns the number of C\+D-\/\+R\+O\+M drives on the system, or -\/1 if \doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8} has not been called with the S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+D\+R\+O\+M flag. \index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Open@{S\+D\+L\+\_\+\+C\+D\+Open}}
+\index{S\+D\+L\+\_\+\+C\+D\+Open@{S\+D\+L\+\_\+\+C\+D\+Open}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+C\+D}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Open (
+\begin{DoxyParamCaption}
+\item[{int}]{drive}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_aa19b41f1ed97048eaf888e2fc7141707}
+Opens a C\+D-\/\+R\+O\+M drive for access. It returns a drive handle on success, or N\+U\+L\+L if the drive was invalid or busy. This newly opened C\+D-\/\+R\+O\+M becomes the default C\+D used when other C\+D functions are passed a N\+U\+L\+L C\+D-\/\+R\+O\+M handle. Drives are numbered starting with 0. Drive 0 is the system default C\+D-\/\+R\+O\+M. \index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Pause@{S\+D\+L\+\_\+\+C\+D\+Pause}}
+\index{S\+D\+L\+\_\+\+C\+D\+Pause@{S\+D\+L\+\_\+\+C\+D\+Pause}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Pause}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Pause (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a87dad4514f89a7e0df5166daf5d41755}
+Pause play \begin{DoxyReturn}{Returns}
+returns 0, or -\/1 on error 
+\end{DoxyReturn}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Play@{S\+D\+L\+\_\+\+C\+D\+Play}}
+\index{S\+D\+L\+\_\+\+C\+D\+Play@{S\+D\+L\+\_\+\+C\+D\+Play}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Play}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Play (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom, }
+\item[{int}]{start, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a993353ee8a87cb4e872a518d8cfaf6ca}
+Play the given C\+D starting at \textquotesingle{}start\textquotesingle{} frame for \textquotesingle{}length\textquotesingle{} frames. \begin{DoxyReturn}{Returns}
+It returns 0, or -\/1 if there was an error. 
+\end{DoxyReturn}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Play\+Tracks@{S\+D\+L\+\_\+\+C\+D\+Play\+Tracks}}
+\index{S\+D\+L\+\_\+\+C\+D\+Play\+Tracks@{S\+D\+L\+\_\+\+C\+D\+Play\+Tracks}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Play\+Tracks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Play\+Tracks (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom, }
+\item[{int}]{start\+\_\+track, }
+\item[{int}]{start\+\_\+frame, }
+\item[{int}]{ntracks, }
+\item[{int}]{nframes}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_ad691acb785f309d632222573eda0957d}
+Play the given C\+D starting at \textquotesingle{}start\+\_\+track\textquotesingle{} and \textquotesingle{}start\+\_\+frame\textquotesingle{} for \textquotesingle{}ntracks\textquotesingle{} tracks and \textquotesingle{}nframes\textquotesingle{} frames. If both \textquotesingle{}ntrack\textquotesingle{} and \textquotesingle{}nframe\textquotesingle{} are 0, play until the end of the C\+D. This function will skip data tracks. This function should only be called after calling \doxyref{S\+D\+L\+\_\+\+C\+D\+Status()}{p.}{_s_d_l__cdrom_8h_a696066cb9444206195dfad7f77f2b38c} to get track information about the C\+D. For example\+: 
+\begin{DoxyCode}
+1 // Play entire CD:
+2 if ( CD\_INDRIVE(SDL\_CDStatus(cdrom)) )
+3     SDL\_CDPlayTracks(cdrom, 0, 0, 0, 0);
+4 // Play last track:
+5 if ( CD\_INDRIVE(SDL\_CDStatus(cdrom)) ) \{
+6     SDL\_CDPlayTracks(cdrom, cdrom->numtracks-1, 0, 0, 0);
+7 \}
+8 // Play first and second track and 10 seconds of third track:
+9 if ( CD\_INDRIVE(SDL\_CDStatus(cdrom)) )
+10     SDL\_CDPlayTracks(cdrom, 0, 0, 2, 10);
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns 0, or -\/1 if there was an error. 
+\end{DoxyReturn}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Resume@{S\+D\+L\+\_\+\+C\+D\+Resume}}
+\index{S\+D\+L\+\_\+\+C\+D\+Resume@{S\+D\+L\+\_\+\+C\+D\+Resume}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Resume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Resume (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a345e19cb56b38baaa56e521a16194cfa}
+Resume play \begin{DoxyReturn}{Returns}
+returns 0, or -\/1 on error 
+\end{DoxyReturn}
+\index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Status@{S\+D\+L\+\_\+\+C\+D\+Status}}
+\index{S\+D\+L\+\_\+\+C\+D\+Status@{S\+D\+L\+\_\+\+C\+D\+Status}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf C\+Dstatus} {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_a696066cb9444206195dfad7f77f2b38c}
+This function returns the current status of the given drive. If the drive has a C\+D in it, the table of contents of the C\+D and current play position of the C\+D will be stored in the \doxyref{S\+D\+L\+\_\+\+C\+D}{p.}{struct_s_d_l___c_d} structure. \index{S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}!S\+D\+L\+\_\+\+C\+D\+Stop@{S\+D\+L\+\_\+\+C\+D\+Stop}}
+\index{S\+D\+L\+\_\+\+C\+D\+Stop@{S\+D\+L\+\_\+\+C\+D\+Stop}!S\+D\+L\+\_\+cdrom.\+h@{S\+D\+L\+\_\+cdrom.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+C\+D\+Stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+C\+D\+Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+C\+D} $\ast$}]{cdrom}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__cdrom_8h_afe244b2c7a9cb3fbc6c3fb96b373f9b2}
+Stop play \begin{DoxyReturn}{Returns}
+returns 0, or -\/1 on error 
+\end{DoxyReturn}

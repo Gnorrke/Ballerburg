@@ -1,0 +1,356 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+stdinc.h File Reference}
+\label{_s_d_l__stdinc_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+stdinc.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+stdinc.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Uint64}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+arraysize}(array)~(sizeof(array)/sizeof(array[0]))
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+T\+A\+B\+L\+E\+S\+I\+Z\+E}(table)~{\bf S\+D\+L\+\_\+arraysize}(table)\label{_s_d_l__stdinc_8h_ac9d76e3a8ba6474d1714f13ca3c9d7e6}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+reinterpret\+\_\+cast}(type,  expression)~((type)(expression))\label{_s_d_l__stdinc_8h_a9891f68858953b42cbc18e68a441e39d}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+static\+\_\+cast}(type,  expression)~((type)(expression))\label{_s_d_l__stdinc_8h_a774ea048cf20bd5f86f31da56d2937ff}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+stack\+\_\+alloc}(type,  count)~(type$\ast$)S\+D\+L\+\_\+malloc(sizeof(type)$\ast$(count))\label{_s_d_l__stdinc_8h_a6c6778dd1ee11d2edce116271c822fbd}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+stack\+\_\+free}(data)~S\+D\+L\+\_\+free(data)\label{_s_d_l__stdinc_8h_aca62cdb628b52c2f1f2a3004ddf721ce}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+abs}(X)~((X) $<$ 0 ? -\/(X) \+: (X))\label{_s_d_l__stdinc_8h_a6ffbc96775d304bab561d191e71874d5}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+min}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))\label{_s_d_l__stdinc_8h_ad93f0b2393a3aa89f9ce24ac2642744e}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+max}(x,  y)~(((x) $>$ (y)) ? (x) \+: (y))\label{_s_d_l__stdinc_8h_ae3ab6e7584a16c7217ca0a4622212b61}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+isdigit}(X)~(((X) $>$= \textquotesingle{}0\textquotesingle{}) \&\& ((X) $<$= \textquotesingle{}9\textquotesingle{}))\label{_s_d_l__stdinc_8h_a6825ac86a89e741c6a05f1b36ef47db5}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+isspace}(X)~(((X) == \textquotesingle{} \textquotesingle{}) $\vert$$\vert$ ((X) == \textquotesingle{}\textbackslash{}t\textquotesingle{}) $\vert$$\vert$ ((X) == \textquotesingle{}\textbackslash{}r\textquotesingle{}) $\vert$$\vert$ ((X) == \textquotesingle{}\textbackslash{}n\textquotesingle{}))\label{_s_d_l__stdinc_8h_aea90c573db7b50355f25355fa017a580}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+toupper}(X)~(((X) $>$= \textquotesingle{}a\textquotesingle{}) \&\& ((X) $<$= \textquotesingle{}z\textquotesingle{}) ? (\textquotesingle{}A\textquotesingle{}+((X)-\/\textquotesingle{}a\textquotesingle{})) \+: (X))\label{_s_d_l__stdinc_8h_a96a014e239602e28e6f60e55d1b4575c}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+tolower}(X)~(((X) $>$= \textquotesingle{}A\textquotesingle{}) \&\& ((X) $<$= \textquotesingle{}Z\textquotesingle{}) ? (\textquotesingle{}a\textquotesingle{}+((X)-\/\textquotesingle{}A\textquotesingle{})) \+: (X))\label{_s_d_l__stdinc_8h_a699ba624e92f37cca06fe4e3d2585a9a}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+memset4}(dst,  val,  len)
+\item 
+\#define {\bfseries S\+D\+L\+\_\+memcpy4}(dst,  src,  len)~S\+D\+L\+\_\+memcpy(dst, src, (len) $<$$<$ 2)\label{_s_d_l__stdinc_8h_a2e2865567a13077bfe2064d6e3676882}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+memmove}(dst,  src,  len)
+\item 
+\#define {\bfseries S\+D\+L\+\_\+itoa}(value,  string,  radix)~S\+D\+L\+\_\+ltoa((long)value, string, radix)\label{_s_d_l__stdinc_8h_a4d3cec8968ce9507b75c9bd52b19c5d2}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+uitoa}(value,  string,  radix)~S\+D\+L\+\_\+ultoa((long)value, string, radix)\label{_s_d_l__stdinc_8h_ab3883d5bd0c48bf216b8b141efb01652}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+atoi}(X)~S\+D\+L\+\_\+strtol(X, {\bf N\+U\+L\+L}, 0)\label{_s_d_l__stdinc_8h_a3a45553689babd8457e452ea29a9b79b}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+atof}(X)~S\+D\+L\+\_\+strtod(X, {\bf N\+U\+L\+L})\label{_s_d_l__stdinc_8h_ad066e3362eba7fe2c11fdefc18d06c7f}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+iconv\+\_\+utf8\+\_\+locale}(S)~{\bf S\+D\+L\+\_\+iconv\+\_\+string}(\char`\"{}\char`\"{}, \char`\"{}U\+T\+F-\/8\char`\"{}, S, S\+D\+L\+\_\+strlen(S)+1)\label{_s_d_l__stdinc_8h_a773e5f83e392495ad8abab8d71aa84c6}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+iconv\+\_\+utf8\+\_\+ucs2}(S)~(Uint16 $\ast$){\bf S\+D\+L\+\_\+iconv\+\_\+string}(\char`\"{}U\+C\+S-\/2\char`\"{}, \char`\"{}U\+T\+F-\/8\char`\"{}, S, S\+D\+L\+\_\+strlen(S)+1)\label{_s_d_l__stdinc_8h_a59cd43c02306558671fe05c23284ab3b}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+iconv\+\_\+utf8\+\_\+ucs4}(S)~(Uint32 $\ast$){\bf S\+D\+L\+\_\+iconv\+\_\+string}(\char`\"{}U\+C\+S-\/4\char`\"{}, \char`\"{}U\+T\+F-\/8\char`\"{}, S, S\+D\+L\+\_\+strlen(S)+1)\label{_s_d_l__stdinc_8h_acdced7c8985d280d87e659f583a5479e}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf S\+D\+L\+\_\+\+I\+C\+O\+N\+V Error Codes}\par
+{\em The S\+D\+L implementation of iconv() returns these error codes }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E\+R\+R\+O\+R}~(size\+\_\+t)-\/1\label{_s_d_l__stdinc_8h_ada422bea61b05ed228c4f42e4aea2144}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E2\+B\+I\+G}~(size\+\_\+t)-\/2\label{_s_d_l__stdinc_8h_a8147462b96bda427f0b41125e645b9ab}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E\+I\+L\+S\+E\+Q}~(size\+\_\+t)-\/3\label{_s_d_l__stdinc_8h_adc8b6997623c449e7ed53a605faa9eb0}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E\+I\+N\+V\+A\+L}~(size\+\_\+t)-\/4\label{_s_d_l__stdinc_8h_a03d30a2857731df69d31ffa802424a9e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \+\_\+\+S\+D\+L\+\_\+iconv\+\_\+t $\ast$ {\bfseries S\+D\+L\+\_\+iconv\+\_\+t}\label{_s_d_l__stdinc_8h_a37ee875bea397030104764a92857ae79}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+malloc} (size\+\_\+t size)\label{_s_d_l__stdinc_8h_aa0843b5fde7f958b8eea238304aa5b2d}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+calloc} (size\+\_\+t nmemb, size\+\_\+t size)\label{_s_d_l__stdinc_8h_aee91cc8889e6d920b9bb6970b0274c96}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+realloc} (void $\ast$mem, size\+\_\+t size)\label{_s_d_l__stdinc_8h_a5123a34a3c99b29c423893aac78b4454}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+free} (void $\ast$mem)\label{_s_d_l__stdinc_8h_a0e4ade894d550ada1fa19dc2d46e88b8}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+getenv} (const char $\ast$name)\label{_s_d_l__stdinc_8h_a16ef7a64cf619b95d337ed87cf73cbaa}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+putenv} (const char $\ast$variable)\label{_s_d_l__stdinc_8h_a2563f8649eff13f301e12189b607c2c4}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+qsort} (void $\ast$base, size\+\_\+t nmemb, size\+\_\+t size, int($\ast$compare)(const void $\ast$, const void $\ast$))\label{_s_d_l__stdinc_8h_ae4e475d53a51a90992745186a20d1f01}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+memset} (void $\ast$dst, int c, size\+\_\+t len)\label{_s_d_l__stdinc_8h_a1aed2b44e47f090a85a75f359385acfe}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+memcpy} (void $\ast$dst, const void $\ast$src, size\+\_\+t len)\label{_s_d_l__stdinc_8h_ae225a37bf4a348e013474a193b1bfabc}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+revcpy} (void $\ast$dst, const void $\ast$src, size\+\_\+t len)\label{_s_d_l__stdinc_8h_ae22fc5d318ac539ebd31edb6f5b2fadf}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+memcmp} (const void $\ast$s1, const void $\ast$s2, size\+\_\+t len)\label{_s_d_l__stdinc_8h_af8e26df545c29284291714410fa7731e}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} size\+\_\+t {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strlen} (const char $\ast$string)\label{_s_d_l__stdinc_8h_a16371ac8bea95cfb560cace79a6c8a15}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} size\+\_\+t {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strlcpy} (char $\ast$dst, const char $\ast$src, size\+\_\+t maxlen)\label{_s_d_l__stdinc_8h_a7ab3cb24c12ac73d6f8422d6ad667f8e}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} size\+\_\+t {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strlcat} (char $\ast$dst, const char $\ast$src, size\+\_\+t maxlen)\label{_s_d_l__stdinc_8h_a67a95e15b395973cc9aaf93033bd484a}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strdup} (const char $\ast$string)\label{_s_d_l__stdinc_8h_a3e3ca7ebc4fd013c3801adbdde12496e}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strrev} (char $\ast$string)\label{_s_d_l__stdinc_8h_a96c0d56ecc7828f47a2833f61bcd98b1}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strupr} (char $\ast$string)\label{_s_d_l__stdinc_8h_a07b7dc927252e252a1c8e5d0ff5e25e1}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strlwr} (char $\ast$string)\label{_s_d_l__stdinc_8h_afd7f2175282b0884b5d4e412ebac0dca}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strchr} (const char $\ast$string, int c)\label{_s_d_l__stdinc_8h_a04404b18bf3d34f7c5f37ddef2d647dc}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strrchr} (const char $\ast$string, int c)\label{_s_d_l__stdinc_8h_a6bb4c69dfa7853fc24921f1ea9e2283e}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strstr} (const char $\ast$haystack, const char $\ast$needle)\label{_s_d_l__stdinc_8h_aa50eca29c8736f5be661e5b26b718cb1}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+ltoa} (long value, char $\ast$string, int radix)\label{_s_d_l__stdinc_8h_a847476472a4e0c6ab1dee0dffdd9fc39}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+ultoa} (unsigned long value, char $\ast$string, int radix)\label{_s_d_l__stdinc_8h_ae9e90fd3fbff283bdcfed075a17d86e0}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} long {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strtol} (const char $\ast$string, char $\ast$$\ast$endp, int base)\label{_s_d_l__stdinc_8h_a1ba7b50ded3403c597816c187617f874}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} unsigned long {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strtoul} (const char $\ast$string, char $\ast$$\ast$endp, int base)\label{_s_d_l__stdinc_8h_a4a01eceae2509ade7deb4252d00a0204}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} double {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strtod} (const char $\ast$string, char $\ast$$\ast$endp)\label{_s_d_l__stdinc_8h_a7a98e3ed3836cba9cd1337c869e4e13c}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strcmp} (const char $\ast$str1, const char $\ast$str2)\label{_s_d_l__stdinc_8h_a37e18b9103f755d03cf4b0aedeb39fb8}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strncmp} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t maxlen)\label{_s_d_l__stdinc_8h_a21287cfa7609bbc3d46ea10b20234389}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strcasecmp} (const char $\ast$str1, const char $\ast$str2)\label{_s_d_l__stdinc_8h_a1de324579fee4225e390df0a7b485d17}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+strncasecmp} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t maxlen)\label{_s_d_l__stdinc_8h_ae2b36260891291943d2c8f7a6b991847}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+sscanf} (const char $\ast$text, const char $\ast$fmt,...)\label{_s_d_l__stdinc_8h_a036a33efecd221ef8760010e5bca9d86}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+snprintf} (char $\ast$text, size\+\_\+t maxlen, const char $\ast$fmt,...)\label{_s_d_l__stdinc_8h_a4282a001a36dfd2286c41a3685281e5c}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+vsnprintf} (char $\ast$text, size\+\_\+t maxlen, const char $\ast$fmt, va\+\_\+list ap)\label{_s_d_l__stdinc_8h_abdef8ba556177f8a9395139997e6cb40}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+iconv\+\_\+t {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+iconv\+\_\+open} (const char $\ast$tocode, const char $\ast$fromcode)\label{_s_d_l__stdinc_8h_a0ba254663bb7d4b49eaa414d4533c6b5}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+iconv\+\_\+close} (S\+D\+L\+\_\+iconv\+\_\+t cd)\label{_s_d_l__stdinc_8h_a92eeaa95348c308ebd882ca85eccd684}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} size\+\_\+t {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+iconv} (S\+D\+L\+\_\+iconv\+\_\+t cd, const char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)\label{_s_d_l__stdinc_8h_aeef39b9728425f231fc3e019ffa6c9ea}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+iconv\+\_\+string} (const char $\ast$tocode, const char $\ast$fromcode, const char $\ast$inbuf, size\+\_\+t inbytesleft)
+\end{DoxyCompactItemize}
+\subsection*{Basic data types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries S\+D\+L\+\_\+bool} \{ {\bfseries S\+D\+L\+\_\+\+F\+A\+L\+S\+E} = 0, 
+{\bfseries S\+D\+L\+\_\+\+T\+R\+U\+E} = 1
+ \}\label{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}
+
+\item 
+typedef int8\+\_\+t {\bfseries Sint8}\label{_s_d_l__stdinc_8h_a5fc98623306a32e69eaab63e89e1d138}
+
+\item 
+typedef uint8\+\_\+t {\bfseries Uint8}\label{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}
+
+\item 
+typedef int16\+\_\+t {\bfseries Sint16}\label{_s_d_l__stdinc_8h_a9d0257032c0e146ab6121bf0122712f5}
+
+\item 
+typedef uint16\+\_\+t {\bfseries Uint16}\label{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}
+
+\item 
+typedef int32\+\_\+t {\bfseries Sint32}\label{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}
+
+\item 
+typedef uint32\+\_\+t {\bfseries Uint32}\label{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}
+
+\item 
+typedef struct {\bf Uint64} {\bfseries Sint64}\label{_s_d_l__stdinc_8h_a55b4614d5b29ccdd1d01742ef1f86185}
+
+\end{DoxyCompactItemize}
+\subsection*{Make sure the types really have the right sizes}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T}(name,  x)~typedef int S\+D\+L\+\_\+dummy\+\_\+ \#\# name[(x) $\ast$ 2 -\/ 1]\label{_s_d_l__stdinc_8h_aba1f23ae531b67b0455a2e254bdad09b}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (uint8, sizeof(Uint8)==1)\label{_s_d_l__stdinc_8h_a005ad2de7d2d27e7f899981151b751ae}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (sint8, sizeof(Sint8)==1)\label{_s_d_l__stdinc_8h_a9a884db976fc89f11817a665ba766cc7}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (uint16, sizeof(Uint16)==2)\label{_s_d_l__stdinc_8h_aa9d7e4271804d40d44b355efd1cb20be}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (sint16, sizeof(Sint16)==2)\label{_s_d_l__stdinc_8h_a77b37f1b37ecaacc3de9c4c151f95c2a}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (uint32, sizeof(Uint32)==4)\label{_s_d_l__stdinc_8h_ac3b0ba0791e90561c88d298c6d2df7b3}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (sint32, sizeof(Sint32)==4)\label{_s_d_l__stdinc_8h_a1146d5974e28b88fff618b4ba91b4256}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (uint64, sizeof({\bf Uint64})==8)\label{_s_d_l__stdinc_8h_a0cbe41d1cdf13b649c880b998631a866}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (sint64, sizeof({\bf Sint64})==8)\label{_s_d_l__stdinc_8h_a60b667298d32de56e9c81c944970cace}
+
+\end{DoxyCompactItemize}
+\subsection*{Enum Size Check}
+\label{_amgrp2cb9321d9d58e7b89760adf34c6da8cd}%
+Check to make sure enums are the size of ints, for structure packing. For both Watcom C/\+C++ and Borland C/\+C++ the compiler option that makes enums having the size of an int must be enabled. This is \char`\"{}-\/b\char`\"{} for Borland C/\+C++ and \char`\"{}-\/ei\char`\"{} for Watcom C/\+C++ (v11). \begin{DoxyCompactItemize}
+\item 
+enum {\bfseries S\+D\+L\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+E\+N\+U\+M} \{ {\bfseries D\+U\+M\+M\+Y\+\_\+\+E\+N\+U\+M\+\_\+\+V\+A\+L\+U\+E}
+ \}\label{_s_d_l__stdinc_8h_a723036ea05ccc4c35a5f16ac0465dd47}
+
+\item 
+{\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+R\+T} (enum, sizeof(S\+D\+L\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+E\+N\+U\+M)==sizeof(int))\label{_s_d_l__stdinc_8h_ace52864a1a78abcd920187642767e881}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a general header that includes C language support 
+
+\subsection{Macro Definition Documentation}
+\index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+arraysize@{S\+D\+L\+\_\+arraysize}}
+\index{S\+D\+L\+\_\+arraysize@{S\+D\+L\+\_\+arraysize}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
+\subsubsection[{S\+D\+L\+\_\+arraysize}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+arraysize(
+\begin{DoxyParamCaption}
+\item[{}]{array}
+\end{DoxyParamCaption}
+)~(sizeof(array)/sizeof(array[0]))}\label{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}
+The number of elements in an array \index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+memmove@{S\+D\+L\+\_\+memmove}}
+\index{S\+D\+L\+\_\+memmove@{S\+D\+L\+\_\+memmove}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
+\subsubsection[{S\+D\+L\+\_\+memmove}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+memmove(
+\begin{DoxyParamCaption}
+\item[{}]{dst, }
+\item[{}]{src, }
+\item[{}]{len}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__stdinc_8h_a21ea361520b23be55c9a85c6e54f5e7b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                            \(\backslash\)
+    if ( dst < src ) \{              \(\backslash\)
+        SDL\_memcpy(dst, src, len);      \(\backslash\)
+    \} \textcolor{keywordflow}{else} \{                    \(\backslash\)
+        SDL\_revcpy(dst, src, len);      \(\backslash\)
+    \}                       \(\backslash\)
+\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+memset4@{S\+D\+L\+\_\+memset4}}
+\index{S\+D\+L\+\_\+memset4@{S\+D\+L\+\_\+memset4}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
+\subsubsection[{S\+D\+L\+\_\+memset4}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+memset4(
+\begin{DoxyParamCaption}
+\item[{}]{dst, }
+\item[{}]{val, }
+\item[{}]{len}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__stdinc_8h_a09324cf4501c090123ca0dc700f0a2c4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                        \(\backslash\)
+    unsigned \_count = (len);        \(\backslash\)
+    unsigned \_n = (\_count + 3) / 4;     \(\backslash\)
+    Uint32 *\_p = SDL\_static\_cast(Uint32 *, dst);    \(\backslash\)
+    Uint32 \_val = (val);            \(\backslash\)
+    if (len == 0) break;            \(\backslash\)
+        switch (\_count % 4) \{           \(\backslash\)
+        case 0: \textcolor{keywordflow}{do} \{    *\_p++ = \_val;       \(\backslash\)
+        case 3:         *\_p++ = \_val;       \(\backslash\)
+        case 2:         *\_p++ = \_val;       \(\backslash\)
+        case 1:         *\_p++ = \_val;       \(\backslash\)
+        \} \textcolor{keywordflow}{while} ( --\_n );       \(\backslash\)
+    \}                   \(\backslash\)
+\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+iconv\+\_\+string@{S\+D\+L\+\_\+iconv\+\_\+string}}
+\index{S\+D\+L\+\_\+iconv\+\_\+string@{S\+D\+L\+\_\+iconv\+\_\+string}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
+\subsubsection[{S\+D\+L\+\_\+iconv\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} char$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+iconv\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tocode, }
+\item[{const char $\ast$}]{fromcode, }
+\item[{const char $\ast$}]{inbuf, }
+\item[{size\+\_\+t}]{inbytesleft}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}
+This function converts a string between encodings in one pass, returning a string that must be freed with S\+D\+L\+\_\+free() or N\+U\+L\+L on error. 

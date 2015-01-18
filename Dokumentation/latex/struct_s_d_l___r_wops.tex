@@ -1,0 +1,101 @@
+\section{S\+D\+L\+\_\+\+R\+Wops Struct Reference}
+\label{struct_s_d_l___r_wops}\index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+rwops.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$seek)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context
+\item 
+{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$read)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context
+\item 
+{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$write)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context
+\item 
+{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$close)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf int} {\bfseries offset}\label{struct_s_d_l___r_wops_a71fb283863acfd186d664f4f2a7eb7d0}
+
+\item 
+{\bf int} {\bf int} {\bfseries whence}\label{struct_s_d_l___r_wops_a93eb5bc3cb33e22cc6c4e6362dcbe625}
+
+\item 
+void $\ast$ {\bfseries ptr}\label{struct_s_d_l___r_wops_a3f68b93789331775de802d51a2934f0a}
+
+\item 
+void {\bf int} {\bfseries size}\label{struct_s_d_l___r_wops_ae0bd64203ee30429f8b879cbd543d694}
+
+\item 
+void {\bf int} {\bf int} {\bfseries maxnum}\label{struct_s_d_l___r_wops_a60f37bebd3385e0fba9164a45c064e01}
+
+\item 
+const void $\ast$ {\bfseries ptr}\label{struct_s_d_l___r_wops_a51baff579726790887a4ca41ce14873c}
+
+\item 
+const void {\bf int} {\bfseries size}\label{struct_s_d_l___r_wops_a6c82c345afd893513c15b268f5bb4595}
+
+\item 
+const void {\bf int} {\bf int} {\bfseries num}\label{struct_s_d_l___r_wops_afb1b7d6d83dcf6b1d4fdd2b4041577e2}
+
+\item 
+Uint32 {\bfseries type}\label{struct_s_d_l___r_wops_a099017bfceaac24ced0e4d08a4e0a023}
+
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>Uint8 $\ast$ {\bfseries base}\\
+\>\>Uint8 $\ast$ {\bfseries here}\\
+\>\>Uint8 $\ast$ {\bfseries stop}\\
+\>\} {\bfseries mem}\\
+\>struct \{\\
+\>\>void $\ast$ {\bfseries data1}\\
+\>\} {\bfseries unknown}\\
+\} {\bfseries hidden}\label{struct_s_d_l___r_wops_a8ac2a4e01366f7bb9f41956beffa759d}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the read/write operation structure -- very basic 
+
+\subsection{Member Function Documentation}
+\index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
+\index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{seek}
+\end{DoxyParamCaption}
+)}\label{struct_s_d_l___r_wops_a25b6f8f86737e5f6af594d4069885771}
+Seek to \textquotesingle{}offset\textquotesingle{} relative to whence, one of stdio\textquotesingle{}s whence values\+: S\+E\+E\+K\+\_\+\+S\+E\+T, S\+E\+E\+K\+\_\+\+C\+U\+R, S\+E\+E\+K\+\_\+\+E\+N\+D Returns the final offset in the data source. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
+\index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{read}
+\end{DoxyParamCaption}
+)}\label{struct_s_d_l___r_wops_a22a0344f0e73d5917aa0dc91417e44a1}
+Read up to \textquotesingle{}maxnum\textquotesingle{} objects each of size \textquotesingle{}size\textquotesingle{} from the data source to the area pointed at by \textquotesingle{}ptr\textquotesingle{}. Returns the number of objects read, or -\/1 if the read failed. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
+\index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{write}
+\end{DoxyParamCaption}
+)}\label{struct_s_d_l___r_wops_a281fa6bf3562d8289f9ef75f658b5a44}
+Write exactly \textquotesingle{}num\textquotesingle{} objects each of size \textquotesingle{}objsize\textquotesingle{} from the area pointed at by \textquotesingle{}ptr\textquotesingle{} to data source. Returns \textquotesingle{}num\textquotesingle{}, or -\/1 if the write failed. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
+\index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{close}
+\end{DoxyParamCaption}
+)}\label{struct_s_d_l___r_wops_ab303bcbb0f6742a141ba8b2998923f47}
+Close and free an allocated S\+D\+L\+\_\+\+F\+Sops structure 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/{\bf S\+D\+L\+\_\+rwops.\+h}\end{DoxyCompactItemize}

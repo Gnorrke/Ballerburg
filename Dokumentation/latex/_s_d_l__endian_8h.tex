@@ -1,0 +1,54 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+endian.h File Reference}
+\label{_s_d_l__endian_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+endian.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+endian.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+B\+Y\+T\+E\+O\+R\+D\+E\+R}~S\+D\+L\+\_\+\+L\+I\+L\+\_\+\+E\+N\+D\+I\+A\+N\label{_s_d_l__endian_8h_a0582882a281bd6c7580e454be3595703}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf S\+D\+L\+\_\+\+E\+N\+D\+I\+A\+Ns}\par
+{\em The two types of endianness }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+L\+I\+L\+\_\+\+E\+N\+D\+I\+A\+N}~1234\label{_s_d_l__endian_8h_ad2b20e63545e73207b007b03bf08c2df}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N}~4321\label{_s_d_l__endian_8h_af22db189169b9aa7e356bf26b2a553f6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+D\+L\+\_\+\+Swap\+L\+E and S\+D\+L\+\_\+\+Swap\+B\+E Functions}\par
+{\em Byteswap item from the specified endianness to the native endianness }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E16}(X)~(X)\label{_s_d_l__endian_8h_ae650119b14f608de5d79e0d73a444c35}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E32}(X)~(X)\label{_s_d_l__endian_8h_a14265c62e134bff318afba31ec1b0911}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E64}(X)~(X)\label{_s_d_l__endian_8h_ae1c6fb787318750e4e974345bd46ca4b}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E16}(X)~S\+D\+L\+\_\+\+Swap16(X)\label{_s_d_l__endian_8h_aba916646d6a5abd082d5a21b406d3823}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E32}(X)~S\+D\+L\+\_\+\+Swap32(X)\label{_s_d_l__endian_8h_a2a2c8f38728448268d6d881f4a699d54}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E64}(X)~S\+D\+L\+\_\+\+Swap64(X)\label{_s_d_l__endian_8h_acc75cbc3e0bbf00dfd438e2186b91b03}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{S\+D\+L\+\_\+\+Swap Functions}
+\label{_amgrp968b97fa28abb0c5b2838d418c0fd83f}%
+Use inline functions for compilers that support them, and static functions for those that do not. Because these functions become static for compilers that do not support inline functions, this header should only be included in files that actually use them. \begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap64}(X)~(X)\label{_s_d_l__endian_8h_a970862b2724f36e7c52fda401022b669}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for reading and writing endian-\/specific values 

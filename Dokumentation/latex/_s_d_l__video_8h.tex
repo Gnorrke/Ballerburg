@@ -1,0 +1,1014 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+video.h File Reference}
+\label{_s_d_l__video_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+video.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+video.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+rwops.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Rect}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Color}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Palette}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Pixel\+Format}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Surface}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Video\+Info}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Overlay}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K}(surface)
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Alloc\+Surface}~{\bf S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Load\+B\+M\+P}(file)~{\bf S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W}(S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}rb\char`\"{}), 1)
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Save\+B\+M\+P}(surface,  file)~{\bf S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W}(surface, S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}wb\char`\"{}), 1)
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Blit\+Surface}~{\bf S\+D\+L\+\_\+\+Upper\+Blit}
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Transparency definitions}\par
+{\em These define alpha as the opacity of a surface }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+A\+L\+P\+H\+A\+\_\+\+O\+P\+A\+Q\+U\+E}~255\label{_s_d_l__video_8h_a5d933eb0233ca33d598800f33ef43376}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+A\+L\+P\+H\+A\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T}~0\label{_s_d_l__video_8h_a604d4b3b28add80eb4824ffd083d3ef4}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+D\+L\+\_\+\+Surface Flags}\par
+{\em These are the currently supported flags for the S\+D\+L\+\_\+surface }\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E}~0x00000000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E}~0x00000001
+\item 
+\#define {\bf S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T}~0x00000004
+\end{DoxyCompactItemize}
+\end{Indent}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T}~0x10000000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E}~0x20000000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F}~0x40000000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}~0x80000000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L}~0x00000002
+\item 
+\#define {\bf S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T}~0x0000000\+A
+\item 
+\#define {\bf S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E}~0x00000010
+\item 
+\#define {\bf S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E}~0x00000020
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L}~0x00000100
+\item 
+\#define {\bf S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y}~0x00001000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K}~0x00002000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L}~0x00004000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A}~0x00010000
+\item 
+\#define {\bf S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C}~0x01000000
+\end{DoxyCompactItemize}
+
+\begin{Indent}{\bf Overlay Formats}\par
+{\em The most common video overlay formats. For an explanation of these pixel formats, see\+: {\tt http\+://www.\+webartz.\+com/fourcc/indexyuv.\+htm}
+
+For information on the relationship between color spaces, see\+: {\tt http\+://www.\+neuro.\+sfc.\+keio.\+ac.\+jp/$\sim$aly/polygon/info/color-\/space-\/faq.\+html} }\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y}~0x32315659
+\item 
+\#define {\bf S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y}~0x56555949
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y}~0x32595559
+\item 
+\#define {\bf S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y}~0x59565955
+\item 
+\#define {\bf S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y}~0x55595659
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf flags for S\+D\+L\+\_\+\+Set\+Palette()}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+L\+O\+G\+P\+A\+L}~0x01\label{_s_d_l__video_8h_a721065ea8fe651200aab7af9e0fcb3cc}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+H\+Y\+S\+P\+A\+L}~0x02\label{_s_d_l__video_8h_a6b82552312c695a75a9f4046436c1679}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Pixel\+Format} {\bf S\+D\+L\+\_\+\+Pixel\+Format}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Surface} {\bf S\+D\+L\+\_\+\+Surface}
+\item 
+typedef int($\ast$ {\bf S\+D\+L\+\_\+blit}) (struct {\bf S\+D\+L\+\_\+\+Surface} $\ast$src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$srcrect, struct {\bf S\+D\+L\+\_\+\+Surface} $\ast$dst, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect)
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Video\+Info} {\bf S\+D\+L\+\_\+\+Video\+Info}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Overlay} {\bf S\+D\+L\+\_\+\+Overlay}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf S\+D\+L\+\_\+\+G\+Lattr} \{ \\*
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+R\+E\+D\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+G\+R\+E\+E\+N\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+B\+L\+U\+E\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+L\+P\+H\+A\+\_\+\+S\+I\+Z\+E}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F\+F\+E\+R}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+S\+T\+E\+N\+C\+I\+L\+\_\+\+S\+I\+Z\+E}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+R\+E\+D\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+G\+R\+E\+E\+N\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+B\+L\+U\+E\+\_\+\+S\+I\+Z\+E}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+A\+L\+P\+H\+A\+\_\+\+S\+I\+Z\+E}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+S\+T\+E\+R\+E\+O}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+M\+U\+L\+T\+I\+S\+A\+M\+P\+L\+E\+B\+U\+F\+F\+E\+R\+S}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+M\+U\+L\+T\+I\+S\+A\+M\+P\+L\+E\+S\+A\+M\+P\+L\+E\+S}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+E\+D\+\_\+\+V\+I\+S\+U\+A\+L}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+S\+W\+A\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Video\+Driver\+Name} (char $\ast$namebuf, int maxlen)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Video\+Surface} (void)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} const {\bf S\+D\+L\+\_\+\+Video\+Info} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Video\+Info} (void)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Video\+Mode\+O\+K} (int width, int height, int bpp, Uint32 flags)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Rect} $\ast$$\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+List\+Modes} ({\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format, Uint32 flags)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Video\+Mode} (int width, int height, int bpp, Uint32 flags)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Flip} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$screen)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Gamma} (float red, float green, float blue)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Gamma\+Ramp} (const Uint16 $\ast$red, const Uint16 $\ast$green, const Uint16 $\ast$blue)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Gamma\+Ramp} (Uint16 $\ast$red, Uint16 $\ast$green, Uint16 $\ast$blue)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Colors} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, {\bf S\+D\+L\+\_\+\+Color} $\ast$colors, int firstcolor, int ncolors)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Palette} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, int flags, {\bf S\+D\+L\+\_\+\+Color} $\ast$colors, int firstcolor, int ncolors)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint32 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Map\+R\+G\+B} (const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const format, const Uint8 r, const Uint8 g, const Uint8 b)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint32 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Map\+R\+G\+B\+A} (const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const format, const Uint8 r, const Uint8 g, const Uint8 b, const Uint8 a)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+R\+G\+B} (Uint32 pixel, const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const fmt, Uint8 $\ast$r, Uint8 $\ast$g, Uint8 $\ast$b)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+R\+G\+B\+A} (Uint32 pixel, const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const fmt, Uint8 $\ast$r, Uint8 $\ast$g, Uint8 $\ast$b, Uint8 $\ast$a)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface} (Uint32 flags, int width, int height, int depth, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From} (void $\ast$pixels, int width, int height, int depth, int pitch, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Free\+Surface} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface)\label{_s_d_l__video_8h_a7b8d4f9cc058822501896a2eed81220e}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Lock\+Surface} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Unlock\+Surface} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface)\label{_s_d_l__video_8h_a56b93f51358b55d7fc213a3ba9b02c24}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W} ({\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$src, int freesrc)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, int freedst)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Color\+Key} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, Uint32 flag, Uint32 key)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Alpha} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, Uint32 flag, Uint8 alpha)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+bool {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Clip\+Rect} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, const {\bf S\+D\+L\+\_\+\+Rect} $\ast$rect)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Clip\+Rect} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface, {\bf S\+D\+L\+\_\+\+Rect} $\ast$rect)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Convert\+Surface} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$src, {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$fmt, Uint32 flags)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Upper\+Blit} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$srcrect, {\bf S\+D\+L\+\_\+\+Surface} $\ast$dst, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Lower\+Blit} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$srcrect, {\bf S\+D\+L\+\_\+\+Surface} $\ast$dst, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Fill\+Rect} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$dst, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect, Uint32 color)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Display\+Format} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Display\+Format\+Alpha} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Soft\+Stretch} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$srcrect, {\bf S\+D\+L\+\_\+\+Surface} $\ast$dst, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect)\label{_s_d_l__video_8h_a38a6d2af389294c32a3cca8bdd637790}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Video Init and Quit}\par
+{\em These functions are used internally, and should not be used unless you have a specific need to specify the video driver you want to use. You should normally use \doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8} or \doxyref{S\+D\+L\+\_\+\+Init\+Sub\+System()}{p.}{_s_d_l_8h_adfbfddc0ec609b5e5e5cb1c89298e4db}. }\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Video\+Init} (const char $\ast$driver\+\_\+name, Uint32 flags)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Video\+Quit} (void)\label{_s_d_l__video_8h_ade5fc4847320fb235f17265b683fa013}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+D\+L\+\_\+\+Update Functions}\par
+{\em These functions should not be called while \textquotesingle{}screen\textquotesingle{} is locked. }\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Update\+Rects} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$screen, int numrects, {\bf S\+D\+L\+\_\+\+Rect} $\ast$rects)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Update\+Rect} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$screen, Sint32 x, Sint32 y, Uint32 w, Uint32 h)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Y\+U\+V video surface overlay functions}\par
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Overlay} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay} (int width, int height, Uint32 format, {\bf S\+D\+L\+\_\+\+Surface} $\ast$display)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay} ({\bf S\+D\+L\+\_\+\+Overlay} $\ast$overlay)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Unlock\+Y\+U\+V\+Overlay} ({\bf S\+D\+L\+\_\+\+Overlay} $\ast$overlay)\label{_s_d_l__video_8h_a1f16d6da4164bab7636fd8085ba23dce}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay} ({\bf S\+D\+L\+\_\+\+Overlay} $\ast$overlay, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay} ({\bf S\+D\+L\+\_\+\+Overlay} $\ast$overlay)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Open\+G\+L support functions.}\par
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library} (const char $\ast$path)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address} (const char $\ast$proc)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute} ({\bf S\+D\+L\+\_\+\+G\+Lattr} attr, int value)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute} ({\bf S\+D\+L\+\_\+\+G\+Lattr} attr, int $\ast$value)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers} (void)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Open\+G\+L Internal Functions}\par
+{\em Internal functions that should not be called unless you have read and understood the source code for these functions. }\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+Update\+Rects} (int numrects, {\bf S\+D\+L\+\_\+\+Rect} $\ast$rects)\label{_s_d_l__video_8h_a97bf15b296228d9b86650227ab0cfefc}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+Lock} (void)\label{_s_d_l__video_8h_af83377afb9d9303ec831ae34e695f0ee}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+Unlock} (void)\label{_s_d_l__video_8h_a680b9667d535c557f36dcaca54f69687}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Useful data types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Colour}~{\bf S\+D\+L\+\_\+\+Color}\label{_s_d_l__video_8h_aceb6cb42789d5646f5206f02a07a36dc}
+
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Rect} {\bfseries S\+D\+L\+\_\+\+Rect}\label{_s_d_l__video_8h_ab9e65f8131b4e7faad18d498e7dbde8c}
+
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Color} {\bfseries S\+D\+L\+\_\+\+Color}\label{_s_d_l__video_8h_a6c62a9e85197f93df21a6a4a9d36eb25}
+
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Palette} {\bfseries S\+D\+L\+\_\+\+Palette}\label{_s_d_l__video_8h_a801e2814517a3e61daf86403d4dd1c6e}
+
+\end{DoxyCompactItemize}
+\subsection*{Window Manager Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf S\+D\+L\+\_\+\+Grab\+Mode} \{ {\bfseries S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+Q\+U\+E\+R\+Y} = -\/1, 
+{\bfseries S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+O\+F\+F} = 0, 
+{\bfseries S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+O\+N} = 1, 
+{\bf S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}
+ \}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption} (const char $\ast$title, const char $\ast$icon)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption} (char $\ast$$\ast$title, char $\ast$$\ast$icon)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$icon, Uint8 $\ast$mask)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window} (void)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen} ({\bf S\+D\+L\+\_\+\+Surface} $\ast$surface)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Grab\+Mode} {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input} ({\bf S\+D\+L\+\_\+\+Grab\+Mode} mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for access to the S\+D\+L raw framebuffer window 
+
+\subsection{Macro Definition Documentation}
+\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Alloc\+Surface@{S\+D\+L\+\_\+\+Alloc\+Surface}}
+\index{S\+D\+L\+\_\+\+Alloc\+Surface@{S\+D\+L\+\_\+\+Alloc\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Alloc\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Alloc\+Surface~{\bf S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}}\label{_s_d_l__video_8h_aa800a80fc2278f1b392d4cdcd793d3e9}
+\begin{DoxySeeAlso}{See also}
+\doxyref{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}{p.}{_s_d_l__video_8h_aac106bf796c828587cce76cb847d11ae} 
+\end{DoxySeeAlso}
+\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T@{S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T}}
+\index{S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T@{S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T~0x10000000}\label{_s_d_l__video_8h_af6bb568980ebb32b7d75636c0d8ac52f}
+Available for \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} Allow any video depth/pixel-\/format \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T@{S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T}}
+\index{S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T@{S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T~0x00000004}\label{_s_d_l__video_8h_a47b116b3ee7ccbe0f2af7132d30c7c3d}
+Use asynchronous blits if possible \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Blit\+Surface@{S\+D\+L\+\_\+\+Blit\+Surface}}
+\index{S\+D\+L\+\_\+\+Blit\+Surface@{S\+D\+L\+\_\+\+Blit\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Blit\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Blit\+Surface~{\bf S\+D\+L\+\_\+\+Upper\+Blit}}\label{_s_d_l__video_8h_aad8d7ebe5e953593cb7d91373e73ba9a}
+This performs a fast blit from the source surface to the destination surface. It assumes that the source and destination rectangles are the same size. If either \textquotesingle{}srcrect\textquotesingle{} or \textquotesingle{}dstrect\textquotesingle{} are N\+U\+L\+L, the entire surface (src or dst) is copied. The final blit rectangles are saved in \textquotesingle{}srcrect\textquotesingle{} and \textquotesingle{}dstrect\textquotesingle{} after all clipping is performed. If the blit is successful, it returns 0, otherwise it returns -\/1.
+
+The blit function should not be called on a locked surface.
+
+The blit semantics for surfaces with and without alpha and colorkey are defined as follows\+:
+
+R\+G\+B\+A-\/$>$R\+G\+B\+: S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A set\+: alpha-\/blend (using alpha-\/channel). S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y ignored. S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A not set\+: copy R\+G\+B. if S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y set, only copy the pixels matching the R\+G\+B values of the source colour key, ignoring alpha in the comparison.
+
+R\+G\+B-\/$>$R\+G\+B\+A\+: S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A set\+: alpha-\/blend (using the source per-\/surface alpha value); set destination alpha to opaque. S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A not set\+: copy R\+G\+B, set destination alpha to source per-\/surface alpha value. both\+: if S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y set, only copy the pixels matching the source colour key.
+
+R\+G\+B\+A-\/$>$R\+G\+B\+A\+: S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A set\+: alpha-\/blend (using the source alpha channel) the R\+G\+B values; leave destination alpha untouched. [Note\+: is this correct?] S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y ignored. S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A not set\+: copy all of R\+G\+B\+A to the destination. if S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y set, only copy the pixels matching the R\+G\+B values of the source colour key, ignoring alpha in the comparison.
+
+R\+G\+B-\/$>$R\+G\+B\+: S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A set\+: alpha-\/blend (using the source per-\/surface alpha value). S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A not set\+: copy R\+G\+B. both\+: if S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y set, only copy the pixels matching the source colour key.
+
+If either of the surfaces were in video memory, and the blit returns -\/2, the video memory was lost, so it should be reloaded with artwork and re-\/blitted\+: 
+\begin{DoxyCode}
+1 while ( SDL\_BlitSurface(image, imgrect, screen, dstrect) == -2 ) \{
+2    while ( SDL\_LockSurface(image) < 0 )
+3        Sleep(10);
+4    -- Write image pixels to image->pixels --
+5    SDL\_UnlockSurface(image);
+6 \}
+\end{DoxyCode}
+
+
+This happens under Direct\+X 5.\+0 when the system switches away from your fullscreen application. The lock will also fail until you have access to the video memory again.
+
+You should call \doxyref{S\+D\+L\+\_\+\+Blit\+Surface()}{p.}{_s_d_l__video_8h_aad8d7ebe5e953593cb7d91373e73ba9a} unless you know exactly how S\+D\+L blitting works internally and how to use the other blit functions. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F@{S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F}}
+\index{S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F@{S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F~0x40000000}\label{_s_d_l__video_8h_a60caadae566ee82f98caa82ae6442414}
+Set up double-\/buffered video mode \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N@{S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}}
+\index{S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N@{S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N~0x80000000}\label{_s_d_l__video_8h_ad113101076cec2715ac629d0b2eb44ad}
+Surface is a full screen display \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L@{S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L}}
+\index{S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L@{S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+H\+W\+A\+C\+C\+E\+L~0x00000100}\label{_s_d_l__video_8h_ac6d875e661ba09d5bf1ab5be76ea4250}
+Used internally (read-\/only) Blit uses hardware acceleration \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E@{S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E}}
+\index{S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E@{S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E~0x20000000}\label{_s_d_l__video_8h_a35ce56a732020a782fb150e2cb04a16c}
+Surface has exclusive palette \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E@{S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E}}
+\index{S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E@{S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E~0x00000001}\label{_s_d_l__video_8h_ac96afe7a08477c328bc0f3dbf483b756}
+Surface is in video memory \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y}}
+\index{S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+I\+Y\+U\+V\+\_\+\+O\+V\+E\+R\+L\+A\+Y~0x56555949}\label{_s_d_l__video_8h_a9e41f272610649ee0fee58029eeb1c23}
+Planar mode\+: Y + U + V (3 planes) \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Load\+B\+M\+P@{S\+D\+L\+\_\+\+Load\+B\+M\+P}}
+\index{S\+D\+L\+\_\+\+Load\+B\+M\+P@{S\+D\+L\+\_\+\+Load\+B\+M\+P}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Load\+B\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Load\+B\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{file}
+\end{DoxyParamCaption}
+)~{\bf S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W}(S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}rb\char`\"{}), 1)}\label{_s_d_l__video_8h_ae63aa646481001be542220a8733c3ce0}
+Convenience macro -- load a surface from a file \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K@{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K}}
+\index{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K@{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K(
+\begin{DoxyParamCaption}
+\item[{}]{surface}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a0bce24bb7b85d73c1f7328b176bd506f}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(surface->offset ||     \(\backslash\)
+  ((surface->flags & (SDL_HWSURFACE|SDL_ASYNCBLIT|SDL_RLEACCEL)) != 0))
+\end{DoxyCode}
+Evaluates to true if the surface needs to be locked before access \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E@{S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E}}
+\index{S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E@{S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E~0x00000020}\label{_s_d_l__video_8h_ab83b5ff570038ceff6da669720cfa826}
+No window caption or edge frame \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L@{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L}}
+\index{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L@{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L~0x00000002}\label{_s_d_l__video_8h_af2cb4a2748fc1095ea5f7710abf3e348}
+Create an Open\+G\+L rendering context \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T@{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T}}
+\index{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T@{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+B\+L\+I\+T~0x0000000\+A}\label{_s_d_l__video_8h_a93c109785d84311b4bd17b28577ac3de}
+Create an Open\+G\+L rendering context and use it for blitting \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C@{S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C}}
+\index{S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C@{S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+O\+C~0x01000000}\label{_s_d_l__video_8h_a4a5f795a69ac626fba73c4bd0bfd9626}
+Surface uses preallocated memory \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E@{S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E}}
+\index{S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E@{S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E~0x00000010}\label{_s_d_l__video_8h_a2d7176bad10adae1594494ced111a4d2}
+This video mode may be resized \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L@{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L}}
+\index{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L@{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L~0x00004000}\label{_s_d_l__video_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}
+Surface is R\+L\+E encoded \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K@{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K}}
+\index{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K@{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L\+O\+K~0x00002000}\label{_s_d_l__video_8h_a6f8fadc5d095634b9717c0d7ba858a45}
+Private flag \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Save\+B\+M\+P@{S\+D\+L\+\_\+\+Save\+B\+M\+P}}
+\index{S\+D\+L\+\_\+\+Save\+B\+M\+P@{S\+D\+L\+\_\+\+Save\+B\+M\+P}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Save\+B\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Save\+B\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{surface, }
+\item[{}]{file}
+\end{DoxyParamCaption}
+)~{\bf S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W}(surface, S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}wb\char`\"{}), 1)}\label{_s_d_l__video_8h_a425e7a69acbdf2bd9ba46d332d917320}
+Convenience macro -- save a surface to a file \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A@{S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A}}
+\index{S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A@{S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A~0x00010000}\label{_s_d_l__video_8h_af3239de7885d1b3eb045a88e130d3575}
+Blit uses source alpha blending \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y@{S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y}}
+\index{S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y@{S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y~0x00001000}\label{_s_d_l__video_8h_aa751d435ed0e4f6a0dd94bf05c070439}
+Blit uses a source color key \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E@{S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E}}
+\index{S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E@{S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E~0x00000000}\label{_s_d_l__video_8h_a59c7111f96872f973d0f058362761776}
+Available for \doxyref{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface()}{p.}{_s_d_l__video_8h_aac106bf796c828587cce76cb847d11ae} or \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} Surface is in system memory \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y}}
+\index{S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+U\+Y\+V\+Y\+\_\+\+O\+V\+E\+R\+L\+A\+Y~0x59565955}\label{_s_d_l__video_8h_a10c8c4d78982fb5df0951e6bc291743f}
+Packed mode\+: U0+\+Y0+\+V0+\+Y1 (1 plane) \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y}}
+\index{S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Y\+U\+Y2\+\_\+\+O\+V\+E\+R\+L\+A\+Y~0x32595559}\label{_s_d_l__video_8h_a3f2d61b3a4e8fdf1c489a5159ddc9564}
+Packed mode\+: Y0+\+U0+\+Y1+\+V0 (1 plane) \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y}}
+\index{S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Y\+V12\+\_\+\+O\+V\+E\+R\+L\+A\+Y~0x32315659}\label{_s_d_l__video_8h_ab5f4d08ed249ba1b3edc253a0e79778b}
+Planar mode\+: Y + V + U (3 planes) \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y}}
+\index{S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y@{S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+Y\+V\+Y\+U\+\_\+\+O\+V\+E\+R\+L\+A\+Y~0x55595659}\label{_s_d_l__video_8h_a06ec7684b45eb880714141eefbf66eb8}
+Packed mode\+: Y0+\+V0+\+Y1+\+U0 (1 plane) 
+
+\subsection{Typedef Documentation}
+\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+blit@{S\+D\+L\+\_\+blit}}
+\index{S\+D\+L\+\_\+blit@{S\+D\+L\+\_\+blit}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+blit}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ S\+D\+L\+\_\+blit) (struct {\bf S\+D\+L\+\_\+\+Surface} $\ast$src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$srcrect, struct {\bf S\+D\+L\+\_\+\+Surface} $\ast$dst, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dstrect)}\label{_s_d_l__video_8h_a28fe7ff2a357ef0c078db3290a44df41}
+typedef for private surface blitting functions \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Overlay@{S\+D\+L\+\_\+\+Overlay}}
+\index{S\+D\+L\+\_\+\+Overlay@{S\+D\+L\+\_\+\+Overlay}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Overlay}  {\bf S\+D\+L\+\_\+\+Overlay}}\label{_s_d_l__video_8h_ae819ecf00f0fbd952c5645ff69f87ac4}
+The Y\+U\+V hardware video overlay \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}}
+\index{S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Pixel\+Format}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Pixel\+Format}  {\bf S\+D\+L\+\_\+\+Pixel\+Format}}\label{_s_d_l__video_8h_a9e5dc2921ca058ecb7cbe15ff38248e2}
+Everything in the pixel format structure is read-\/only \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Surface}  {\bf S\+D\+L\+\_\+\+Surface}}\label{_s_d_l__video_8h_a32471ad028ae3d2a132302bc5efcb1ee}
+This structure should be treated as read-\/only, except for \textquotesingle{}pixels\textquotesingle{}, which, if not N\+U\+L\+L, contains the raw pixel data for the surface. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Video\+Info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Video\+Info}  {\bf S\+D\+L\+\_\+\+Video\+Info}}\label{_s_d_l__video_8h_a7a6c28c396b5b87b3adc1bde63c80381}
+Useful for determining the video hardware capabilities 
+
+\subsection{Enumeration Type Documentation}
+\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+Lattr@{S\+D\+L\+\_\+\+G\+Lattr}}
+\index{S\+D\+L\+\_\+\+G\+Lattr@{S\+D\+L\+\_\+\+G\+Lattr}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+G\+Lattr}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+D\+L\+\_\+\+G\+Lattr}}\label{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}
+Public enumeration for setting the Open\+G\+L window attributes. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Grab\+Mode@{S\+D\+L\+\_\+\+Grab\+Mode}}
+\index{S\+D\+L\+\_\+\+Grab\+Mode@{S\+D\+L\+\_\+\+Grab\+Mode}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Grab\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+D\+L\+\_\+\+Grab\+Mode}}\label{_s_d_l__video_8h_ae199e83984ab7d3e2ebacc8541f7bb36}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N@{S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N@{S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N}}\item[{\em 
+S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\label{_s_d_l__video_8h_ae199e83984ab7d3e2ebacc8541f7bb36a7446cf721805c7f1428d2a810025d56d}
+}]Used internally \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Convert\+Surface@{S\+D\+L\+\_\+\+Convert\+Surface}}
+\index{S\+D\+L\+\_\+\+Convert\+Surface@{S\+D\+L\+\_\+\+Convert\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Convert\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Convert\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{src, }
+\item[{{\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$}]{fmt, }
+\item[{Uint32}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a4098aa5d51f85c7a0c7d032737ce9e74}
+Creates a new surface of the specified format, and then copies and maps the given surface to it so the blit of the converted surface will be as fast as possible. If this function fails, it returns N\+U\+L\+L.
+
+The \textquotesingle{}flags\textquotesingle{} parameter is passed to \doxyref{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface()}{p.}{_s_d_l__video_8h_aac106bf796c828587cce76cb847d11ae} and has those semantics. You can also pass S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L in the flags parameter and S\+D\+L will try to R\+L\+E accelerate colorkey and alpha blits in the resulting surface.
+
+This function is used internally by \doxyref{S\+D\+L\+\_\+\+Display\+Format()}{p.}{_s_d_l__video_8h_a32cfda22be05857a99d7b65264109e07}. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface@{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}}
+\index{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface@{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface (
+\begin{DoxyParamCaption}
+\item[{Uint32}]{flags, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{depth, }
+\item[{Uint32}]{Rmask, }
+\item[{Uint32}]{Gmask, }
+\item[{Uint32}]{Bmask, }
+\item[{Uint32}]{Amask}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_aac106bf796c828587cce76cb847d11ae}
+Allocate and free an R\+G\+B surface (must be called after S\+D\+L\+\_\+\+Set\+Video\+Mode) If the depth is 4 or 8 bits, an empty palette is allocated for the surface. If the depth is greater than 8 bits, the pixel format is set using the flags \textquotesingle{}[R\+G\+B]mask\textquotesingle{}. If the function runs out of memory, it will return N\+U\+L\+L.
+
+The \textquotesingle{}flags\textquotesingle{} tell what kind of surface to create. S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+C\+E means that the surface should be created in system memory. S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E means that the surface should be created in video memory, with the same format as the display surface. This is useful for surfaces that will not change much, to take advantage of hardware acceleration when being blitted to the display surface. S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T means that S\+D\+L will try to perform asynchronous blits with this surface, but you must always lock it before accessing the pixels. S\+D\+L will wait for current blits to finish before returning from the lock. S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y indicates that the surface will be used for colorkey blits. If the hardware supports acceleration of colorkey blits between two surfaces in video memory, S\+D\+L will try to place the surface in video memory. If this isn\textquotesingle{}t possible or if there is no hardware acceleration available, the surface will be placed in system memory. S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A means that the surface will be used for alpha blits and if the hardware supports hardware acceleration of alpha blits between two surfaces in video memory, to place the surface in video memory if possible, otherwise it will be placed in system memory. If the surface is created in video memory, blits will be {\itshape much} faster, but the surface format must be identical to the video surface format, and the only way to access the pixels member of the surface is to use the \doxyref{S\+D\+L\+\_\+\+Lock\+Surface()}{p.}{_s_d_l__video_8h_a3d1da1c7ecdaa461fac51a10785f5077} and S\+D\+L\+\_\+\+Unlock\+Surface() calls. If the requested surface actually resides in video memory, S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E will be set in the flags member of the returned surface. If for some reason the surface could not be placed in video memory, it will not have the S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E flag set, and will be created in system memory instead. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From@{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From}}
+\index{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From@{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pixels, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{depth, }
+\item[{int}]{pitch, }
+\item[{Uint32}]{Rmask, }
+\item[{Uint32}]{Gmask, }
+\item[{Uint32}]{Bmask, }
+\item[{Uint32}]{Amask}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a25c74ddbc73538e9a4accb42e1c09971}
+\begin{DoxySeeAlso}{See also}
+\doxyref{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}{p.}{_s_d_l__video_8h_aac106bf796c828587cce76cb847d11ae} 
+\end{DoxySeeAlso}
+\index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay}}
+\index{S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Overlay}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Create\+Y\+U\+V\+Overlay (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{Uint32}]{format, }
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{display}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a9ad289eba60a09fdc59cf37b3bb488ae}
+This function creates a video output overlay Calling the returned surface an overlay is something of a misnomer because the contents of the display surface underneath the area where the overlay is shown is undefined -\/ it may be overwritten with the converted Y\+U\+V data. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Display\+Format@{S\+D\+L\+\_\+\+Display\+Format}}
+\index{S\+D\+L\+\_\+\+Display\+Format@{S\+D\+L\+\_\+\+Display\+Format}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Display\+Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Display\+Format (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a32cfda22be05857a99d7b65264109e07}
+This function takes a surface and copies it to a new surface of the pixel format and colors of the video framebuffer, suitable for fast blitting onto the display surface. It calls \doxyref{S\+D\+L\+\_\+\+Convert\+Surface()}{p.}{_s_d_l__video_8h_a4098aa5d51f85c7a0c7d032737ce9e74}
+
+If you want to take advantage of hardware colorkey or alpha blit acceleration, you should set the colorkey and alpha value before calling this function.
+
+If the conversion fails or runs out of memory, it returns N\+U\+L\+L \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Display\+Format\+Alpha@{S\+D\+L\+\_\+\+Display\+Format\+Alpha}}
+\index{S\+D\+L\+\_\+\+Display\+Format\+Alpha@{S\+D\+L\+\_\+\+Display\+Format\+Alpha}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Display\+Format\+Alpha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Display\+Format\+Alpha (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a5335421963a8fe82502903c4e5b9dd84}
+This function takes a surface and copies it to a new surface of the pixel format and colors of the video framebuffer (if possible), suitable for fast alpha blitting onto the display surface. The new surface will always have an alpha channel.
+
+If you want to take advantage of hardware colorkey or alpha blit acceleration, you should set the colorkey and alpha value before calling this function.
+
+If the conversion fails or runs out of memory, it returns N\+U\+L\+L \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay}}
+\index{S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Display\+Y\+U\+V\+Overlay (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{overlay, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{dstrect}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a06dddda830e801d6dd389d4ad8a2cf6c}
+Blit a video overlay to the display surface. The contents of the video surface underneath the blit destination are not defined. The width and height of the destination rectangle may be different from that of the overlay, but currently only 2x scaling is supported. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Fill\+Rect@{S\+D\+L\+\_\+\+Fill\+Rect}}
+\index{S\+D\+L\+\_\+\+Fill\+Rect@{S\+D\+L\+\_\+\+Fill\+Rect}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Fill\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Fill\+Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{dst, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{dstrect, }
+\item[{Uint32}]{color}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a793f5101d80cf442790fcead1f9e45f7}
+This function performs a fast fill of the given rectangle with \textquotesingle{}color\textquotesingle{} The given rectangle is clipped to the destination surface clip area and the final fill rectangle is saved in the passed in pointer. If \textquotesingle{}dstrect\textquotesingle{} is N\+U\+L\+L, the whole surface will be filled with \textquotesingle{}color\textquotesingle{} The color should be a pixel of the format used by the surface, and can be generated by the \doxyref{S\+D\+L\+\_\+\+Map\+R\+G\+B()}{p.}{_s_d_l__video_8h_a7aab2d186086a09d626378c53f209352} function. This function returns 0 on success, or -\/1 on error. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Flip@{S\+D\+L\+\_\+\+Flip}}
+\index{S\+D\+L\+\_\+\+Flip@{S\+D\+L\+\_\+\+Flip}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Flip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Flip (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a3fb4f43ce7a5032d7e8ac778f3dacd7f}
+On hardware that supports double-\/buffering, this function sets up a flip and returns. The hardware will wait for vertical retrace, and then swap video buffers before the next video surface blit or lock will return. On hardware that doesn not support double-\/buffering, this is equivalent to calling S\+D\+L\+\_\+\+Update\+Rect(screen, 0, 0, 0, 0); The S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F flag must have been passed to \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} when setting the video mode for this function to perform hardware flipping. This function returns 0 if successful, or -\/1 if there was an error. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay}}
+\index{S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Free\+Y\+U\+V\+Overlay (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{overlay}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ac31e4e0119d1c58b3a79d62a576af8ed}
+Free a video overlay \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Get\+Clip\+Rect@{S\+D\+L\+\_\+\+Get\+Clip\+Rect}}
+\index{S\+D\+L\+\_\+\+Get\+Clip\+Rect@{S\+D\+L\+\_\+\+Get\+Clip\+Rect}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Clip\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Clip\+Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{rect}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a7d7f71b94748a1b0db3b5b769834ed27}
+Gets the clipping rectangle for the destination surface in a blit. \textquotesingle{}rect\textquotesingle{} must be a pointer to a valid rectangle which will be filled with the correct values. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Get\+Gamma\+Ramp@{S\+D\+L\+\_\+\+Get\+Gamma\+Ramp}}
+\index{S\+D\+L\+\_\+\+Get\+Gamma\+Ramp@{S\+D\+L\+\_\+\+Get\+Gamma\+Ramp}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Gamma\+Ramp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Gamma\+Ramp (
+\begin{DoxyParamCaption}
+\item[{Uint16 $\ast$}]{red, }
+\item[{Uint16 $\ast$}]{green, }
+\item[{Uint16 $\ast$}]{blue}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a98ede6a1eb94d3b68413848629b675d3}
+Retrieve the current values of the gamma translation tables.
+
+You must pass in valid pointers to arrays of 256 16-\/bit quantities. Any of the pointers may be N\+U\+L\+L to ignore that channel. If the call succeeds, it will return 0. If the display driver or hardware does not support gamma translation, or otherwise fails, this function will return -\/1. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Get\+R\+G\+B@{S\+D\+L\+\_\+\+Get\+R\+G\+B}}
+\index{S\+D\+L\+\_\+\+Get\+R\+G\+B@{S\+D\+L\+\_\+\+Get\+R\+G\+B}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+R\+G\+B (
+\begin{DoxyParamCaption}
+\item[{Uint32}]{pixel, }
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const}]{fmt, }
+\item[{Uint8 $\ast$}]{r, }
+\item[{Uint8 $\ast$}]{g, }
+\item[{Uint8 $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a4e883f7c9b17e4cdcef7c71e3a41df48}
+Maps a pixel value into the R\+G\+B components for a given pixel format \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Get\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A}}
+\index{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+R\+G\+B\+A (
+\begin{DoxyParamCaption}
+\item[{Uint32}]{pixel, }
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const}]{fmt, }
+\item[{Uint8 $\ast$}]{r, }
+\item[{Uint8 $\ast$}]{g, }
+\item[{Uint8 $\ast$}]{b, }
+\item[{Uint8 $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a3dbc4a45554bf5ef48e064617e7b1da7}
+Maps a pixel value into the R\+G\+B\+A components for a given pixel format \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Get\+Video\+Info@{S\+D\+L\+\_\+\+Get\+Video\+Info}}
+\index{S\+D\+L\+\_\+\+Get\+Video\+Info@{S\+D\+L\+\_\+\+Get\+Video\+Info}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Video\+Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} const {\bf S\+D\+L\+\_\+\+Video\+Info}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Video\+Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ae7ce182f8b24961efc6d1a8260c50ffd}
+This function returns a read-\/only pointer to information about the video hardware. If this is called before \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288}, the \textquotesingle{}vfmt\textquotesingle{} member of the returned structure will contain the pixel format of the \char`\"{}best\char`\"{} video mode. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Get\+Video\+Surface@{S\+D\+L\+\_\+\+Get\+Video\+Surface}}
+\index{S\+D\+L\+\_\+\+Get\+Video\+Surface@{S\+D\+L\+\_\+\+Get\+Video\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Video\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Video\+Surface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ac502be87203c942ab06cbb18ae65abfc}
+This function returns a pointer to the current display surface. If S\+D\+L is doing format conversion on the display surface, this function returns the publicly visible surface, not the real video surface. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute}}
+\index{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+G\+Lattr}}]{attr, }
+\item[{int $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a611bbed6c7374329e1d1b9c31b06976d}
+Get an attribute of the Open\+G\+L subsystem from the windowing interface, such as gl\+X. This is of course different from getting the values from S\+D\+L\textquotesingle{}s internal Open\+G\+L subsystem, which only stores the values you request before initialization.
+
+Developers should track the values they pass into S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute themselves if they want to retrieve these values. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address}}
+\index{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{proc}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}
+Get the address of a G\+L function \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library}}
+\index{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}
+Dynamically load an Open\+G\+L library, or the default one if path is N\+U\+L\+L
+
+If you do this, you need to retrieve all of the G\+L functions used in your program from the dynamic library using \doxyref{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address()}{p.}{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute}}
+\index{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+G\+Lattr}}]{attr, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_aed4d4347f2d5def1532bc22893e0e0d9}
+Set an attribute of the Open\+G\+L subsystem before intialization. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers}}
+\index{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers@{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Buffers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ac928f4440899850e2f1c773c3d38356d}
+Swap the Open\+G\+L buffers, if double-\/buffering is supported. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+List\+Modes@{S\+D\+L\+\_\+\+List\+Modes}}
+\index{S\+D\+L\+\_\+\+List\+Modes@{S\+D\+L\+\_\+\+List\+Modes}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+List\+Modes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Rect}$\ast$$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+List\+Modes (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$}]{format, }
+\item[{Uint32}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a42252a3fc90d8dcaf727c4bddab1e3fd}
+Return a pointer to an array of available screen dimensions for the given format and video flags, sorted largest to smallest. Returns N\+U\+L\+L if there are no dimensions available for a particular format, or (\doxyref{S\+D\+L\+\_\+\+Rect}{p.}{struct_s_d_l___rect} $\ast$$\ast$)-\/1 if any dimension is okay for the given format.
+
+If \textquotesingle{}format\textquotesingle{} is N\+U\+L\+L, the mode list will be for the format given by \doxyref{S\+D\+L\+\_\+\+Get\+Video\+Info()}{p.}{_s_d_l__video_8h_ae7ce182f8b24961efc6d1a8260c50ffd}-\/$>$vfmt \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W@{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W}}
+\index{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W@{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+R\+W (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$}]{src, }
+\item[{int}]{freesrc}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_aac1d1435b9fa8523d699c3a33264d559}
+Load a surface from a seekable S\+D\+L data source (memory or file.) If \textquotesingle{}freesrc\textquotesingle{} is non-\/zero, the source will be closed after being read. Returns the new surface, or N\+U\+L\+L if there was an error. The new surface should be freed with S\+D\+L\+\_\+\+Free\+Surface(). \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Lock\+Surface@{S\+D\+L\+\_\+\+Lock\+Surface}}
+\index{S\+D\+L\+\_\+\+Lock\+Surface@{S\+D\+L\+\_\+\+Lock\+Surface}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Lock\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Lock\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a3d1da1c7ecdaa461fac51a10785f5077}
+\doxyref{S\+D\+L\+\_\+\+Lock\+Surface()}{p.}{_s_d_l__video_8h_a3d1da1c7ecdaa461fac51a10785f5077} sets up a surface for directly accessing the pixels. Between calls to \doxyref{S\+D\+L\+\_\+\+Lock\+Surface()}{p.}{_s_d_l__video_8h_a3d1da1c7ecdaa461fac51a10785f5077}/\+S\+D\+L\+\_\+\+Unlock\+Surface(), you can write to and read from \textquotesingle{}surface-\/$>$pixels\textquotesingle{}, using the pixel format stored in \textquotesingle{}surface-\/$>$format\textquotesingle{}. Once you are done accessing the surface, you should use S\+D\+L\+\_\+\+Unlock\+Surface() to release it.
+
+Not all surfaces require locking. If \doxyref{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K(surface)}{p.}{_s_d_l__video_8h_a0bce24bb7b85d73c1f7328b176bd506f} evaluates to 0, then you can read and write to the surface at any time, and the pixel format of the surface will not change. In particular, if the S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E flag is not given when calling \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288}, you will not need to lock the display surface before accessing it.
+
+No operating system or library calls should be made between lock/unlock pairs, as critical system locks may be held during this time.
+
+\doxyref{S\+D\+L\+\_\+\+Lock\+Surface()}{p.}{_s_d_l__video_8h_a3d1da1c7ecdaa461fac51a10785f5077} returns 0, or -\/1 if the surface couldn\textquotesingle{}t be locked. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay}}
+\index{S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay@{S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Lock\+Y\+U\+V\+Overlay (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{overlay}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a55438076f93d0fe00905cb14569f8a0c}
+Lock an overlay for direct access, and unlock it when you are done \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Lower\+Blit@{S\+D\+L\+\_\+\+Lower\+Blit}}
+\index{S\+D\+L\+\_\+\+Lower\+Blit@{S\+D\+L\+\_\+\+Lower\+Blit}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Lower\+Blit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Lower\+Blit (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{src, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{srcrect, }
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{dst, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{dstrect}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a82bd1c0e0886d77e287207fe6351bf87}
+This is a semi-\/private blit function and it performs low-\/level surface blitting only. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Map\+R\+G\+B@{S\+D\+L\+\_\+\+Map\+R\+G\+B}}
+\index{S\+D\+L\+\_\+\+Map\+R\+G\+B@{S\+D\+L\+\_\+\+Map\+R\+G\+B}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Map\+R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint32 {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Map\+R\+G\+B (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const}]{format, }
+\item[{const Uint8}]{r, }
+\item[{const Uint8}]{g, }
+\item[{const Uint8}]{b}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a7aab2d186086a09d626378c53f209352}
+Maps an R\+G\+B triple to an opaque pixel value for a given pixel format \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Map\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A}}
+\index{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint32 {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Map\+R\+G\+B\+A (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$const}]{format, }
+\item[{const Uint8}]{r, }
+\item[{const Uint8}]{g, }
+\item[{const Uint8}]{b, }
+\item[{const Uint8}]{a}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ae9ad39309698067c7a8670ea01ba8a4c}
+Maps an R\+G\+B\+A quadruple to a pixel value for a given pixel format \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W@{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W}}
+\index{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W@{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+R\+W (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{{\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$}]{dst, }
+\item[{int}]{freedst}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_aadc126a4edeafb5033d5e942cf32db6a}
+Save a surface to a seekable S\+D\+L data source (memory or file.) If \textquotesingle{}freedst\textquotesingle{} is non-\/zero, the source will be closed after being written. Returns 0 if successful or -\/1 if there was an error. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Alpha@{S\+D\+L\+\_\+\+Set\+Alpha}}
+\index{S\+D\+L\+\_\+\+Set\+Alpha@{S\+D\+L\+\_\+\+Set\+Alpha}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Alpha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Alpha (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{Uint32}]{flag, }
+\item[{Uint8}]{alpha}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a81a9bae0b4a4ee36770eb3ba68e7b323}
+This function sets the alpha value for the entire surface, as opposed to using the alpha component of each pixel. This value measures the range of transparency of the surface, 0 being completely transparent to 255 being completely opaque. An \textquotesingle{}alpha\textquotesingle{} value of 255 causes blits to be opaque, the source pixels copied to the destination (the default). Note that per-\/surface alpha can be combined with colorkey transparency.
+
+If \textquotesingle{}flag\textquotesingle{} is 0, alpha blending is disabled for the surface. If \textquotesingle{}flag\textquotesingle{} is S\+D\+L\+\_\+\+S\+R\+C\+A\+L\+P\+H\+A, alpha blending is enabled for the surface. O\+R\+:ing the flag with S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L requests R\+L\+E acceleration for the surface; if S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L is not specified, the R\+L\+E accel will be removed.
+
+The \textquotesingle{}alpha\textquotesingle{} parameter is ignored for surfaces that have an alpha channel. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Clip\+Rect@{S\+D\+L\+\_\+\+Set\+Clip\+Rect}}
+\index{S\+D\+L\+\_\+\+Set\+Clip\+Rect@{S\+D\+L\+\_\+\+Set\+Clip\+Rect}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Clip\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+bool {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Clip\+Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{const {\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{rect}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a6cf2c30be55f51fe9e4faf97e3f8d08b}
+Sets the clipping rectangle for the destination surface in a blit.
+
+If the clip rectangle is N\+U\+L\+L, clipping will be disabled. If the clip rectangle doesn\textquotesingle{}t intersect the surface, the function will return S\+D\+L\+\_\+\+F\+A\+L\+S\+E and blits will be completely clipped. Otherwise the function returns S\+D\+L\+\_\+\+T\+R\+U\+E and blits to the surface will be clipped to the intersection of the surface area and the clipping rectangle.
+
+Note that blits are automatically clipped to the edges of the source and destination surfaces. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Color\+Key@{S\+D\+L\+\_\+\+Set\+Color\+Key}}
+\index{S\+D\+L\+\_\+\+Set\+Color\+Key@{S\+D\+L\+\_\+\+Set\+Color\+Key}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Color\+Key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Color\+Key (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{Uint32}]{flag, }
+\item[{Uint32}]{key}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_adc7e866ce5cb8dd77974bdf4375c13ad}
+Sets the color key (transparent pixel) in a blittable surface. If \textquotesingle{}flag\textquotesingle{} is S\+D\+L\+\_\+\+S\+R\+C\+C\+O\+L\+O\+R\+K\+E\+Y (optionally O\+R\textquotesingle{}d with S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L), \textquotesingle{}key\textquotesingle{} will be the transparent pixel in the source image of a blit. S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+E\+L requests R\+L\+E acceleration for the surface if present, and removes R\+L\+E acceleration if absent. If \textquotesingle{}flag\textquotesingle{} is 0, this function clears any current color key. This function returns 0, or -\/1 if there was an error. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Colors@{S\+D\+L\+\_\+\+Set\+Colors}}
+\index{S\+D\+L\+\_\+\+Set\+Colors@{S\+D\+L\+\_\+\+Set\+Colors}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Colors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Colors (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{{\bf S\+D\+L\+\_\+\+Color} $\ast$}]{colors, }
+\item[{int}]{firstcolor, }
+\item[{int}]{ncolors}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ad2bec38aa7164bf5560a71a340ccd7aa}
+Sets a portion of the colormap for the given 8-\/bit surface. If \textquotesingle{}surface\textquotesingle{} is not a palettized surface, this function does nothing, returning 0. If all of the colors were set as passed to \doxyref{S\+D\+L\+\_\+\+Set\+Colors()}{p.}{_s_d_l__video_8h_ad2bec38aa7164bf5560a71a340ccd7aa}, it will return 1. If not all the color entries were set exactly as given, it will return 0, and you should look at the surface palette to determine the actual color palette.
+
+When \textquotesingle{}surface\textquotesingle{} is the surface associated with the current display, the display colormap will be updated with the requested colors. If S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E was set in \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} flags, \doxyref{S\+D\+L\+\_\+\+Set\+Colors()}{p.}{_s_d_l__video_8h_ad2bec38aa7164bf5560a71a340ccd7aa} will always return 1, and the palette is guaranteed to be set the way you desire, even if the window colormap has to be warped or run under emulation. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Gamma@{S\+D\+L\+\_\+\+Set\+Gamma}}
+\index{S\+D\+L\+\_\+\+Set\+Gamma@{S\+D\+L\+\_\+\+Set\+Gamma}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Gamma}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Gamma (
+\begin{DoxyParamCaption}
+\item[{float}]{red, }
+\item[{float}]{green, }
+\item[{float}]{blue}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_acbf56583f5807bd45812bacd8a4b99b4}
+Set the gamma correction for each of the color channels. The gamma values range (approximately) between 0.\+1 and 10.\+0
+
+If this function isn\textquotesingle{}t supported directly by the hardware, it will be emulated using gamma ramps, if available. If successful, this function returns 0, otherwise it returns -\/1. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Gamma\+Ramp@{S\+D\+L\+\_\+\+Set\+Gamma\+Ramp}}
+\index{S\+D\+L\+\_\+\+Set\+Gamma\+Ramp@{S\+D\+L\+\_\+\+Set\+Gamma\+Ramp}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Gamma\+Ramp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Gamma\+Ramp (
+\begin{DoxyParamCaption}
+\item[{const Uint16 $\ast$}]{red, }
+\item[{const Uint16 $\ast$}]{green, }
+\item[{const Uint16 $\ast$}]{blue}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a68a1f804962104530584410a51fc745f}
+Set the gamma translation table for the red, green, and blue channels of the video hardware. Each table is an array of 256 16-\/bit quantities, representing a mapping between the input and output for that channel. The input is the index into the array, and the output is the 16-\/bit gamma value at that index, scaled to the output color precision.
+
+You may pass N\+U\+L\+L for any of the channels to leave it unchanged. If the call succeeds, it will return 0. If the display driver or hardware does not support gamma translation, or otherwise fails, this function will return -\/1. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Palette@{S\+D\+L\+\_\+\+Set\+Palette}}
+\index{S\+D\+L\+\_\+\+Set\+Palette@{S\+D\+L\+\_\+\+Set\+Palette}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Palette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Palette (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface, }
+\item[{int}]{flags, }
+\item[{{\bf S\+D\+L\+\_\+\+Color} $\ast$}]{colors, }
+\item[{int}]{firstcolor, }
+\item[{int}]{ncolors}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a54b145fcea4b9825a1464264301a1da7}
+Sets a portion of the colormap for a given 8-\/bit surface. \textquotesingle{}flags\textquotesingle{} is one or both of\+: S\+D\+L\+\_\+\+L\+O\+G\+P\+A\+L -- set logical palette, which controls how blits are mapped to/from the surface, S\+D\+L\+\_\+\+P\+H\+Y\+S\+P\+A\+L -- set physical palette, which controls how pixels look on the screen Only screens have physical palettes. Separate change of physical/logical palettes is only possible if the screen has S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E set.
+
+The return value is 1 if all colours could be set as requested, and 0 otherwise.
+
+\doxyref{S\+D\+L\+\_\+\+Set\+Colors()}{p.}{_s_d_l__video_8h_ad2bec38aa7164bf5560a71a340ccd7aa} is equivalent to calling this function with flags = (S\+D\+L\+\_\+\+L\+O\+G\+P\+A\+L$\vert$\+S\+D\+L\+\_\+\+P\+H\+Y\+S\+P\+A\+L). \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Set\+Video\+Mode@{S\+D\+L\+\_\+\+Set\+Video\+Mode}}
+\index{S\+D\+L\+\_\+\+Set\+Video\+Mode@{S\+D\+L\+\_\+\+Set\+Video\+Mode}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Video\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Surface}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Video\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bpp, }
+\item[{Uint32}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288}
+Set up a video mode with the specified width, height and bits-\/per-\/pixel.
+
+If \textquotesingle{}bpp\textquotesingle{} is 0, it is treated as the current display bits per pixel.
+
+If S\+D\+L\+\_\+\+A\+N\+Y\+F\+O\+R\+M\+A\+T is set in \textquotesingle{}flags\textquotesingle{}, the S\+D\+L library will try to set the requested bits-\/per-\/pixel, but will return whatever video pixel format is available. The default is to emulate the requested pixel format if it is not natively available.
+
+If S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E is set in \textquotesingle{}flags\textquotesingle{}, the video surface will be placed in video memory, if possible, and you may have to call \doxyref{S\+D\+L\+\_\+\+Lock\+Surface()}{p.}{_s_d_l__video_8h_a3d1da1c7ecdaa461fac51a10785f5077} in order to access the raw framebuffer. Otherwise, the video surface will be created in system memory.
+
+If S\+D\+L\+\_\+\+A\+S\+Y\+N\+C\+B\+L\+I\+T is set in \textquotesingle{}flags\textquotesingle{}, S\+D\+L will try to perform rectangle updates asynchronously, but you must always lock before accessing pixels. S\+D\+L will wait for updates to complete before returning from the lock.
+
+If S\+D\+L\+\_\+\+H\+W\+P\+A\+L\+E\+T\+T\+E is set in \textquotesingle{}flags\textquotesingle{}, the S\+D\+L library will guarantee that the colors set by \doxyref{S\+D\+L\+\_\+\+Set\+Colors()}{p.}{_s_d_l__video_8h_ad2bec38aa7164bf5560a71a340ccd7aa} will be the colors you get. Otherwise, in 8-\/bit mode, \doxyref{S\+D\+L\+\_\+\+Set\+Colors()}{p.}{_s_d_l__video_8h_ad2bec38aa7164bf5560a71a340ccd7aa} may not be able to set all of the colors exactly the way they are requested, and you should look at the video surface structure to determine the actual palette. If S\+D\+L cannot guarantee that the colors you request can be set, i.\+e. if the colormap is shared, then the video surface may be created under emulation in system memory, overriding the S\+D\+L\+\_\+\+H\+W\+S\+U\+R\+F\+A\+C\+E flag.
+
+If S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N is set in \textquotesingle{}flags\textquotesingle{}, the S\+D\+L library will try to set a fullscreen video mode. The default is to create a windowed mode if the current graphics system has a window manager. If the S\+D\+L library is able to set a fullscreen video mode, this flag will be set in the surface that is returned.
+
+If S\+D\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F is set in \textquotesingle{}flags\textquotesingle{}, the S\+D\+L library will try to set up two surfaces in video memory and swap between them when you call \doxyref{S\+D\+L\+\_\+\+Flip()}{p.}{_s_d_l__video_8h_a3fb4f43ce7a5032d7e8ac778f3dacd7f}. This is usually slower than the normal single-\/buffering scheme, but prevents \char`\"{}tearing\char`\"{} artifacts caused by modifying video memory while the monitor is refreshing. It should only be used by applications that redraw the entire screen on every update.
+
+If S\+D\+L\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+L\+E is set in \textquotesingle{}flags\textquotesingle{}, the S\+D\+L library will allow the window manager, if any, to resize the window at runtime. When this occurs, S\+D\+L will send a S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E event to you application, and you must respond to the event by re-\/calling \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} with the requested size (or another size that suits the application).
+
+If S\+D\+L\+\_\+\+N\+O\+F\+R\+A\+M\+E is set in \textquotesingle{}flags\textquotesingle{}, the S\+D\+L library will create a window without any title bar or frame decoration. Fullscreen video modes have this flag set automatically.
+
+This function returns the video framebuffer surface, or N\+U\+L\+L if it fails.
+
+If you rely on functionality provided by certain video flags, check the flags of the returned surface to make sure that functionality is available. S\+D\+L will fall back to reduced functionality if the exact flags you wanted are not available. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Update\+Rect@{S\+D\+L\+\_\+\+Update\+Rect}}
+\index{S\+D\+L\+\_\+\+Update\+Rect@{S\+D\+L\+\_\+\+Update\+Rect}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Update\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Update\+Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{screen, }
+\item[{Sint32}]{x, }
+\item[{Sint32}]{y, }
+\item[{Uint32}]{w, }
+\item[{Uint32}]{h}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ace0326e8377f77eae661f4733a68f72d}
+If \textquotesingle{}x\textquotesingle{}, \textquotesingle{}y\textquotesingle{}, \textquotesingle{}w\textquotesingle{} and \textquotesingle{}h\textquotesingle{} are all 0, S\+D\+L\+\_\+\+Update\+Rect will update the entire screen. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Update\+Rects@{S\+D\+L\+\_\+\+Update\+Rects}}
+\index{S\+D\+L\+\_\+\+Update\+Rects@{S\+D\+L\+\_\+\+Update\+Rects}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Update\+Rects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Update\+Rects (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{screen, }
+\item[{int}]{numrects, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{rects}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a86a9e79d5178eee0e084099db4adb459}
+Makes sure the given list of rectangles is updated on the given screen. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Upper\+Blit@{S\+D\+L\+\_\+\+Upper\+Blit}}
+\index{S\+D\+L\+\_\+\+Upper\+Blit@{S\+D\+L\+\_\+\+Upper\+Blit}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Upper\+Blit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Upper\+Blit (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{src, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{srcrect, }
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{dst, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{dstrect}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a6f9b0bc3c7b6495894af65ccebfae90e}
+This is the public blit function, \doxyref{S\+D\+L\+\_\+\+Blit\+Surface()}{p.}{_s_d_l__video_8h_aad8d7ebe5e953593cb7d91373e73ba9a}, and it performs rectangle validation and clipping before passing it to \doxyref{S\+D\+L\+\_\+\+Lower\+Blit()}{p.}{_s_d_l__video_8h_a82bd1c0e0886d77e287207fe6351bf87} \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Video\+Driver\+Name@{S\+D\+L\+\_\+\+Video\+Driver\+Name}}
+\index{S\+D\+L\+\_\+\+Video\+Driver\+Name@{S\+D\+L\+\_\+\+Video\+Driver\+Name}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Video\+Driver\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} char$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Video\+Driver\+Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{namebuf, }
+\item[{int}]{maxlen}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a2750e9681ab7b493ab730f4aca2d1cc9}
+This function fills the given character buffer with the name of the video driver, and returns a pointer to it if the video driver has been initialized. It returns N\+U\+L\+L if no driver has been initialized. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Video\+Init@{S\+D\+L\+\_\+\+Video\+Init}}
+\index{S\+D\+L\+\_\+\+Video\+Init@{S\+D\+L\+\_\+\+Video\+Init}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Video\+Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Video\+Init (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{driver\+\_\+name, }
+\item[{Uint32}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a5f56f36b68b0f95bb715390b39af111d}
+Initializes the video subsystem. Sets up a connection to the window manager, etc, and determines the current video mode and pixel format, but does not initialize a window or graphics mode. Note that event handling is activated by this routine.
+
+If you use both sound and video in your application, you need to call \doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8} before opening the sound device, otherwise under Win32 Direct\+X, you won\textquotesingle{}t be able to set full-\/screen display modes. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+Video\+Mode\+O\+K@{S\+D\+L\+\_\+\+Video\+Mode\+O\+K}}
+\index{S\+D\+L\+\_\+\+Video\+Mode\+O\+K@{S\+D\+L\+\_\+\+Video\+Mode\+O\+K}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Video\+Mode\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Video\+Mode\+O\+K (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bpp, }
+\item[{Uint32}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a5021ea314f3db53664a3703670d82b0d}
+Check to see if a particular video mode is supported. It returns 0 if the requested mode is not supported under any bit depth, or returns the bits-\/per-\/pixel of the closest available mode with the given width and height. If this bits-\/per-\/pixel is different from the one used when setting the video mode, \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} will succeed, but will emulate the requested bits-\/per-\/pixel with a shadow surface.
+
+The arguments to \doxyref{S\+D\+L\+\_\+\+Video\+Mode\+O\+K()}{p.}{_s_d_l__video_8h_a5021ea314f3db53664a3703670d82b0d} are the same ones you would pass to \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption}}
+\index{S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+W\+M\+\_\+\+Get\+Caption (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{title, }
+\item[{char $\ast$$\ast$}]{icon}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a4b1425746427d78fa1b47f217a7b948f}
+Gets the title and icon text of the display window (U\+T\+F-\/8 encoded) \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input}}
+\index{S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Grab\+Mode} {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+W\+M\+\_\+\+Grab\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Grab\+Mode}}]{mode}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a3e8447321132e521521256ff78a0479d}
+This function allows you to set and query the input grab state of the application. It returns the new input grab state.
+
+Grabbing means that the mouse is confined to the application window, and nearly all keyboard input is passed directly to the application, and not interpreted by a window manager, if any. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window}}
+\index{S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+W\+M\+\_\+\+Iconify\+Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_af2cb0a180eda7245d21a5026f8e84d1b}
+This function iconifies the window, and returns 1 if it succeeded. If the function succeeds, it generates an S\+D\+L\+\_\+\+A\+P\+P\+A\+C\+T\+I\+V\+E loss event. This function is a noop and returns 0 in non-\/windowed environments. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption}}
+\index{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Caption (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{title, }
+\item[{const char $\ast$}]{icon}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_a3c68abe491c620fadb50d267d586b1bc}
+These functions allow interaction with the window manager, if any. Sets the title and icon text of the display window (U\+T\+F-\/8 encoded) \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon}}
+\index{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+W\+M\+\_\+\+Set\+Icon (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{icon, }
+\item[{Uint8 $\ast$}]{mask}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ac16d7d1c3c6efdec28683c07a14634ef}
+Sets the icon for the display window. This function must be called before the first call to \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288}. It takes an icon surface, and a mask in M\+S\+B format. If \textquotesingle{}mask\textquotesingle{} is N\+U\+L\+L, the entire icon surface will be used as the icon. \index{S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}!S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen}}
+\index{S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen@{S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen}!S\+D\+L\+\_\+video.\+h@{S\+D\+L\+\_\+video.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+W\+M\+\_\+\+Toggle\+Full\+Screen (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{surface}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__video_8h_ac30e8923098e3b60647026ea06dc4016}
+Toggle fullscreen mode without changing the contents of the screen. If the display surface does not require locking before accessing the pixel information, then the memory pointers will not change.
+
+If this function was able to toggle fullscreen mode (change from running in a window to fullscreen, or vice-\/versa), it will return 1. If it is not implemented, or fails, it returns 0.
+
+The next call to \doxyref{S\+D\+L\+\_\+\+Set\+Video\+Mode()}{p.}{_s_d_l__video_8h_a6ef2b117d8295ba60dc07d038fead288} will set the mode fullscreen attribute based on the flags parameter -\/ if S\+D\+L\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N is not set, then the display will be windowed by default where supported.
+
+This is currently only implemented in the X11 video driver. 

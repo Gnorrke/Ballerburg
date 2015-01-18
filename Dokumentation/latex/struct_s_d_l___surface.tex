@@ -1,0 +1,88 @@
+\section{S\+D\+L\+\_\+\+Surface Struct Reference}
+\label{struct_s_d_l___surface}\index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+video.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 {\bf flags}
+\item 
+{\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$ {\bf format}
+\item 
+int {\bfseries w}\label{struct_s_d_l___surface_a9b0ec7185dcdb2a3530a9160a6ea83d9}
+
+\item 
+int {\bf h}
+\item 
+Uint16 {\bf pitch}
+\item 
+void $\ast$ {\bf pixels}
+\item 
+int {\bf offset}
+\item 
+struct private\+\_\+hwdata $\ast$ {\bf hwdata}
+\item 
+{\bf S\+D\+L\+\_\+\+Rect} {\bf clip\+\_\+rect}
+\item 
+Uint32 {\bf unused1}
+\item 
+Uint32 {\bf locked}
+\item 
+struct S\+D\+L\+\_\+\+Blit\+Map $\ast$ {\bf map}
+\item 
+unsigned int {\bf format\+\_\+version}
+\item 
+int {\bf refcount}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure should be treated as read-\/only, except for \textquotesingle{}pixels\textquotesingle{}, which, if not N\+U\+L\+L, contains the raw pixel data for the surface. 
+
+\subsection{Member Data Documentation}
+\index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!clip\+\_\+rect@{clip\+\_\+rect}}
+\index{clip\+\_\+rect@{clip\+\_\+rect}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{clip\+\_\+rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Rect} S\+D\+L\+\_\+\+Surface\+::clip\+\_\+rect}\label{struct_s_d_l___surface_aa9a0da3b38261dad6cf0cc4e3bb5b0c3}
+clipping information Read-\/only \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!flags@{flags}}
+\index{flags@{flags}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Surface\+::flags}\label{struct_s_d_l___surface_a86d78b665d5dfd7aa1dd9696b067641b}
+Read-\/only \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!format@{format}}
+\index{format@{format}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Pixel\+Format}$\ast$ S\+D\+L\+\_\+\+Surface\+::format}\label{struct_s_d_l___surface_a0a90721f947c10c3b79e02ccb419ca62}
+Read-\/only \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!format\+\_\+version@{format\+\_\+version}}
+\index{format\+\_\+version@{format\+\_\+version}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{format\+\_\+version}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+D\+L\+\_\+\+Surface\+::format\+\_\+version}\label{struct_s_d_l___surface_a71e84e52b2faf69be9739f97b248342a}
+format version, bumped at every change to invalidate blit maps Private \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!h@{h}}
+\index{h@{h}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Surface\+::h}\label{struct_s_d_l___surface_af33bcf87a1f5e10a99b3c7e8626b38c8}
+Read-\/only \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!hwdata@{hwdata}}
+\index{hwdata@{hwdata}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{hwdata}]{\setlength{\rightskip}{0pt plus 5cm}struct private\+\_\+hwdata$\ast$ S\+D\+L\+\_\+\+Surface\+::hwdata}\label{struct_s_d_l___surface_a2d3ce688b6cfb72875f2411ea0560f18}
+Hardware-\/specific surface info \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!locked@{locked}}
+\index{locked@{locked}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{locked}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Surface\+::locked}\label{struct_s_d_l___surface_ae807b7e4f4174d56e6cf40df12c8cefe}
+Allow recursive locks Private \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!map@{map}}
+\index{map@{map}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}struct S\+D\+L\+\_\+\+Blit\+Map$\ast$ S\+D\+L\+\_\+\+Surface\+::map}\label{struct_s_d_l___surface_a8c1ecad399b0d4f525b1a53b6ee9393f}
+info for fast blit mapping to other surfaces Private \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!offset@{offset}}
+\index{offset@{offset}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Surface\+::offset}\label{struct_s_d_l___surface_ab40c060fa976dbb25bebc7869132ffda}
+Private \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!pitch@{pitch}}
+\index{pitch@{pitch}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{pitch}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Surface\+::pitch}\label{struct_s_d_l___surface_a53fd25784c0f6efd7dd19bb0afce5452}
+Read-\/only \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!pixels@{pixels}}
+\index{pixels@{pixels}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{pixels}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ S\+D\+L\+\_\+\+Surface\+::pixels}\label{struct_s_d_l___surface_abd9597e0e084b8ef33fe0397bc26d911}
+Read-\/write \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!refcount@{refcount}}
+\index{refcount@{refcount}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{refcount}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Surface\+::refcount}\label{struct_s_d_l___surface_a03d10628a359c0674f5ceffd574f1641}
+Reference count -- used when freeing surface Read-\/mostly \index{S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}!unused1@{unused1}}
+\index{unused1@{unused1}!S\+D\+L\+\_\+\+Surface@{S\+D\+L\+\_\+\+Surface}}
+\subsubsection[{unused1}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Surface\+::unused1}\label{struct_s_d_l___surface_a41066cf7cc91d2f032dd0f29cc418ec4}
+for binary compatibility 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/{\bf S\+D\+L\+\_\+video.\+h}\end{DoxyCompactItemize}

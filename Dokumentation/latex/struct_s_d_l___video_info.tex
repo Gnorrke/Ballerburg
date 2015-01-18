@@ -1,0 +1,94 @@
+\section{S\+D\+L\+\_\+\+Video\+Info Struct Reference}
+\label{struct_s_d_l___video_info}\index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+video.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 {\bf hw\+\_\+available}\+:1
+\item 
+Uint32 {\bf wm\+\_\+available}\+:1
+\item 
+Uint32 {\bfseries Unused\+Bits1}\+:6\label{struct_s_d_l___video_info_a1aeb1f930953b9d32a56f978047b5f27}
+
+\item 
+Uint32 {\bfseries Unused\+Bits2}\+:1\label{struct_s_d_l___video_info_add1b831a063c0a4aed3f2f496096374b}
+
+\item 
+Uint32 {\bf blit\+\_\+hw}\+:1
+\item 
+Uint32 {\bf blit\+\_\+hw\+\_\+\+C\+C}\+:1
+\item 
+Uint32 {\bf blit\+\_\+hw\+\_\+\+A}\+:1
+\item 
+Uint32 {\bf blit\+\_\+sw}\+:1
+\item 
+Uint32 {\bf blit\+\_\+sw\+\_\+\+C\+C}\+:1
+\item 
+Uint32 {\bf blit\+\_\+sw\+\_\+\+A}\+:1
+\item 
+Uint32 {\bf blit\+\_\+fill}\+:1
+\item 
+Uint32 {\bfseries Unused\+Bits3}\+:16\label{struct_s_d_l___video_info_a647dc6f87a620ac1f4d7075a0f7063c7}
+
+\item 
+Uint32 {\bf video\+\_\+mem}
+\item 
+{\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$ {\bf vfmt}
+\item 
+int {\bf current\+\_\+w}
+\item 
+int {\bf current\+\_\+h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Useful for determining the video hardware capabilities 
+
+\subsection{Member Data Documentation}
+\index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+fill@{blit\+\_\+fill}}
+\index{blit\+\_\+fill@{blit\+\_\+fill}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+fill}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+fill}\label{struct_s_d_l___video_info_ab0453880653b45226638e1ee34fceb56}
+Flag\+: Accelerated color fill \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+hw@{blit\+\_\+hw}}
+\index{blit\+\_\+hw@{blit\+\_\+hw}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+hw}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+hw}\label{struct_s_d_l___video_info_afd985d7ee038d978694ebe0203338837}
+Flag\+: Accelerated blits H\+W --$>$ H\+W \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+hw\+\_\+\+A@{blit\+\_\+hw\+\_\+\+A}}
+\index{blit\+\_\+hw\+\_\+\+A@{blit\+\_\+hw\+\_\+\+A}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+hw\+\_\+\+A}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+hw\+\_\+\+A}\label{struct_s_d_l___video_info_a2153563e63065ba5a66836ad03f0cd68}
+Flag\+: Accelerated blits with Alpha \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+hw\+\_\+\+C\+C@{blit\+\_\+hw\+\_\+\+C\+C}}
+\index{blit\+\_\+hw\+\_\+\+C\+C@{blit\+\_\+hw\+\_\+\+C\+C}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+hw\+\_\+\+C\+C}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+hw\+\_\+\+C\+C}\label{struct_s_d_l___video_info_af62ba97a72e925000dde2ea27c854b7f}
+Flag\+: Accelerated blits with Colorkey \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+sw@{blit\+\_\+sw}}
+\index{blit\+\_\+sw@{blit\+\_\+sw}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+sw}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+sw}\label{struct_s_d_l___video_info_aa7dc499b5b1bea4bdb4de04bd58fc796}
+Flag\+: Accelerated blits S\+W --$>$ H\+W \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+sw\+\_\+\+A@{blit\+\_\+sw\+\_\+\+A}}
+\index{blit\+\_\+sw\+\_\+\+A@{blit\+\_\+sw\+\_\+\+A}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+sw\+\_\+\+A}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+sw\+\_\+\+A}\label{struct_s_d_l___video_info_ad8319697999a5d00f551e2b7547f17aa}
+Flag\+: Accelerated blits with Alpha \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!blit\+\_\+sw\+\_\+\+C\+C@{blit\+\_\+sw\+\_\+\+C\+C}}
+\index{blit\+\_\+sw\+\_\+\+C\+C@{blit\+\_\+sw\+\_\+\+C\+C}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{blit\+\_\+sw\+\_\+\+C\+C}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::blit\+\_\+sw\+\_\+\+C\+C}\label{struct_s_d_l___video_info_aafaf9067d0b70d78ec9d58c32895b62e}
+Flag\+: Accelerated blits with Colorkey \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!current\+\_\+h@{current\+\_\+h}}
+\index{current\+\_\+h@{current\+\_\+h}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{current\+\_\+h}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Video\+Info\+::current\+\_\+h}\label{struct_s_d_l___video_info_ae797099dc83c35aa6fa9a157fee4c120}
+Value\+: The current video mode height \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!current\+\_\+w@{current\+\_\+w}}
+\index{current\+\_\+w@{current\+\_\+w}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{current\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Video\+Info\+::current\+\_\+w}\label{struct_s_d_l___video_info_add58e29175b54818092e9dea416fdc7f}
+Value\+: The current video mode width \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!hw\+\_\+available@{hw\+\_\+available}}
+\index{hw\+\_\+available@{hw\+\_\+available}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{hw\+\_\+available}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::hw\+\_\+available}\label{struct_s_d_l___video_info_a515e38f0a122a45fe67230e3929670f5}
+Flag\+: Can you create hardware surfaces? \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!vfmt@{vfmt}}
+\index{vfmt@{vfmt}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{vfmt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Pixel\+Format}$\ast$ S\+D\+L\+\_\+\+Video\+Info\+::vfmt}\label{struct_s_d_l___video_info_a8501500d288bda9c60d8251138478f08}
+Value\+: The format of the video surface \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!video\+\_\+mem@{video\+\_\+mem}}
+\index{video\+\_\+mem@{video\+\_\+mem}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{video\+\_\+mem}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::video\+\_\+mem}\label{struct_s_d_l___video_info_ab706d6c856b170f8da28786e98fb5de3}
+The total amount of video memory (in K) \index{S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}!wm\+\_\+available@{wm\+\_\+available}}
+\index{wm\+\_\+available@{wm\+\_\+available}!S\+D\+L\+\_\+\+Video\+Info@{S\+D\+L\+\_\+\+Video\+Info}}
+\subsubsection[{wm\+\_\+available}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Video\+Info\+::wm\+\_\+available}\label{struct_s_d_l___video_info_aa7dee6b91b73acd0476d67d7036669e9}
+Flag\+: Can you talk to a window manager? 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/{\bf S\+D\+L\+\_\+video.\+h}\end{DoxyCompactItemize}

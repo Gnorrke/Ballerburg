@@ -24,6 +24,7 @@ public:
     std::vector<SDL_Rect> getMap();
 
     void deleteBlock(int index);
+    CastleBlock &getBlock(int block);
 
     private:
     std::vector<std::unique_ptr<CastleBlock>> cblocks;

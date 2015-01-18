@@ -1,0 +1,400 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+events.h File Reference}
+\label{_s_d_l__events_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+events.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+events.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+active.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+keyboard.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+mouse.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+joystick.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+quit.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Active\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Keyboard\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Mouse\+Motion\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Mouse\+Button\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Joy\+Axis\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Joy\+Ball\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Joy\+Hat\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Joy\+Button\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Resize\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Expose\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Quit\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+User\+Event}
+\item 
+struct {\bf S\+D\+L\+\_\+\+Sys\+W\+M\+Event}
+\item 
+union {\bf S\+D\+L\+\_\+\+Event}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{Indent}{\bf General keyboard/mouse state definitions}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D}~0\label{_s_d_l__events_8h_ad680a069f9fcab80de91b3eefdf29c3c}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+E\+S\+S\+E\+D}~1\label{_s_d_l__events_8h_aee81bbffbc8489bdea8fecd1232c4bd1}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Event State}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Q\+U\+E\+R\+Y}~-\/1\label{_s_d_l__events_8h_a56cee6a1344dd6d33598af982fa9607f}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+G\+N\+O\+R\+E}~0\label{_s_d_l__events_8h_af1ff071ae5e1576d6de5663d68391ac5}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E}~0\label{_s_d_l__events_8h_a8190e7249139292b676f0cfcaf7d590a}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+E\+N\+A\+B\+L\+E}~1\label{_s_d_l__events_8h_ae8ffaa5d3d65f4dd75dcf1563e1cc8a9}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Active\+Event} {\bf S\+D\+L\+\_\+\+Active\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Keyboard\+Event} {\bf S\+D\+L\+\_\+\+Keyboard\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Mouse\+Motion\+Event} {\bf S\+D\+L\+\_\+\+Mouse\+Motion\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Mouse\+Button\+Event} {\bf S\+D\+L\+\_\+\+Mouse\+Button\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Axis\+Event} {\bf S\+D\+L\+\_\+\+Joy\+Axis\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Ball\+Event} {\bf S\+D\+L\+\_\+\+Joy\+Ball\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Hat\+Event} {\bf S\+D\+L\+\_\+\+Joy\+Hat\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Button\+Event} {\bf S\+D\+L\+\_\+\+Joy\+Button\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Resize\+Event} {\bf S\+D\+L\+\_\+\+Resize\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Expose\+Event} {\bf S\+D\+L\+\_\+\+Expose\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Quit\+Event} {\bf S\+D\+L\+\_\+\+Quit\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+User\+Event} {\bf S\+D\+L\+\_\+\+User\+Event}
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Sys\+W\+Mmsg} {\bfseries S\+D\+L\+\_\+\+Sys\+W\+Mmsg}\label{_s_d_l__events_8h_a1ebcb2014aeef8b8c2cfdd66c91ce3c8}
+
+\item 
+typedef struct {\bf S\+D\+L\+\_\+\+Sys\+W\+M\+Event} {\bfseries S\+D\+L\+\_\+\+Sys\+W\+M\+Event}\label{_s_d_l__events_8h_aac1ed3c867af6ba87928d86a4c16e7e5}
+
+\item 
+typedef union {\bf S\+D\+L\+\_\+\+Event} {\bf S\+D\+L\+\_\+\+Event}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf S\+D\+L\+\_\+\+Event\+Type} \{ \\*
+{\bf S\+D\+L\+\_\+\+N\+O\+E\+V\+E\+N\+T} = 0, 
+{\bf S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T}, 
+{\bf S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N}, 
+{\bf S\+D\+L\+\_\+\+K\+E\+Y\+U\+P}, 
+\\*
+{\bf S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N}, 
+{\bf S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N}, 
+{\bf S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P}, 
+{\bf S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N}, 
+\\*
+{\bf S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N}, 
+{\bf S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N}, 
+{\bf S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N}, 
+{\bf S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P}, 
+\\*
+{\bf S\+D\+L\+\_\+\+Q\+U\+I\+T}, 
+{\bf S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+A}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+B}, 
+\\*
+{\bf S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E}, 
+{\bf S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3}, 
+\\*
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6}, 
+{\bf S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7}, 
+\\*
+{\bf S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T} = 24, 
+{\bf S\+D\+L\+\_\+\+N\+U\+M\+E\+V\+E\+N\+T\+S} = 32
+ \}
+\item 
+enum {\bfseries S\+D\+L\+\_\+eventaction} \{ {\bfseries S\+D\+L\+\_\+\+A\+D\+D\+E\+V\+E\+N\+T}, 
+{\bfseries S\+D\+L\+\_\+\+P\+E\+E\+K\+E\+V\+E\+N\+T}, 
+{\bfseries S\+D\+L\+\_\+\+G\+E\+T\+E\+V\+E\+N\+T}
+ \}\label{_s_d_l__events_8h_a8fdf1485b0419bb77b89e745267dc179}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Pump\+Events} (void)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Peep\+Events} ({\bf S\+D\+L\+\_\+\+Event} $\ast$events, int numevents, S\+D\+L\+\_\+eventaction action, Uint32 mask)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Poll\+Event} ({\bf S\+D\+L\+\_\+\+Event} $\ast$event)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Wait\+Event} ({\bf S\+D\+L\+\_\+\+Event} $\ast$event)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Push\+Event} ({\bf S\+D\+L\+\_\+\+Event} $\ast$event)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Event\+State} (Uint8 type, int state)
+\end{DoxyCompactItemize}
+\subsection*{Predefined event masks}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K}(X)~(1$<$$<$(X))\label{_s_d_l__events_8h_ab631e5f1db261985cf5a8d32ea3dd382}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+A\+L\+L\+E\+V\+E\+N\+T\+S}~0x\+F\+F\+F\+F\+F\+F\+F\+F\label{_s_d_l__events_8h_aed93f15a1934ce4845afb7664a710bc2}
+
+\item 
+enum {\bfseries S\+D\+L\+\_\+\+Event\+Mask} \{ \\*
+{\bfseries S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T), 
+{\bfseries S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N), 
+{\bfseries S\+D\+L\+\_\+\+K\+E\+Y\+U\+P\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+K\+E\+Y\+U\+P), 
+{\bfseries S\+D\+L\+\_\+\+K\+E\+Y\+E\+V\+E\+N\+T\+M\+A\+S\+K}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N), 
+{\bfseries S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N), 
+{\bfseries S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P), 
+{\bfseries S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+E\+V\+E\+N\+T\+M\+A\+S\+K}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N), 
+{\bfseries S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N), 
+{\bfseries S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N), 
+{\bfseries S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N), 
+\\*
+{\bfseries S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P), 
+{\bfseries S\+D\+L\+\_\+\+J\+O\+Y\+E\+V\+E\+N\+T\+M\+A\+S\+K}, 
+{\bfseries S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E), 
+{\bfseries S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E), 
+\\*
+{\bfseries S\+D\+L\+\_\+\+Q\+U\+I\+T\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+Q\+U\+I\+T), 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T\+M\+A\+S\+K} = S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+M\+A\+S\+K(S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T)
+ \}\label{_s_d_l__events_8h_a07339c3fbda4c18a07fad288a2e23d21}
+
+\end{DoxyCompactItemize}
+\subsection*{Event Filtering}
+\begin{DoxyCompactItemize}
+\item 
+typedef int({\bf S\+D\+L\+C\+A\+L\+L} $\ast$ {\bfseries S\+D\+L\+\_\+\+Event\+Filter}) (const {\bf S\+D\+L\+\_\+\+Event} $\ast$event)\label{_s_d_l__events_8h_aa26e6a96de52e105eea34ca00a9fd87c}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Event\+Filter} (S\+D\+L\+\_\+\+Event\+Filter filter)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+\+Event\+Filter {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Event\+Filter} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+D\+L event handling 
+
+\subsection{Typedef Documentation}
+\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Active\+Event@{S\+D\+L\+\_\+\+Active\+Event}}
+\index{S\+D\+L\+\_\+\+Active\+Event@{S\+D\+L\+\_\+\+Active\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Active\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Active\+Event}  {\bf S\+D\+L\+\_\+\+Active\+Event}}\label{_s_d_l__events_8h_a951f49b468c4a2b3dfcc0b6dfb01a155}
+Application visibility event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf S\+D\+L\+\_\+\+Event}  {\bf S\+D\+L\+\_\+\+Event}}\label{_s_d_l__events_8h_ac123539589592fb2a938d43fa7e13794}
+General event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Expose\+Event@{S\+D\+L\+\_\+\+Expose\+Event}}
+\index{S\+D\+L\+\_\+\+Expose\+Event@{S\+D\+L\+\_\+\+Expose\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Expose\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Expose\+Event}  {\bf S\+D\+L\+\_\+\+Expose\+Event}}\label{_s_d_l__events_8h_a81cdf3a42369fb5fd992beca1affa646}
+The \char`\"{}screen redraw\char`\"{} event \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Joy\+Axis\+Event@{S\+D\+L\+\_\+\+Joy\+Axis\+Event}}
+\index{S\+D\+L\+\_\+\+Joy\+Axis\+Event@{S\+D\+L\+\_\+\+Joy\+Axis\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Joy\+Axis\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Axis\+Event}  {\bf S\+D\+L\+\_\+\+Joy\+Axis\+Event}}\label{_s_d_l__events_8h_a12d4cc4e7665b37af0cf4352cb522b71}
+Joystick axis motion event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Joy\+Ball\+Event@{S\+D\+L\+\_\+\+Joy\+Ball\+Event}}
+\index{S\+D\+L\+\_\+\+Joy\+Ball\+Event@{S\+D\+L\+\_\+\+Joy\+Ball\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Joy\+Ball\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Ball\+Event}  {\bf S\+D\+L\+\_\+\+Joy\+Ball\+Event}}\label{_s_d_l__events_8h_a5811cd314ff0fcb4a5a8d3da110e59b6}
+Joystick trackball motion event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Joy\+Button\+Event@{S\+D\+L\+\_\+\+Joy\+Button\+Event}}
+\index{S\+D\+L\+\_\+\+Joy\+Button\+Event@{S\+D\+L\+\_\+\+Joy\+Button\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Joy\+Button\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Button\+Event}  {\bf S\+D\+L\+\_\+\+Joy\+Button\+Event}}\label{_s_d_l__events_8h_a1c9066d1e7d075042a55a5a0ebdeaf3e}
+Joystick button event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}}
+\index{S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Joy\+Hat\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Joy\+Hat\+Event}  {\bf S\+D\+L\+\_\+\+Joy\+Hat\+Event}}\label{_s_d_l__events_8h_a5753fe82887f64c4feef90a9f0a19099}
+Joystick hat position change event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Keyboard\+Event@{S\+D\+L\+\_\+\+Keyboard\+Event}}
+\index{S\+D\+L\+\_\+\+Keyboard\+Event@{S\+D\+L\+\_\+\+Keyboard\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Keyboard\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Keyboard\+Event}  {\bf S\+D\+L\+\_\+\+Keyboard\+Event}}\label{_s_d_l__events_8h_a2dfd49e5d1391bed57dcbc2359d9580f}
+Keyboard event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Mouse\+Button\+Event@{S\+D\+L\+\_\+\+Mouse\+Button\+Event}}
+\index{S\+D\+L\+\_\+\+Mouse\+Button\+Event@{S\+D\+L\+\_\+\+Mouse\+Button\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Mouse\+Button\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Mouse\+Button\+Event}  {\bf S\+D\+L\+\_\+\+Mouse\+Button\+Event}}\label{_s_d_l__events_8h_ad32036e6c0ba8aeadfb3063a5e945e8d}
+Mouse button event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
+\index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Mouse\+Motion\+Event}  {\bf S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}\label{_s_d_l__events_8h_aefe38e3abc59e3312e5a50d98f708de4}
+Mouse motion event structure \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Quit\+Event@{S\+D\+L\+\_\+\+Quit\+Event}}
+\index{S\+D\+L\+\_\+\+Quit\+Event@{S\+D\+L\+\_\+\+Quit\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Quit\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Quit\+Event}  {\bf S\+D\+L\+\_\+\+Quit\+Event}}\label{_s_d_l__events_8h_a2aa3b2097d14330fadfc91585fd18dfc}
+The \char`\"{}quit requested\char`\"{} event \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Resize\+Event@{S\+D\+L\+\_\+\+Resize\+Event}}
+\index{S\+D\+L\+\_\+\+Resize\+Event@{S\+D\+L\+\_\+\+Resize\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Resize\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Resize\+Event}  {\bf S\+D\+L\+\_\+\+Resize\+Event}}\label{_s_d_l__events_8h_a00ff869b4b6d9d829b84f5f6d0ae31ad}
+The \char`\"{}window resized\char`\"{} event When you get this event, you are responsible for setting a new video mode with the new width and height. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+User\+Event@{S\+D\+L\+\_\+\+User\+Event}}
+\index{S\+D\+L\+\_\+\+User\+Event@{S\+D\+L\+\_\+\+User\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+User\+Event}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+User\+Event}  {\bf S\+D\+L\+\_\+\+User\+Event}}\label{_s_d_l__events_8h_a3c174fcb2518c4c9b858c8e3c3840830}
+A user-\/defined event type 
+
+\subsection{Enumeration Type Documentation}
+\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Event\+Type@{S\+D\+L\+\_\+\+Event\+Type}}
+\index{S\+D\+L\+\_\+\+Event\+Type@{S\+D\+L\+\_\+\+Event\+Type}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Event\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+D\+L\+\_\+\+Event\+Type}}\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fcca}
+Event enumerations \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+D\+L\+\_\+\+N\+O\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+N\+O\+E\+V\+E\+N\+T}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+N\+O\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+N\+O\+E\+V\+E\+N\+T}}\item[{\em 
+S\+D\+L\+\_\+\+N\+O\+E\+V\+E\+N\+T\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa8d638d6b7c16579b793f08165b11ea68}
+}]Unused (do not remove) \index{S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T}}\item[{\em 
+S\+D\+L\+\_\+\+A\+C\+T\+I\+V\+E\+E\+V\+E\+N\+T\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa805c60f34b315629064b897318ea7b0f}
+}]Application loses/gains visibility \index{S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N@{S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N@{S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N}}\item[{\em 
+S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+W\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc}
+}]Keys pressed \index{S\+D\+L\+\_\+\+K\+E\+Y\+U\+P@{S\+D\+L\+\_\+\+K\+E\+Y\+U\+P}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+K\+E\+Y\+U\+P@{S\+D\+L\+\_\+\+K\+E\+Y\+U\+P}}\item[{\em 
+S\+D\+L\+\_\+\+K\+E\+Y\+U\+P\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b}
+}]Keys released \index{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N}}\item[{\em 
+S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30}
+}]Mouse moved \index{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N@{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N@{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N}}\item[{\em 
+S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052}
+}]Mouse button pressed \index{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P@{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P@{S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P}}\item[{\em 
+S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+B\+U\+T\+T\+O\+N\+U\+P\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b}
+}]Mouse button released \index{S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N}}\item[{\em 
+S\+D\+L\+\_\+\+J\+O\+Y\+A\+X\+I\+S\+M\+O\+T\+I\+O\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaaf0803b3f8a12de3d85f81ebd7b514cd1}
+}]Joystick axis motion \index{S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N}}\item[{\em 
+S\+D\+L\+\_\+\+J\+O\+Y\+B\+A\+L\+L\+M\+O\+T\+I\+O\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa78f859489cfd565c305c7f6f9d5b25c1}
+}]Joystick trackball motion \index{S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N}}\item[{\em 
+S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaafba4080bfbad335e520097b2024f0dff}
+}]Joystick hat position change \index{S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N@{S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N}}\item[{\em 
+S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+D\+O\+W\+N\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa386ac978bc145a45883fe0adab70710b}
+}]Joystick button pressed \index{S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P@{S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P@{S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P}}\item[{\em 
+S\+D\+L\+\_\+\+J\+O\+Y\+B\+U\+T\+T\+O\+N\+U\+P\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa76f91c81110f012e3a47cbbc0449e3c3}
+}]Joystick button released \index{S\+D\+L\+\_\+\+Q\+U\+I\+T@{S\+D\+L\+\_\+\+Q\+U\+I\+T}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Q\+U\+I\+T@{S\+D\+L\+\_\+\+Q\+U\+I\+T}}\item[{\em 
+S\+D\+L\+\_\+\+Q\+U\+I\+T\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603}
+}]User-\/requested quit \index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T}}\item[{\em 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7}
+}]System specific event \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+A@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+A}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+A@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+A}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+A\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa064075bce2d1a3cd68f103de46dbccb6}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+B@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+B}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+B@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+B}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+B\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaace4664e201bf199751bec7e9b9b56982}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E@{S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E@{S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E}}\item[{\em 
+S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+R\+E\+S\+I\+Z\+E\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa328321c1c9ef88537e94fb6ca42fa050}
+}]User resized video mode \index{S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E@{S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E@{S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E}}\item[{\em 
+S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+E\+X\+P\+O\+S\+E\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa71837d3c769d3830d721b911797f04bc}
+}]Screen needs to be redrawn \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa167cadab6f99867d8a8cded5f058ab25}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa4273409cb098de861ffb00d10f7b7afb}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaaa1ff31a05eea53c8081fc268e08a470c}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaaf2ec84e8d348aa4f4271c8d3937611c2}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa4ebdb51555100069c32e8afd106827ac}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7@{S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7}}\item[{\em 
+S\+D\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa294d4d209bd2324f697f50f8e87cf483}
+}]Reserved for future use.. \index{S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T@{S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T}}\item[{\em 
+S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa4364c23f54802309e83fdb9b1c07c719}
+}]Events S\+D\+L\+\_\+\+U\+S\+E\+R\+E\+V\+E\+N\+T through S\+D\+L\+\_\+\+M\+A\+X\+E\+V\+E\+N\+T\+S-\/1 are for your use \index{S\+D\+L\+\_\+\+N\+U\+M\+E\+V\+E\+N\+T\+S@{S\+D\+L\+\_\+\+N\+U\+M\+E\+V\+E\+N\+T\+S}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+N\+U\+M\+E\+V\+E\+N\+T\+S@{S\+D\+L\+\_\+\+N\+U\+M\+E\+V\+E\+N\+T\+S}}\item[{\em 
+S\+D\+L\+\_\+\+N\+U\+M\+E\+V\+E\+N\+T\+S\label{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaac7ab35bfec8662d148fd20d75c6117e7}
+}]This last event is only for bounding internal arrays It is the number of bits in the event mask datatype -- Uint32 \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Event\+State@{S\+D\+L\+\_\+\+Event\+State}}
+\index{S\+D\+L\+\_\+\+Event\+State@{S\+D\+L\+\_\+\+Event\+State}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Event\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Event\+State (
+\begin{DoxyParamCaption}
+\item[{Uint8}]{type, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_a946c32ab98f1d4ec927e8917f01520e2}
+This function allows you to set the state of processing certain events. If \textquotesingle{}state\textquotesingle{} is set to S\+D\+L\+\_\+\+I\+G\+N\+O\+R\+E, that event will be automatically dropped from the event queue and will not event be filtered. If \textquotesingle{}state\textquotesingle{} is set to S\+D\+L\+\_\+\+E\+N\+A\+B\+L\+E, that event will be processed normally. If \textquotesingle{}state\textquotesingle{} is set to S\+D\+L\+\_\+\+Q\+U\+E\+R\+Y, \doxyref{S\+D\+L\+\_\+\+Event\+State()}{p.}{_s_d_l__events_8h_a946c32ab98f1d4ec927e8917f01520e2} will return the current processing state of the specified event. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Get\+Event\+Filter@{S\+D\+L\+\_\+\+Get\+Event\+Filter}}
+\index{S\+D\+L\+\_\+\+Get\+Event\+Filter@{S\+D\+L\+\_\+\+Get\+Event\+Filter}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Event\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+\+Event\+Filter {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Event\+Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_a6379e3346737caed714cdbe48379c800}
+Return the current event filter -\/ can be used to \char`\"{}chain\char`\"{} filters. If there is no event filter set, this function returns N\+U\+L\+L. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Peep\+Events@{S\+D\+L\+\_\+\+Peep\+Events}}
+\index{S\+D\+L\+\_\+\+Peep\+Events@{S\+D\+L\+\_\+\+Peep\+Events}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Peep\+Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Peep\+Events (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Event} $\ast$}]{events, }
+\item[{int}]{numevents, }
+\item[{S\+D\+L\+\_\+eventaction}]{action, }
+\item[{Uint32}]{mask}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_a3b4a79e56dbe6f770572ef45575e6ef1}
+Checks the event queue for messages and optionally returns them.
+
+If \textquotesingle{}action\textquotesingle{} is S\+D\+L\+\_\+\+A\+D\+D\+E\+V\+E\+N\+T, up to \textquotesingle{}numevents\textquotesingle{} events will be added to the back of the event queue. If \textquotesingle{}action\textquotesingle{} is S\+D\+L\+\_\+\+P\+E\+E\+K\+E\+V\+E\+N\+T, up to \textquotesingle{}numevents\textquotesingle{} events at the front of the event queue, matching \textquotesingle{}mask\textquotesingle{}, will be returned and will not be removed from the queue. If \textquotesingle{}action\textquotesingle{} is S\+D\+L\+\_\+\+G\+E\+T\+E\+V\+E\+N\+T, up to \textquotesingle{}numevents\textquotesingle{} events at the front of the event queue, matching \textquotesingle{}mask\textquotesingle{}, will be returned and will be removed from the queue.
+
+\begin{DoxyReturn}{Returns}
+This function returns the number of events actually stored, or -\/1 if there was an error.
+\end{DoxyReturn}
+This function is thread-\/safe. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Poll\+Event@{S\+D\+L\+\_\+\+Poll\+Event}}
+\index{S\+D\+L\+\_\+\+Poll\+Event@{S\+D\+L\+\_\+\+Poll\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Poll\+Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Poll\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Event} $\ast$}]{event}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_acfa517963c25f8b71acc6b56721c5d9b}
+Polls for currently pending events, and returns 1 if there are any pending events, or 0 if there are none available. If \textquotesingle{}event\textquotesingle{} is not N\+U\+L\+L, the next event is removed from the queue and stored in that area. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Pump\+Events@{S\+D\+L\+\_\+\+Pump\+Events}}
+\index{S\+D\+L\+\_\+\+Pump\+Events@{S\+D\+L\+\_\+\+Pump\+Events}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Pump\+Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Pump\+Events (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_aa15403d1c8fc341cd9cf750e27a66d19}
+Pumps the event loop, gathering events from the input devices. This function updates the event queue and internal input device state. This should only be run in the thread that sets the video mode. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Push\+Event@{S\+D\+L\+\_\+\+Push\+Event}}
+\index{S\+D\+L\+\_\+\+Push\+Event@{S\+D\+L\+\_\+\+Push\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Push\+Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Push\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Event} $\ast$}]{event}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_adced45c8816620846a6fde2a7d54b446}
+Add an event to the event queue. This function returns 0 on success, or -\/1 if the event queue was full or there was some other error. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Set\+Event\+Filter@{S\+D\+L\+\_\+\+Set\+Event\+Filter}}
+\index{S\+D\+L\+\_\+\+Set\+Event\+Filter@{S\+D\+L\+\_\+\+Set\+Event\+Filter}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Event\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Event\+Filter (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Event\+Filter}]{filter}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_acc4080d9db1e2cd5946e274212ec0f8a}
+This function sets up a filter to process all events before they change internal state and are posted to the internal event queue.
+
+The filter is protypted as\+: 
+\begin{DoxyCode}
+1 typedef int (SDLCALL *SDL\_EventFilter)(const SDL\_Event *event); 
+\end{DoxyCode}
+
+
+If the filter returns 1, then the event will be added to the internal queue. If it returns 0, then the event will be dropped from the queue, but the internal state will still be updated. This allows selective filtering of dynamically arriving events.
+
+\begin{DoxyWarning}{Warning}
+Be very careful of what you do in the event filter function, as it may run in a different thread!
+\end{DoxyWarning}
+There is one caveat when dealing with the S\+D\+L\+\_\+\+Q\+U\+I\+T\+E\+V\+E\+N\+T event type. The event filter is only called when the window manager desires to close the application window. If the event filter returns 1, then the window will be closed, otherwise the window will remain open if possible. If the quit event is generated by an interrupt signal, it will bypass the internal queue and be delivered to the application at the next event poll. \index{S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}!S\+D\+L\+\_\+\+Wait\+Event@{S\+D\+L\+\_\+\+Wait\+Event}}
+\index{S\+D\+L\+\_\+\+Wait\+Event@{S\+D\+L\+\_\+\+Wait\+Event}!S\+D\+L\+\_\+events.\+h@{S\+D\+L\+\_\+events.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Wait\+Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Wait\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Event} $\ast$}]{event}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__events_8h_af37c266ea979ba39b82079d9eb401003}
+Waits indefinitely for the next available event, returning 1, or 0 if there was an error while waiting for events. If \textquotesingle{}event\textquotesingle{} is not N\+U\+L\+L, the next event is removed from the queue and stored in that area. 

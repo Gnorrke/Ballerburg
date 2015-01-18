@@ -155,3 +155,8 @@ void Castle::deleteBlock(int index)
     cblocks.erase(cblocks.begin() + index);
 }
 
+CastleBlock& Castle::getBlock(int block)
+{
+    return *cblocks[block];
+}
+

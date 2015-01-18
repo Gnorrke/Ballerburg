@@ -1,0 +1,20 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+quit.h File Reference}
+\label{_s_d_l__quit_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+quit.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+quit.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Quit\+Requested}()~({\bf S\+D\+L\+\_\+\+Pump\+Events}(), {\bf S\+D\+L\+\_\+\+Peep\+Events}({\bf N\+U\+L\+L},0,S\+D\+L\+\_\+\+P\+E\+E\+K\+E\+V\+E\+N\+T,S\+D\+L\+\_\+\+Q\+U\+I\+T\+M\+A\+S\+K))\label{_s_d_l__quit_8h_a28f0e45d1be91312001526ec45d9dc83}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+D\+L quit event handling
+
+An S\+D\+L\+\_\+\+Q\+U\+I\+T\+E\+V\+E\+N\+T is generated when the user tries to close the application window. If it is ignored or filtered out, the window will remain open. If it is not ignored or filtered, it is queued normally and the window is allowed to close. When the window is closed, screen updates will complete, but have no effect.
+
+\doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8} installs signal handlers for S\+I\+G\+I\+N\+T (keyboard interrupt) and S\+I\+G\+T\+E\+R\+M (system termination request), if handlers do not already exist, that generate S\+D\+L\+\_\+\+Q\+U\+I\+T\+E\+V\+E\+N\+T events as well. There is no way to determine the cause of an S\+D\+L\+\_\+\+Q\+U\+I\+T\+E\+V\+E\+N\+T, but setting a signal handler in your application will override the default generation of quit events for that signal.
+
+There are no functions directly affecting the quit event 

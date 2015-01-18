@@ -1,0 +1,46 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+error.h File Reference}
+\label{_s_d_l__error_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+error.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+error.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{Indent}{\bf Public functions}\par
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Set\+Error} (const char $\ast$fmt,...)\label{_s_d_l__error_8h_afde07df832effe88d483ab7015fb4c71}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Get\+Error} (void)\label{_s_d_l__error_8h_a5151f59bab897ec9128a5ec6f9cec403}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Clear\+Error} (void)\label{_s_d_l__error_8h_a007ed517953a99a46e46be567ef5609e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private functions}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Out\+Of\+Memory}()~S\+D\+L\+\_\+\+Error(S\+D\+L\+\_\+\+E\+N\+O\+M\+E\+M)\label{_s_d_l__error_8h_a440edcb93dba4e39c88ecf8dc676b6c1}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+Unsupported}()~S\+D\+L\+\_\+\+Error(S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D)\label{_s_d_l__error_8h_a45dc695e3a906dd40f00e204ace3bcf5}
+
+\item 
+enum {\bfseries S\+D\+L\+\_\+errorcode} \{ \\*
+{\bfseries S\+D\+L\+\_\+\+E\+N\+O\+M\+E\+M}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+R\+E\+A\+D}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+W\+R\+I\+T\+E}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+S\+E\+E\+K}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D}, 
+{\bfseries S\+D\+L\+\_\+\+L\+A\+S\+T\+E\+R\+R\+O\+R}
+ \}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}
+
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Error} (S\+D\+L\+\_\+errorcode code)\label{_s_d_l__error_8h_a6555e5bb07af0a69c345366326897b22}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple error message routines for S\+D\+L 

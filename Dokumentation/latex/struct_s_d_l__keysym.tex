@@ -1,0 +1,55 @@
+\section{S\+D\+L\+\_\+keysym Struct Reference}
+\label{struct_s_d_l__keysym}\index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+keyboard.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Uint8 {\bf scancode}
+\item 
+S\+D\+L\+Key {\bf sym}
+\item 
+S\+D\+L\+Mod {\bf mod}
+\item 
+Uint16 {\bf unicode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keysym structure
+
+
+\begin{DoxyItemize}
+\item The scancode is hardware dependent, and should not be used by general applications. If no hardware scancode is available, it will be 0.
+\item The \textquotesingle{}unicode\textquotesingle{} translated character is only available when character translation is enabled by the \doxyref{S\+D\+L\+\_\+\+Enable\+U\+N\+I\+C\+O\+D\+E()}{p.}{_s_d_l__keyboard_8h_aa872f99acb3dd68cdd806e2421ff8e96} A\+P\+I. If non-\/zero, this is a U\+N\+I\+C\+O\+D\+E character corresponding to the keypress. If the high 9 bits of the character are 0, then this maps to the equivalent A\+S\+C\+I\+I character\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} ch;
+\textcolor{keywordflow}{if} ( (keysym.unicode & 0xFF80) == 0 ) \{
+    ch = keysym.unicode & 0x7F;
+\} \textcolor{keywordflow}{else} \{
+    An international character..
+\}
+\end{DoxyCode}
+ 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!mod@{mod}}
+\index{mod@{mod}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
+\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+Mod S\+D\+L\+\_\+keysym\+::mod}\label{struct_s_d_l__keysym_ac5da46a4cf8aea69b0b1cb3f9224c91c}
+current key modifiers \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!scancode@{scancode}}
+\index{scancode@{scancode}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
+\subsubsection[{scancode}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+keysym\+::scancode}\label{struct_s_d_l__keysym_a1ea71b1de132939909302dc14e5f468c}
+hardware specific scancode \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!sym@{sym}}
+\index{sym@{sym}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
+\subsubsection[{sym}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+Key S\+D\+L\+\_\+keysym\+::sym}\label{struct_s_d_l__keysym_a2a22c7afc8239b19cd18dda3aa26b70c}
+S\+D\+L virtual keysym \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!unicode@{unicode}}
+\index{unicode@{unicode}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
+\subsubsection[{unicode}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+keysym\+::unicode}\label{struct_s_d_l__keysym_a683a8e5de4e6dc6de95f670f6275cb0c}
+translated character 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/{\bf S\+D\+L\+\_\+keyboard.\+h}\end{DoxyCompactItemize}

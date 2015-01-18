@@ -1,0 +1,51 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+loadso.h File Reference}
+\label{_s_d_l__loadso_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+loadso.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+loadso.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Load\+Object} (const char $\ast$sofile)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Load\+Function} (void $\ast$handle, const char $\ast$name)
+\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Unload\+Object} (void $\ast$handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System dependent library loading routines
+
+Some things to keep in mind\+:
+\begin{DoxyItemize}
+\item These functions only work on C function names. Other languages may have name mangling and intrinsic language support that varies from compiler to compiler.
+\item Make sure you declare your function pointers with the same calling convention as the actual library function. Your code will crash mysteriously if you do not do this.
+\item Avoid namespace collisions. If you load a symbol from the library, it is not defined whether or not it goes into the global symbol namespace for the application. If it does and it conflicts with symbols in your code or other shared libraries, you will not get the results you expect. \+:) 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\index{S\+D\+L\+\_\+loadso.\+h@{S\+D\+L\+\_\+loadso.\+h}!S\+D\+L\+\_\+\+Load\+Function@{S\+D\+L\+\_\+\+Load\+Function}}
+\index{S\+D\+L\+\_\+\+Load\+Function@{S\+D\+L\+\_\+\+Load\+Function}!S\+D\+L\+\_\+loadso.\+h@{S\+D\+L\+\_\+loadso.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Load\+Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Load\+Function (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__loadso_8h_a926a605bda55d8d3d66ff6389bc98941}
+Given an object handle, this function looks up the address of the named function in the shared object and returns it. This address is no longer valid after calling \doxyref{S\+D\+L\+\_\+\+Unload\+Object()}{p.}{_s_d_l__loadso_8h_a041e43c276cb826c2034eff220be7fe4}. \index{S\+D\+L\+\_\+loadso.\+h@{S\+D\+L\+\_\+loadso.\+h}!S\+D\+L\+\_\+\+Load\+Object@{S\+D\+L\+\_\+\+Load\+Object}}
+\index{S\+D\+L\+\_\+\+Load\+Object@{S\+D\+L\+\_\+\+Load\+Object}!S\+D\+L\+\_\+loadso.\+h@{S\+D\+L\+\_\+loadso.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Load\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Load\+Object (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sofile}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__loadso_8h_a278c5f3a6bb4f141680ef164e94b12b0}
+This function dynamically loads a shared object and returns a pointer to the object handle (or N\+U\+L\+L if there was an error). The \textquotesingle{}sofile\textquotesingle{} parameter is a system dependent name of the object file. \index{S\+D\+L\+\_\+loadso.\+h@{S\+D\+L\+\_\+loadso.\+h}!S\+D\+L\+\_\+\+Unload\+Object@{S\+D\+L\+\_\+\+Unload\+Object}}
+\index{S\+D\+L\+\_\+\+Unload\+Object@{S\+D\+L\+\_\+\+Unload\+Object}!S\+D\+L\+\_\+loadso.\+h@{S\+D\+L\+\_\+loadso.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Unload\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Unload\+Object (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__loadso_8h_a041e43c276cb826c2034eff220be7fe4}
+Unload a shared object from memory 
