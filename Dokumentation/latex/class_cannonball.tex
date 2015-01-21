@@ -30,6 +30,45 @@ void {\bfseries move\+Down} ()\label{class_cannonball_af69eb8fff953a77721d63063d
 bool {\bfseries has\+Collided} ()\label{class_cannonball_a3c2e8ae577405cd797f7e5bfbeab2e59}
 
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries distance} (int x1, int y1, int x2, int y2)\label{class_cannonball_a9e297db446a0a85cf11459b657d26125}
+
+\item 
+bool {\bfseries check\+Collision} ({\bf Circle} \&A, {\bf Map} \&B)\label{class_cannonball_a782b1293862fe31273c7de1941e8544a}
+
+\item 
+void {\bfseries update\+X} (int elapsed\+Time, {\bf Map} \&map)\label{class_cannonball_aeb159591227b193a1d78f663fc807653}
+
+\item 
+void {\bfseries update\+Y} (int elapsed\+Time, {\bf Map} \&map)\label{class_cannonball_a72f41a02fe2101abd082dbb6567715ef}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries pos\+X}\label{class_cannonball_a36aac6eec38415bb074c09e66cf24f1f}
+
+\item 
+int {\bfseries pos\+Y}\label{class_cannonball_a27def66b928e564d5bac7382c66ae5a5}
+
+\item 
+bool {\bfseries collided}\label{class_cannonball_a0794a8ae61dc67fab82fcbc24d580100}
+
+\item 
+float {\bfseries velocity\+X}\label{class_cannonball_ac384c351b9621cd16ebbd980ba37404d}
+
+\item 
+float {\bfseries velocity\+Y}\label{class_cannonball_a0275fa75787a8ddc9e4decead6201a27}
+
+\item 
+{\bf Circle} {\bfseries collision\+Circle}\label{class_cannonball_abae8e9805e8931bcbe6d5c83d9dd0a27}
+
+\item 
+std\+::unique\+\_\+ptr$<$ {\bf Sprite} $>$ {\bfseries sprite\+Dot}\label{class_cannonball_a90ddfd584ef92517b2ca3d1de600a7e6}
+
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

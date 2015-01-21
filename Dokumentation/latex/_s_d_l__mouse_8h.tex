@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+mouse.h File Reference}
 \label{_s_d_l__mouse_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+mouse.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+mouse.\+h}}
+
+
+Include file for S\+D\+L mouse event handling.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\\*
@@ -14,8 +19,9 @@ struct {\bf S\+D\+L\+\_\+\+Cursor}
 {\bf }\par
 \begin{DoxyCompactItemize}
 \item 
-\#define {\bf S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N}(X)~(1 $<$$<$ ((X)-\/1))
-\item 
+\#define {\bf S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N}(X)~(1 $<$$<$ ((X)-\/1))\label{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}
+
+\begin{DoxyCompactList}\small\item\em Used as a mask when testing buttons in buttonstate Button 1\+: Left mouse button Button 2\+: Middle mouse button Button 3\+: Right mouse button Button 4\+: Mouse wheel up (may also be a real button) Button 5\+: Mouse wheel down (may also be a real button) \end{DoxyCompactList}\item 
 \#define {\bfseries S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T}~1\label{_s_d_l__mouse_8h_a9500bda83bcc0e9afee1438a79019c5f}
 
 \item 
@@ -56,8 +62,9 @@ struct {\bf S\+D\+L\+\_\+\+Cursor}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct {\bf W\+Mcursor} {\bf W\+Mcursor}
-\item 
+typedef struct {\bf W\+Mcursor} {\bf W\+Mcursor}\label{_s_d_l__mouse_8h_a8acd11965ec83b75723cc1f5e0d9c5c2}
+
+\begin{DoxyCompactList}\small\item\em Implementation dependent. \end{DoxyCompactList}\item 
 typedef struct {\bf S\+D\+L\+\_\+\+Cursor} {\bfseries S\+D\+L\+\_\+\+Cursor}\label{_s_d_l__mouse_8h_aa77cfd5001bfd623c45f68253c88b390}
 
 \end{DoxyCompactItemize}
@@ -65,41 +72,30 @@ typedef struct {\bf S\+D\+L\+\_\+\+Cursor} {\bfseries S\+D\+L\+\_\+\+Cursor}\lab
 \begin{DoxyCompactItemize}
 \item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Mouse\+State} (int $\ast$x, int $\ast$y)
-\item 
+\begin{DoxyCompactList}\small\item\em Retrieve the current state of the mouse. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State} (int $\ast$x, int $\ast$y)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Warp\+Mouse} (Uint16 x, Uint16 y)
-\item 
+\begin{DoxyCompactList}\small\item\em Retrieve the current state of the mouse. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Warp\+Mouse} (Uint16 x, Uint16 y)\label{_s_d_l__mouse_8h_a12a2d46c3148b539dfc2ab13c93b7c97}
+
+\begin{DoxyCompactList}\small\item\em Set the position of the mouse cursor (generates a mouse motion event) \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Cursor} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Create\+Cursor} (Uint8 $\ast$data, Uint8 $\ast$mask, int w, int h, int hot\+\_\+x, int hot\+\_\+y)
-\item 
+\begin{DoxyCompactList}\small\item\em Create a cursor using the specified data and mask (in M\+S\+B format). \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Cursor} ({\bf S\+D\+L\+\_\+\+Cursor} $\ast$cursor)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Cursor} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Cursor} (void)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Free\+Cursor} ({\bf S\+D\+L\+\_\+\+Cursor} $\ast$cursor)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the currently active cursor to the specified one. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Cursor} $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Cursor} (void)\label{_s_d_l__mouse_8h_a427ee5473e9ce3f4ad7a58035d7a6ffd}
+
+\begin{DoxyCompactList}\small\item\em Returns the currently active cursor. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Free\+Cursor} ({\bf S\+D\+L\+\_\+\+Cursor} $\ast$cursor)\label{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}
+
+\begin{DoxyCompactList}\small\item\em Deallocates a cursor created with \doxyref{S\+D\+L\+\_\+\+Create\+Cursor()}{p.}{_s_d_l__mouse_8h_a948954fcd042d2957926633ffe3f5bd3}. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Show\+Cursor} (int toggle)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Toggle whether or not the cursor is shown on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Include file for S\+D\+L mouse event handling 
+Include file for S\+D\+L mouse event handling. 
 
-\subsection{Macro Definition Documentation}
-\index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N@{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N}}
-\index{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N@{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(
-\begin{DoxyParamCaption}
-\item[{}]{X}
-\end{DoxyParamCaption}
-)~(1 $<$$<$ ((X)-\/1))}\label{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}
-Used as a mask when testing buttons in buttonstate Button 1\+: Left mouse button Button 2\+: Middle mouse button Button 3\+: Right mouse button Button 4\+: Mouse wheel up (may also be a real button) Button 5\+: Mouse wheel down (may also be a real button) 
 
-\subsection{Typedef Documentation}
-\index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!W\+Mcursor@{W\+Mcursor}}
-\index{W\+Mcursor@{W\+Mcursor}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
-\subsubsection[{W\+Mcursor}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf W\+Mcursor} {\bf W\+Mcursor}}\label{_s_d_l__mouse_8h_a8acd11965ec83b75723cc1f5e0d9c5c2}
-Implementation dependent 
 
 \subsection{Function Documentation}
 \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Create\+Cursor@{S\+D\+L\+\_\+\+Create\+Cursor}}
@@ -114,25 +110,15 @@ Implementation dependent
 \item[{int}]{hot\+\_\+y}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__mouse_8h_a948954fcd042d2957926633ffe3f5bd3}
-Create a cursor using the specified data and mask (in M\+S\+B format). The cursor width must be a multiple of 8 bits.
+
+
+Create a cursor using the specified data and mask (in M\+S\+B format). 
+
+The cursor width must be a multiple of 8 bits.
 
 The cursor is created in black and white according to the following\+: data mask resulting pixel on screen 0 1 White 1 1 Black 0 0 Transparent 1 0 Inverted color if possible, black if not.
 
-Cursors created with this function must be freed with \doxyref{S\+D\+L\+\_\+\+Free\+Cursor()}{p.}{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Free\+Cursor@{S\+D\+L\+\_\+\+Free\+Cursor}}
-\index{S\+D\+L\+\_\+\+Free\+Cursor@{S\+D\+L\+\_\+\+Free\+Cursor}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Free\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Free\+Cursor (
-\begin{DoxyParamCaption}
-\item[{{\bf S\+D\+L\+\_\+\+Cursor} $\ast$}]{cursor}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}
-Deallocates a cursor created with \doxyref{S\+D\+L\+\_\+\+Create\+Cursor()}{p.}{_s_d_l__mouse_8h_a948954fcd042d2957926633ffe3f5bd3}. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Get\+Cursor@{S\+D\+L\+\_\+\+Get\+Cursor}}
-\index{S\+D\+L\+\_\+\+Get\+Cursor@{S\+D\+L\+\_\+\+Get\+Cursor}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Get\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} {\bf S\+D\+L\+\_\+\+Cursor}$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Cursor (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__mouse_8h_a427ee5473e9ce3f4ad7a58035d7a6ffd}
-Returns the currently active cursor. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Get\+Mouse\+State@{S\+D\+L\+\_\+\+Get\+Mouse\+State}}
+Cursors created with this function must be freed with \doxyref{S\+D\+L\+\_\+\+Free\+Cursor()}{p.}{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Get\+Mouse\+State@{S\+D\+L\+\_\+\+Get\+Mouse\+State}}
 \index{S\+D\+L\+\_\+\+Get\+Mouse\+State@{S\+D\+L\+\_\+\+Get\+Mouse\+State}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Get\+Mouse\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Mouse\+State (
 \begin{DoxyParamCaption}
@@ -140,7 +126,11 @@ Returns the currently active cursor. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\
 \item[{int $\ast$}]{y}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__mouse_8h_a775d3bd97a3a49800cb07f0b901eaffb}
-Retrieve the current state of the mouse. The current button state is returned as a button bitmask, which can be tested using the \doxyref{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(\+X)}{p.}{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b} macros, and x and y are set to the current mouse cursor position. You can pass N\+U\+L\+L for either x or y. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State@{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State}}
+
+
+Retrieve the current state of the mouse. 
+
+The current button state is returned as a button bitmask, which can be tested using the \doxyref{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(\+X)}{p.}{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b} macros, and x and y are set to the current mouse cursor position. You can pass N\+U\+L\+L for either x or y. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State@{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State}}
 \index{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State@{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State (
 \begin{DoxyParamCaption}
@@ -148,26 +138,30 @@ Retrieve the current state of the mouse. The current button state is returned as
 \item[{int $\ast$}]{y}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__mouse_8h_ac67f36520421d4b392b74bc9d11eb81a}
-Retrieve the current state of the mouse. The current button state is returned as a button bitmask, which can be tested using the \doxyref{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(\+X)}{p.}{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b} macros, and x and y are set to the mouse deltas since the last call to \doxyref{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State()}{p.}{_s_d_l__mouse_8h_ac67f36520421d4b392b74bc9d11eb81a}. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Set\+Cursor@{S\+D\+L\+\_\+\+Set\+Cursor}}
+
+
+Retrieve the current state of the mouse. 
+
+The current button state is returned as a button bitmask, which can be tested using the \doxyref{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(\+X)}{p.}{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b} macros, and x and y are set to the mouse deltas since the last call to \doxyref{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State()}{p.}{_s_d_l__mouse_8h_ac67f36520421d4b392b74bc9d11eb81a}. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Set\+Cursor@{S\+D\+L\+\_\+\+Set\+Cursor}}
 \index{S\+D\+L\+\_\+\+Set\+Cursor@{S\+D\+L\+\_\+\+Set\+Cursor}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Set\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Cursor (
 \begin{DoxyParamCaption}
 \item[{{\bf S\+D\+L\+\_\+\+Cursor} $\ast$}]{cursor}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__mouse_8h_a7c2971901f9a772be22152420aee275c}
-Set the currently active cursor to the specified one. If the cursor is currently visible, the change will be immediately represented on the display. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Show\+Cursor@{S\+D\+L\+\_\+\+Show\+Cursor}}
+
+
+Set the currently active cursor to the specified one. 
+
+If the cursor is currently visible, the change will be immediately represented on the display. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Show\+Cursor@{S\+D\+L\+\_\+\+Show\+Cursor}}
 \index{S\+D\+L\+\_\+\+Show\+Cursor@{S\+D\+L\+\_\+\+Show\+Cursor}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Show\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Show\+Cursor (
 \begin{DoxyParamCaption}
 \item[{int}]{toggle}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__mouse_8h_a00286ec15cd56dee1fd71ed4e6e7a585}
-Toggle whether or not the cursor is shown on the screen. The cursor start off displayed, but can be turned off. \doxyref{S\+D\+L\+\_\+\+Show\+Cursor()}{p.}{_s_d_l__mouse_8h_a00286ec15cd56dee1fd71ed4e6e7a585} returns 1 if the cursor was being displayed before the call, or 0 if it was not. You can query the current state by passing a \textquotesingle{}toggle\textquotesingle{} value of -\/1. \index{S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}!S\+D\+L\+\_\+\+Warp\+Mouse@{S\+D\+L\+\_\+\+Warp\+Mouse}}
-\index{S\+D\+L\+\_\+\+Warp\+Mouse@{S\+D\+L\+\_\+\+Warp\+Mouse}!S\+D\+L\+\_\+mouse.\+h@{S\+D\+L\+\_\+mouse.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Warp\+Mouse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Warp\+Mouse (
-\begin{DoxyParamCaption}
-\item[{Uint16}]{x, }
-\item[{Uint16}]{y}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__mouse_8h_a12a2d46c3148b539dfc2ab13c93b7c97}
-Set the position of the mouse cursor (generates a mouse motion event) 
+
+
+Toggle whether or not the cursor is shown on the screen. 
+
+The cursor start off displayed, but can be turned off. \doxyref{S\+D\+L\+\_\+\+Show\+Cursor()}{p.}{_s_d_l__mouse_8h_a00286ec15cd56dee1fd71ed4e6e7a585} returns 1 if the cursor was being displayed before the call, or 0 if it was not. You can query the current state by passing a \textquotesingle{}toggle\textquotesingle{} value of -\/1. 

@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -116,17 +115,26 @@ $(document).ready(function(){initNavTree('struct_s_d_l___r_wops.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>This is the read/write operation structure &ndash; very basic.  
+ <a href="struct_s_d_l___r_wops.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a25b6f8f86737e5f6af594d4069885771"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___r_wops.html#a25b6f8f86737e5f6af594d4069885771">int</a> (<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *seek)(struct <a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a> *context</td></tr>
+<tr class="memitem:a25b6f8f86737e5f6af594d4069885771"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25b6f8f86737e5f6af594d4069885771"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___r_wops.html#a25b6f8f86737e5f6af594d4069885771">int</a> (<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *seek)(struct <a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a> *context</td></tr>
+<tr class="memdesc:a25b6f8f86737e5f6af594d4069885771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to 'offset' relative to whence, one of stdio's whence values: SEEK_SET, SEEK_CUR, SEEK_END Returns the final offset in the data source. <br /></td></tr>
 <tr class="separator:a25b6f8f86737e5f6af594d4069885771"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a0344f0e73d5917aa0dc91417e44a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___r_wops.html#a22a0344f0e73d5917aa0dc91417e44a1">int</a> (<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *read)(struct <a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a> *context</td></tr>
+<tr class="memdesc:a22a0344f0e73d5917aa0dc91417e44a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read up to 'maxnum' objects each of size 'size' from the data source to the area pointed at by 'ptr'.  <a href="#a22a0344f0e73d5917aa0dc91417e44a1">More...</a><br /></td></tr>
 <tr class="separator:a22a0344f0e73d5917aa0dc91417e44a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a281fa6bf3562d8289f9ef75f658b5a44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___r_wops.html#a281fa6bf3562d8289f9ef75f658b5a44">int</a> (<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *write)(struct <a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a> *context</td></tr>
+<tr class="memdesc:a281fa6bf3562d8289f9ef75f658b5a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write exactly 'num' objects each of size 'objsize' from the area pointed at by 'ptr' to data source.  <a href="#a281fa6bf3562d8289f9ef75f658b5a44">More...</a><br /></td></tr>
 <tr class="separator:a281fa6bf3562d8289f9ef75f658b5a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab303bcbb0f6742a141ba8b2998923f47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___r_wops.html#ab303bcbb0f6742a141ba8b2998923f47">int</a> (<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *close)(struct <a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a> *context)</td></tr>
+<tr class="memitem:ab303bcbb0f6742a141ba8b2998923f47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab303bcbb0f6742a141ba8b2998923f47"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___r_wops.html#ab303bcbb0f6742a141ba8b2998923f47">int</a> (<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *close)(struct <a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a> *context)</td></tr>
+<tr class="memdesc:ab303bcbb0f6742a141ba8b2998923f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close and free an allocated SDL_FSops structure. <br /></td></tr>
 <tr class="separator:ab303bcbb0f6742a141ba8b2998923f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -184,25 +192,8 @@ union {</td></tr>
 <tr class="separator:a8ac2a4e01366f7bb9f41956beffa759d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the read/write operation structure &ndash; very basic </p>
+<div class="textblock"><p>This is the read/write operation structure &ndash; very basic. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a25b6f8f86737e5f6af594d4069885771"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SDL_RWops::int </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *&#160;</td>
-          <td class="paramname"><em>seek</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Seek to 'offset' relative to whence, one of stdio's whence values: SEEK_SET, SEEK_CUR, SEEK_END Returns the final offset in the data source. </p>
-
-</div>
-</div>
 <a class="anchor" id="a22a0344f0e73d5917aa0dc91417e44a1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +207,9 @@ union {</td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read up to 'maxnum' objects each of size 'size' from the data source to the area pointed at by 'ptr'. Returns the number of objects read, or -1 if the read failed. </p>
+
+<p>Read up to 'maxnum' objects each of size 'size' from the data source to the area pointed at by 'ptr'. </p>
+<p>Returns the number of objects read, or -1 if the read failed. </p>
 
 </div>
 </div>
@@ -233,24 +226,9 @@ union {</td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Write exactly 'num' objects each of size 'objsize' from the area pointed at by 'ptr' to data source. Returns 'num', or -1 if the write failed. </p>
 
-</div>
-</div>
-<a class="anchor" id="ab303bcbb0f6742a141ba8b2998923f47"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SDL_RWops::int </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *&#160;</td>
-          <td class="paramname"><em>close</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Close and free an allocated SDL_FSops structure </p>
+<p>Write exactly 'num' objects each of size 'objsize' from the area pointed at by 'ptr' to data source. </p>
+<p>Returns 'num', or -1 if the write failed. </p>
 
 </div>
 </div>
@@ -263,7 +241,7 @@ union {</td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="struct_s_d_l___r_wops.html">SDL_RWops</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:44 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:35 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

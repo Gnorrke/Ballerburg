@@ -1,5 +1,14 @@
 \section{Graphic Class Reference}
 \label{class_graphic}\index{Graphic@{Graphic}}
+
+
+Die Klasse \doxyref{Graphic}{p.}{class_graphic} dient als zentrales Objekt, wenn es um das Laden und Darstellen von Sprites geht.  
+
+
+
+
+{\ttfamily \#include $<$graphic.\+h$>$}
+
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,19 +18,116 @@ typedef {\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bfseries Surface\+I\+D}\label{clas
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf Surface\+I\+D} {\bfseries load\+Image} (const std\+::string \&file\+Path)\label{class_graphic_a259fd9b61b67a164094bf9ba0b5044cd}
+{\bf Surface\+I\+D} {\bf load\+Image} (const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Lädt eine Datei und setzt einen Color\+Key (entfernt R\+G\+B\+: 255, 0, 255) \end{DoxyCompactList}\item 
+void {\bf blit\+Surface} ({\bf Surface\+I\+D} src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$src\+\_\+rectangle, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dest\+\_\+rectangle)
+\begin{DoxyCompactList}\small\item\em zeichnet ein Surface auf den Screen \end{DoxyCompactList}\item 
+void {\bf clean\+Up} ()\label{class_graphic_a15c85c04c5b78994c94013827e6095ea}
 
+\begin{DoxyCompactList}\small\item\em Säubert den Screen nach jedem Frame, indem er alles löscht. Dies verhindert Artefakte aus dem letzten Frame im neuen Frame. \end{DoxyCompactList}\item 
+void {\bf flip} ()
+\begin{DoxyCompactList}\small\item\em Da der Screen als doppelter Puffer in S\+D\+L realisiert wird muss der Screen \char`\"{}umgedreht\char`\"{} werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
 \item 
-void {\bfseries blit\+Surface} ({\bf Surface\+I\+D} src, {\bf S\+D\+L\+\_\+\+Rect} $\ast$src\+\_\+rectangle, {\bf S\+D\+L\+\_\+\+Rect} $\ast$dest\+\_\+rectangle)\label{class_graphic_ae2ab1b6e70958efae02f7131493740ff}
-
+typedef std\+::map$<$ std\+::string, {\bf S\+D\+L\+\_\+\+Surface} $\ast$ $>$ {\bf Sprite\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-void {\bfseries clean\+Up} ()\label{class_graphic_a15c85c04c5b78994c94013827e6095ea}
-
+{\bf Sprite\+Map} {\bf sprite\+Sheets}
 \item 
-void {\bfseries flip} ()\label{class_graphic_af3dd8fed2b2384149643116bdb813c01}
-
+{\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bf screen}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Die Klasse \doxyref{Graphic}{p.}{class_graphic} dient als zentrales Objekt, wenn es um das Laden und Darstellen von Sprites geht. 
+
+Alle Grafiken werden in einer \doxyref{Map}{p.}{class_map} organisiert und mit Hilfe der blit\+Surface Methode auf dem Screen angebracht
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{sprite.\+h}{p.}{sprite_8h_source} 
+
+\doxyref{animated\+Sprite.\+h}{p.}{animatedsprite_8h_source}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Max Niederauer 
+\end{DoxyAuthor}
+
+
+\subsection{Member Typedef Documentation}
+\index{Graphic@{Graphic}!Sprite\+Map@{Sprite\+Map}}
+\index{Sprite\+Map@{Sprite\+Map}!Graphic@{Graphic}}
+\subsubsection[{Sprite\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf S\+D\+L\+\_\+\+Surface}$\ast$$>$ {\bf Graphic\+::\+Sprite\+Map}\hspace{0.3cm}{\ttfamily [private]}}\label{class_graphic_aa06a625a3faeaccd5613e8623d59ae4e}
+Definition eines eigenen Types Sprite\+Map 
+
+\subsection{Member Function Documentation}
+\index{Graphic@{Graphic}!blit\+Surface@{blit\+Surface}}
+\index{blit\+Surface@{blit\+Surface}!Graphic@{Graphic}}
+\subsubsection[{blit\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}void Graphic\+::blit\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf Surface\+I\+D}}]{src, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{src\+\_\+rectangle, }
+\item[{{\bf S\+D\+L\+\_\+\+Rect} $\ast$}]{dest\+\_\+rectangle}
+\end{DoxyParamCaption}
+)}\label{class_graphic_ae2ab1b6e70958efae02f7131493740ff}
+
+
+zeichnet ein Surface auf den Screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ Surface, welches auf den Screen gezeichnet werden soll \\
+\hline
+{\em src\+\_\+rectangle} & -\/ definiert wo und wie groß das Surface gezeichnet werden soll (beinhaltet das Surface) \\
+\hline
+{\em dest\+\_\+rectangle} & -\/ das engültige Ziel des Surfaces \\
+\hline
+\end{DoxyParams}
+\index{Graphic@{Graphic}!flip@{flip}}
+\index{flip@{flip}!Graphic@{Graphic}}
+\subsubsection[{flip}]{\setlength{\rightskip}{0pt plus 5cm}void Graphic\+::flip (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_graphic_af3dd8fed2b2384149643116bdb813c01}
+
+
+Da der Screen als doppelter Puffer in S\+D\+L realisiert wird muss der Screen \char`\"{}umgedreht\char`\"{} werden. 
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{S\+D\+L/\+S\+D\+L.\+h}{p.}{_s_d_l_8h} 
+\end{DoxySeeAlso}
+\index{Graphic@{Graphic}!load\+Image@{load\+Image}}
+\index{load\+Image@{load\+Image}!Graphic@{Graphic}}
+\subsubsection[{load\+Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphic\+::\+Surface\+I\+D} Graphic\+::load\+Image (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_graphic_a259fd9b61b67a164094bf9ba0b5044cd}
+
+
+Lädt eine Datei und setzt einen Color\+Key (entfernt R\+G\+B\+: 255, 0, 255) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & -\/ Dateipfad zu der Datei, die geladen werden soll \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+gibt das Surface zurück auf welches die Datei geladen wurde 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Graphic@{Graphic}!screen@{screen}}
+\index{screen@{screen}!Graphic@{Graphic}}
+\subsubsection[{screen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Surface}$\ast$ Graphic\+::screen\hspace{0.3cm}{\ttfamily [private]}}\label{class_graphic_a395202e12873a72645439fe6a202d0d2}
+Der Screen auf den alle Surfaces gezeichnet werden \index{Graphic@{Graphic}!sprite\+Sheets@{sprite\+Sheets}}
+\index{sprite\+Sheets@{sprite\+Sheets}!Graphic@{Graphic}}
+\subsubsection[{sprite\+Sheets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sprite\+Map} Graphic\+::sprite\+Sheets\hspace{0.3cm}{\ttfamily [private]}}\label{class_graphic_ad552ac2423b445b7c58be50a484d886b}
+std\+::map, die die Sprites organisiert 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

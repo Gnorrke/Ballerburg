@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+rwops.h File Reference}
 \label{_s_d_l__rwops_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+rwops.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+rwops.\+h}}
+
+
+This file provides a general interface for S\+D\+L to read and write data sources.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
@@ -8,17 +13,20 @@
 \begin{DoxyCompactItemize}
 \item 
 struct {\bf S\+D\+L\+\_\+\+R\+Wops}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is the read/write operation structure -- very basic. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{Indent}{\bf Seek Reference Points}\par
 \begin{DoxyCompactItemize}
 \item 
-\#define {\bf R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}~0
-\item 
-\#define {\bf R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}~1
-\item 
-\#define {\bf R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}~2
-\end{DoxyCompactItemize}
+\#define {\bf R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}~0\label{_s_d_l__rwops_8h_ac028b032bb8230df64bc6284e04789f5}
+
+\begin{DoxyCompactList}\small\item\em Seek from the beginning of data. \end{DoxyCompactList}\item 
+\#define {\bf R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}~1\label{_s_d_l__rwops_8h_aba5f3b60c197def370ffa2ca1ab1348d}
+
+\begin{DoxyCompactList}\small\item\em Seek relative to current read point. \end{DoxyCompactList}\item 
+\#define {\bf R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}~2\label{_s_d_l__rwops_8h_a6cf141faabd1b8f2ec3c03cf76eaf553}
+
+\begin{DoxyCompactList}\small\item\em Seek relative to the end of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}{\bf Macros to easily read and write from an S\+D\+L\+\_\+\+R\+Wops structure}\par
 \begin{DoxyCompactItemize}
@@ -42,8 +50,9 @@ struct {\bf S\+D\+L\+\_\+\+R\+Wops}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct {\bf S\+D\+L\+\_\+\+R\+Wops} {\bf S\+D\+L\+\_\+\+R\+Wops}
-\end{DoxyCompactItemize}
+typedef struct {\bf S\+D\+L\+\_\+\+R\+Wops} {\bf S\+D\+L\+\_\+\+R\+Wops}\label{_s_d_l__rwops_8h_af758c42c576a0612bdf298c5823a5fe5}
+
+\begin{DoxyCompactList}\small\item\em This is the read/write operation structure -- very basic. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{Indent}{\bf Functions to create S\+D\+L\+\_\+\+R\+Wops structures from various data sources}\par
 \begin{DoxyCompactItemize}
@@ -111,22 +120,6 @@ typedef struct {\bf S\+D\+L\+\_\+\+R\+Wops} {\bf S\+D\+L\+\_\+\+R\+Wops}
 
 
 \subsection{Detailed Description}
-This file provides a general interface for S\+D\+L to read and write data sources. It can easily be extended to files, memory, etc. 
+This file provides a general interface for S\+D\+L to read and write data sources. 
 
-\subsection{Macro Definition Documentation}
-\index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}}
-\index{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
-\subsubsection[{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R~1}\label{_s_d_l__rwops_8h_aba5f3b60c197def370ffa2ca1ab1348d}
-Seek relative to current read point \index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}}
-\index{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
-\subsubsection[{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D~2}\label{_s_d_l__rwops_8h_a6cf141faabd1b8f2ec3c03cf76eaf553}
-Seek relative to the end of data \index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}}
-\index{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
-\subsubsection[{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T~0}\label{_s_d_l__rwops_8h_ac028b032bb8230df64bc6284e04789f5}
-Seek from the beginning of data 
-
-\subsection{Typedef Documentation}
-\index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
-\index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+R\+Wops}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+R\+Wops}  {\bf S\+D\+L\+\_\+\+R\+Wops}}\label{_s_d_l__rwops_8h_af758c42c576a0612bdf298c5823a5fe5}
-This is the read/write operation structure -- very basic 
+It can easily be extended to files, memory, etc. 

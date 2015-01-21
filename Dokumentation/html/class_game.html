@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -110,6 +109,8 @@ $(document).ready(function(){initNavTree('class_game.html','');});
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Game Class Reference</div>  </div>
@@ -133,6 +134,33 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>kScreenHeight</
 <tr class="memitem:a8ca5b9f8a62990e6022de17785beac2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca5b9f8a62990e6022de17785beac2c"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>running</b> = true</td></tr>
 <tr class="separator:a8ca5b9f8a62990e6022de17785beac2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aede5f46c8c7bbbaf8459eeec397a11e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aede5f46c8c7bbbaf8459eeec397a11e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>gameLoop</b> ()</td></tr>
+<tr class="separator:aede5f46c8c7bbbaf8459eeec397a11e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500c9c05c044487957dfc3c7e5d7df99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a500c9c05c044487957dfc3c7e5d7df99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (int elapsedTime, <a class="el" href="class_map.html">Map</a> &amp;map, <a class="el" href="class_input.html">Input</a> &amp;input, <a class="el" href="class_sound.html">Sound</a> &amp;sound)</td></tr>
+<tr class="separator:a500c9c05c044487957dfc3c7e5d7df99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adddab9024dc030c923651ed737f1f6b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adddab9024dc030c923651ed737f1f6b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics)</td></tr>
+<tr class="separator:adddab9024dc030c923651ed737f1f6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a023bc00208cfb619bc770ae70960e324"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a023bc00208cfb619bc770ae70960e324"></a>
+std::unique_ptr&lt; <a class="el" href="class_backdrop.html">Backdrop</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>background</b></td></tr>
+<tr class="separator:a023bc00208cfb619bc770ae70960e324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac35f37418de999e504f85448b57cb57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac35f37418de999e504f85448b57cb57"></a>
+std::unique_ptr&lt; <a class="el" href="class_cannon.html">Cannon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cannon</b></td></tr>
+<tr class="separator:aac35f37418de999e504f85448b57cb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7489006293a79030b68c0e8e4d0029"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca7489006293a79030b68c0e8e4d0029"></a>
+std::unique_ptr&lt; <a class="el" href="class_sound.html">Sound</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sounds</b></td></tr>
+<tr class="separator:aca7489006293a79030b68c0e8e4d0029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3f6b00e354d21502a62e375360911f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc3f6b00e354d21502a62e375360911f"></a>
+std::unique_ptr&lt; <a class="el" href="class_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>map</b></td></tr>
+<tr class="separator:adc3f6b00e354d21502a62e375360911f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Max/Documents/GitHub/Ballerburg/Ballerburg_v001/<a class="el" href="game_8h_source.html">game.h</a></li>
@@ -144,7 +172,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>running</b> = 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_game.html">Game</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:43 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:34 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -114,6 +113,9 @@ $(document).ready(function(){initNavTree('_s_d_l__keyboard_8h.html','');});
 <div class="title">SDL_keyboard.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Include file for SDL keyboard event handling.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_s_d_l__stdinc_8h_source.html">SDL_stdinc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_d_l__error_8h_source.html">SDL_error.h</a>&quot;</code><br />
 <code>#include &quot;SDL_keysym.h&quot;</code><br />
@@ -125,11 +127,14 @@ $(document).ready(function(){initNavTree('_s_d_l__keyboard_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l__keysym.html">SDL_keysym</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keysym structure.  <a href="struct_s_d_l__keysym.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a7c37b8c3aebd51ade2c8d0a72da44163"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a7c37b8c3aebd51ade2c8d0a72da44163">SDL_ALL_HOTKEYS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="memitem:a7c37b8c3aebd51ade2c8d0a72da44163"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c37b8c3aebd51ade2c8d0a72da44163"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a7c37b8c3aebd51ade2c8d0a72da44163">SDL_ALL_HOTKEYS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="memdesc:a7c37b8c3aebd51ade2c8d0a72da44163"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the mask which refers to all hotkey bindings. <br /></td></tr>
 <tr class="separator:a7c37b8c3aebd51ade2c8d0a72da44163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3904e497e7079e421ad61713f96117"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c3904e497e7079e421ad61713f96117"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SDL_DEFAULT_REPEAT_DELAY</b>&#160;&#160;&#160;500</td></tr>
@@ -141,43 +146,38 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:acf493c0691cdf8af4e48937a73157b29"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l__keysym.html">SDL_keysym</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#acf493c0691cdf8af4e48937a73157b29">SDL_keysym</a></td></tr>
+<tr class="memdesc:acf493c0691cdf8af4e48937a73157b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keysym structure.  <a href="#acf493c0691cdf8af4e48937a73157b29">More...</a><br /></td></tr>
 <tr class="separator:acf493c0691cdf8af4e48937a73157b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa872f99acb3dd68cdd806e2421ff8e96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> int <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#aa872f99acb3dd68cdd806e2421ff8e96">SDL_EnableUNICODE</a> (int enable)</td></tr>
+<tr class="memdesc:aa872f99acb3dd68cdd806e2421ff8e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/Disable UNICODE translation of keyboard input.  <a href="#aa872f99acb3dd68cdd806e2421ff8e96">More...</a><br /></td></tr>
 <tr class="separator:aa872f99acb3dd68cdd806e2421ff8e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d9755bd12c5c27a7c86688bf7a32488"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> int <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a0d9755bd12c5c27a7c86688bf7a32488">SDL_EnableKeyRepeat</a> (int delay, int interval)</td></tr>
+<tr class="memdesc:a0d9755bd12c5c27a7c86688bf7a32488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/Disable keyboard repeat.  <a href="#a0d9755bd12c5c27a7c86688bf7a32488">More...</a><br /></td></tr>
 <tr class="separator:a0d9755bd12c5c27a7c86688bf7a32488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c5645662b43fcf4408963b1a5b0a70c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c5645662b43fcf4408963b1a5b0a70c"></a>
 <a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> void <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SDL_GetKeyRepeat</b> (int *delay, int *interval)</td></tr>
 <tr class="separator:a5c5645662b43fcf4408963b1a5b0a70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8790af806464c820356f6e8b9efee24f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> Uint8 *<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a8790af806464c820356f6e8b9efee24f">SDL_GetKeyState</a> (int *numkeys)</td></tr>
+<tr class="memdesc:a8790af806464c820356f6e8b9efee24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a snapshot of the current state of the keyboard.  <a href="#a8790af806464c820356f6e8b9efee24f">More...</a><br /></td></tr>
 <tr class="separator:a8790af806464c820356f6e8b9efee24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52333a5aa5c8336bfa80b526e81c38c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> SDLMod <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a52333a5aa5c8336bfa80b526e81c38c0">SDL_GetModState</a> (void)</td></tr>
+<tr class="memitem:a52333a5aa5c8336bfa80b526e81c38c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52333a5aa5c8336bfa80b526e81c38c0"></a>
+<a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> SDLMod <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a52333a5aa5c8336bfa80b526e81c38c0">SDL_GetModState</a> (void)</td></tr>
+<tr class="memdesc:a52333a5aa5c8336bfa80b526e81c38c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current key modifier state. <br /></td></tr>
 <tr class="separator:a52333a5aa5c8336bfa80b526e81c38c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c5dd5c95a51a55631a855dc620898f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> void <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a7c5dd5c95a51a55631a855dc620898f5">SDL_SetModState</a> (SDLMod modstate)</td></tr>
+<tr class="memdesc:a7c5dd5c95a51a55631a855dc620898f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current key modifier state.  <a href="#a7c5dd5c95a51a55631a855dc620898f5">More...</a><br /></td></tr>
 <tr class="separator:a7c5dd5c95a51a55631a855dc620898f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51590a98e514a7f100ee1d9712679e64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> char *<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a51590a98e514a7f100ee1d9712679e64">SDL_GetKeyName</a> (SDLKey key)</td></tr>
+<tr class="memitem:a51590a98e514a7f100ee1d9712679e64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51590a98e514a7f100ee1d9712679e64"></a>
+<a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> char *<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__keyboard_8h.html#a51590a98e514a7f100ee1d9712679e64">SDL_GetKeyName</a> (SDLKey key)</td></tr>
+<tr class="memdesc:a51590a98e514a7f100ee1d9712679e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of an SDL virtual keysym. <br /></td></tr>
 <tr class="separator:a51590a98e514a7f100ee1d9712679e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Include file for SDL keyboard event handling </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a7c37b8c3aebd51ade2c8d0a72da44163"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SDL_ALL_HOTKEYS&#160;&#160;&#160;0xFFFFFFFF</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This is the mask which refers to all hotkey bindings </p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
+<div class="textblock"><p>Include file for SDL keyboard event handling. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="acf493c0691cdf8af4e48937a73157b29"></a>
 <div class="memitem">
 <div class="memproto">
@@ -187,10 +187,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Keysym structure</p>
+
+<p>Keysym structure. </p>
 <ul>
 <li>The scancode is hardware dependent, and should not be used by general applications. If no hardware scancode is available, it will be 0.</li>
-<li>The 'unicode' translated character is only available when character translation is enabled by the <a class="el" href="_s_d_l__keyboard_8h.html#aa872f99acb3dd68cdd806e2421ff8e96">SDL_EnableUNICODE()</a> API. If non-zero, this is a UNICODE character corresponding to the keypress. If the high 9 bits of the character are 0, then this maps to the equivalent ASCII character: <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;char ch;</div>
+<li>The 'unicode' translated character is only available when character translation is enabled by the <a class="el" href="_s_d_l__keyboard_8h.html#aa872f99acb3dd68cdd806e2421ff8e96" title="Enable/Disable UNICODE translation of keyboard input. ">SDL_EnableUNICODE()</a> API. If non-zero, this is a UNICODE character corresponding to the keypress. If the high 9 bits of the character are 0, then this maps to the equivalent ASCII character: <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;char ch;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;if ( (keysym.unicode &amp; 0xFF80) == 0 ) {</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    ch = keysym.unicode &amp; 0x7F;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;} else {</div>
@@ -225,7 +226,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Enable/Disable keyboard repeat. Keyboard repeat defaults to off.</p>
+
+<p>Enable/Disable keyboard repeat. </p>
+<p>Keyboard repeat defaults to off.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>'delay' is the initial delay in ms between the time when a key is pressed, and keyboard repeat begins.</td></tr>
@@ -250,7 +253,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Enable/Disable UNICODE translation of keyboard input.</p>
+
+<p>Enable/Disable UNICODE translation of keyboard input. </p>
 <p>This translation has some overhead, so translation defaults off.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -259,23 +263,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>It returns the previous state of keyboard translation. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a51590a98e514a7f100ee1d9712679e64"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> char* <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_GetKeyName </td>
-          <td>(</td>
-          <td class="paramtype">SDLKey&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get the name of an SDL virtual keysym </p>
 
 </div>
 </div>
@@ -292,26 +279,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get a snapshot of the current state of the keyboard. Returns an array of keystates, indexed by the SDLK_* syms. Usage: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;   Uint8 *keystate = SDL_GetKeyState(NULL);</div>
+
+<p>Get a snapshot of the current state of the keyboard. </p>
+<p>Returns an array of keystates, indexed by the SDLK_* syms. Usage: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;   Uint8 *keystate = SDL_GetKeyState(NULL);</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;if ( keystate[SDLK_RETURN] ) //... &lt;RETURN&gt; is pressed.</div>
 </div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="a52333a5aa5c8336bfa80b526e81c38c0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> SDLMod <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_GetModState </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get the current key modifier state </p>
-
 </div>
 </div>
 <a class="anchor" id="a7c5dd5c95a51a55631a855dc620898f5"></a>
@@ -327,7 +299,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the current key modifier state. This does not change the keyboard state, only the key modifier flags. </p>
+
+<p>Set the current key modifier state. </p>
+<p>This does not change the keyboard state, only the key modifier flags. </p>
 
 </div>
 </div>
@@ -337,7 +311,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e7e2cedda4976b886a75f4a00d945b24.html">Ballerburg_v001</a></li><li class="navelem"><a class="el" href="dir_088c1b5fb6ca35972940272bcc95c73d.html">Resources</a></li><li class="navelem"><a class="el" href="dir_8a91d630b0994b992fd50cb36a9f7ff0.html">SDL-1.2.15</a></li><li class="navelem"><a class="el" href="dir_41d87297e0d13301df3e3d80fd14ac89.html">include</a></li><li class="navelem"><a class="el" href="dir_345acc6b2cf63f3dbc92b73db844cd3b.html">SDL</a></li><li class="navelem"><a class="el" href="_s_d_l__keyboard_8h.html">SDL_keyboard.h</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:43 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:34 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

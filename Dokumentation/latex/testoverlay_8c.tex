@@ -1,0 +1,179 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/test/testoverlay.c File Reference}
+\label{testoverlay_8c}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testoverlay.\+c@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testoverlay.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L}
+\item 
+\#define {\bf N\+O\+T\+I\+C\+E}(X)~printf(\char`\"{}\%s\char`\"{}, X);
+\item 
+\#define {\bf W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H}~640
+\item 
+\#define {\bf W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T}~480
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf R\+G\+Bto\+Y\+U\+V} ({\bf Uint8} $\ast$rgb, int $\ast$yuv, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+Y\+V12} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+I\+Y\+U\+V} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+U\+Y\+V\+Y} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+Y\+V\+Y\+U} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+Y\+U\+Y2} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Draw} ()
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bf screen}
+\item 
+{\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bf pic}
+\item 
+{\bf S\+D\+L\+\_\+\+Overlay} $\ast$ {\bf overlay}
+\item 
+int {\bf scale}
+\item 
+int {\bf monochrome}
+\item 
+int {\bf luminance}
+\item 
+int {\bf w}
+\item 
+int {\bf h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{testoverlay.\+c@{testoverlay.\+c}!B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L@{B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L}}
+\index{B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L@{B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+S\+D\+L}\label{testoverlay_8c_a594d2affa2762af61d11b6f43c257ab8}
+\index{testoverlay.\+c@{testoverlay.\+c}!N\+O\+T\+I\+C\+E@{N\+O\+T\+I\+C\+E}}
+\index{N\+O\+T\+I\+C\+E@{N\+O\+T\+I\+C\+E}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{N\+O\+T\+I\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+T\+I\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{X}
+\end{DoxyParamCaption}
+)~printf(\char`\"{}\%s\char`\"{}, X);}\label{testoverlay_8c_a528a98b840a657812918f4b06c1304b2}
+\index{testoverlay.\+c@{testoverlay.\+c}!W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T@{W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T}}
+\index{W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T@{W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+H\+T~480}\label{testoverlay_8c_a5473cf64fa979b48335079c99532e243}
+\index{testoverlay.\+c@{testoverlay.\+c}!W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H@{W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H}}
+\index{W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H@{W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+T\+H~640}\label{testoverlay_8c_a498d9f026138406895e9a34b504ac6a6}
+
+
+\subsection{Function Documentation}
+\index{testoverlay.\+c@{testoverlay.\+c}!Convert\+R\+G\+Bto\+I\+Y\+U\+V@{Convert\+R\+G\+Bto\+I\+Y\+U\+V}}
+\index{Convert\+R\+G\+Bto\+I\+Y\+U\+V@{Convert\+R\+G\+Bto\+I\+Y\+U\+V}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+I\+Y\+U\+V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+I\+Y\+U\+V (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_a69a95e1456c11ae6c52ec6801032eca2}
+\index{testoverlay.\+c@{testoverlay.\+c}!Convert\+R\+G\+Bto\+U\+Y\+V\+Y@{Convert\+R\+G\+Bto\+U\+Y\+V\+Y}}
+\index{Convert\+R\+G\+Bto\+U\+Y\+V\+Y@{Convert\+R\+G\+Bto\+U\+Y\+V\+Y}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+U\+Y\+V\+Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+U\+Y\+V\+Y (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_a663a0115a853a9260740a021d519cc64}
+\index{testoverlay.\+c@{testoverlay.\+c}!Convert\+R\+G\+Bto\+Y\+U\+Y2@{Convert\+R\+G\+Bto\+Y\+U\+Y2}}
+\index{Convert\+R\+G\+Bto\+Y\+U\+Y2@{Convert\+R\+G\+Bto\+Y\+U\+Y2}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+Y\+U\+Y2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+Y\+U\+Y2 (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_a4bbdf07168f3f4cf2677ffd58e9caeac}
+\index{testoverlay.\+c@{testoverlay.\+c}!Convert\+R\+G\+Bto\+Y\+V12@{Convert\+R\+G\+Bto\+Y\+V12}}
+\index{Convert\+R\+G\+Bto\+Y\+V12@{Convert\+R\+G\+Bto\+Y\+V12}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+Y\+V12}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+Y\+V12 (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_a6a71c461a949287ab29b3a007b04fd9f}
+\index{testoverlay.\+c@{testoverlay.\+c}!Convert\+R\+G\+Bto\+Y\+V\+Y\+U@{Convert\+R\+G\+Bto\+Y\+V\+Y\+U}}
+\index{Convert\+R\+G\+Bto\+Y\+V\+Y\+U@{Convert\+R\+G\+Bto\+Y\+V\+Y\+U}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+Y\+V\+Y\+U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+Y\+V\+Y\+U (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_ad92dacf4a471e2e85b7393b61c3183f4}
+\index{testoverlay.\+c@{testoverlay.\+c}!Draw@{Draw}}
+\index{Draw@{Draw}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_a3d5cf0d8d37b6b17224867eb397c9a16}
+\index{testoverlay.\+c@{testoverlay.\+c}!main@{main}}
+\index{main@{main}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{testoverlay.\+c@{testoverlay.\+c}!R\+G\+Bto\+Y\+U\+V@{R\+G\+Bto\+Y\+U\+V}}
+\index{R\+G\+Bto\+Y\+U\+V@{R\+G\+Bto\+Y\+U\+V}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{R\+G\+Bto\+Y\+U\+V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+G\+Bto\+Y\+U\+V (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint8} $\ast$}]{rgb, }
+\item[{int $\ast$}]{yuv, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay_8c_afb0e656b35d65e1583fe50bb477c46b2}
+
+
+\subsection{Variable Documentation}
+\index{testoverlay.\+c@{testoverlay.\+c}!h@{h}}
+\index{h@{h}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}int h}\label{testoverlay_8c_a16611451551e3d15916bae723c3f59f7}
+\index{testoverlay.\+c@{testoverlay.\+c}!luminance@{luminance}}
+\index{luminance@{luminance}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{luminance}]{\setlength{\rightskip}{0pt plus 5cm}int luminance}\label{testoverlay_8c_ae533d76bf70ef3af82fd3d9149aaf8ae}
+\index{testoverlay.\+c@{testoverlay.\+c}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{monochrome}]{\setlength{\rightskip}{0pt plus 5cm}int monochrome}\label{testoverlay_8c_a3ddea6d070b521f87c1f8d7a642d8090}
+\index{testoverlay.\+c@{testoverlay.\+c}!overlay@{overlay}}
+\index{overlay@{overlay}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Overlay}$\ast$ overlay}\label{testoverlay_8c_aab45edcecb39a3f99e41ee23b8e8d077}
+\index{testoverlay.\+c@{testoverlay.\+c}!pic@{pic}}
+\index{pic@{pic}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{pic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Surface} $\ast$ pic}\label{testoverlay_8c_a5a16c79ebacfb4d885c60725db245589}
+\index{testoverlay.\+c@{testoverlay.\+c}!scale@{scale}}
+\index{scale@{scale}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf scale}}\label{testoverlay_8c_a418e7934b5363ecde8269070181b3cef}
+\index{testoverlay.\+c@{testoverlay.\+c}!screen@{screen}}
+\index{screen@{screen}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{screen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Surface}$\ast$ screen}\label{testoverlay_8c_a78fa3957d73de49cb81d047857504218}
+\index{testoverlay.\+c@{testoverlay.\+c}!w@{w}}
+\index{w@{w}!testoverlay.\+c@{testoverlay.\+c}}
+\subsubsection[{w}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf w}}\label{testoverlay_8c_aac374e320caaadeca4874add33b62af2}

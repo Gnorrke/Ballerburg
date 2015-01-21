@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -112,23 +111,26 @@ $(document).ready(function(){initNavTree('circle_8h_source.html','');});
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CIRCLE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CIRCLE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_circle.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_circle.html">Circle</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_circle.html">Circle</a>(<span class="keywordtype">int</span> offsetX, <span class="keywordtype">int</span> offsetY, <span class="keywordtype">int</span> radius) : x(offsetX), y(offsetY), r(radius) {}</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">int</span> x, y, r; <span class="comment">//Offset von der Mitte des Kreises</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif // CIRCLE_H</span></div>
-<div class="ttc" id="class_circle_html"><div class="ttname"><a href="class_circle.html">Circle</a></div><div class="ttdef"><b>Definition:</b> circle.h:4</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_circle.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_circle.html">Circle</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_circle.html">Circle</a>(<span class="keywordtype">int</span> offsetX, <span class="keywordtype">int</span> offsetY, <span class="keywordtype">int</span> radius) : x(offsetX), <a class="code" href="class_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">y</a>(offsetY), <a class="code" href="class_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">r</a>(radius) {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">   13</a></span>&#160;    <span class="keywordtype">int</span> x, <a class="code" href="class_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">y</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">   14</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">r</a>; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif // CIRCLE_H</span></div>
+<div class="ttc" id="class_circle_html"><div class="ttname"><a href="class_circle.html">Circle</a></div><div class="ttdoc">Dies ist eine kleine Klasse, die einen einfachen Kreis realisiert. </div><div class="ttdef"><b>Definition:</b> circle.h:8</div></div>
+<div class="ttc" id="class_circle_html_a067c0b8ccbda5ca1f518dd89a1d55989"><div class="ttname"><a href="class_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">Circle::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> circle.h:14</div></div>
+<div class="ttc" id="class_circle_html_a78aef28b3c176d14e8d25f8cd84e7dfd"><div class="ttname"><a href="class_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">Circle::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> circle.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e7e2cedda4976b886a75f4a00d945b24.html">Ballerburg_v001</a></li><li class="navelem"><b>circle.h</b></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:42 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:32 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

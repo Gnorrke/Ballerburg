@@ -26,5 +26,6 @@ var searchData=
   ['sdl_5ftimercallback',['SDL_TimerCallback',['../_s_d_l__timer_8h.html#a6bfe78b1d532b2a227becdb635b1e2e5',1,'SDL_timer.h']]],
   ['sdl_5ftimerid',['SDL_TimerID',['../_s_d_l__timer_8h.html#ac92c90c9c28c79541a4f1a5fa60bfc15',1,'SDL_timer.h']]],
   ['sdl_5fuserevent',['SDL_UserEvent',['../_s_d_l__events_8h.html#a3c174fcb2518c4c9b858c8e3c3840830',1,'SDL_events.h']]],
-  ['sdl_5fvideoinfo',['SDL_VideoInfo',['../_s_d_l__video_8h.html#a7a6c28c396b5b87b3adc1bde63c80381',1,'SDL_video.h']]]
+  ['sdl_5fvideoinfo',['SDL_VideoInfo',['../_s_d_l__video_8h.html#a7a6c28c396b5b87b3adc1bde63c80381',1,'SDL_video.h']]],
+  ['spritemap',['SpriteMap',['../class_graphic.html#aa06a625a3faeaccd5613e8623d59ae4e',1,'Graphic']]]
 ];

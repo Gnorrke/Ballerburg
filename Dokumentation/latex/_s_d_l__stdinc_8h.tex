@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+stdinc.h File Reference}
 \label{_s_d_l__stdinc_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+stdinc.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+stdinc.\+h}}
+
+
+This is a general header that includes C language support.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+config.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
@@ -11,8 +16,9 @@ struct {\bf Uint64}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define {\bf S\+D\+L\+\_\+arraysize}(array)~(sizeof(array)/sizeof(array[0]))
-\item 
+\#define {\bf S\+D\+L\+\_\+arraysize}(array)~(sizeof(array)/sizeof(array[0]))\label{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}
+
+\begin{DoxyCompactList}\small\item\em The number of elements in an array. \end{DoxyCompactList}\item 
 \#define {\bfseries S\+D\+L\+\_\+\+T\+A\+B\+L\+E\+S\+I\+Z\+E}(table)~{\bf S\+D\+L\+\_\+arraysize}(table)\label{_s_d_l__stdinc_8h_ac9d76e3a8ba6474d1714f13ca3c9d7e6}
 
 \item 
@@ -210,8 +216,9 @@ typedef struct \+\_\+\+S\+D\+L\+\_\+iconv\+\_\+t $\ast$ {\bfseries S\+D\+L\+\_\+
 {\bf D\+E\+C\+L\+S\+P\+E\+C} size\+\_\+t {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+iconv} (S\+D\+L\+\_\+iconv\+\_\+t cd, const char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)\label{_s_d_l__stdinc_8h_aeef39b9728425f231fc3e019ffa6c9ea}
 
 \item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+iconv\+\_\+string} (const char $\ast$tocode, const char $\ast$fromcode, const char $\ast$inbuf, size\+\_\+t inbytesleft)
-\end{DoxyCompactItemize}
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+iconv\+\_\+string} (const char $\ast$tocode, const char $\ast$fromcode, const char $\ast$inbuf, size\+\_\+t inbytesleft)\label{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}
+
+\begin{DoxyCompactList}\small\item\em This function converts a string between encodings in one pass, returning a string that must be freed with S\+D\+L\+\_\+free() or N\+U\+L\+L on error. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Basic data types}
 \begin{DoxyCompactItemize}
 \item 
@@ -273,7 +280,9 @@ typedef struct {\bf Uint64} {\bfseries Sint64}\label{_s_d_l__stdinc_8h_a55b4614d
 \end{DoxyCompactItemize}
 \subsection*{Enum Size Check}
 \label{_amgrp2cb9321d9d58e7b89760adf34c6da8cd}%
-Check to make sure enums are the size of ints, for structure packing. For both Watcom C/\+C++ and Borland C/\+C++ the compiler option that makes enums having the size of an int must be enabled. This is \char`\"{}-\/b\char`\"{} for Borland C/\+C++ and \char`\"{}-\/ei\char`\"{} for Watcom C/\+C++ (v11). \begin{DoxyCompactItemize}
+Check to make sure enums are the size of ints, for structure packing.
+
+For both Watcom C/\+C++ and Borland C/\+C++ the compiler option that makes enums having the size of an int must be enabled. This is \char`\"{}-\/b\char`\"{} for Borland C/\+C++ and \char`\"{}-\/ei\char`\"{} for Watcom C/\+C++ (v11). \begin{DoxyCompactItemize}
 \item 
 enum {\bfseries S\+D\+L\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+E\+N\+U\+M} \{ {\bfseries D\+U\+M\+M\+Y\+\_\+\+E\+N\+U\+M\+\_\+\+V\+A\+L\+U\+E}
  \}\label{_s_d_l__stdinc_8h_a723036ea05ccc4c35a5f16ac0465dd47}
@@ -285,17 +294,12 @@ enum {\bfseries S\+D\+L\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+E\+N\+U\+M} \{ {\bfseries D\
 
 
 \subsection{Detailed Description}
-This is a general header that includes C language support 
+This is a general header that includes C language support. 
+
+
 
 \subsection{Macro Definition Documentation}
-\index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+arraysize@{S\+D\+L\+\_\+arraysize}}
-\index{S\+D\+L\+\_\+arraysize@{S\+D\+L\+\_\+arraysize}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
-\subsubsection[{S\+D\+L\+\_\+arraysize}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+arraysize(
-\begin{DoxyParamCaption}
-\item[{}]{array}
-\end{DoxyParamCaption}
-)~(sizeof(array)/sizeof(array[0]))}\label{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}
-The number of elements in an array \index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+memmove@{S\+D\+L\+\_\+memmove}}
+\index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+memmove@{S\+D\+L\+\_\+memmove}}
 \index{S\+D\+L\+\_\+memmove@{S\+D\+L\+\_\+memmove}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
 \subsubsection[{S\+D\+L\+\_\+memmove}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+memmove(
 \begin{DoxyParamCaption}
@@ -340,17 +344,3 @@ The number of elements in an array \index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+
     \}                   \(\backslash\)
 \} \textcolor{keywordflow}{while}(0)
 \end{DoxyCode}
-
-
-\subsection{Function Documentation}
-\index{S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}!S\+D\+L\+\_\+iconv\+\_\+string@{S\+D\+L\+\_\+iconv\+\_\+string}}
-\index{S\+D\+L\+\_\+iconv\+\_\+string@{S\+D\+L\+\_\+iconv\+\_\+string}!S\+D\+L\+\_\+stdinc.\+h@{S\+D\+L\+\_\+stdinc.\+h}}
-\subsubsection[{S\+D\+L\+\_\+iconv\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} char$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+iconv\+\_\+string (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{tocode, }
-\item[{const char $\ast$}]{fromcode, }
-\item[{const char $\ast$}]{inbuf, }
-\item[{size\+\_\+t}]{inbytesleft}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}
-This function converts a string between encodings in one pass, returning a string that must be freed with S\+D\+L\+\_\+free() or N\+U\+L\+L on error. 

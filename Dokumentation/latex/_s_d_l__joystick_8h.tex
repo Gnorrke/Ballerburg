@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+joystick.h File Reference}
 \label{_s_d_l__joystick_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+joystick.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+joystick.\+h}}
+
+
+Include file for S\+D\+L joystick event handling.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
@@ -45,42 +50,49 @@ typedef struct \+\_\+\+S\+D\+L\+\_\+\+Joystick {\bfseries S\+D\+L\+\_\+\+Joystic
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Num\+Joysticks} (void)
-\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Num\+Joysticks} (void)\label{_s_d_l__joystick_8h_a2ab130eaa28f8e3bd544a5432041a311}
+
+\begin{DoxyCompactList}\small\item\em Count the number of joysticks attached to the system. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} const char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Name} (int device\+\_\+index)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the implementation dependent name of a joystick. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+\+Joystick $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Open} (int device\+\_\+index)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Opened} (int device\+\_\+index)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Index} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Axes} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)
-\item 
+\begin{DoxyCompactList}\small\item\em Open a joystick for use. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Opened} (int device\+\_\+index)\label{_s_d_l__joystick_8h_a67b2b8c86bef297cc5f00c02b59379b0}
+
+\begin{DoxyCompactList}\small\item\em Returns 1 if the joystick has been opened, or 0 if it has not. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Index} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)\label{_s_d_l__joystick_8h_abc79a9dae2ba93a4d41c93274dd22463}
+
+\begin{DoxyCompactList}\small\item\em Get the device index of an opened joystick. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Axes} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)\label{_s_d_l__joystick_8h_a865c2e087fe69a3a30c87243729ecdea}
+
+\begin{DoxyCompactList}\small\item\em Get the number of general axis controls on a joystick. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Balls} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Hats} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Buttons} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the number of trackballs on a joystick. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Hats} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)\label{_s_d_l__joystick_8h_aa62ea91c7c4ca2d12804a9fb3760e448}
+
+\begin{DoxyCompactList}\small\item\em Get the number of P\+O\+V hats on a joystick. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Num\+Buttons} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)\label{_s_d_l__joystick_8h_adfc662e571011ae7ec303101ab34e53a}
+
+\begin{DoxyCompactList}\small\item\em Get the number of buttons on a joystick. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Update} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Update the current state of the open joysticks. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Event\+State} (int state)
-\item 
+\begin{DoxyCompactList}\small\item\em Enable/disable joystick event polling. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} Sint16 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Get\+Axis} (S\+D\+L\+\_\+\+Joystick $\ast$joystick, int axis)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current state of an axis control on a joystick. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Get\+Hat} (S\+D\+L\+\_\+\+Joystick $\ast$joystick, int hat)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current state of a P\+O\+V hat on a joystick. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Get\+Ball} (S\+D\+L\+\_\+\+Joystick $\ast$joystick, int ball, int $\ast$dx, int $\ast$dy)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the ball axis change since the last poll. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Get\+Button} (S\+D\+L\+\_\+\+Joystick $\ast$joystick, int button)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Close} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the current state of a button on a joystick. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Joystick\+Close} (S\+D\+L\+\_\+\+Joystick $\ast$joystick)\label{_s_d_l__joystick_8h_aafa0951b40ec2e200c098495c3dd4943}
+
+\begin{DoxyCompactList}\small\item\em Close a joystick previously opened with \doxyref{S\+D\+L\+\_\+\+Joystick\+Open()}{p.}{_s_d_l__joystick_8h_a5b6f6554bca2659e149b5bc0fa538899} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Include file for S\+D\+L joystick event handling
+Include file for S\+D\+L joystick event handling. 
 
 \begin{DoxyNote}{Note}
 In order to use these functions, \doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8} must have been called with the S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K flag. This causes S\+D\+L to scan the system for joysticks, and load appropriate drivers. 
@@ -88,21 +100,16 @@ In order to use these functions, \doxyref{S\+D\+L\+\_\+\+Init()}{p.}{_s_d_l_8h_a
 
 
 \subsection{Function Documentation}
-\index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Close@{S\+D\+L\+\_\+\+Joystick\+Close}}
-\index{S\+D\+L\+\_\+\+Joystick\+Close@{S\+D\+L\+\_\+\+Joystick\+Close}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Joystick\+Close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Close (
-\begin{DoxyParamCaption}
-\item[{S\+D\+L\+\_\+\+Joystick $\ast$}]{joystick}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_aafa0951b40ec2e200c098495c3dd4943}
-Close a joystick previously opened with \doxyref{S\+D\+L\+\_\+\+Joystick\+Open()}{p.}{_s_d_l__joystick_8h_a5b6f6554bca2659e149b5bc0fa538899} \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Event\+State@{S\+D\+L\+\_\+\+Joystick\+Event\+State}}
+\index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Event\+State@{S\+D\+L\+\_\+\+Joystick\+Event\+State}}
 \index{S\+D\+L\+\_\+\+Joystick\+Event\+State@{S\+D\+L\+\_\+\+Joystick\+Event\+State}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Joystick\+Event\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Event\+State (
 \begin{DoxyParamCaption}
 \item[{int}]{state}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_a51ba353843fd4477f6a485ac4ef35d00}
-Enable/disable joystick event polling.
+
+
+Enable/disable joystick event polling. 
 
 If joystick events are disabled, you must call \doxyref{S\+D\+L\+\_\+\+Joystick\+Update()}{p.}{_s_d_l__joystick_8h_a3ea23a9504ea56f2778147dbf39a029f} yourself and check the state of the joystick when you want joystick information.
 
@@ -119,7 +126,9 @@ If joystick events are disabled, you must call \doxyref{S\+D\+L\+\_\+\+Joystick\
 \item[{int}]{axis}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_ac6fbda13b93679bedfc34733d4b2e748}
-Get the current state of an axis control on a joystick
+
+
+Get the current state of an axis control on a joystick. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -139,7 +148,9 @@ The state is a value ranging from -\/32768 to 32767.
 \item[{int $\ast$}]{dy}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_ac7a5a4c17f6a5a4ef9f5bc78e50913df}
-Get the ball axis change since the last poll
+
+
+Get the ball axis change since the last poll. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -157,7 +168,9 @@ This returns 0, or -\/1 if you passed it invalid parameters.
 \item[{int}]{button}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_aaf7789eb03bc42525691e075e2a36131}
-Get the current state of a button on a joystick
+
+
+Get the current state of a button on a joystick. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -172,67 +185,47 @@ Get the current state of a button on a joystick
 \item[{int}]{hat}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_a2215030cf283295569fee41fd0251e01}
-Get the current state of a P\+O\+V hat on a joystick
+
+
+Get the current state of a P\+O\+V hat on a joystick. 
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em hat} & The hat indices start at index 0. \\
 \hline
 \end{DoxyParams}
-\index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Index@{S\+D\+L\+\_\+\+Joystick\+Index}}
-\index{S\+D\+L\+\_\+\+Joystick\+Index@{S\+D\+L\+\_\+\+Joystick\+Index}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Joystick\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Index (
-\begin{DoxyParamCaption}
-\item[{S\+D\+L\+\_\+\+Joystick $\ast$}]{joystick}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_abc79a9dae2ba93a4d41c93274dd22463}
-Get the device index of an opened joystick. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Name@{S\+D\+L\+\_\+\+Joystick\+Name}}
+\index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Name@{S\+D\+L\+\_\+\+Joystick\+Name}}
 \index{S\+D\+L\+\_\+\+Joystick\+Name@{S\+D\+L\+\_\+\+Joystick\+Name}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Joystick\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} const char$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Name (
 \begin{DoxyParamCaption}
 \item[{int}]{device\+\_\+index}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_adfb20d3521e007135c6f1b2e7b67fcfb}
-Get the implementation dependent name of a joystick.
 
-This can be called before any joysticks are opened. If no name can be found, this function returns N\+U\+L\+L. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Num\+Axes@{S\+D\+L\+\_\+\+Joystick\+Num\+Axes}}
-\index{S\+D\+L\+\_\+\+Joystick\+Num\+Axes@{S\+D\+L\+\_\+\+Joystick\+Num\+Axes}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Joystick\+Num\+Axes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Num\+Axes (
-\begin{DoxyParamCaption}
-\item[{S\+D\+L\+\_\+\+Joystick $\ast$}]{joystick}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_a865c2e087fe69a3a30c87243729ecdea}
-Get the number of general axis controls on a joystick \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Num\+Balls@{S\+D\+L\+\_\+\+Joystick\+Num\+Balls}}
+
+Get the implementation dependent name of a joystick. 
+
+This can be called before any joysticks are opened. If no name can be found, this function returns N\+U\+L\+L. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Num\+Balls@{S\+D\+L\+\_\+\+Joystick\+Num\+Balls}}
 \index{S\+D\+L\+\_\+\+Joystick\+Num\+Balls@{S\+D\+L\+\_\+\+Joystick\+Num\+Balls}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Joystick\+Num\+Balls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Num\+Balls (
 \begin{DoxyParamCaption}
 \item[{S\+D\+L\+\_\+\+Joystick $\ast$}]{joystick}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_a755d087bb16270087bfced7501656a6d}
-Get the number of trackballs on a joystick
 
-Joystick trackballs have only relative motion events associated with them and their state cannot be polled. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Num\+Buttons@{S\+D\+L\+\_\+\+Joystick\+Num\+Buttons}}
-\index{S\+D\+L\+\_\+\+Joystick\+Num\+Buttons@{S\+D\+L\+\_\+\+Joystick\+Num\+Buttons}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Joystick\+Num\+Buttons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Num\+Buttons (
-\begin{DoxyParamCaption}
-\item[{S\+D\+L\+\_\+\+Joystick $\ast$}]{joystick}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_adfc662e571011ae7ec303101ab34e53a}
-Get the number of buttons on a joystick \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Num\+Hats@{S\+D\+L\+\_\+\+Joystick\+Num\+Hats}}
-\index{S\+D\+L\+\_\+\+Joystick\+Num\+Hats@{S\+D\+L\+\_\+\+Joystick\+Num\+Hats}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Joystick\+Num\+Hats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Num\+Hats (
-\begin{DoxyParamCaption}
-\item[{S\+D\+L\+\_\+\+Joystick $\ast$}]{joystick}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_aa62ea91c7c4ca2d12804a9fb3760e448}
-Get the number of P\+O\+V hats on a joystick \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Open@{S\+D\+L\+\_\+\+Joystick\+Open}}
+
+Get the number of trackballs on a joystick. 
+
+Joystick trackballs have only relative motion events associated with them and their state cannot be polled. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Open@{S\+D\+L\+\_\+\+Joystick\+Open}}
 \index{S\+D\+L\+\_\+\+Joystick\+Open@{S\+D\+L\+\_\+\+Joystick\+Open}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Joystick\+Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+\_\+\+Joystick$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Open (
 \begin{DoxyParamCaption}
 \item[{int}]{device\+\_\+index}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_a5b6f6554bca2659e149b5bc0fa538899}
-Open a joystick for use.
+
+
+Open a joystick for use. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -242,27 +235,15 @@ Open a joystick for use.
 \begin{DoxyReturn}{Returns}
 This function returns a joystick identifier, or N\+U\+L\+L if an error occurred. 
 \end{DoxyReturn}
-\index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Opened@{S\+D\+L\+\_\+\+Joystick\+Opened}}
-\index{S\+D\+L\+\_\+\+Joystick\+Opened@{S\+D\+L\+\_\+\+Joystick\+Opened}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Joystick\+Opened}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Opened (
-\begin{DoxyParamCaption}
-\item[{int}]{device\+\_\+index}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_a67b2b8c86bef297cc5f00c02b59379b0}
-Returns 1 if the joystick has been opened, or 0 if it has not. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Update@{S\+D\+L\+\_\+\+Joystick\+Update}}
+\index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Joystick\+Update@{S\+D\+L\+\_\+\+Joystick\+Update}}
 \index{S\+D\+L\+\_\+\+Joystick\+Update@{S\+D\+L\+\_\+\+Joystick\+Update}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Joystick\+Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Joystick\+Update (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__joystick_8h_a3ea23a9504ea56f2778147dbf39a029f}
-Update the current state of the open joysticks.
 
-This is called automatically by the event loop if any joystick events are enabled. \index{S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}!S\+D\+L\+\_\+\+Num\+Joysticks@{S\+D\+L\+\_\+\+Num\+Joysticks}}
-\index{S\+D\+L\+\_\+\+Num\+Joysticks@{S\+D\+L\+\_\+\+Num\+Joysticks}!S\+D\+L\+\_\+joystick.\+h@{S\+D\+L\+\_\+joystick.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Num\+Joysticks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Num\+Joysticks (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__joystick_8h_a2ab130eaa28f8e3bd544a5432041a311}
-Count the number of joysticks attached to the system 
+
+Update the current state of the open joysticks. 
+
+This is called automatically by the event loop if any joystick events are enabled. 

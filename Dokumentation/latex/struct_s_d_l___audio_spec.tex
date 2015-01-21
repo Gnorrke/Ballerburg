@@ -2,30 +2,42 @@
 \label{struct_s_d_l___audio_spec}\index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
 
 
+When filling in the desired audio spec structure,.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+audio.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\bf void} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$callback)(void $\ast$userdata
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function is called when the audio device needs more data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bf freq}
-\item 
-Uint16 {\bf format}
-\item 
-Uint8 {\bf channels}
-\item 
-Uint8 {\bf silence}
-\item 
-Uint16 {\bf samples}
-\item 
-Uint16 {\bf padding}
-\item 
-Uint32 {\bf size}
-\item 
+int {\bf freq}\label{struct_s_d_l___audio_spec_a8b823ce46fc2e448cf7e6fc141aff6b2}
+
+\begin{DoxyCompactList}\small\item\em D\+S\+P frequency -- samples per second. \end{DoxyCompactList}\item 
+Uint16 {\bf format}\label{struct_s_d_l___audio_spec_a6eda133f50c3be8d0ba91f8dee830be8}
+
+\begin{DoxyCompactList}\small\item\em Audio data format. \end{DoxyCompactList}\item 
+Uint8 {\bf channels}\label{struct_s_d_l___audio_spec_a31fe8b3710cf23bbef24be8a1749fe46}
+
+\begin{DoxyCompactList}\small\item\em Number of channels\+: 1 mono, 2 stereo. \end{DoxyCompactList}\item 
+Uint8 {\bf silence}\label{struct_s_d_l___audio_spec_addc462c8a806e6c122eccf63482048f6}
+
+\begin{DoxyCompactList}\small\item\em Audio buffer silence value (calculated) \end{DoxyCompactList}\item 
+Uint16 {\bf samples}\label{struct_s_d_l___audio_spec_a2cdf5e885808c10bfa2810b706e69f95}
+
+\begin{DoxyCompactList}\small\item\em Audio buffer size in samples (power of 2) \end{DoxyCompactList}\item 
+Uint16 {\bf padding}\label{struct_s_d_l___audio_spec_a738371fc13b54cefef4db16994abeeb6}
+
+\begin{DoxyCompactList}\small\item\em Necessary for some compile environments. \end{DoxyCompactList}\item 
+Uint32 {\bf size}\label{struct_s_d_l___audio_spec_a154cf44743ecec78c36dc6c827dd2fdb}
+
+\begin{DoxyCompactList}\small\item\em Audio buffer size in bytes (calculated) \end{DoxyCompactList}\item 
 Uint8 $\ast$ {\bfseries stream}\label{struct_s_d_l___audio_spec_aacbebdd2696a8abec7ac5bed473eb5c5}
 
 \item 
@@ -38,7 +50,9 @@ Uint8 int {\bfseries len}\label{struct_s_d_l___audio_spec_ab6f999b1bf0ee080b42f4
 
 
 \subsection{Detailed Description}
-When filling in the desired audio spec structure,
+When filling in the desired audio spec structure,. 
+
+
 \begin{DoxyItemize}
 \item \textquotesingle{}desired-\/$>$freq\textquotesingle{} should be the desired audio frequency in samples-\/per-\/second.
 \item \textquotesingle{}desired-\/$>$format\textquotesingle{} should be the desired audio format.
@@ -62,7 +76,9 @@ The calculated values in this structure are calculated by \doxyref{S\+D\+L\+\_\+
 \item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{callback}
 \end{DoxyParamCaption}
 )}\label{struct_s_d_l___audio_spec_ab8a359069a60f225ab6e35a55dfb3d92}
-This function is called when the audio device needs more data.
+
+
+This function is called when the audio device needs more data. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -72,30 +88,6 @@ This function is called when the audio device needs more data.
 \hline
 \end{DoxyParams}
 Once the callback returns, the buffer will no longer be valid. Stereo samples are stored in a L\+R\+L\+R\+L\+R ordering. 
-
-\subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!channels@{channels}}
-\index{channels@{channels}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{channels}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Audio\+Spec\+::channels}\label{struct_s_d_l___audio_spec_a31fe8b3710cf23bbef24be8a1749fe46}
-Number of channels\+: 1 mono, 2 stereo \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!format@{format}}
-\index{format@{format}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+Spec\+::format}\label{struct_s_d_l___audio_spec_a6eda133f50c3be8d0ba91f8dee830be8}
-Audio data format \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!freq@{freq}}
-\index{freq@{freq}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{freq}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+Spec\+::freq}\label{struct_s_d_l___audio_spec_a8b823ce46fc2e448cf7e6fc141aff6b2}
-D\+S\+P frequency -- samples per second \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!padding@{padding}}
-\index{padding@{padding}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{padding}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+Spec\+::padding}\label{struct_s_d_l___audio_spec_a738371fc13b54cefef4db16994abeeb6}
-Necessary for some compile environments \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!samples@{samples}}
-\index{samples@{samples}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{samples}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+Spec\+::samples}\label{struct_s_d_l___audio_spec_a2cdf5e885808c10bfa2810b706e69f95}
-Audio buffer size in samples (power of 2) \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!silence@{silence}}
-\index{silence@{silence}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{silence}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Audio\+Spec\+::silence}\label{struct_s_d_l___audio_spec_addc462c8a806e6c122eccf63482048f6}
-Audio buffer silence value (calculated) \index{S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}!size@{size}}
-\index{size@{size}!S\+D\+L\+\_\+\+Audio\+Spec@{S\+D\+L\+\_\+\+Audio\+Spec}}
-\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Audio\+Spec\+::size}\label{struct_s_d_l___audio_spec_a154cf44743ecec78c36dc6c827dd2fdb}
-Audio buffer size in bytes (calculated) 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

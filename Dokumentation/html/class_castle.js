@@ -7,5 +7,6 @@ var class_castle =
     [ "draw", "class_castle.html#a0b25b9dead62c64e7e48a587453b1138", null ],
     [ "getBlock", "class_castle.html#a540a311c65db41018f12a9da996f01b4", null ],
     [ "getMap", "class_castle.html#a94e009f51990bf1fe4e65c6809848480", null ],
-    [ "update", "class_castle.html#a88b3dd90f1c6a9bc4f84deb5bed8ea97", null ]
+    [ "update", "class_castle.html#a88b3dd90f1c6a9bc4f84deb5bed8ea97", null ],
+    [ "cblocks", "class_castle.html#a6242b6b73f63cd62dcbfed916d3c49a7", null ]
 ];

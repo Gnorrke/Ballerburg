@@ -8,5 +8,9 @@ var class_rectangle =
     [ "left", "class_rectangle.html#a1f169cef3c9b8307e8dc7c6093bfdd14", null ],
     [ "reassign", "class_rectangle.html#a7f08779a8dbbd7cbf9ca6d8d31e272f8", null ],
     [ "right", "class_rectangle.html#a8e76ee84d39c8c063cb2ef0e1cb7f5df", null ],
-    [ "top", "class_rectangle.html#a8eb6de2c6d532b2175bddd8484196eab", null ]
+    [ "top", "class_rectangle.html#a8eb6de2c6d532b2175bddd8484196eab", null ],
+    [ "height", "class_rectangle.html#ac564db1ed0dd61dd82a5276399bc72ad", null ],
+    [ "posX", "class_rectangle.html#a686488c52756f4a4d7de622fa8f2b513", null ],
+    [ "posY", "class_rectangle.html#a041ba9f18bfc8ff54240a141a4c5b6ee", null ],
+    [ "width", "class_rectangle.html#a019ed802523594472e0032953b6062d4", null ]
 ];

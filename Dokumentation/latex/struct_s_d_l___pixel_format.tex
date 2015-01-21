@@ -2,6 +2,11 @@
 \label{struct_s_d_l___pixel_format}\index{S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}}
 
 
+Everything in the pixel format structure is read-\/only.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+video.\+h$>$}
 
 \subsection*{Public Attributes}
@@ -52,23 +57,16 @@ Uint32 {\bfseries Bmask}\label{struct_s_d_l___pixel_format_ad366812df3ae62edb9ae
 Uint32 {\bfseries Amask}\label{struct_s_d_l___pixel_format_a6cdaf31f6cb153fefda47fa6b8368c0e}
 
 \item 
-Uint32 {\bf colorkey}
-\item 
-Uint8 {\bf alpha}
-\end{DoxyCompactItemize}
+Uint32 {\bf colorkey}\label{struct_s_d_l___pixel_format_a1413d87ed860296a49f8b2d8fd8ad778}
+
+\begin{DoxyCompactList}\small\item\em R\+G\+B color key information. \end{DoxyCompactList}\item 
+Uint8 {\bf alpha}\label{struct_s_d_l___pixel_format_a0b0fd9deaec730811212ecdeaa24c7ea}
+
+\begin{DoxyCompactList}\small\item\em Alpha value information (per-\/surface alpha) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Everything in the pixel format structure is read-\/only 
-
-\subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}!alpha@{alpha}}
-\index{alpha@{alpha}!S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}}
-\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Pixel\+Format\+::alpha}\label{struct_s_d_l___pixel_format_a0b0fd9deaec730811212ecdeaa24c7ea}
-Alpha value information (per-\/surface alpha) \index{S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}!colorkey@{colorkey}}
-\index{colorkey@{colorkey}!S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}}
-\subsubsection[{colorkey}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Pixel\+Format\+::colorkey}\label{struct_s_d_l___pixel_format_a1413d87ed860296a49f8b2d8fd8ad778}
-R\+G\+B color key information 
+Everything in the pixel format structure is read-\/only. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

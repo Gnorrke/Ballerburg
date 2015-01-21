@@ -11,5 +11,11 @@ var class_input =
     [ "moveCannonball", "class_input.html#a021cb5427da09e513b4ac4ed60f7b178", null ],
     [ "wasKeyPressed", "class_input.html#a20a05eafeefe8f0a4a901d8c23c862e6", null ],
     [ "wasKeyReleased", "class_input.html#a40f4e0bef7deaf1b81c517c8d2e4e08c", null ],
-    [ "wasLeftMouseButtonPressed", "class_input.html#a0dad9a60338030fae228726f7d76bfe1", null ]
+    [ "wasLeftMouseButtonPressed", "class_input.html#a0dad9a60338030fae228726f7d76bfe1", null ],
+    [ "heldKeys", "class_input.html#ac7eae67ebd03e0570dd4e0fdd6610e8f", null ],
+    [ "mouseButtonWasPressed", "class_input.html#a71ef8f9f55cd0391ccf9012d88f0ed13", null ],
+    [ "offsetX", "class_input.html#a1d4a76ad638234b05b67e4342868815c", null ],
+    [ "offsetY", "class_input.html#a2d134a0288a6638bc59f35602c33f8d1", null ],
+    [ "pressedKeys", "class_input.html#a37741f7dc7f6aae418ebbc7a36203424", null ],
+    [ "releasedKeys", "class_input.html#ad130fe0fb7085b9cc52faaff155d4e38", null ]
 ];

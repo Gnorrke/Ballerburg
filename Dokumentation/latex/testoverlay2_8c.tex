@@ -1,0 +1,157 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/test/testoverlay2.c File Reference}
+\label{testoverlay2_8c}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testoverlay2.\+c@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testoverlay2.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W}~64
+\item 
+\#define {\bf M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H}~88
+\item 
+\#define {\bf M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E}~({\bf M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W} $\ast$ {\bf M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H})
+\item 
+\#define {\bf M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf R\+G\+Bto\+Y\+U\+V} ({\bf Uint8} $\ast$rgb, int $\ast$yuv, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+Y\+V12} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+I\+Y\+U\+V} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+U\+Y\+V\+Y} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+Y\+V\+Y\+U} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+{\bf void} {\bf Convert\+R\+G\+Bto\+Y\+U\+Y2} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf s}, {\bf S\+D\+L\+\_\+\+Overlay} $\ast$o, int {\bf monochrome}, int {\bf luminance})
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+D\+L\+\_\+\+Color} {\bf Moose\+Colors} [84]
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E@{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E}}
+\index{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E@{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+\_\+\+S\+I\+Z\+E~({\bf M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W} $\ast$ {\bf M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H})}\label{testoverlay2_8c_ad8a197e5e4dc565564ed3b4583df199d}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T@{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T}}
+\index{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T@{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+O\+S\+E\+F\+R\+A\+M\+E\+S\+\_\+\+C\+O\+U\+N\+T~10}\label{testoverlay2_8c_a07de30307b12a5872d1fa6682e6f02dd}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H@{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H}}
+\index{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H@{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+H~88}\label{testoverlay2_8c_a02696dfac4138286802c155ef6ef5ad7}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W@{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W}}
+\index{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W@{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+O\+S\+E\+P\+I\+C\+\_\+\+W~64}\label{testoverlay2_8c_a3f45b9a6db0cca5e63a92bc33989ced6}
+
+
+\subsection{Function Documentation}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!Convert\+R\+G\+Bto\+I\+Y\+U\+V@{Convert\+R\+G\+Bto\+I\+Y\+U\+V}}
+\index{Convert\+R\+G\+Bto\+I\+Y\+U\+V@{Convert\+R\+G\+Bto\+I\+Y\+U\+V}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+I\+Y\+U\+V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+I\+Y\+U\+V (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_a69a95e1456c11ae6c52ec6801032eca2}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!Convert\+R\+G\+Bto\+U\+Y\+V\+Y@{Convert\+R\+G\+Bto\+U\+Y\+V\+Y}}
+\index{Convert\+R\+G\+Bto\+U\+Y\+V\+Y@{Convert\+R\+G\+Bto\+U\+Y\+V\+Y}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+U\+Y\+V\+Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+U\+Y\+V\+Y (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_a663a0115a853a9260740a021d519cc64}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!Convert\+R\+G\+Bto\+Y\+U\+Y2@{Convert\+R\+G\+Bto\+Y\+U\+Y2}}
+\index{Convert\+R\+G\+Bto\+Y\+U\+Y2@{Convert\+R\+G\+Bto\+Y\+U\+Y2}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+Y\+U\+Y2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+Y\+U\+Y2 (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_a4bbdf07168f3f4cf2677ffd58e9caeac}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!Convert\+R\+G\+Bto\+Y\+V12@{Convert\+R\+G\+Bto\+Y\+V12}}
+\index{Convert\+R\+G\+Bto\+Y\+V12@{Convert\+R\+G\+Bto\+Y\+V12}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+Y\+V12}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+Y\+V12 (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_a6a71c461a949287ab29b3a007b04fd9f}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!Convert\+R\+G\+Bto\+Y\+V\+Y\+U@{Convert\+R\+G\+Bto\+Y\+V\+Y\+U}}
+\index{Convert\+R\+G\+Bto\+Y\+V\+Y\+U@{Convert\+R\+G\+Bto\+Y\+V\+Y\+U}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{Convert\+R\+G\+Bto\+Y\+V\+Y\+U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Convert\+R\+G\+Bto\+Y\+V\+Y\+U (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{s, }
+\item[{{\bf S\+D\+L\+\_\+\+Overlay} $\ast$}]{o, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_ad92dacf4a471e2e85b7393b61c3183f4}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!main@{main}}
+\index{main@{main}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!R\+G\+Bto\+Y\+U\+V@{R\+G\+Bto\+Y\+U\+V}}
+\index{R\+G\+Bto\+Y\+U\+V@{R\+G\+Bto\+Y\+U\+V}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{R\+G\+Bto\+Y\+U\+V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+G\+Bto\+Y\+U\+V (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint8} $\ast$}]{rgb, }
+\item[{int $\ast$}]{yuv, }
+\item[{int}]{monochrome, }
+\item[{int}]{luminance}
+\end{DoxyParamCaption}
+)}\label{testoverlay2_8c_afb0e656b35d65e1583fe50bb477c46b2}
+
+
+\subsection{Variable Documentation}
+\index{testoverlay2.\+c@{testoverlay2.\+c}!Moose\+Colors@{Moose\+Colors}}
+\index{Moose\+Colors@{Moose\+Colors}!testoverlay2.\+c@{testoverlay2.\+c}}
+\subsubsection[{Moose\+Colors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Color} Moose\+Colors[84]}\label{testoverlay2_8c_a6ee533635bbc7b02ed870e6f9919053d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=\{
+    \{ 49,  49,  49\}, \{ 66,  24,   0\}, \{ 66,  33,   0\}, \{ 66,  66,  66\},
+    \{ 66, 115,  49\}, \{ 74,  33,   0\}, \{ 74,  41,  16\}, \{ 82,  33,   8\},
+    \{ 82,  41,   8\}, \{ 82,  49,  16\}, \{ 82,  82,  82\}, \{ 90,  41,   8\},
+    \{ 90,  41,  16\}, \{ 90,  57,  24\}, \{ 99,  49,  16\}, \{ 99,  66,  24\},
+    \{ 99,  66,  33\}, \{ 99,  74,  33\}, \{107,  57,  24\}, \{107,  82,  41\},
+    \{115,  57,  33\}, \{115,  66,  33\}, \{115,  66,  41\}, \{115,  74,   0\},
+    \{115,  90,  49\}, \{115, 115, 115\}, \{123,  82,   0\}, \{123,  99,  57\},
+    \{132,  66,  41\}, \{132,  74,  41\}, \{132,  90,   8\}, \{132,  99,  33\},
+    \{132,  99,  66\}, \{132, 107,  66\}, \{140,  74,  49\}, \{140,  99,  16\},
+    \{140, 107,  74\}, \{140, 115,  74\}, \{148, 107,  24\}, \{148, 115,  82\},
+    \{148, 123,  74\}, \{148, 123,  90\}, \{156, 115,  33\}, \{156, 115,  90\},
+    \{156, 123,  82\}, \{156, 132,  82\}, \{156, 132,  99\}, \{156, 156, 156\},
+    \{165, 123,  49\}, \{165, 123,  90\}, \{165, 132,  82\}, \{165, 132,  90\},
+    \{165, 132,  99\}, \{165, 140,  90\}, \{173, 132,  57\}, \{173, 132,  99\},
+    \{173, 140, 107\}, \{173, 140, 115\}, \{173, 148,  99\}, \{173, 173, 173\},
+    \{181, 140,  74\}, \{181, 148, 115\}, \{181, 148, 123\}, \{181, 156, 107\},
+    \{189, 148, 123\}, \{189, 156,  82\}, \{189, 156, 123\}, \{189, 156, 132\},
+    \{189, 189, 189\}, \{198, 156, 123\}, \{198, 165, 132\}, \{206, 165,  99\},
+    \{206, 165, 132\}, \{206, 173, 140\}, \{206, 206, 206\}, \{214, 173, 115\},
+    \{214, 173, 140\}, \{222, 181, 148\}, \{222, 189, 132\}, \{222, 189, 156\},
+    \{222, 222, 222\}, \{231, 198, 165\}, \{231, 231, 231\}, \{239, 206, 173\}
+\}
+\end{DoxyCode}

@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -110,11 +109,17 @@ $(document).ready(function(){initNavTree('class_sprite.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_sprite-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Sprite Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Die <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann.  
+ <a href="class_sprite.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sprite_8h_source.html">sprite.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Sprite:</div>
 <div class="dyncontent">
@@ -127,22 +132,178 @@ Inheritance diagram for Sprite:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a47466164808cee0827ed2fa769cc76e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47466164808cee0827ed2fa769cc76e6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, const std::string &amp;filepath, int src_x, int src_y, int width, int height)</td></tr>
+<tr class="memitem:a47466164808cee0827ed2fa769cc76e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#a47466164808cee0827ed2fa769cc76e6">Sprite</a> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, const std::string &amp;filepath, int src_x, int src_y, int width, int height)</td></tr>
+<tr class="memdesc:a47466164808cee0827ed2fa769cc76e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt ein neues <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> an.  <a href="#a47466164808cee0827ed2fa769cc76e6">More...</a><br /></td></tr>
 <tr class="separator:a47466164808cee0827ed2fa769cc76e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae93ffca39a384237789ec65de213e68f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae93ffca39a384237789ec65de213e68f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (int)</td></tr>
 <tr class="separator:ae93ffca39a384237789ec65de213e68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1a918703101e1d9e63f82da7504e024"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1a918703101e1d9e63f82da7504e024"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, int x, int y)</td></tr>
+<tr class="memitem:ad1a918703101e1d9e63f82da7504e024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#ad1a918703101e1d9e63f82da7504e024">draw</a> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, int x, int y)</td></tr>
+<tr class="memdesc:ad1a918703101e1d9e63f82da7504e024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> wird auf den im graphics Objekt enthaltenen Screen gezeichnet.  <a href="#ad1a918703101e1d9e63f82da7504e024">More...</a><br /></td></tr>
 <tr class="separator:ad1a918703101e1d9e63f82da7504e024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8fa271c176620b583103408ba6d95810"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fa271c176620b583103408ba6d95810"></a>
-<a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>srcRect</b></td></tr>
+<tr class="memitem:a8fa271c176620b583103408ba6d95810"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#a8fa271c176620b583103408ba6d95810">srcRect</a></td></tr>
 <tr class="separator:a8fa271c176620b583103408ba6d95810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa356e52e44c86d8d76cc3060eb41ae06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_d_l___surface.html">SDL_Surface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#aa356e52e44c86d8d76cc3060eb41ae06">spriteSheet</a></td></tr>
+<tr class="separator:aa356e52e44c86d8d76cc3060eb41ae06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Die <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a47466164808cee0827ed2fa769cc76e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite::Sprite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_graphic.html">Graphic</a> &amp;&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Legt ein neues <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> an. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>object </td></tr>
+    <tr><td class="paramname">filepath</td><td>- Der Dateipfad des zu ladenen Bildes </td></tr>
+    <tr><td class="paramname">src_x</td><td>- Der X-Offset der auf das <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> angelegt wird </td></tr>
+    <tr><td class="paramname">src_y</td><td>- Der Y-Offset der auf das <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> angelegt wird </td></tr>
+    <tr><td class="paramname">width</td><td>- Legt die Weite des Sprites fest </td></tr>
+    <tr><td class="paramname">height</td><td>- Legt die Höhe des Sprites fest </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad1a918703101e1d9e63f82da7504e024"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sprite::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_graphic.html">Graphic</a> &amp;&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Das <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> wird auf den im graphics Objekt enthaltenen Screen gezeichnet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>- Auf dieses graphic Objekt wird das <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> gezeichnet </td></tr>
+    <tr><td class="paramname">x</td><td>- Die X-Position des Sprites auf dem Screen </td></tr>
+    <tr><td class="paramname">y</td><td>- Die Y-Position des Sprites auf dem Screen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa356e52e44c86d8d76cc3060eb41ae06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s_d_l___surface.html">SDL_Surface</a>* Sprite::spriteSheet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enthält das Bild </p>
+
+</div>
+</div>
+<a class="anchor" id="a8fa271c176620b583103408ba6d95810"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a> Sprite::srcRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Legt die Abmessungen, Höhe und Weite des Sprites fest </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Max/Documents/GitHub/Ballerburg/Ballerburg_v001/<a class="el" href="sprite_8h_source.html">sprite.h</a></li>
 <li>C:/Users/Max/Documents/GitHub/Ballerburg/Ballerburg_v001/sprite.cpp</li>
@@ -153,7 +314,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_sprite.html">Sprite</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:44 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:35 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

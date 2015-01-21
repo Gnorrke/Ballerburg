@@ -9,6 +9,7 @@ var searchData=
   ['cdstatus',['CDstatus',['../_s_d_l__cdrom_8h.html#ae689551deb9bd434bce7e4c39e45e15d',1,'SDL_cdrom.h']]],
   ['channels',['channels',['../struct_s_d_l___audio_spec.html#a31fe8b3710cf23bbef24be8a1749fe46',1,'SDL_AudioSpec']]],
   ['circle',['Circle',['../class_circle.html',1,'']]],
+  ['cleanup',['cleanUp',['../class_graphic.html#a15c85c04c5b78994c94013827e6095ea',1,'Graphic']]],
   ['clip_5frect',['clip_rect',['../struct_s_d_l___surface.html#aa9a0da3b38261dad6cf0cc4e3bb5b0c3',1,'SDL_Surface']]],
   ['close_5fcode_2eh',['close_code.h',['../close__code_8h.html',1,'']]],
   ['code',['code',['../struct_s_d_l___user_event.html#aed0990a34143309d42e9d0f20a7a9cd4',1,'SDL_UserEvent']]],

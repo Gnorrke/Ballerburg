@@ -1,0 +1,87 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/test/testvidinfo.c File Reference}
+\label{testvidinfo_8c}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testvidinfo.\+c@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testvidinfo.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf N\+U\+M\+\_\+\+B\+L\+I\+T\+S}~10
+\item 
+\#define {\bf N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S}~500
+\item 
+\#define {\bf F\+L\+A\+G\+\_\+\+M\+A\+S\+K}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Print\+Flags} ({\bf Uint32} flags)
+\item 
+int {\bf Run\+Blit\+Tests} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf screen}, {\bf S\+D\+L\+\_\+\+Surface} $\ast$bmp, int blitcount)
+\item 
+int {\bf Run\+Mode\+Tests} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf screen})
+\item 
+{\bf void} {\bf Run\+Video\+Tests} ()
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!F\+L\+A\+G\+\_\+\+M\+A\+S\+K@{F\+L\+A\+G\+\_\+\+M\+A\+S\+K}}
+\index{F\+L\+A\+G\+\_\+\+M\+A\+S\+K@{F\+L\+A\+G\+\_\+\+M\+A\+S\+K}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{F\+L\+A\+G\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+A\+G\+\_\+\+M\+A\+S\+K}\label{testvidinfo_8c_a890221cb651a3f30f6d1bca0d9b0e13d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(SDL_HWSURFACE | SDL_FULLSCREEN | SDL_DOUBLEBUF | \
+                         SDL_SRCCOLORKEY | SDL_SRCALPHA | SDL_RLEACCEL  | \
+                         SDL_RLEACCELOK)
+\end{DoxyCode}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!N\+U\+M\+\_\+\+B\+L\+I\+T\+S@{N\+U\+M\+\_\+\+B\+L\+I\+T\+S}}
+\index{N\+U\+M\+\_\+\+B\+L\+I\+T\+S@{N\+U\+M\+\_\+\+B\+L\+I\+T\+S}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{N\+U\+M\+\_\+\+B\+L\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+B\+L\+I\+T\+S~10}\label{testvidinfo_8c_a62306f57028a77b9beffc387e8840fa3}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S@{N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S}}
+\index{N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S@{N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+U\+P\+D\+A\+T\+E\+S~500}\label{testvidinfo_8c_ae8f4aa6ef5625a9fa7c1006ab9c165bb}
+
+
+\subsection{Function Documentation}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!main@{main}}
+\index{main@{main}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{testvidinfo_8c_a0ddf1224851353fc92bfbff6f499fa97}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!Print\+Flags@{Print\+Flags}}
+\index{Print\+Flags@{Print\+Flags}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{Print\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Print\+Flags (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint32}}]{flags}
+\end{DoxyParamCaption}
+)}\label{testvidinfo_8c_a658c1e62f62bed3d48545a8bd3151991}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!Run\+Blit\+Tests@{Run\+Blit\+Tests}}
+\index{Run\+Blit\+Tests@{Run\+Blit\+Tests}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{Run\+Blit\+Tests}]{\setlength{\rightskip}{0pt plus 5cm}int Run\+Blit\+Tests (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{screen, }
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{bmp, }
+\item[{int}]{blitcount}
+\end{DoxyParamCaption}
+)}\label{testvidinfo_8c_a287afca18de453a4b9d27bdf61ce375e}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!Run\+Mode\+Tests@{Run\+Mode\+Tests}}
+\index{Run\+Mode\+Tests@{Run\+Mode\+Tests}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{Run\+Mode\+Tests}]{\setlength{\rightskip}{0pt plus 5cm}int Run\+Mode\+Tests (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}\label{testvidinfo_8c_adf18e9e4031f2270a1245dac0753b245}
+\index{testvidinfo.\+c@{testvidinfo.\+c}!Run\+Video\+Tests@{Run\+Video\+Tests}}
+\index{Run\+Video\+Tests@{Run\+Video\+Tests}!testvidinfo.\+c@{testvidinfo.\+c}}
+\subsubsection[{Run\+Video\+Tests}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Run\+Video\+Tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{testvidinfo_8c_a744d87162f99cb78c04b51564cab5e23}

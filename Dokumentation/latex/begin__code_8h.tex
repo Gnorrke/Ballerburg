@@ -1,44 +1,40 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/begin\+\_\+code.h File Reference}
 \label{begin__code_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/begin\+\_\+code.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/begin\+\_\+code.\+h}}
+
+
+This file sets things up for C dynamic library function definitions, static inlined functions, and structures aligned at 4-\/byte alignment.  
+
+
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define {\bfseries \+\_\+begin\+\_\+code\+\_\+h}\label{begin__code_8h_ad8ee189cfed593708b48fa2163caaed7}
 
 \item 
-\#define {\bf D\+E\+C\+L\+S\+P\+E\+C}
-\item 
-\#define {\bf S\+D\+L\+C\+A\+L\+L}
-\item 
-\#define {\bf \+\_\+\+\_\+inline\+\_\+\+\_\+}~inline
-\item 
-\#define {\bf S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y}
-\item 
-\#define {\bf N\+U\+L\+L}~((void $\ast$)0)
-\end{DoxyCompactItemize}
+\#define {\bf D\+E\+C\+L\+S\+P\+E\+C}\label{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}
+
+\begin{DoxyCompactList}\small\item\em Some compilers use a special export keyword. \end{DoxyCompactList}\item 
+\#define {\bf S\+D\+L\+C\+A\+L\+L}\label{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}
+
+\begin{DoxyCompactList}\small\item\em By default S\+D\+L uses the C calling convention. \end{DoxyCompactList}\item 
+\#define {\bf \+\_\+\+\_\+inline\+\_\+\+\_\+}~inline\label{begin__code_8h_a9f04218fe09e6ee659e045b2f11542ed}
+
+\begin{DoxyCompactList}\small\item\em If inlining isn\textquotesingle{}t supported, remove \char`\"{}\+\_\+\+\_\+inline\+\_\+\+\_\+\char`\"{}, turning static inlined functions into static functions (resulting in code bloat in all files which include the offending header files) \end{DoxyCompactList}\item 
+\#define {\bf S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y}\label{begin__code_8h_a947320556194d84f3494292a480dd3a2}
+
+\begin{DoxyCompactList}\small\item\em Set up compiler-\/specific options for inlining functions. \end{DoxyCompactList}\item 
+\#define {\bf N\+U\+L\+L}~((void $\ast$)0)\label{begin__code_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}
+
+\begin{DoxyCompactList}\small\item\em Apparently this is needed by several Windows compilers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This file sets things up for C dynamic library function definitions, static inlined functions, and structures aligned at 4-\/byte alignment. If you don\textquotesingle{}t like ugly C preprocessor code, don\textquotesingle{}t look at this file. \+:)
+This file sets things up for C dynamic library function definitions, static inlined functions, and structures aligned at 4-\/byte alignment. 
+
+Force structure packing at 4 byte alignment.
 
 This shouldn\textquotesingle{}t be nested -- included it around code only.
 
-Force structure packing at 4 byte alignment. This is necessary if the header is included in code which has structure packing set to an alternate value, say for loading structures from disk. The packing is reset to the previous value in \doxyref{close\+\_\+code.\+h}{p.}{close__code_8h} 
+If you don\textquotesingle{}t like ugly C preprocessor code, don\textquotesingle{}t look at this file. \+:)
 
-\subsection{Macro Definition Documentation}
-\index{begin\+\_\+code.\+h@{begin\+\_\+code.\+h}!\+\_\+\+\_\+inline\+\_\+\+\_\+@{\+\_\+\+\_\+inline\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+inline\+\_\+\+\_\+@{\+\_\+\+\_\+inline\+\_\+\+\_\+}!begin\+\_\+code.\+h@{begin\+\_\+code.\+h}}
-\subsubsection[{\+\_\+\+\_\+inline\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+\_\+inline\+\_\+\+\_\+~inline}\label{begin__code_8h_a9f04218fe09e6ee659e045b2f11542ed}
-If inlining isn\textquotesingle{}t supported, remove \char`\"{}\+\_\+\+\_\+inline\+\_\+\+\_\+\char`\"{}, turning static inlined functions into static functions (resulting in code bloat in all files which include the offending header files) \index{begin\+\_\+code.\+h@{begin\+\_\+code.\+h}!D\+E\+C\+L\+S\+P\+E\+C@{D\+E\+C\+L\+S\+P\+E\+C}}
-\index{D\+E\+C\+L\+S\+P\+E\+C@{D\+E\+C\+L\+S\+P\+E\+C}!begin\+\_\+code.\+h@{begin\+\_\+code.\+h}}
-\subsubsection[{D\+E\+C\+L\+S\+P\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+C\+L\+S\+P\+E\+C}\label{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}
-Some compilers use a special export keyword \index{begin\+\_\+code.\+h@{begin\+\_\+code.\+h}!N\+U\+L\+L@{N\+U\+L\+L}}
-\index{N\+U\+L\+L@{N\+U\+L\+L}!begin\+\_\+code.\+h@{begin\+\_\+code.\+h}}
-\subsubsection[{N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+L\+L~((void $\ast$)0)}\label{begin__code_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}
-Apparently this is needed by several Windows compilers \index{begin\+\_\+code.\+h@{begin\+\_\+code.\+h}!S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y@{S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y}}
-\index{S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y@{S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y}!begin\+\_\+code.\+h@{begin\+\_\+code.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+O\+K\+A\+Y}\label{begin__code_8h_a947320556194d84f3494292a480dd3a2}
-Set up compiler-\/specific options for inlining functions \index{begin\+\_\+code.\+h@{begin\+\_\+code.\+h}!S\+D\+L\+C\+A\+L\+L@{S\+D\+L\+C\+A\+L\+L}}
-\index{S\+D\+L\+C\+A\+L\+L@{S\+D\+L\+C\+A\+L\+L}!begin\+\_\+code.\+h@{begin\+\_\+code.\+h}}
-\subsubsection[{S\+D\+L\+C\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+C\+A\+L\+L}\label{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}
-By default S\+D\+L uses the C calling convention 
+This is necessary if the header is included in code which has structure packing set to an alternate value, say for loading structures from disk. The packing is reset to the previous value in \doxyref{close\+\_\+code.\+h}{p.}{close__code_8h} 

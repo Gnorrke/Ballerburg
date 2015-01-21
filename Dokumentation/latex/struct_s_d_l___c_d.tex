@@ -2,24 +2,33 @@
 \label{struct_s_d_l___c_d}\index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
 
 
+This structure is only current as of the last call to \doxyref{S\+D\+L\+\_\+\+C\+D\+Status()}{p.}{_s_d_l__cdrom_8h_a696066cb9444206195dfad7f77f2b38c}  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+cdrom.\+h$>$}
 
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bf id}
-\item 
-{\bf C\+Dstatus} {\bf status}
-\end{DoxyCompactItemize}
+int {\bf id}\label{struct_s_d_l___c_d_ab48f9cbecf78bc689649d877eceba103}
+
+\begin{DoxyCompactList}\small\item\em Private drive identifier. \end{DoxyCompactList}\item 
+{\bf C\+Dstatus} {\bf status}\label{struct_s_d_l___c_d_afaab8559e9b75bbf501b31b5f5f01a9b}
+
+\begin{DoxyCompactList}\small\item\em Current drive status. \end{DoxyCompactList}\end{DoxyCompactItemize}
 {\bf }\par
 \begin{DoxyCompactItemize}
 \item 
 int {\bf numtracks}
-\item 
-int {\bf cur\+\_\+track}
-\item 
-int {\bf cur\+\_\+frame}
-\item 
+\begin{DoxyCompactList}\small\item\em The rest of this structure is only valid if there\textquotesingle{}s a C\+D in drive. \end{DoxyCompactList}\item 
+int {\bf cur\+\_\+track}\label{struct_s_d_l___c_d_afe5a3ca65be47b34c72ac21ce28de31e}
+
+\begin{DoxyCompactList}\small\item\em Current track position. \end{DoxyCompactList}\item 
+int {\bf cur\+\_\+frame}\label{struct_s_d_l___c_d_a42123aeca413aa581c1403843d1a5809}
+
+\begin{DoxyCompactList}\small\item\em Current frame offset within current track. \end{DoxyCompactList}\item 
 {\bf S\+D\+L\+\_\+\+C\+Dtrack} {\bfseries track} [{\bf S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+C\+K\+S}+1]\label{struct_s_d_l___c_d_ad9dd6d42b8c1677e83926aa9e9031ecc}
 
 \end{DoxyCompactItemize}
@@ -30,22 +39,14 @@ int {\bf cur\+\_\+frame}
 This structure is only current as of the last call to \doxyref{S\+D\+L\+\_\+\+C\+D\+Status()}{p.}{_s_d_l__cdrom_8h_a696066cb9444206195dfad7f77f2b38c} 
 
 \subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!cur\+\_\+frame@{cur\+\_\+frame}}
-\index{cur\+\_\+frame@{cur\+\_\+frame}!S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
-\subsubsection[{cur\+\_\+frame}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+C\+D\+::cur\+\_\+frame}\label{struct_s_d_l___c_d_a42123aeca413aa581c1403843d1a5809}
-Current frame offset within current track \index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!cur\+\_\+track@{cur\+\_\+track}}
-\index{cur\+\_\+track@{cur\+\_\+track}!S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
-\subsubsection[{cur\+\_\+track}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+C\+D\+::cur\+\_\+track}\label{struct_s_d_l___c_d_afe5a3ca65be47b34c72ac21ce28de31e}
-Current track position \index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!id@{id}}
-\index{id@{id}!S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
-\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+C\+D\+::id}\label{struct_s_d_l___c_d_ab48f9cbecf78bc689649d877eceba103}
-Private drive identifier \index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!numtracks@{numtracks}}
+\index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!numtracks@{numtracks}}
 \index{numtracks@{numtracks}!S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
 \subsubsection[{numtracks}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+C\+D\+::numtracks}\label{struct_s_d_l___c_d_ade87d0c7e217291fb1f1a53d03e1bfdf}
-The rest of this structure is only valid if there\textquotesingle{}s a C\+D in drive Number of tracks on disk \index{S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}!status@{status}}
-\index{status@{status}!S\+D\+L\+\_\+\+C\+D@{S\+D\+L\+\_\+\+C\+D}}
-\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Dstatus} S\+D\+L\+\_\+\+C\+D\+::status}\label{struct_s_d_l___c_d_afaab8559e9b75bbf501b31b5f5f01a9b}
-Current drive status 
+
+
+The rest of this structure is only valid if there\textquotesingle{}s a C\+D in drive. 
+
+Number of tracks on disk 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

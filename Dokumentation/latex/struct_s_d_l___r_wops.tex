@@ -2,19 +2,26 @@
 \label{struct_s_d_l___r_wops}\index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
 
 
+This is the read/write operation structure -- very basic.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+rwops.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$seek)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context
-\item 
+{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$seek)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context\label{struct_s_d_l___r_wops_a25b6f8f86737e5f6af594d4069885771}
+
+\begin{DoxyCompactList}\small\item\em Seek to \textquotesingle{}offset\textquotesingle{} relative to whence, one of stdio\textquotesingle{}s whence values\+: S\+E\+E\+K\+\_\+\+S\+E\+T, S\+E\+E\+K\+\_\+\+C\+U\+R, S\+E\+E\+K\+\_\+\+E\+N\+D Returns the final offset in the data source. \end{DoxyCompactList}\item 
 {\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$read)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context
-\item 
+\begin{DoxyCompactList}\small\item\em Read up to \textquotesingle{}maxnum\textquotesingle{} objects each of size \textquotesingle{}size\textquotesingle{} from the data source to the area pointed at by \textquotesingle{}ptr\textquotesingle{}. \end{DoxyCompactList}\item 
 {\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$write)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context
-\item 
-{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$close)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Write exactly \textquotesingle{}num\textquotesingle{} objects each of size \textquotesingle{}objsize\textquotesingle{} from the area pointed at by \textquotesingle{}ptr\textquotesingle{} to data source. \end{DoxyCompactList}\item 
+{\bf int} ({\bf S\+D\+L\+C\+A\+L\+L} $\ast$close)(struct {\bf S\+D\+L\+\_\+\+R\+Wops} $\ast$context)\label{struct_s_d_l___r_wops_ab303bcbb0f6742a141ba8b2998923f47}
+
+\begin{DoxyCompactList}\small\item\em Close and free an allocated S\+D\+L\+\_\+\+F\+Sops structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,38 +70,32 @@ union \{\\
 
 
 \subsection{Detailed Description}
-This is the read/write operation structure -- very basic 
+This is the read/write operation structure -- very basic. 
 
 \subsection{Member Function Documentation}
 \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
 \index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
 \subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
 \begin{DoxyParamCaption}
-\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{seek}
-\end{DoxyParamCaption}
-)}\label{struct_s_d_l___r_wops_a25b6f8f86737e5f6af594d4069885771}
-Seek to \textquotesingle{}offset\textquotesingle{} relative to whence, one of stdio\textquotesingle{}s whence values\+: S\+E\+E\+K\+\_\+\+S\+E\+T, S\+E\+E\+K\+\_\+\+C\+U\+R, S\+E\+E\+K\+\_\+\+E\+N\+D Returns the final offset in the data source. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
-\index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
-\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
-\begin{DoxyParamCaption}
 \item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{read}
 \end{DoxyParamCaption}
 )}\label{struct_s_d_l___r_wops_a22a0344f0e73d5917aa0dc91417e44a1}
-Read up to \textquotesingle{}maxnum\textquotesingle{} objects each of size \textquotesingle{}size\textquotesingle{} from the data source to the area pointed at by \textquotesingle{}ptr\textquotesingle{}. Returns the number of objects read, or -\/1 if the read failed. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
+
+
+Read up to \textquotesingle{}maxnum\textquotesingle{} objects each of size \textquotesingle{}size\textquotesingle{} from the data source to the area pointed at by \textquotesingle{}ptr\textquotesingle{}. 
+
+Returns the number of objects read, or -\/1 if the read failed. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
 \index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
 \subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
 \begin{DoxyParamCaption}
 \item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{write}
 \end{DoxyParamCaption}
 )}\label{struct_s_d_l___r_wops_a281fa6bf3562d8289f9ef75f658b5a44}
-Write exactly \textquotesingle{}num\textquotesingle{} objects each of size \textquotesingle{}objsize\textquotesingle{} from the area pointed at by \textquotesingle{}ptr\textquotesingle{} to data source. Returns \textquotesingle{}num\textquotesingle{}, or -\/1 if the write failed. \index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!int@{int}}
-\index{int@{int}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
-\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+R\+Wops\+::int (
-\begin{DoxyParamCaption}
-\item[{{\bf S\+D\+L\+C\+A\+L\+L} $\ast$}]{close}
-\end{DoxyParamCaption}
-)}\label{struct_s_d_l___r_wops_ab303bcbb0f6742a141ba8b2998923f47}
-Close and free an allocated S\+D\+L\+\_\+\+F\+Sops structure 
+
+
+Write exactly \textquotesingle{}num\textquotesingle{} objects each of size \textquotesingle{}objsize\textquotesingle{} from the area pointed at by \textquotesingle{}ptr\textquotesingle{} to data source. 
+
+Returns \textquotesingle{}num\textquotesingle{}, or -\/1 if the write failed. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

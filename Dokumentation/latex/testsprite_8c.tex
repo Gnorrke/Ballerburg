@@ -1,0 +1,123 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/test/testsprite.c File Reference}
+\label{testsprite_8c}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testsprite.\+c@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testsprite.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S}~100
+\item 
+\#define {\bf M\+A\+X\+\_\+\+S\+P\+E\+E\+D}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf Load\+Sprite} (char $\ast$file)
+\item 
+{\bf void} {\bf Move\+Sprites} ({\bf S\+D\+L\+\_\+\+Surface} $\ast${\bf screen}, {\bf Uint32} background)
+\item 
+{\bf Uint32} {\bf Fastest\+Flags} ({\bf Uint32} flags, int {\bf width}, int {\bf height}, int bpp)
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bf sprite}
+\item 
+int {\bf numsprites}
+\item 
+{\bf S\+D\+L\+\_\+\+Rect} $\ast$ {\bf sprite\+\_\+rects}
+\item 
+{\bf S\+D\+L\+\_\+\+Rect} $\ast$ {\bf positions}
+\item 
+{\bf S\+D\+L\+\_\+\+Rect} $\ast$ {\bf velocities}
+\item 
+int {\bf sprites\+\_\+visible}
+\item 
+int {\bf debug\+\_\+flip}
+\item 
+{\bf Uint16} {\bf sprite\+\_\+w}
+\item 
+{\bf Uint16} {\bf sprite\+\_\+h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{testsprite.\+c@{testsprite.\+c}!M\+A\+X\+\_\+\+S\+P\+E\+E\+D@{M\+A\+X\+\_\+\+S\+P\+E\+E\+D}}
+\index{M\+A\+X\+\_\+\+S\+P\+E\+E\+D@{M\+A\+X\+\_\+\+S\+P\+E\+E\+D}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{M\+A\+X\+\_\+\+S\+P\+E\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+S\+P\+E\+E\+D~1}\label{testsprite_8c_ac2cd96d53dd3ba6407db6766c3d92b26}
+\index{testsprite.\+c@{testsprite.\+c}!N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S@{N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S}}
+\index{N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S@{N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+S\+P\+R\+I\+T\+E\+S~100}\label{testsprite_8c_aaefba7c82ef683b9f05de02356067373}
+
+
+\subsection{Function Documentation}
+\index{testsprite.\+c@{testsprite.\+c}!Fastest\+Flags@{Fastest\+Flags}}
+\index{Fastest\+Flags@{Fastest\+Flags}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{Fastest\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint32} Fastest\+Flags (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint32}}]{flags, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bpp}
+\end{DoxyParamCaption}
+)}\label{testsprite_8c_ac25699de34eb6c21d4e95e55f65ae7d4}
+\index{testsprite.\+c@{testsprite.\+c}!Load\+Sprite@{Load\+Sprite}}
+\index{Load\+Sprite@{Load\+Sprite}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{Load\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}int Load\+Sprite (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{testsprite_8c_add8ce17235285242293d72ce0adac664}
+\index{testsprite.\+c@{testsprite.\+c}!main@{main}}
+\index{main@{main}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{testsprite_8c_a0ddf1224851353fc92bfbff6f499fa97}
+\index{testsprite.\+c@{testsprite.\+c}!Move\+Sprites@{Move\+Sprites}}
+\index{Move\+Sprites@{Move\+Sprites}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{Move\+Sprites}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Move\+Sprites (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Surface} $\ast$}]{screen, }
+\item[{{\bf Uint32}}]{background}
+\end{DoxyParamCaption}
+)}\label{testsprite_8c_aa1df85a5a42edddd7aeaa0854bc79886}
+
+
+\subsection{Variable Documentation}
+\index{testsprite.\+c@{testsprite.\+c}!debug\+\_\+flip@{debug\+\_\+flip}}
+\index{debug\+\_\+flip@{debug\+\_\+flip}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{debug\+\_\+flip}]{\setlength{\rightskip}{0pt plus 5cm}int debug\+\_\+flip}\label{testsprite_8c_a1d1fb8be89d90132112042e5124355cd}
+\index{testsprite.\+c@{testsprite.\+c}!numsprites@{numsprites}}
+\index{numsprites@{numsprites}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{numsprites}]{\setlength{\rightskip}{0pt plus 5cm}int numsprites}\label{testsprite_8c_a422bf642f73a50a36cab35c5ea1c2c90}
+\index{testsprite.\+c@{testsprite.\+c}!positions@{positions}}
+\index{positions@{positions}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{positions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Rect}$\ast$ positions}\label{testsprite_8c_ab6fb6356e338df2cbf3fed1ca75c99b6}
+\index{testsprite.\+c@{testsprite.\+c}!sprite@{sprite}}
+\index{sprite@{sprite}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Surface}$\ast$ sprite}\label{testsprite_8c_a1c7252614a33238e51edd3bbd5fa08c5}
+\index{testsprite.\+c@{testsprite.\+c}!sprite\+\_\+h@{sprite\+\_\+h}}
+\index{sprite\+\_\+h@{sprite\+\_\+h}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{sprite\+\_\+h}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} sprite\+\_\+h}\label{testsprite_8c_a2d7a89c67a74a2dbc06997afff1d2b18}
+\index{testsprite.\+c@{testsprite.\+c}!sprite\+\_\+rects@{sprite\+\_\+rects}}
+\index{sprite\+\_\+rects@{sprite\+\_\+rects}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{sprite\+\_\+rects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Rect}$\ast$ sprite\+\_\+rects}\label{testsprite_8c_a5db3e152d36db53363f1aa2ebf686e4b}
+\index{testsprite.\+c@{testsprite.\+c}!sprite\+\_\+w@{sprite\+\_\+w}}
+\index{sprite\+\_\+w@{sprite\+\_\+w}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{sprite\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} sprite\+\_\+w}\label{testsprite_8c_a5ecda2715db4f8f8c8526b84fa69a389}
+\index{testsprite.\+c@{testsprite.\+c}!sprites\+\_\+visible@{sprites\+\_\+visible}}
+\index{sprites\+\_\+visible@{sprites\+\_\+visible}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{sprites\+\_\+visible}]{\setlength{\rightskip}{0pt plus 5cm}int sprites\+\_\+visible}\label{testsprite_8c_a90183578f438fd00ee10168a181fff92}
+\index{testsprite.\+c@{testsprite.\+c}!velocities@{velocities}}
+\index{velocities@{velocities}!testsprite.\+c@{testsprite.\+c}}
+\subsubsection[{velocities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Rect}$\ast$ velocities}\label{testsprite_8c_a61ed401524e2733317642414ff78e38b}

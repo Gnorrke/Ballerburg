@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -109,6 +108,7 @@ $(document).ready(function(){initNavTree('class_animated_sprite.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_animated_sprite-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AnimatedSprite Class Reference</div>  </div>
@@ -120,7 +120,7 @@ Inheritance diagram for AnimatedSprite:</div>
  <div class="center">
   <img src="class_animated_sprite.png" usemap="#AnimatedSprite_map" alt=""/>
   <map id="AnimatedSprite_map" name="AnimatedSprite_map">
-<area href="class_sprite.html" alt="Sprite" shape="rect" coords="0,0,97,24"/>
+<area href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann..." alt="Sprite" shape="rect" coords="0,0,97,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -133,18 +133,32 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (int elapsedTimeMs)</td></tr>
 <tr class="separator:a18757c4843c4022bd1a021e5679ba072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sprite"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sprite')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sprite.html">Sprite</a></td></tr>
-<tr class="memitem:a47466164808cee0827ed2fa769cc76e6 inherit pub_methods_class_sprite"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47466164808cee0827ed2fa769cc76e6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, const std::string &amp;filepath, int src_x, int src_y, int width, int height)</td></tr>
+<tr class="memitem:a47466164808cee0827ed2fa769cc76e6 inherit pub_methods_class_sprite"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#a47466164808cee0827ed2fa769cc76e6">Sprite</a> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, const std::string &amp;filepath, int src_x, int src_y, int width, int height)</td></tr>
+<tr class="memdesc:a47466164808cee0827ed2fa769cc76e6 inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt ein neues <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> an.  <a href="#a47466164808cee0827ed2fa769cc76e6">More...</a><br /></td></tr>
 <tr class="separator:a47466164808cee0827ed2fa769cc76e6 inherit pub_methods_class_sprite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1a918703101e1d9e63f82da7504e024 inherit pub_methods_class_sprite"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1a918703101e1d9e63f82da7504e024"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, int x, int y)</td></tr>
+<tr class="memitem:ad1a918703101e1d9e63f82da7504e024 inherit pub_methods_class_sprite"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#ad1a918703101e1d9e63f82da7504e024">draw</a> (<a class="el" href="class_graphic.html">Graphic</a> &amp;graphics, int x, int y)</td></tr>
+<tr class="memdesc:ad1a918703101e1d9e63f82da7504e024 inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das <a class="el" href="class_sprite.html" title="Die Sprite Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann...">Sprite</a> wird auf den im graphics Objekt enthaltenen Screen gezeichnet.  <a href="#ad1a918703101e1d9e63f82da7504e024">More...</a><br /></td></tr>
 <tr class="separator:ad1a918703101e1d9e63f82da7504e024 inherit pub_methods_class_sprite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5d2761b7b834c5b0e8f8e96702c4f45b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d2761b7b834c5b0e8f8e96702c4f45b"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>frameTime</b></td></tr>
+<tr class="separator:a5d2761b7b834c5b0e8f8e96702c4f45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89d280976ff63f8cdaf50c6c4dcf640"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac89d280976ff63f8cdaf50c6c4dcf640"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>numFrames</b></td></tr>
+<tr class="separator:ac89d280976ff63f8cdaf50c6c4dcf640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d0ef997b93c7376ebdeffd0e6cd061"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02d0ef997b93c7376ebdeffd0e6cd061"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>curFrame</b></td></tr>
+<tr class="separator:a02d0ef997b93c7376ebdeffd0e6cd061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c653a3497872da461b83dfcc3dac040"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c653a3497872da461b83dfcc3dac040"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>elapsedTime</b></td></tr>
+<tr class="separator:a3c653a3497872da461b83dfcc3dac040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_sprite"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_sprite')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_sprite.html">Sprite</a></td></tr>
-<tr class="memitem:a8fa271c176620b583103408ba6d95810 inherit pro_attribs_class_sprite"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fa271c176620b583103408ba6d95810"></a>
-<a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>srcRect</b></td></tr>
+<tr class="memitem:a8fa271c176620b583103408ba6d95810 inherit pro_attribs_class_sprite"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite.html#a8fa271c176620b583103408ba6d95810">srcRect</a></td></tr>
 <tr class="separator:a8fa271c176620b583103408ba6d95810 inherit pro_attribs_class_sprite"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -157,7 +171,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_animated_sprite.html">AnimatedSprite</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:43 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:34 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

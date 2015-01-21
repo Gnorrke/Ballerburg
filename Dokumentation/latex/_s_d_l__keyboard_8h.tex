@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+keyboard.h File Reference}
 \label{_s_d_l__keyboard_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+keyboard.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+keyboard.\+h}}
+
+
+Include file for S\+D\+L keyboard event handling.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+keysym.\+h\char`\"{}}\\*
@@ -9,12 +14,13 @@
 \begin{DoxyCompactItemize}
 \item 
 struct {\bf S\+D\+L\+\_\+keysym}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Keysym structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define {\bf S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S}~0x\+F\+F\+F\+F\+F\+F\+F\+F
-\item 
+\#define {\bf S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S}~0x\+F\+F\+F\+F\+F\+F\+F\+F\label{_s_d_l__keyboard_8h_a7c37b8c3aebd51ade2c8d0a72da44163}
+
+\begin{DoxyCompactList}\small\item\em This is the mask which refers to all hotkey bindings. \end{DoxyCompactList}\item 
 \#define {\bfseries S\+D\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+P\+E\+A\+T\+\_\+\+D\+E\+L\+A\+Y}~500\label{_s_d_l__keyboard_8h_a8c3904e497e7079e421ad61713f96117}
 
 \item 
@@ -25,41 +31,41 @@ struct {\bf S\+D\+L\+\_\+keysym}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct {\bf S\+D\+L\+\_\+keysym} {\bf S\+D\+L\+\_\+keysym}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Keysym structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Enable\+U\+N\+I\+C\+O\+D\+E} (int enable)
-\item 
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable U\+N\+I\+C\+O\+D\+E translation of keyboard input. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Enable\+Key\+Repeat} (int delay, int interval)
-\item 
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable keyboard repeat. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bfseries S\+D\+L\+\_\+\+Get\+Key\+Repeat} (int $\ast$delay, int $\ast$interval)\label{_s_d_l__keyboard_8h_a5c5645662b43fcf4408963b1a5b0a70c}
 
 \item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8 $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Key\+State} (int $\ast$numkeys)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+Mod {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Mod\+State} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Get a snapshot of the current state of the keyboard. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+Mod {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Mod\+State} (void)\label{_s_d_l__keyboard_8h_a52333a5aa5c8336bfa80b526e81c38c0}
+
+\begin{DoxyCompactList}\small\item\em Get the current key modifier state. \end{DoxyCompactList}\item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Set\+Mod\+State} (S\+D\+L\+Mod modstate)
-\item 
-{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Key\+Name} (S\+D\+L\+Key key)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the current key modifier state. \end{DoxyCompactList}\item 
+{\bf D\+E\+C\+L\+S\+P\+E\+C} char $\ast${\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+Key\+Name} (S\+D\+L\+Key key)\label{_s_d_l__keyboard_8h_a51590a98e514a7f100ee1d9712679e64}
+
+\begin{DoxyCompactList}\small\item\em Get the name of an S\+D\+L virtual keysym. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Include file for S\+D\+L keyboard event handling 
+Include file for S\+D\+L keyboard event handling. 
 
-\subsection{Macro Definition Documentation}
-\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S@{S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S}}
-\index{S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S@{S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+A\+L\+L\+\_\+\+H\+O\+T\+K\+E\+Y\+S~0x\+F\+F\+F\+F\+F\+F\+F\+F}\label{_s_d_l__keyboard_8h_a7c37b8c3aebd51ade2c8d0a72da44163}
-This is the mask which refers to all hotkey bindings 
+
 
 \subsection{Typedef Documentation}
 \index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
 \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
 \subsubsection[{S\+D\+L\+\_\+keysym}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+keysym}  {\bf S\+D\+L\+\_\+keysym}}\label{_s_d_l__keyboard_8h_acf493c0691cdf8af4e48937a73157b29}
-Keysym structure
+
+
+Keysym structure. 
 
 
 \begin{DoxyItemize}
@@ -85,7 +91,11 @@ Keysym structure
 \item[{int}]{interval}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__keyboard_8h_a0d9755bd12c5c27a7c86688bf7a32488}
-Enable/\+Disable keyboard repeat. Keyboard repeat defaults to off.
+
+
+Enable/\+Disable keyboard repeat. 
+
+Keyboard repeat defaults to off.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -101,7 +111,9 @@ If \textquotesingle{}delay\textquotesingle{} is set to 0, keyboard repeat is dis
 \item[{int}]{enable}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__keyboard_8h_aa872f99acb3dd68cdd806e2421ff8e96}
-Enable/\+Disable U\+N\+I\+C\+O\+D\+E translation of keyboard input.
+
+
+Enable/\+Disable U\+N\+I\+C\+O\+D\+E translation of keyboard input. 
 
 This translation has some overhead, so translation defaults off.
 
@@ -113,37 +125,31 @@ This translation has some overhead, so translation defaults off.
 \begin{DoxyReturn}{Returns}
 It returns the previous state of keyboard translation. 
 \end{DoxyReturn}
-\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Key\+Name@{S\+D\+L\+\_\+\+Get\+Key\+Name}}
-\index{S\+D\+L\+\_\+\+Get\+Key\+Name@{S\+D\+L\+\_\+\+Get\+Key\+Name}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Get\+Key\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} char$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Key\+Name (
-\begin{DoxyParamCaption}
-\item[{S\+D\+L\+Key}]{key}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__keyboard_8h_a51590a98e514a7f100ee1d9712679e64}
-Get the name of an S\+D\+L virtual keysym \index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Key\+State@{S\+D\+L\+\_\+\+Get\+Key\+State}}
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Key\+State@{S\+D\+L\+\_\+\+Get\+Key\+State}}
 \index{S\+D\+L\+\_\+\+Get\+Key\+State@{S\+D\+L\+\_\+\+Get\+Key\+State}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Get\+Key\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} Uint8$\ast$ {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Key\+State (
 \begin{DoxyParamCaption}
 \item[{int $\ast$}]{numkeys}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__keyboard_8h_a8790af806464c820356f6e8b9efee24f}
-Get a snapshot of the current state of the keyboard. Returns an array of keystates, indexed by the S\+D\+L\+K\+\_\+$\ast$ syms. Usage\+: 
+
+
+Get a snapshot of the current state of the keyboard. 
+
+Returns an array of keystates, indexed by the S\+D\+L\+K\+\_\+$\ast$ syms. Usage\+: 
 \begin{DoxyCode}
 1    Uint8 *keystate = SDL\_GetKeyState(NULL);
 2 if ( keystate[SDLK\_RETURN] ) //... \(\backslash\)<RETURN> is pressed.
 \end{DoxyCode}
- \index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Mod\+State@{S\+D\+L\+\_\+\+Get\+Mod\+State}}
-\index{S\+D\+L\+\_\+\+Get\+Mod\+State@{S\+D\+L\+\_\+\+Get\+Mod\+State}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Get\+Mod\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} S\+D\+L\+Mod {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Get\+Mod\+State (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}\label{_s_d_l__keyboard_8h_a52333a5aa5c8336bfa80b526e81c38c0}
-Get the current key modifier state \index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Set\+Mod\+State@{S\+D\+L\+\_\+\+Set\+Mod\+State}}
+ \index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Set\+Mod\+State@{S\+D\+L\+\_\+\+Set\+Mod\+State}}
 \index{S\+D\+L\+\_\+\+Set\+Mod\+State@{S\+D\+L\+\_\+\+Set\+Mod\+State}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
 \subsubsection[{S\+D\+L\+\_\+\+Set\+Mod\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+C\+L\+S\+P\+E\+C} void {\bf S\+D\+L\+C\+A\+L\+L} S\+D\+L\+\_\+\+Set\+Mod\+State (
 \begin{DoxyParamCaption}
 \item[{S\+D\+L\+Mod}]{modstate}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__keyboard_8h_a7c5dd5c95a51a55631a855dc620898f5}
-Set the current key modifier state. This does not change the keyboard state, only the key modifier flags. 
+
+
+Set the current key modifier state. 
+
+This does not change the keyboard state, only the key modifier flags. 

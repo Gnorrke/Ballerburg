@@ -2,51 +2,41 @@
 \label{struct_s_d_l___mouse_motion_event}\index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
 
 
+Mouse motion event structure.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
 
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Uint8 {\bf type}
-\item 
-Uint8 {\bf which}
-\item 
-Uint8 {\bf state}
-\item 
+Uint8 {\bf type}\label{struct_s_d_l___mouse_motion_event_ab5d4d8bef3b1a6f34429024b7aecf682}
+
+\begin{DoxyCompactList}\small\item\em S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N. \end{DoxyCompactList}\item 
+Uint8 {\bf which}\label{struct_s_d_l___mouse_motion_event_a7ea0004baf91d3b4572cdaadd35474c5}
+
+\begin{DoxyCompactList}\small\item\em The mouse device index. \end{DoxyCompactList}\item 
+Uint8 {\bf state}\label{struct_s_d_l___mouse_motion_event_a10434904d352c7165b9de5685d10dda6}
+
+\begin{DoxyCompactList}\small\item\em The current button state. \end{DoxyCompactList}\item 
 Uint16 {\bfseries x}\label{struct_s_d_l___mouse_motion_event_abf5b246feb0afbcabcef22b924eda8c3}
 
 \item 
-Uint16 {\bf y}
-\item 
-Sint16 {\bf xrel}
-\item 
-Sint16 {\bf yrel}
-\end{DoxyCompactItemize}
+Uint16 {\bf y}\label{struct_s_d_l___mouse_motion_event_ac7d0f0463c27e6d8e154efe5cc6c1897}
+
+\begin{DoxyCompactList}\small\item\em The X/\+Y coordinates of the mouse. \end{DoxyCompactList}\item 
+Sint16 {\bf xrel}\label{struct_s_d_l___mouse_motion_event_a84d307cc7d52073852497d8846f0a7c5}
+
+\begin{DoxyCompactList}\small\item\em The relative motion in the X direction. \end{DoxyCompactList}\item 
+Sint16 {\bf yrel}\label{struct_s_d_l___mouse_motion_event_a371e2cd4087a507663e512436fb4009b}
+
+\begin{DoxyCompactList}\small\item\em The relative motion in the Y direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Mouse motion event structure 
-
-\subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!state@{state}}
-\index{state@{state}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
-\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Mouse\+Motion\+Event\+::state}\label{struct_s_d_l___mouse_motion_event_a10434904d352c7165b9de5685d10dda6}
-The current button state \index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!type@{type}}
-\index{type@{type}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
-\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Mouse\+Motion\+Event\+::type}\label{struct_s_d_l___mouse_motion_event_ab5d4d8bef3b1a6f34429024b7aecf682}
-S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+M\+O\+T\+I\+O\+N \index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!which@{which}}
-\index{which@{which}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
-\subsubsection[{which}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Mouse\+Motion\+Event\+::which}\label{struct_s_d_l___mouse_motion_event_a7ea0004baf91d3b4572cdaadd35474c5}
-The mouse device index \index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!xrel@{xrel}}
-\index{xrel@{xrel}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
-\subsubsection[{xrel}]{\setlength{\rightskip}{0pt plus 5cm}Sint16 S\+D\+L\+\_\+\+Mouse\+Motion\+Event\+::xrel}\label{struct_s_d_l___mouse_motion_event_a84d307cc7d52073852497d8846f0a7c5}
-The relative motion in the X direction \index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!y@{y}}
-\index{y@{y}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
-\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Mouse\+Motion\+Event\+::y}\label{struct_s_d_l___mouse_motion_event_ac7d0f0463c27e6d8e154efe5cc6c1897}
-The X/\+Y coordinates of the mouse \index{S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}!yrel@{yrel}}
-\index{yrel@{yrel}!S\+D\+L\+\_\+\+Mouse\+Motion\+Event@{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}}
-\subsubsection[{yrel}]{\setlength{\rightskip}{0pt plus 5cm}Sint16 S\+D\+L\+\_\+\+Mouse\+Motion\+Event\+::yrel}\label{struct_s_d_l___mouse_motion_event_a371e2cd4087a507663e512436fb4009b}
-The relative motion in the Y direction 
+Mouse motion event structure. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

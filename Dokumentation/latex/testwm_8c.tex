@@ -1,0 +1,87 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/test/testwm.c File Reference}
+\label{testwm_8c}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testwm.\+c@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testwm.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf Set\+Video\+Mode} (int {\bf w}, int {\bf h})
+\item 
+{\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bf Load\+Icon\+Surface} (char $\ast$file, {\bf Uint8} $\ast$$\ast$maskp)
+\item 
+{\bf void} {\bf Hot\+Key\+\_\+\+Toggle\+Full\+Screen} ({\bf void})
+\item 
+{\bf void} {\bf Hot\+Key\+\_\+\+Toggle\+Grab} ({\bf void})
+\item 
+{\bf void} {\bf Hot\+Key\+\_\+\+Iconify} ({\bf void})
+\item 
+{\bf void} {\bf Hot\+Key\+\_\+\+Quit} ({\bf void})
+\item 
+int {\bf S\+D\+L\+C\+A\+L\+L} {\bf Filter\+Events} (const {\bf S\+D\+L\+\_\+\+Event} $\ast$event)
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{testwm.\+c@{testwm.\+c}!Filter\+Events@{Filter\+Events}}
+\index{Filter\+Events@{Filter\+Events}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Filter\+Events}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+D\+L\+C\+A\+L\+L} Filter\+Events (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+D\+L\+\_\+\+Event} $\ast$}]{event}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a60acccbee84b493ded66d8d80b81cb96}
+\index{testwm.\+c@{testwm.\+c}!Hot\+Key\+\_\+\+Iconify@{Hot\+Key\+\_\+\+Iconify}}
+\index{Hot\+Key\+\_\+\+Iconify@{Hot\+Key\+\_\+\+Iconify}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Hot\+Key\+\_\+\+Iconify}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Hot\+Key\+\_\+\+Iconify (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a361bc93559246348eaafd94c2f5da4ba}
+\index{testwm.\+c@{testwm.\+c}!Hot\+Key\+\_\+\+Quit@{Hot\+Key\+\_\+\+Quit}}
+\index{Hot\+Key\+\_\+\+Quit@{Hot\+Key\+\_\+\+Quit}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Hot\+Key\+\_\+\+Quit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Hot\+Key\+\_\+\+Quit (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a49fb4183960585549ffc1729966b5fae}
+\index{testwm.\+c@{testwm.\+c}!Hot\+Key\+\_\+\+Toggle\+Full\+Screen@{Hot\+Key\+\_\+\+Toggle\+Full\+Screen}}
+\index{Hot\+Key\+\_\+\+Toggle\+Full\+Screen@{Hot\+Key\+\_\+\+Toggle\+Full\+Screen}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Hot\+Key\+\_\+\+Toggle\+Full\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Hot\+Key\+\_\+\+Toggle\+Full\+Screen (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_af04ae205c61183582abd9b308cbc4e4a}
+\index{testwm.\+c@{testwm.\+c}!Hot\+Key\+\_\+\+Toggle\+Grab@{Hot\+Key\+\_\+\+Toggle\+Grab}}
+\index{Hot\+Key\+\_\+\+Toggle\+Grab@{Hot\+Key\+\_\+\+Toggle\+Grab}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Hot\+Key\+\_\+\+Toggle\+Grab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Hot\+Key\+\_\+\+Toggle\+Grab (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a85e58e575be8144d32412186db24c60d}
+\index{testwm.\+c@{testwm.\+c}!Load\+Icon\+Surface@{Load\+Icon\+Surface}}
+\index{Load\+Icon\+Surface@{Load\+Icon\+Surface}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Load\+Icon\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Surface}$\ast$ Load\+Icon\+Surface (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file, }
+\item[{{\bf Uint8} $\ast$$\ast$}]{maskp}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a050a413f0417481dc2f31794edfaec55}
+\index{testwm.\+c@{testwm.\+c}!main@{main}}
+\index{main@{main}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a0ddf1224851353fc92bfbff6f499fa97}
+\index{testwm.\+c@{testwm.\+c}!Set\+Video\+Mode@{Set\+Video\+Mode}}
+\index{Set\+Video\+Mode@{Set\+Video\+Mode}!testwm.\+c@{testwm.\+c}}
+\subsubsection[{Set\+Video\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}int Set\+Video\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{testwm_8c_a19b59cff5912a3281857a3bc03dd2e3c}

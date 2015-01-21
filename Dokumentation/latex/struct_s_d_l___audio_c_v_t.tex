@@ -2,6 +2,11 @@
 \label{struct_s_d_l___audio_c_v_t}\index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
 
 
+A structure to hold a set of audio conversion filters and buffers.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+audio.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -13,66 +18,43 @@
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bf needed}
-\item 
-Uint16 {\bf src\+\_\+format}
-\item 
-Uint16 {\bf dst\+\_\+format}
-\item 
-double {\bf rate\+\_\+incr}
-\item 
-Uint8 $\ast$ {\bf buf}
-\item 
-int {\bf len}
-\item 
-int {\bf len\+\_\+cvt}
-\item 
-int {\bf len\+\_\+mult}
-\item 
-double {\bf len\+\_\+ratio}
-\item 
+int {\bf needed}\label{struct_s_d_l___audio_c_v_t_ac600a035a48df05e14d3712fd6953ad4}
+
+\begin{DoxyCompactList}\small\item\em Set to 1 if conversion possible. \end{DoxyCompactList}\item 
+Uint16 {\bf src\+\_\+format}\label{struct_s_d_l___audio_c_v_t_a06215f053474c02d9292b6c317af435c}
+
+\begin{DoxyCompactList}\small\item\em Source audio format. \end{DoxyCompactList}\item 
+Uint16 {\bf dst\+\_\+format}\label{struct_s_d_l___audio_c_v_t_a2388a295604af1169651568742de928d}
+
+\begin{DoxyCompactList}\small\item\em Target audio format. \end{DoxyCompactList}\item 
+double {\bf rate\+\_\+incr}\label{struct_s_d_l___audio_c_v_t_ad886122c23a6673073baace31bff3b6c}
+
+\begin{DoxyCompactList}\small\item\em Rate conversion increment. \end{DoxyCompactList}\item 
+Uint8 $\ast$ {\bf buf}\label{struct_s_d_l___audio_c_v_t_a080db27b929efa983c5161360ffce310}
+
+\begin{DoxyCompactList}\small\item\em Buffer to hold entire audio data. \end{DoxyCompactList}\item 
+int {\bf len}\label{struct_s_d_l___audio_c_v_t_aeaeb8c5a63c3ab96471fbfdf412c78ff}
+
+\begin{DoxyCompactList}\small\item\em Length of original audio buffer. \end{DoxyCompactList}\item 
+int {\bf len\+\_\+cvt}\label{struct_s_d_l___audio_c_v_t_a5c60163f34d1947e5b166c23aba9879d}
+
+\begin{DoxyCompactList}\small\item\em Length of converted audio buffer. \end{DoxyCompactList}\item 
+int {\bf len\+\_\+mult}\label{struct_s_d_l___audio_c_v_t_ac9662d47cf2348b82b27b151150116b0}
+
+\begin{DoxyCompactList}\small\item\em buffer must be len$\ast$len\+\_\+mult big \end{DoxyCompactList}\item 
+double {\bf len\+\_\+ratio}\label{struct_s_d_l___audio_c_v_t_a5628ff5ccf711de9d77c0a4a9f57d2f0}
+
+\begin{DoxyCompactList}\small\item\em Given len, final size is len$\ast$len\+\_\+ratio. \end{DoxyCompactList}\item 
 Uint16 {\bfseries format}\label{struct_s_d_l___audio_c_v_t_a020b6e1c01089169921ddb0c1e7f08d2}
 
 \item 
-int {\bf filter\+\_\+index}
-\end{DoxyCompactItemize}
+int {\bf filter\+\_\+index}\label{struct_s_d_l___audio_c_v_t_a35093b3ad3331c17416c593a76012b63}
+
+\begin{DoxyCompactList}\small\item\em Current audio conversion function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-A structure to hold a set of audio conversion filters and buffers 
-
-\subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!buf@{buf}}
-\index{buf@{buf}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{buf}]{\setlength{\rightskip}{0pt plus 5cm}Uint8$\ast$ S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::buf}\label{struct_s_d_l___audio_c_v_t_a080db27b929efa983c5161360ffce310}
-Buffer to hold entire audio data \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!dst\+\_\+format@{dst\+\_\+format}}
-\index{dst\+\_\+format@{dst\+\_\+format}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{dst\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::dst\+\_\+format}\label{struct_s_d_l___audio_c_v_t_a2388a295604af1169651568742de928d}
-Target audio format \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!filter\+\_\+index@{filter\+\_\+index}}
-\index{filter\+\_\+index@{filter\+\_\+index}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{filter\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::filter\+\_\+index}\label{struct_s_d_l___audio_c_v_t_a35093b3ad3331c17416c593a76012b63}
-Current audio conversion function \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!len@{len}}
-\index{len@{len}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{len}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::len}\label{struct_s_d_l___audio_c_v_t_aeaeb8c5a63c3ab96471fbfdf412c78ff}
-Length of original audio buffer \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!len\+\_\+cvt@{len\+\_\+cvt}}
-\index{len\+\_\+cvt@{len\+\_\+cvt}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{len\+\_\+cvt}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::len\+\_\+cvt}\label{struct_s_d_l___audio_c_v_t_a5c60163f34d1947e5b166c23aba9879d}
-Length of converted audio buffer \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!len\+\_\+mult@{len\+\_\+mult}}
-\index{len\+\_\+mult@{len\+\_\+mult}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{len\+\_\+mult}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::len\+\_\+mult}\label{struct_s_d_l___audio_c_v_t_ac9662d47cf2348b82b27b151150116b0}
-buffer must be len$\ast$len\+\_\+mult big \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!len\+\_\+ratio@{len\+\_\+ratio}}
-\index{len\+\_\+ratio@{len\+\_\+ratio}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{len\+\_\+ratio}]{\setlength{\rightskip}{0pt plus 5cm}double S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::len\+\_\+ratio}\label{struct_s_d_l___audio_c_v_t_a5628ff5ccf711de9d77c0a4a9f57d2f0}
-Given len, final size is len$\ast$len\+\_\+ratio \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!needed@{needed}}
-\index{needed@{needed}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{needed}]{\setlength{\rightskip}{0pt plus 5cm}int S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::needed}\label{struct_s_d_l___audio_c_v_t_ac600a035a48df05e14d3712fd6953ad4}
-Set to 1 if conversion possible \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!rate\+\_\+incr@{rate\+\_\+incr}}
-\index{rate\+\_\+incr@{rate\+\_\+incr}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{rate\+\_\+incr}]{\setlength{\rightskip}{0pt plus 5cm}double S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::rate\+\_\+incr}\label{struct_s_d_l___audio_c_v_t_ad886122c23a6673073baace31bff3b6c}
-Rate conversion increment \index{S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}!src\+\_\+format@{src\+\_\+format}}
-\index{src\+\_\+format@{src\+\_\+format}!S\+D\+L\+\_\+\+Audio\+C\+V\+T@{S\+D\+L\+\_\+\+Audio\+C\+V\+T}}
-\subsubsection[{src\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+\+Audio\+C\+V\+T\+::src\+\_\+format}\label{struct_s_d_l___audio_c_v_t_a06215f053474c02d9292b6c317af435c}
-Source audio format 
+A structure to hold a set of audio conversion filters and buffers. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

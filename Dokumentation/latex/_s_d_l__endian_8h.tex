@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+endian.h File Reference}
 \label{_s_d_l__endian_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+endian.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+endian.\+h}}
+
+
+Functions for reading and writing endian-\/specific values.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
@@ -43,7 +48,9 @@
 \end{Indent}
 \subsection*{S\+D\+L\+\_\+\+Swap Functions}
 \label{_amgrp968b97fa28abb0c5b2838d418c0fd83f}%
-Use inline functions for compilers that support them, and static functions for those that do not. Because these functions become static for compilers that do not support inline functions, this header should only be included in files that actually use them. \begin{DoxyCompactItemize}
+Use inline functions for compilers that support them, and static functions for those that do not.
+
+Because these functions become static for compilers that do not support inline functions, this header should only be included in files that actually use them. \begin{DoxyCompactItemize}
 \item 
 \#define {\bfseries S\+D\+L\+\_\+\+Swap64}(X)~(X)\label{_s_d_l__endian_8h_a970862b2724f36e7c52fda401022b669}
 
@@ -51,4 +58,5 @@ Use inline functions for compilers that support them, and static functions for t
 
 
 \subsection{Detailed Description}
-Functions for reading and writing endian-\/specific values 
+Functions for reading and writing endian-\/specific values. 
+

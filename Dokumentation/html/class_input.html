@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -109,6 +108,7 @@ $(document).ready(function(){initNavTree('class_input.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_input-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Input Class Reference</div>  </div>
@@ -153,6 +153,27 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getoffsetX</b> () cons
 <tr class="memitem:a76e210586ca26895c80af7268475187f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76e210586ca26895c80af7268475187f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getoffsetY</b> () const </td></tr>
 <tr class="separator:a76e210586ca26895c80af7268475187f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1d4a76ad638234b05b67e4342868815c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d4a76ad638234b05b67e4342868815c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>offsetX</b> = 0</td></tr>
+<tr class="separator:a1d4a76ad638234b05b67e4342868815c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d134a0288a6638bc59f35602c33f8d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d134a0288a6638bc59f35602c33f8d1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>offsetY</b> = 0</td></tr>
+<tr class="separator:a2d134a0288a6638bc59f35602c33f8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ef8f9f55cd0391ccf9012d88f0ed13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71ef8f9f55cd0391ccf9012d88f0ed13"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mouseButtonWasPressed</b></td></tr>
+<tr class="separator:a71ef8f9f55cd0391ccf9012d88f0ed13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7eae67ebd03e0570dd4e0fdd6610e8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7eae67ebd03e0570dd4e0fdd6610e8f"></a>
+std::map&lt; SDLKey, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>heldKeys</b></td></tr>
+<tr class="separator:ac7eae67ebd03e0570dd4e0fdd6610e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37741f7dc7f6aae418ebbc7a36203424"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37741f7dc7f6aae418ebbc7a36203424"></a>
+std::map&lt; SDLKey, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pressedKeys</b></td></tr>
+<tr class="separator:a37741f7dc7f6aae418ebbc7a36203424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad130fe0fb7085b9cc52faaff155d4e38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad130fe0fb7085b9cc52faaff155d4e38"></a>
+std::map&lt; SDLKey, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>releasedKeys</b></td></tr>
+<tr class="separator:ad130fe0fb7085b9cc52faaff155d4e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Max/Documents/GitHub/Ballerburg/Ballerburg_v001/<a class="el" href="input_8h_source.html">input.h</a></li>
@@ -164,7 +185,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getoffsetY</b> () cons
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_input.html">Input</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:43 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:34 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -6,5 +6,6 @@ var class_mountain =
     [ "deleteBlock", "class_mountain.html#ab15bc8f4bb480c9553e05d2755eb2e90", null ],
     [ "draw", "class_mountain.html#acc7a7808b86e6e6ccd50684fb10a884c", null ],
     [ "getMap", "class_mountain.html#a052e5b287efe7e11c90ce0af651b349f", null ],
-    [ "update", "class_mountain.html#ab0ebe70029e2bf21d50d7f0517217e12", null ]
+    [ "update", "class_mountain.html#ab0ebe70029e2bf21d50d7f0517217e12", null ],
+    [ "mblocks", "class_mountain.html#affc7841a0c1baa4576d9fbc52dae2f9c", null ]
 ];

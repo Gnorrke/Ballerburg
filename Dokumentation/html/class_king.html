@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -109,6 +108,8 @@ $(document).ready(function(){initNavTree('class_king.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_king-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">King Class Reference</div>  </div>
@@ -138,6 +139,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></
 <tr class="memitem:ae356b9770f435e7ddb98cfd3816df51c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae356b9770f435e7ddb98cfd3816df51c"></a>
 <a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCollisionRectangle</b> ()</td></tr>
 <tr class="separator:ae356b9770f435e7ddb98cfd3816df51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a29f5cafc79707843e6ef910aa2781871"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29f5cafc79707843e6ef910aa2781871"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHit</b> (<a class="el" href="class_input.html">Input</a> &amp;in)</td></tr>
+<tr class="separator:a29f5cafc79707843e6ef910aa2781871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a577f46e8f16167dfca5ca1a8858fe365"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a577f46e8f16167dfca5ca1a8858fe365"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>posX</b></td></tr>
+<tr class="separator:a577f46e8f16167dfca5ca1a8858fe365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d49cd1d68f0296a1f43e1708453abd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85d49cd1d68f0296a1f43e1708453abd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>posY</b></td></tr>
+<tr class="separator:a85d49cd1d68f0296a1f43e1708453abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03651a8a66143d64f10f9f3df00a4629"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03651a8a66143d64f10f9f3df00a4629"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hit</b></td></tr>
+<tr class="separator:a03651a8a66143d64f10f9f3df00a4629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc87addaf51d5efe880ca7ba8087e87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bc87addaf51d5efe880ca7ba8087e87"></a>
+std::unique_ptr&lt; <a class="el" href="class_sprite.html">Sprite</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>king</b></td></tr>
+<tr class="separator:a9bc87addaf51d5efe880ca7ba8087e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d9a98230662f73e2bb396d7f7218dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33d9a98230662f73e2bb396d7f7218dd"></a>
+<a class="el" href="struct_s_d_l___rect.html">SDL_Rect</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>collisionRectangle</b></td></tr>
+<tr class="separator:a33d9a98230662f73e2bb396d7f7218dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Max/Documents/GitHub/Ballerburg/Ballerburg_v001/<a class="el" href="king_8h_source.html">king.h</a></li>
@@ -149,7 +174,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_king.html">King</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:43 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:34 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

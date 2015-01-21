@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -114,6 +113,9 @@ $(document).ready(function(){initNavTree('_s_d_l__events_8h.html','');});
 <div class="title">SDL_events.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Include file for SDL event handling.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_s_d_l__stdinc_8h_source.html">SDL_stdinc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_d_l__error_8h_source.html">SDL_error.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_d_l__active_8h_source.html">SDL_active.h</a>&quot;</code><br />
@@ -129,32 +131,45 @@ $(document).ready(function(){initNavTree('_s_d_l__events_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___active_event.html">SDL_ActiveEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application visibility event structure.  <a href="struct_s_d_l___active_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___keyboard_event.html">SDL_KeyboardEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard event structure.  <a href="struct_s_d_l___keyboard_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___mouse_motion_event.html">SDL_MouseMotionEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse motion event structure.  <a href="struct_s_d_l___mouse_motion_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___mouse_button_event.html">SDL_MouseButtonEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse button event structure.  <a href="struct_s_d_l___mouse_button_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___joy_axis_event.html">SDL_JoyAxisEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick axis motion event structure.  <a href="struct_s_d_l___joy_axis_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___joy_ball_event.html">SDL_JoyBallEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick trackball motion event structure.  <a href="struct_s_d_l___joy_ball_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___joy_hat_event.html">SDL_JoyHatEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick hat position change event structure.  <a href="struct_s_d_l___joy_hat_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___joy_button_event.html">SDL_JoyButtonEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick button event structure.  <a href="struct_s_d_l___joy_button_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___resize_event.html">SDL_ResizeEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "window resized" event When you get this event, you are responsible for setting a new video mode with the new width and height.  <a href="struct_s_d_l___resize_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___expose_event.html">SDL_ExposeEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "screen redraw" event.  <a href="struct_s_d_l___expose_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___quit_event.html">SDL_QuitEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "quit requested" event.  <a href="struct_s_d_l___quit_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___user_event.html">SDL_UserEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A user-defined event type.  <a href="struct_s_d_l___user_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_d_l___sys_w_m_event.html">SDL_SysWMEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_s_d_l___event.html">SDL_Event</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">General event structure.  <a href="union_s_d_l___event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -182,29 +197,53 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a951f49b468c4a2b3dfcc0b6dfb01a155"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___active_event.html">SDL_ActiveEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a951f49b468c4a2b3dfcc0b6dfb01a155">SDL_ActiveEvent</a></td></tr>
+<tr class="memitem:a951f49b468c4a2b3dfcc0b6dfb01a155"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a951f49b468c4a2b3dfcc0b6dfb01a155"></a>
+typedef struct <a class="el" href="struct_s_d_l___active_event.html">SDL_ActiveEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a951f49b468c4a2b3dfcc0b6dfb01a155">SDL_ActiveEvent</a></td></tr>
+<tr class="memdesc:a951f49b468c4a2b3dfcc0b6dfb01a155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application visibility event structure. <br /></td></tr>
 <tr class="separator:a951f49b468c4a2b3dfcc0b6dfb01a155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dfd49e5d1391bed57dcbc2359d9580f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___keyboard_event.html">SDL_KeyboardEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a2dfd49e5d1391bed57dcbc2359d9580f">SDL_KeyboardEvent</a></td></tr>
+<tr class="memitem:a2dfd49e5d1391bed57dcbc2359d9580f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dfd49e5d1391bed57dcbc2359d9580f"></a>
+typedef struct <a class="el" href="struct_s_d_l___keyboard_event.html">SDL_KeyboardEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a2dfd49e5d1391bed57dcbc2359d9580f">SDL_KeyboardEvent</a></td></tr>
+<tr class="memdesc:a2dfd49e5d1391bed57dcbc2359d9580f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard event structure. <br /></td></tr>
 <tr class="separator:a2dfd49e5d1391bed57dcbc2359d9580f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe38e3abc59e3312e5a50d98f708de4"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___mouse_motion_event.html">SDL_MouseMotionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#aefe38e3abc59e3312e5a50d98f708de4">SDL_MouseMotionEvent</a></td></tr>
+<tr class="memitem:aefe38e3abc59e3312e5a50d98f708de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefe38e3abc59e3312e5a50d98f708de4"></a>
+typedef struct <a class="el" href="struct_s_d_l___mouse_motion_event.html">SDL_MouseMotionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#aefe38e3abc59e3312e5a50d98f708de4">SDL_MouseMotionEvent</a></td></tr>
+<tr class="memdesc:aefe38e3abc59e3312e5a50d98f708de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse motion event structure. <br /></td></tr>
 <tr class="separator:aefe38e3abc59e3312e5a50d98f708de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad32036e6c0ba8aeadfb3063a5e945e8d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___mouse_button_event.html">SDL_MouseButtonEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#ad32036e6c0ba8aeadfb3063a5e945e8d">SDL_MouseButtonEvent</a></td></tr>
+<tr class="memitem:ad32036e6c0ba8aeadfb3063a5e945e8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad32036e6c0ba8aeadfb3063a5e945e8d"></a>
+typedef struct <a class="el" href="struct_s_d_l___mouse_button_event.html">SDL_MouseButtonEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#ad32036e6c0ba8aeadfb3063a5e945e8d">SDL_MouseButtonEvent</a></td></tr>
+<tr class="memdesc:ad32036e6c0ba8aeadfb3063a5e945e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse button event structure. <br /></td></tr>
 <tr class="separator:ad32036e6c0ba8aeadfb3063a5e945e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d4cc4e7665b37af0cf4352cb522b71"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___joy_axis_event.html">SDL_JoyAxisEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a12d4cc4e7665b37af0cf4352cb522b71">SDL_JoyAxisEvent</a></td></tr>
+<tr class="memitem:a12d4cc4e7665b37af0cf4352cb522b71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12d4cc4e7665b37af0cf4352cb522b71"></a>
+typedef struct <a class="el" href="struct_s_d_l___joy_axis_event.html">SDL_JoyAxisEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a12d4cc4e7665b37af0cf4352cb522b71">SDL_JoyAxisEvent</a></td></tr>
+<tr class="memdesc:a12d4cc4e7665b37af0cf4352cb522b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick axis motion event structure. <br /></td></tr>
 <tr class="separator:a12d4cc4e7665b37af0cf4352cb522b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5811cd314ff0fcb4a5a8d3da110e59b6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___joy_ball_event.html">SDL_JoyBallEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a5811cd314ff0fcb4a5a8d3da110e59b6">SDL_JoyBallEvent</a></td></tr>
+<tr class="memitem:a5811cd314ff0fcb4a5a8d3da110e59b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5811cd314ff0fcb4a5a8d3da110e59b6"></a>
+typedef struct <a class="el" href="struct_s_d_l___joy_ball_event.html">SDL_JoyBallEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a5811cd314ff0fcb4a5a8d3da110e59b6">SDL_JoyBallEvent</a></td></tr>
+<tr class="memdesc:a5811cd314ff0fcb4a5a8d3da110e59b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick trackball motion event structure. <br /></td></tr>
 <tr class="separator:a5811cd314ff0fcb4a5a8d3da110e59b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5753fe82887f64c4feef90a9f0a19099"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___joy_hat_event.html">SDL_JoyHatEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a5753fe82887f64c4feef90a9f0a19099">SDL_JoyHatEvent</a></td></tr>
+<tr class="memitem:a5753fe82887f64c4feef90a9f0a19099"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5753fe82887f64c4feef90a9f0a19099"></a>
+typedef struct <a class="el" href="struct_s_d_l___joy_hat_event.html">SDL_JoyHatEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a5753fe82887f64c4feef90a9f0a19099">SDL_JoyHatEvent</a></td></tr>
+<tr class="memdesc:a5753fe82887f64c4feef90a9f0a19099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick hat position change event structure. <br /></td></tr>
 <tr class="separator:a5753fe82887f64c4feef90a9f0a19099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9066d1e7d075042a55a5a0ebdeaf3e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___joy_button_event.html">SDL_JoyButtonEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a1c9066d1e7d075042a55a5a0ebdeaf3e">SDL_JoyButtonEvent</a></td></tr>
+<tr class="memitem:a1c9066d1e7d075042a55a5a0ebdeaf3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c9066d1e7d075042a55a5a0ebdeaf3e"></a>
+typedef struct <a class="el" href="struct_s_d_l___joy_button_event.html">SDL_JoyButtonEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a1c9066d1e7d075042a55a5a0ebdeaf3e">SDL_JoyButtonEvent</a></td></tr>
+<tr class="memdesc:a1c9066d1e7d075042a55a5a0ebdeaf3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick button event structure. <br /></td></tr>
 <tr class="separator:a1c9066d1e7d075042a55a5a0ebdeaf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ff869b4b6d9d829b84f5f6d0ae31ad"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___resize_event.html">SDL_ResizeEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a00ff869b4b6d9d829b84f5f6d0ae31ad">SDL_ResizeEvent</a></td></tr>
+<tr class="memitem:a00ff869b4b6d9d829b84f5f6d0ae31ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00ff869b4b6d9d829b84f5f6d0ae31ad"></a>
+typedef struct <a class="el" href="struct_s_d_l___resize_event.html">SDL_ResizeEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a00ff869b4b6d9d829b84f5f6d0ae31ad">SDL_ResizeEvent</a></td></tr>
+<tr class="memdesc:a00ff869b4b6d9d829b84f5f6d0ae31ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "window resized" event When you get this event, you are responsible for setting a new video mode with the new width and height. <br /></td></tr>
 <tr class="separator:a00ff869b4b6d9d829b84f5f6d0ae31ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81cdf3a42369fb5fd992beca1affa646"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___expose_event.html">SDL_ExposeEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a81cdf3a42369fb5fd992beca1affa646">SDL_ExposeEvent</a></td></tr>
+<tr class="memitem:a81cdf3a42369fb5fd992beca1affa646"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81cdf3a42369fb5fd992beca1affa646"></a>
+typedef struct <a class="el" href="struct_s_d_l___expose_event.html">SDL_ExposeEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a81cdf3a42369fb5fd992beca1affa646">SDL_ExposeEvent</a></td></tr>
+<tr class="memdesc:a81cdf3a42369fb5fd992beca1affa646"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "screen redraw" event. <br /></td></tr>
 <tr class="separator:a81cdf3a42369fb5fd992beca1affa646"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aa3b2097d14330fadfc91585fd18dfc"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___quit_event.html">SDL_QuitEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a2aa3b2097d14330fadfc91585fd18dfc">SDL_QuitEvent</a></td></tr>
+<tr class="memitem:a2aa3b2097d14330fadfc91585fd18dfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2aa3b2097d14330fadfc91585fd18dfc"></a>
+typedef struct <a class="el" href="struct_s_d_l___quit_event.html">SDL_QuitEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a2aa3b2097d14330fadfc91585fd18dfc">SDL_QuitEvent</a></td></tr>
+<tr class="memdesc:a2aa3b2097d14330fadfc91585fd18dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "quit requested" event. <br /></td></tr>
 <tr class="separator:a2aa3b2097d14330fadfc91585fd18dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c174fcb2518c4c9b858c8e3c3840830"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_d_l___user_event.html">SDL_UserEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a3c174fcb2518c4c9b858c8e3c3840830">SDL_UserEvent</a></td></tr>
+<tr class="memitem:a3c174fcb2518c4c9b858c8e3c3840830"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c174fcb2518c4c9b858c8e3c3840830"></a>
+typedef struct <a class="el" href="struct_s_d_l___user_event.html">SDL_UserEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a3c174fcb2518c4c9b858c8e3c3840830">SDL_UserEvent</a></td></tr>
+<tr class="memdesc:a3c174fcb2518c4c9b858c8e3c3840830"><td class="mdescLeft">&#160;</td><td class="mdescRight">A user-defined event type. <br /></td></tr>
 <tr class="separator:a3c174fcb2518c4c9b858c8e3c3840830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ebcb2014aeef8b8c2cfdd66c91ce3c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ebcb2014aeef8b8c2cfdd66c91ce3c8"></a>
 typedef struct <a class="el" href="struct_s_d_l___sys_w_mmsg.html">SDL_SysWMmsg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SDL_SysWMmsg</b></td></tr>
@@ -212,7 +251,9 @@ typedef struct <a class="el" href="struct_s_d_l___sys_w_mmsg.html">SDL_SysWMmsg<
 <tr class="memitem:aac1ed3c867af6ba87928d86a4c16e7e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac1ed3c867af6ba87928d86a4c16e7e5"></a>
 typedef struct <a class="el" href="struct_s_d_l___sys_w_m_event.html">SDL_SysWMEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SDL_SysWMEvent</b></td></tr>
 <tr class="separator:aac1ed3c867af6ba87928d86a4c16e7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac123539589592fb2a938d43fa7e13794"><td class="memItemLeft" align="right" valign="top">typedef union <a class="el" href="union_s_d_l___event.html">SDL_Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#ac123539589592fb2a938d43fa7e13794">SDL_Event</a></td></tr>
+<tr class="memitem:ac123539589592fb2a938d43fa7e13794"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac123539589592fb2a938d43fa7e13794"></a>
+typedef union <a class="el" href="union_s_d_l___event.html">SDL_Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#ac123539589592fb2a938d43fa7e13794">SDL_Event</a></td></tr>
+<tr class="memdesc:ac123539589592fb2a938d43fa7e13794"><td class="mdescLeft">&#160;</td><td class="mdescRight">General event structure. <br /></td></tr>
 <tr class="separator:ac123539589592fb2a938d43fa7e13794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -252,6 +293,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaac7ab35bfec8662d148fd20d75c6117e7">SDL_NUMEVENTS</a> = 32
 <br />
  }</td></tr>
+<tr class="memdesc:a3b589e89be6b35c02e0dd34a55f3fcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event enumerations.  <a href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fcca">More...</a><br /></td></tr>
 <tr class="separator:a3b589e89be6b35c02e0dd34a55f3fcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fdf1485b0419bb77b89e745267dc179"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fdf1485b0419bb77b89e745267dc179"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SDL_eventaction</b> { <b>SDL_ADDEVENT</b>, 
 <b>SDL_PEEKEVENT</b>, 
@@ -262,16 +304,22 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa15403d1c8fc341cd9cf750e27a66d19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> void <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#aa15403d1c8fc341cd9cf750e27a66d19">SDL_PumpEvents</a> (void)</td></tr>
+<tr class="memdesc:aa15403d1c8fc341cd9cf750e27a66d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pumps the event loop, gathering events from the input devices.  <a href="#aa15403d1c8fc341cd9cf750e27a66d19">More...</a><br /></td></tr>
 <tr class="separator:aa15403d1c8fc341cd9cf750e27a66d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b4a79e56dbe6f770572ef45575e6ef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> int <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a3b4a79e56dbe6f770572ef45575e6ef1">SDL_PeepEvents</a> (<a class="el" href="union_s_d_l___event.html">SDL_Event</a> *events, int numevents, SDL_eventaction action, Uint32 mask)</td></tr>
+<tr class="memdesc:a3b4a79e56dbe6f770572ef45575e6ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the event queue for messages and optionally returns them.  <a href="#a3b4a79e56dbe6f770572ef45575e6ef1">More...</a><br /></td></tr>
 <tr class="separator:a3b4a79e56dbe6f770572ef45575e6ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfa517963c25f8b71acc6b56721c5d9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> int <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#acfa517963c25f8b71acc6b56721c5d9b">SDL_PollEvent</a> (<a class="el" href="union_s_d_l___event.html">SDL_Event</a> *event)</td></tr>
+<tr class="memdesc:acfa517963c25f8b71acc6b56721c5d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls for currently pending events, and returns 1 if there are any pending events, or 0 if there are none available.  <a href="#acfa517963c25f8b71acc6b56721c5d9b">More...</a><br /></td></tr>
 <tr class="separator:acfa517963c25f8b71acc6b56721c5d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af37c266ea979ba39b82079d9eb401003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> int <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#af37c266ea979ba39b82079d9eb401003">SDL_WaitEvent</a> (<a class="el" href="union_s_d_l___event.html">SDL_Event</a> *event)</td></tr>
+<tr class="memdesc:af37c266ea979ba39b82079d9eb401003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits indefinitely for the next available event, returning 1, or 0 if there was an error while waiting for events.  <a href="#af37c266ea979ba39b82079d9eb401003">More...</a><br /></td></tr>
 <tr class="separator:af37c266ea979ba39b82079d9eb401003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adced45c8816620846a6fde2a7d54b446"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> int <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#adced45c8816620846a6fde2a7d54b446">SDL_PushEvent</a> (<a class="el" href="union_s_d_l___event.html">SDL_Event</a> *event)</td></tr>
+<tr class="memdesc:adced45c8816620846a6fde2a7d54b446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an event to the event queue.  <a href="#adced45c8816620846a6fde2a7d54b446">More...</a><br /></td></tr>
 <tr class="separator:adced45c8816620846a6fde2a7d54b446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946c32ab98f1d4ec927e8917f01520e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> Uint8 <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a946c32ab98f1d4ec927e8917f01520e2">SDL_EventState</a> (Uint8 type, int state)</td></tr>
+<tr class="memdesc:a946c32ab98f1d4ec927e8917f01520e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function allows you to set the state of processing certain events.  <a href="#a946c32ab98f1d4ec927e8917f01520e2">More...</a><br /></td></tr>
 <tr class="separator:a946c32ab98f1d4ec927e8917f01520e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
@@ -315,183 +363,15 @@ Event Filtering</h2></td></tr>
 typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SDL_EventFilter</b>) (const <a class="el" href="union_s_d_l___event.html">SDL_Event</a> *event)</td></tr>
 <tr class="separator:aa26e6a96de52e105eea34ca00a9fd87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc4080d9db1e2cd5946e274212ec0f8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> void <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#acc4080d9db1e2cd5946e274212ec0f8a">SDL_SetEventFilter</a> (SDL_EventFilter filter)</td></tr>
+<tr class="memdesc:acc4080d9db1e2cd5946e274212ec0f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sets up a filter to process all events before they change internal state and are posted to the internal event queue.  <a href="#acc4080d9db1e2cd5946e274212ec0f8a">More...</a><br /></td></tr>
 <tr class="separator:acc4080d9db1e2cd5946e274212ec0f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6379e3346737caed714cdbe48379c800"><td class="memItemLeft" align="right" valign="top"><a class="el" href="begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> SDL_EventFilter <a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_d_l__events_8h.html#a6379e3346737caed714cdbe48379c800">SDL_GetEventFilter</a> (void)</td></tr>
+<tr class="memdesc:a6379e3346737caed714cdbe48379c800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current event filter - can be used to "chain" filters.  <a href="#a6379e3346737caed714cdbe48379c800">More...</a><br /></td></tr>
 <tr class="separator:a6379e3346737caed714cdbe48379c800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Include file for SDL event handling </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a951f49b468c4a2b3dfcc0b6dfb01a155"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___active_event.html">SDL_ActiveEvent</a>  <a class="el" href="struct_s_d_l___active_event.html">SDL_ActiveEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Application visibility event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="ac123539589592fb2a938d43fa7e13794"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef union <a class="el" href="union_s_d_l___event.html">SDL_Event</a>  <a class="el" href="union_s_d_l___event.html">SDL_Event</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>General event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="a81cdf3a42369fb5fd992beca1affa646"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___expose_event.html">SDL_ExposeEvent</a>  <a class="el" href="struct_s_d_l___expose_event.html">SDL_ExposeEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The "screen redraw" event </p>
-
-</div>
-</div>
-<a class="anchor" id="a12d4cc4e7665b37af0cf4352cb522b71"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___joy_axis_event.html">SDL_JoyAxisEvent</a>  <a class="el" href="struct_s_d_l___joy_axis_event.html">SDL_JoyAxisEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Joystick axis motion event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="a5811cd314ff0fcb4a5a8d3da110e59b6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___joy_ball_event.html">SDL_JoyBallEvent</a>  <a class="el" href="struct_s_d_l___joy_ball_event.html">SDL_JoyBallEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Joystick trackball motion event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="a1c9066d1e7d075042a55a5a0ebdeaf3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___joy_button_event.html">SDL_JoyButtonEvent</a>  <a class="el" href="struct_s_d_l___joy_button_event.html">SDL_JoyButtonEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Joystick button event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="a5753fe82887f64c4feef90a9f0a19099"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___joy_hat_event.html">SDL_JoyHatEvent</a>  <a class="el" href="struct_s_d_l___joy_hat_event.html">SDL_JoyHatEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Joystick hat position change event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="a2dfd49e5d1391bed57dcbc2359d9580f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___keyboard_event.html">SDL_KeyboardEvent</a>  <a class="el" href="struct_s_d_l___keyboard_event.html">SDL_KeyboardEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Keyboard event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="ad32036e6c0ba8aeadfb3063a5e945e8d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___mouse_button_event.html">SDL_MouseButtonEvent</a>  <a class="el" href="struct_s_d_l___mouse_button_event.html">SDL_MouseButtonEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Mouse button event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="aefe38e3abc59e3312e5a50d98f708de4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___mouse_motion_event.html">SDL_MouseMotionEvent</a>  <a class="el" href="struct_s_d_l___mouse_motion_event.html">SDL_MouseMotionEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Mouse motion event structure </p>
-
-</div>
-</div>
-<a class="anchor" id="a2aa3b2097d14330fadfc91585fd18dfc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___quit_event.html">SDL_QuitEvent</a>  <a class="el" href="struct_s_d_l___quit_event.html">SDL_QuitEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The "quit requested" event </p>
-
-</div>
-</div>
-<a class="anchor" id="a00ff869b4b6d9d829b84f5f6d0ae31ad"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___resize_event.html">SDL_ResizeEvent</a>  <a class="el" href="struct_s_d_l___resize_event.html">SDL_ResizeEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The "window resized" event When you get this event, you are responsible for setting a new video mode with the new width and height. </p>
-
-</div>
-</div>
-<a class="anchor" id="a3c174fcb2518c4c9b858c8e3c3840830"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_s_d_l___user_event.html">SDL_UserEvent</a>  <a class="el" href="struct_s_d_l___user_event.html">SDL_UserEvent</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>A user-defined event type </p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+<div class="textblock"><p>Include file for SDL event handling. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fcca"></a>
 <div class="memitem">
 <div class="memproto">
@@ -501,85 +381,86 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Event enumerations </p>
+
+<p>Event enumerations. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa8d638d6b7c16579b793f08165b11ea68"></a>SDL_NOEVENT&#160;</td><td class="fielddoc">
 <p>Unused (do not remove) </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa805c60f34b315629064b897318ea7b0f"></a>SDL_ACTIVEEVENT&#160;</td><td class="fielddoc">
-<p>Application loses/gains visibility </p>
+<p>Application loses/gains visibility. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc"></a>SDL_KEYDOWN&#160;</td><td class="fielddoc">
-<p>Keys pressed </p>
+<p>Keys pressed. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b"></a>SDL_KEYUP&#160;</td><td class="fielddoc">
-<p>Keys released </p>
+<p>Keys released. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30"></a>SDL_MOUSEMOTION&#160;</td><td class="fielddoc">
-<p>Mouse moved </p>
+<p>Mouse moved. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052"></a>SDL_MOUSEBUTTONDOWN&#160;</td><td class="fielddoc">
-<p>Mouse button pressed </p>
+<p>Mouse button pressed. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b"></a>SDL_MOUSEBUTTONUP&#160;</td><td class="fielddoc">
-<p>Mouse button released </p>
+<p>Mouse button released. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaaf0803b3f8a12de3d85f81ebd7b514cd1"></a>SDL_JOYAXISMOTION&#160;</td><td class="fielddoc">
-<p>Joystick axis motion </p>
+<p>Joystick axis motion. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa78f859489cfd565c305c7f6f9d5b25c1"></a>SDL_JOYBALLMOTION&#160;</td><td class="fielddoc">
-<p>Joystick trackball motion </p>
+<p>Joystick trackball motion. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaafba4080bfbad335e520097b2024f0dff"></a>SDL_JOYHATMOTION&#160;</td><td class="fielddoc">
-<p>Joystick hat position change </p>
+<p>Joystick hat position change. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa386ac978bc145a45883fe0adab70710b"></a>SDL_JOYBUTTONDOWN&#160;</td><td class="fielddoc">
-<p>Joystick button pressed </p>
+<p>Joystick button pressed. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa76f91c81110f012e3a47cbbc0449e3c3"></a>SDL_JOYBUTTONUP&#160;</td><td class="fielddoc">
-<p>Joystick button released </p>
+<p>Joystick button released. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603"></a>SDL_QUIT&#160;</td><td class="fielddoc">
-<p>User-requested quit </p>
+<p>User-requested quit. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7"></a>SDL_SYSWMEVENT&#160;</td><td class="fielddoc">
-<p>System specific event </p>
+<p>System specific event. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa064075bce2d1a3cd68f103de46dbccb6"></a>SDL_EVENT_RESERVEDA&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaace4664e201bf199751bec7e9b9b56982"></a>SDL_EVENT_RESERVEDB&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa328321c1c9ef88537e94fb6ca42fa050"></a>SDL_VIDEORESIZE&#160;</td><td class="fielddoc">
-<p>User resized video mode </p>
+<p>User resized video mode. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa71837d3c769d3830d721b911797f04bc"></a>SDL_VIDEOEXPOSE&#160;</td><td class="fielddoc">
-<p>Screen needs to be redrawn </p>
+<p>Screen needs to be redrawn. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa167cadab6f99867d8a8cded5f058ab25"></a>SDL_EVENT_RESERVED2&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa4273409cb098de861ffb00d10f7b7afb"></a>SDL_EVENT_RESERVED3&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaaa1ff31a05eea53c8081fc268e08a470c"></a>SDL_EVENT_RESERVED4&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaaf2ec84e8d348aa4f4271c8d3937611c2"></a>SDL_EVENT_RESERVED5&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa4ebdb51555100069c32e8afd106827ac"></a>SDL_EVENT_RESERVED6&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa294d4d209bd2324f697f50f8e87cf483"></a>SDL_EVENT_RESERVED7&#160;</td><td class="fielddoc">
-<p>Reserved for future use.. </p>
+<p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaa4364c23f54802309e83fdb9b1c07c719"></a>SDL_USEREVENT&#160;</td><td class="fielddoc">
-<p>Events SDL_USEREVENT through SDL_MAXEVENTS-1 are for your use </p>
+<p>Events SDL_USEREVENT through SDL_MAXEVENTS-1 are for your use. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3b589e89be6b35c02e0dd34a55f3fccaac7ab35bfec8662d148fd20d75c6117e7"></a>SDL_NUMEVENTS&#160;</td><td class="fielddoc">
-<p>This last event is only for bounding internal arrays It is the number of bits in the event mask datatype &ndash; Uint32 </p>
+<p>This last event is only for bounding internal arrays It is the number of bits in the event mask datatype &ndash; Uint32. </p>
 </td></tr>
 </table>
 
@@ -609,7 +490,9 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function allows you to set the state of processing certain events. If 'state' is set to SDL_IGNORE, that event will be automatically dropped from the event queue and will not event be filtered. If 'state' is set to SDL_ENABLE, that event will be processed normally. If 'state' is set to SDL_QUERY, <a class="el" href="_s_d_l__events_8h.html#a946c32ab98f1d4ec927e8917f01520e2">SDL_EventState()</a> will return the current processing state of the specified event. </p>
+
+<p>This function allows you to set the state of processing certain events. </p>
+<p>If 'state' is set to SDL_IGNORE, that event will be automatically dropped from the event queue and will not event be filtered. If 'state' is set to SDL_ENABLE, that event will be processed normally. If 'state' is set to SDL_QUERY, <a class="el" href="_s_d_l__events_8h.html#a946c32ab98f1d4ec927e8917f01520e2" title="This function allows you to set the state of processing certain events. ">SDL_EventState()</a> will return the current processing state of the specified event. </p>
 
 </div>
 </div>
@@ -626,7 +509,9 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the current event filter - can be used to "chain" filters. If there is no event filter set, this function returns NULL. </p>
+
+<p>Return the current event filter - can be used to "chain" filters. </p>
+<p>If there is no event filter set, this function returns NULL. </p>
 
 </div>
 </div>
@@ -665,7 +550,8 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Checks the event queue for messages and optionally returns them.</p>
+
+<p>Checks the event queue for messages and optionally returns them. </p>
 <p>If 'action' is SDL_ADDEVENT, up to 'numevents' events will be added to the back of the event queue. If 'action' is SDL_PEEKEVENT, up to 'numevents' events at the front of the event queue, matching 'mask', will be returned and will not be removed from the queue. If 'action' is SDL_GETEVENT, up to 'numevents' events at the front of the event queue, matching 'mask', will be returned and will be removed from the queue.</p>
 <dl class="section return"><dt>Returns</dt><dd>This function returns the number of events actually stored, or -1 if there was an error.</dd></dl>
 <p>This function is thread-safe. </p>
@@ -685,7 +571,9 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Polls for currently pending events, and returns 1 if there are any pending events, or 0 if there are none available. If 'event' is not NULL, the next event is removed from the queue and stored in that area. </p>
+
+<p>Polls for currently pending events, and returns 1 if there are any pending events, or 0 if there are none available. </p>
+<p>If 'event' is not NULL, the next event is removed from the queue and stored in that area. </p>
 
 </div>
 </div>
@@ -702,7 +590,9 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pumps the event loop, gathering events from the input devices. This function updates the event queue and internal input device state. This should only be run in the thread that sets the video mode. </p>
+
+<p>Pumps the event loop, gathering events from the input devices. </p>
+<p>This function updates the event queue and internal input device state. This should only be run in the thread that sets the video mode. </p>
 
 </div>
 </div>
@@ -719,7 +609,9 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add an event to the event queue. This function returns 0 on success, or -1 if the event queue was full or there was some other error. </p>
+
+<p>Add an event to the event queue. </p>
+<p>This function returns 0 on success, or -1 if the event queue was full or there was some other error. </p>
 
 </div>
 </div>
@@ -736,7 +628,8 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function sets up a filter to process all events before they change internal state and are posted to the internal event queue.</p>
+
+<p>This function sets up a filter to process all events before they change internal state and are posted to the internal event queue. </p>
 <p>The filter is protypted as: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;typedef int (SDLCALL *SDL_EventFilter)(const SDL_Event *event); </div>
 </div><!-- fragment --><p>If the filter returns 1, then the event will be added to the internal queue. If it returns 0, then the event will be dropped from the queue, but the internal state will still be updated. This allows selective filtering of dynamically arriving events.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Be very careful of what you do in the event filter function, as it may run in a different thread!</dd></dl>
@@ -757,7 +650,9 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Waits indefinitely for the next available event, returning 1, or 0 if there was an error while waiting for events. If 'event' is not NULL, the next event is removed from the queue and stored in that area. </p>
+
+<p>Waits indefinitely for the next available event, returning 1, or 0 if there was an error while waiting for events. </p>
+<p>If 'event' is not NULL, the next event is removed from the queue and stored in that area. </p>
 
 </div>
 </div>
@@ -767,7 +662,7 @@ typedef int(<a class="el" href="begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e7e2cedda4976b886a75f4a00d945b24.html">Ballerburg_v001</a></li><li class="navelem"><a class="el" href="dir_088c1b5fb6ca35972940272bcc95c73d.html">Resources</a></li><li class="navelem"><a class="el" href="dir_8a91d630b0994b992fd50cb36a9f7ff0.html">SDL-1.2.15</a></li><li class="navelem"><a class="el" href="dir_41d87297e0d13301df3e3d80fd14ac89.html">include</a></li><li class="navelem"><a class="el" href="dir_345acc6b2cf63f3dbc92b73db844cd3b.html">SDL</a></li><li class="navelem"><a class="el" href="_s_d_l__events_8h.html">SDL_events.h</a></li>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:43 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:33 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

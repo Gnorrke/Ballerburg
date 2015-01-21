@@ -1,0 +1,95 @@
+\section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/test/testcursor.c File Reference}
+\label{testcursor_8c}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testcursor.\+c@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/test/testcursor.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Uint16} {\bf cursor\+\_\+data} [16]
+\item 
+{\bf Uint16} {\bf cursor\+\_\+mask} [16]
+\item 
+{\bf Uint8} {\bf small\+\_\+cursor\+\_\+data} [11] = \{ 0x00, 0x18, 0x08, 0x38, 0x44, 0x54, 0x44, 0x38, 0x20, 0x20, 0x00 \}
+\item 
+{\bf Uint8} {\bf small\+\_\+cursor\+\_\+mask} [11] = \{ 0x3\+C, 0x3\+C, 0x3\+C, 0x7\+C, 0x\+C6, 0x\+C6, 0x\+C6, 0x7\+C, 0x78, 0x70, 0x70 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{testcursor.\+c@{testcursor.\+c}!main@{main}}
+\index{main@{main}!testcursor.\+c@{testcursor.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{testcursor_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+\subsection{Variable Documentation}
+\index{testcursor.\+c@{testcursor.\+c}!cursor\+\_\+data@{cursor\+\_\+data}}
+\index{cursor\+\_\+data@{cursor\+\_\+data}!testcursor.\+c@{testcursor.\+c}}
+\subsubsection[{cursor\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} cursor\+\_\+data[16]}\label{testcursor_8c_a2b83165190f3b02b50039781c368caa0}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=\{
+    0xffff,
+    0xffff,
+    0xffff,
+    0xffff, 
+
+    0xffff,
+    0xffff,
+    0xffff,
+    0xffff, 
+
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000
+\}
+\end{DoxyCode}
+\index{testcursor.\+c@{testcursor.\+c}!cursor\+\_\+mask@{cursor\+\_\+mask}}
+\index{cursor\+\_\+mask@{cursor\+\_\+mask}!testcursor.\+c@{testcursor.\+c}}
+\subsubsection[{cursor\+\_\+mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} cursor\+\_\+mask[16]}\label{testcursor_8c_a7079b60a51f811b44e00e84be1ff47fa}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=\{
+    0xff00,
+    0xff00,
+    0xff00,
+    0xff00,
+
+    0xff00,
+    0xff00,
+    0xff00,
+    0xff00,
+
+    0xff00,
+    0xff00,
+    0xff00,
+    0xff00,
+
+    0xff00,
+    0xff00,
+    0xff00,
+    0xff00
+\}
+\end{DoxyCode}
+\index{testcursor.\+c@{testcursor.\+c}!small\+\_\+cursor\+\_\+data@{small\+\_\+cursor\+\_\+data}}
+\index{small\+\_\+cursor\+\_\+data@{small\+\_\+cursor\+\_\+data}!testcursor.\+c@{testcursor.\+c}}
+\subsubsection[{small\+\_\+cursor\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint8} small\+\_\+cursor\+\_\+data[11] = \{ 0x00, 0x18, 0x08, 0x38, 0x44, 0x54, 0x44, 0x38, 0x20, 0x20, 0x00 \}}\label{testcursor_8c_acf532a660501718187d231aab5f92f79}
+\index{testcursor.\+c@{testcursor.\+c}!small\+\_\+cursor\+\_\+mask@{small\+\_\+cursor\+\_\+mask}}
+\index{small\+\_\+cursor\+\_\+mask@{small\+\_\+cursor\+\_\+mask}!testcursor.\+c@{testcursor.\+c}}
+\subsubsection[{small\+\_\+cursor\+\_\+mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint8} small\+\_\+cursor\+\_\+mask[11] = \{ 0x3\+C, 0x3\+C, 0x3\+C, 0x7\+C, 0x\+C6, 0x\+C6, 0x\+C6, 0x7\+C, 0x78, 0x70, 0x70 \}}\label{testcursor_8c_a5d4b21ebc9d83ef662c65f4152c340d6}

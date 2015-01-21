@@ -30,7 +30,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="ballerburg_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Studienprojekt Ballerburg
    &#160;<span id="projectnumber">0.8a</span>
@@ -82,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -179,6 +179,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>blit_sw_CC
 : <a class="el" href="struct_s_d_l___video_info.html#aafaf9067d0b70d78ec9d58c32895b62e">SDL_VideoInfo</a>
 </li>
+<li>blitSurface()
+: <a class="el" href="class_graphic.html#ae2ab1b6e70958efae02f7131493740ff">Graphic</a>
+</li>
 <li>buf
 : <a class="el" href="struct_s_d_l___audio_c_v_t.html#a080db27b929efa983c5161360ffce310">SDL_AudioCVT</a>
 </li>
@@ -192,6 +195,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>channels
 : <a class="el" href="struct_s_d_l___audio_spec.html#a31fe8b3710cf23bbef24be8a1749fe46">SDL_AudioSpec</a>
+</li>
+<li>cleanUp()
+: <a class="el" href="class_graphic.html#a15c85c04c5b78994c94013827e6095ea">Graphic</a>
 </li>
 <li>clip_rect
 : <a class="el" href="struct_s_d_l___surface.html#aa9a0da3b38261dad6cf0cc4e3bb5b0c3">SDL_Surface</a>
@@ -227,6 +233,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>data2
 : <a class="el" href="struct_s_d_l___user_event.html#aae4dbf65c34d654c9edf519eb061b7cf">SDL_UserEvent</a>
 </li>
+<li>draw()
+: <a class="el" href="class_sprite.html#ad1a918703101e1d9e63f82da7504e024">Sprite</a>
+</li>
 <li>dst_format
 : <a class="el" href="struct_s_d_l___audio_c_v_t.html#a2388a295604af1169651568742de928d">SDL_AudioCVT</a>
 </li>
@@ -239,6 +248,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>flags
 : <a class="el" href="struct_s_d_l___surface.html#a86d78b665d5dfd7aa1dd9696b067641b">SDL_Surface</a>
+</li>
+<li>flip()
+: <a class="el" href="class_graphic.html#af3dd8fed2b2384149643116bdb813c01">Graphic</a>
 </li>
 <li>format
 : <a class="el" href="struct_s_d_l___audio_spec.html#a6eda133f50c3be8d0ba91f8dee830be8">SDL_AudioSpec</a>
@@ -312,6 +324,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>length
 : <a class="el" href="struct_s_d_l___c_dtrack.html#a15ae81e65a360c3a334e4323af6f2da5">SDL_CDtrack</a>
 </li>
+<li>loadImage()
+: <a class="el" href="class_graphic.html#a259fd9b61b67a164094bf9ba0b5044cd">Graphic</a>
+</li>
 <li>locked
 : <a class="el" href="struct_s_d_l___surface.html#ae807b7e4f4174d56e6cf40df12c8cefe">SDL_Surface</a>
 </li>
@@ -370,6 +385,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>r
+: <a class="el" href="class_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">Circle</a>
+</li>
 <li>rate_incr
 : <a class="el" href="struct_s_d_l___audio_c_v_t.html#ad886122c23a6673073baace31bff3b6c">SDL_AudioCVT</a>
 </li>
@@ -389,14 +407,32 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>scancode
 : <a class="el" href="struct_s_d_l__keysym.html#a1ea71b1de132939909302dc14e5f468c">SDL_keysym</a>
 </li>
+<li>screen
+: <a class="el" href="class_graphic.html#a395202e12873a72645439fe6a202d0d2">Graphic</a>
+</li>
 <li>silence
 : <a class="el" href="struct_s_d_l___audio_spec.html#addc462c8a806e6c122eccf63482048f6">SDL_AudioSpec</a>
 </li>
 <li>size
 : <a class="el" href="struct_s_d_l___audio_spec.html#a154cf44743ecec78c36dc6c827dd2fdb">SDL_AudioSpec</a>
 </li>
+<li>Sprite()
+: <a class="el" href="class_sprite.html#a47466164808cee0827ed2fa769cc76e6">Sprite</a>
+</li>
+<li>SpriteMap
+: <a class="el" href="class_graphic.html#aa06a625a3faeaccd5613e8623d59ae4e">Graphic</a>
+</li>
+<li>spriteSheet
+: <a class="el" href="class_sprite.html#aa356e52e44c86d8d76cc3060eb41ae06">Sprite</a>
+</li>
+<li>spriteSheets
+: <a class="el" href="class_graphic.html#ad552ac2423b445b7c58be50a484d886b">Graphic</a>
+</li>
 <li>src_format
 : <a class="el" href="struct_s_d_l___audio_c_v_t.html#a06215f053474c02d9292b6c317af435c">SDL_AudioCVT</a>
+</li>
+<li>srcRect
+: <a class="el" href="class_sprite.html#a8fa271c176620b583103408ba6d95810">Sprite</a>
 </li>
 <li>state
 : <a class="el" href="struct_s_d_l___active_event.html#af8f060502a9c906b25a4aa9c61f745f9">SDL_ActiveEvent</a>
@@ -492,7 +528,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
 <li>y
-: <a class="el" href="struct_s_d_l___mouse_button_event.html#ae22a30e4b491a0cac67dd72d22fdbf80">SDL_MouseButtonEvent</a>
+: <a class="el" href="class_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">Circle</a>
+, <a class="el" href="struct_s_d_l___mouse_button_event.html#ae22a30e4b491a0cac67dd72d22fdbf80">SDL_MouseButtonEvent</a>
 , <a class="el" href="struct_s_d_l___mouse_motion_event.html#ac7d0f0463c27e6d8e154efe5cc6c1897">SDL_MouseMotionEvent</a>
 </li>
 <li>yrel
@@ -505,7 +542,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Jan 18 2015 16:48:44 for Studienprojekt Ballerburg by
+    <li class="footer">Generated on Mon Jan 19 2015 03:26:35 for Studienprojekt Ballerburg by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

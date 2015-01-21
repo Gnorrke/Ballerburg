@@ -2,38 +2,32 @@
 \label{struct_s_d_l___joy_hat_event}\index{S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}}
 
 
+Joystick hat position change event structure.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
 
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Uint8 {\bf type}
-\item 
-Uint8 {\bf which}
-\item 
-Uint8 {\bf hat}
-\item 
-Uint8 {\bf value}
-\end{DoxyCompactItemize}
+Uint8 {\bf type}\label{struct_s_d_l___joy_hat_event_a1592071b54de4fe74c087945f43a1d3f}
+
+\begin{DoxyCompactList}\small\item\em S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N. \end{DoxyCompactList}\item 
+Uint8 {\bf which}\label{struct_s_d_l___joy_hat_event_a73ba3817ba1265f3878012c21462e74a}
+
+\begin{DoxyCompactList}\small\item\em The joystick device index. \end{DoxyCompactList}\item 
+Uint8 {\bf hat}\label{struct_s_d_l___joy_hat_event_ab1b54a6d1091e583e856f86b5af1e2f6}
+
+\begin{DoxyCompactList}\small\item\em The joystick hat index. \end{DoxyCompactList}\item 
+Uint8 {\bf value}\label{struct_s_d_l___joy_hat_event_a52b179a34407449941b61d988ca72ef4}
+
+\begin{DoxyCompactList}\small\item\em The hat position value\+: S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+L\+E\+F\+T\+U\+P S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+U\+P S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+R\+I\+G\+H\+T\+U\+P S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+L\+E\+F\+T S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+R\+I\+G\+H\+T S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+L\+E\+F\+T\+D\+O\+W\+N S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+D\+O\+W\+N S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+R\+I\+G\+H\+T\+D\+O\+W\+N Note that zero means the P\+O\+V is centered. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Joystick hat position change event structure 
-
-\subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}!hat@{hat}}
-\index{hat@{hat}!S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}}
-\subsubsection[{hat}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Joy\+Hat\+Event\+::hat}\label{struct_s_d_l___joy_hat_event_ab1b54a6d1091e583e856f86b5af1e2f6}
-The joystick hat index \index{S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}!type@{type}}
-\index{type@{type}!S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}}
-\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Joy\+Hat\+Event\+::type}\label{struct_s_d_l___joy_hat_event_a1592071b54de4fe74c087945f43a1d3f}
-S\+D\+L\+\_\+\+J\+O\+Y\+H\+A\+T\+M\+O\+T\+I\+O\+N \index{S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}!value@{value}}
-\index{value@{value}!S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}}
-\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Joy\+Hat\+Event\+::value}\label{struct_s_d_l___joy_hat_event_a52b179a34407449941b61d988ca72ef4}
-The hat position value\+: S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+L\+E\+F\+T\+U\+P S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+U\+P S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+R\+I\+G\+H\+T\+U\+P S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+L\+E\+F\+T S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+R\+I\+G\+H\+T S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+L\+E\+F\+T\+D\+O\+W\+N S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+D\+O\+W\+N S\+D\+L\+\_\+\+H\+A\+T\+\_\+\+R\+I\+G\+H\+T\+D\+O\+W\+N Note that zero means the P\+O\+V is centered. \index{S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}!which@{which}}
-\index{which@{which}!S\+D\+L\+\_\+\+Joy\+Hat\+Event@{S\+D\+L\+\_\+\+Joy\+Hat\+Event}}
-\subsubsection[{which}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+\+Joy\+Hat\+Event\+::which}\label{struct_s_d_l___joy_hat_event_a73ba3817ba1265f3878012c21462e74a}
-The joystick device index 
+Joystick hat position change event structure. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

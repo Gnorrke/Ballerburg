@@ -1,5 +1,14 @@
 \section{Sprite Class Reference}
 \label{class_sprite}\index{Sprite@{Sprite}}
+
+
+Die \doxyref{Sprite}{p.}{class_sprite} Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann.  
+
+
+
+
+{\ttfamily \#include $<$sprite.\+h$>$}
+
 Inheritance diagram for Sprite\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +18,95 @@ Inheritance diagram for Sprite\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Sprite} ({\bf Graphic} \&graphics, const std\+::string \&filepath, int src\+\_\+x, int src\+\_\+y, int width, int height)\label{class_sprite_a47466164808cee0827ed2fa769cc76e6}
-
-\item 
+{\bf Sprite} ({\bf Graphic} \&graphics, const std\+::string \&filepath, int src\+\_\+x, int src\+\_\+y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Legt ein neues \doxyref{Sprite}{p.}{class_sprite} an. \end{DoxyCompactList}\item 
 virtual void {\bfseries update} (int)\label{class_sprite_ae93ffca39a384237789ec65de213e68f}
 
 \item 
-void {\bfseries draw} ({\bf Graphic} \&graphics, int x, int y)\label{class_sprite_ad1a918703101e1d9e63f82da7504e024}
-
-\end{DoxyCompactItemize}
+void {\bf draw} ({\bf Graphic} \&graphics, int x, int y)
+\begin{DoxyCompactList}\small\item\em Das \doxyref{Sprite}{p.}{class_sprite} wird auf den im graphics Objekt enthaltenen Screen gezeichnet. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-{\bf S\+D\+L\+\_\+\+Rect} {\bfseries src\+Rect}\label{class_sprite_a8fa271c176620b583103408ba6d95810}
-
+{\bf S\+D\+L\+\_\+\+Rect} {\bf src\+Rect}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+D\+L\+\_\+\+Surface} $\ast$ {\bf sprite\+Sheet}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Die \doxyref{Sprite}{p.}{class_sprite} Klasse hält ein Bild, welches bei Bedarf auf den Screen gezeichnet werden kann. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\subsubsection[{Sprite}]{\setlength{\rightskip}{0pt plus 5cm}Sprite\+::\+Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphic} \&}]{graphics, }
+\item[{const std\+::string \&}]{filepath, }
+\item[{int}]{src\+\_\+x, }
+\item[{int}]{src\+\_\+y, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_sprite_a47466164808cee0827ed2fa769cc76e6}
+
+
+Legt ein neues \doxyref{Sprite}{p.}{class_sprite} an. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & object \\
+\hline
+{\em filepath} & -\/ Der Dateipfad des zu ladenen Bildes \\
+\hline
+{\em src\+\_\+x} & -\/ Der X-\/\+Offset der auf das \doxyref{Sprite}{p.}{class_sprite} angelegt wird \\
+\hline
+{\em src\+\_\+y} & -\/ Der Y-\/\+Offset der auf das \doxyref{Sprite}{p.}{class_sprite} angelegt wird \\
+\hline
+{\em width} & -\/ Legt die Weite des Sprites fest \\
+\hline
+{\em height} & -\/ Legt die Höhe des Sprites fest \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Sprite@{Sprite}!draw@{draw}}
+\index{draw@{draw}!Sprite@{Sprite}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphic} \&}]{graphics, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_sprite_ad1a918703101e1d9e63f82da7504e024}
+
+
+Das \doxyref{Sprite}{p.}{class_sprite} wird auf den im graphics Objekt enthaltenen Screen gezeichnet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & -\/ Auf dieses graphic Objekt wird das \doxyref{Sprite}{p.}{class_sprite} gezeichnet \\
+\hline
+{\em x} & -\/ Die X-\/\+Position des Sprites auf dem Screen \\
+\hline
+{\em y} & -\/ Die Y-\/\+Position des Sprites auf dem Screen \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Sprite@{Sprite}!sprite\+Sheet@{sprite\+Sheet}}
+\index{sprite\+Sheet@{sprite\+Sheet}!Sprite@{Sprite}}
+\subsubsection[{sprite\+Sheet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Surface}$\ast$ Sprite\+::sprite\+Sheet\hspace{0.3cm}{\ttfamily [private]}}\label{class_sprite_aa356e52e44c86d8d76cc3060eb41ae06}
+Enthält das Bild \index{Sprite@{Sprite}!src\+Rect@{src\+Rect}}
+\index{src\+Rect@{src\+Rect}!Sprite@{Sprite}}
+\subsubsection[{src\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Rect} Sprite\+::src\+Rect\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sprite_a8fa271c176620b583103408ba6d95810}
+Legt die Abmessungen, Höhe und Weite des Sprites fest 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

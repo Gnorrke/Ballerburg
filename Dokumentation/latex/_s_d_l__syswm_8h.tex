@@ -1,5 +1,10 @@
 \section{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.2.15/include/\+S\+D\+L/\+S\+D\+L\+\_\+syswm.h File Reference}
 \label{_s_d_l__syswm_8h}\index{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+syswm.\+h@{C\+:/\+Users/\+Max/\+Documents/\+Git\+Hub/\+Ballerburg/\+Ballerburg\+\_\+v001/\+Resources/\+S\+D\+L-\/1.\+2.\+15/include/\+S\+D\+L/\+S\+D\+L\+\_\+syswm.\+h}}
+
+
+Include file for S\+D\+L custom system window manager hooks.  
+
+
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}S\+D\+L\+\_\+version.\+h\char`\"{}}\\*
@@ -9,31 +14,28 @@
 \begin{DoxyCompactItemize}
 \item 
 struct {\bf S\+D\+L\+\_\+\+Sys\+W\+Mmsg}
-\item 
+\begin{DoxyCompactList}\small\item\em The generic custom event structure. \end{DoxyCompactList}\item 
 struct {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The generic custom window manager information structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo} {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo}
-\end{DoxyCompactItemize}
+typedef struct {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo} {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo}\label{_s_d_l__syswm_8h_aae8dac39eb53e894935f70e884894a91}
+
+\begin{DoxyCompactList}\small\item\em The generic custom window manager information structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\bf D\+E\+C\+L\+S\+P\+E\+C} int {\bf S\+D\+L\+C\+A\+L\+L} {\bf S\+D\+L\+\_\+\+Get\+W\+M\+Info} ({\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo} $\ast$info)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function gives you custom hooks into the window manager information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Include file for S\+D\+L custom system window manager hooks
+Include file for S\+D\+L custom system window manager hooks. 
 
-Your application has access to a special type of event \textquotesingle{}S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T\textquotesingle{}, which contains window-\/manager specific information and arrives whenever an unhandled window event occurs. This event is ignored by default, but you can enable it with \doxyref{S\+D\+L\+\_\+\+Event\+State()}{p.}{_s_d_l__events_8h_a946c32ab98f1d4ec927e8917f01520e2} 
+Your application has access to a special type of event \textquotesingle{}S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T\textquotesingle{}, which contains window-\/manager specific information and arrives whenever an unhandled window event occurs.
 
-\subsection{Typedef Documentation}
-\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+Sys\+W\+Minfo@{S\+D\+L\+\_\+\+Sys\+W\+Minfo}}
-\index{S\+D\+L\+\_\+\+Sys\+W\+Minfo@{S\+D\+L\+\_\+\+Sys\+W\+Minfo}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
-\subsubsection[{S\+D\+L\+\_\+\+Sys\+W\+Minfo}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo}  {\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo}}\label{_s_d_l__syswm_8h_aae8dac39eb53e894935f70e884894a91}
-The generic custom window manager information structure 
+This event is ignored by default, but you can enable it with \doxyref{S\+D\+L\+\_\+\+Event\+State()}{p.}{_s_d_l__events_8h_a946c32ab98f1d4ec927e8917f01520e2} 
 
 \subsection{Function Documentation}
 \index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+Get\+W\+M\+Info@{S\+D\+L\+\_\+\+Get\+W\+M\+Info}}
@@ -43,7 +45,11 @@ The generic custom window manager information structure
 \item[{{\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo} $\ast$}]{info}
 \end{DoxyParamCaption}
 )}\label{_s_d_l__syswm_8h_abd9d27aba9a8ba6abc3695ddb36db10f}
-This function gives you custom hooks into the window manager information. It fills the structure pointed to by \textquotesingle{}info\textquotesingle{} with custom information and returns 0 if the function is not implemented, 1 if the function is implemented and no error occurred, and -\/1 if the version member of the \textquotesingle{}info\textquotesingle{} structure is not filled in or not supported.
+
+
+This function gives you custom hooks into the window manager information. 
+
+It fills the structure pointed to by \textquotesingle{}info\textquotesingle{} with custom information and returns 0 if the function is not implemented, 1 if the function is implemented and no error occurred, and -\/1 if the version member of the \textquotesingle{}info\textquotesingle{} structure is not filled in or not supported.
 
 You typically use this function like this\+: 
 \begin{DoxyCode}

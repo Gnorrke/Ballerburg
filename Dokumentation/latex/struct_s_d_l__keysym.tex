@@ -2,23 +2,32 @@
 \label{struct_s_d_l__keysym}\index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
 
 
+Keysym structure.  
+
+
+
+
 {\ttfamily \#include $<$S\+D\+L\+\_\+keyboard.\+h$>$}
 
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Uint8 {\bf scancode}
-\item 
-S\+D\+L\+Key {\bf sym}
-\item 
-S\+D\+L\+Mod {\bf mod}
-\item 
-Uint16 {\bf unicode}
-\end{DoxyCompactItemize}
+Uint8 {\bf scancode}\label{struct_s_d_l__keysym_a1ea71b1de132939909302dc14e5f468c}
+
+\begin{DoxyCompactList}\small\item\em hardware specific scancode \end{DoxyCompactList}\item 
+S\+D\+L\+Key {\bf sym}\label{struct_s_d_l__keysym_a2a22c7afc8239b19cd18dda3aa26b70c}
+
+\begin{DoxyCompactList}\small\item\em S\+D\+L virtual keysym. \end{DoxyCompactList}\item 
+S\+D\+L\+Mod {\bf mod}\label{struct_s_d_l__keysym_ac5da46a4cf8aea69b0b1cb3f9224c91c}
+
+\begin{DoxyCompactList}\small\item\em current key modifiers \end{DoxyCompactList}\item 
+Uint16 {\bf unicode}\label{struct_s_d_l__keysym_a683a8e5de4e6dc6de95f670f6275cb0c}
+
+\begin{DoxyCompactList}\small\item\em translated character \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Keysym structure
+Keysym structure. 
 
 
 \begin{DoxyItemize}
@@ -34,21 +43,6 @@ Keysym structure
 \end{DoxyCode}
  
 \end{DoxyItemize}
-
-\subsection{Member Data Documentation}
-\index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!mod@{mod}}
-\index{mod@{mod}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
-\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+Mod S\+D\+L\+\_\+keysym\+::mod}\label{struct_s_d_l__keysym_ac5da46a4cf8aea69b0b1cb3f9224c91c}
-current key modifiers \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!scancode@{scancode}}
-\index{scancode@{scancode}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
-\subsubsection[{scancode}]{\setlength{\rightskip}{0pt plus 5cm}Uint8 S\+D\+L\+\_\+keysym\+::scancode}\label{struct_s_d_l__keysym_a1ea71b1de132939909302dc14e5f468c}
-hardware specific scancode \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!sym@{sym}}
-\index{sym@{sym}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
-\subsubsection[{sym}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+Key S\+D\+L\+\_\+keysym\+::sym}\label{struct_s_d_l__keysym_a2a22c7afc8239b19cd18dda3aa26b70c}
-S\+D\+L virtual keysym \index{S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}!unicode@{unicode}}
-\index{unicode@{unicode}!S\+D\+L\+\_\+keysym@{S\+D\+L\+\_\+keysym}}
-\subsubsection[{unicode}]{\setlength{\rightskip}{0pt plus 5cm}Uint16 S\+D\+L\+\_\+keysym\+::unicode}\label{struct_s_d_l__keysym_a683a8e5de4e6dc6de95f670f6275cb0c}
-translated character 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

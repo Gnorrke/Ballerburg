@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['void',['void',['../struct_s_d_l___audio_spec.html#ab8a359069a60f225ab6e35a55dfb3d92',1,'SDL_AudioSpec']]]
+  ['draw',['draw',['../class_sprite.html#ad1a918703101e1d9e63f82da7504e024',1,'Sprite']]]
 ];
