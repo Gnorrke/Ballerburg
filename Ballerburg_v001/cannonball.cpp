@@ -13,11 +13,11 @@
 
 namespace {
     const int kDotWidth = 20;
-    const float kGravity = 0.0012f;
-    const float kMaxSpeedX = 0.150f;
-    const float kMaxSpeedY = 0.150f;
+    const float kGravity = 0.004f;
+    const float kMaxSpeedX = 0.2;
+    const float kMaxSpeedY = 0.2f;
     const float kAcceleration = 0.001f;
-    const float kSlowDownFactor = 0.965f;
+    const float kSlowDownFactor = 0.95f;
     const Circle kCollisionCircle(10, 10, 10);
 }
 
@@ -36,10 +36,10 @@ Cannonball::Cannonball(Graphic &graphic, int posX, int posY) :
 
 void Cannonball::update(int elapsedTime, Map& map)
 {
+    accelerationX *= kSlowDownFactor;
     //Physik
     updateX(elapsedTime, map);
     updateY(elapsedTime, map);
-    accelerationX *= kSlowDownFactor;
 
 }
 

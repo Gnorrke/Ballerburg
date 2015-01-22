@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <vector>
+#include "SDL/SDL.h"
 
 class Sprite;
 class Graphic;
@@ -15,7 +16,9 @@ class Input;
 class CastleBlock;
 class Mountain;
 class Map;
+class Button;
 class King;
+class StartMenu;
 
 class Game
 {
@@ -26,17 +29,22 @@ public:
     static int kScreenWidth;
     static int kScreenHeight;
     static bool running;
+    static bool menuRunning;
 
-    static void endGame() { Game::running = false; }
+    static void startGame() { Game::running = true; Game::menuRunning = false; }
+    static void endGame() { Game::running = false; Game::menuRunning = false;  }
 private:
     void gameLoop();
     void update(int elapsedTime, Map &map, Input &input, Sound &sound);
     void draw(Graphic& graphics);
 
+    void runStartMenu(Input &input, SDL_Event &event, Graphic &graphics);
+
     std::unique_ptr<Backdrop> background;
     std::unique_ptr<Cannon> cannon;
     std::unique_ptr<Sound> sounds;
     std::unique_ptr<Map> map;
+    std::unique_ptr<StartMenu> menu;
 
 };
 

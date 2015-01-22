@@ -17,4 +17,6 @@ INPUT(
 ./release\cannon.o
 ./release\map.o
 ./release\king.o
+./release\startmenu.o
+./release\button.o
 );

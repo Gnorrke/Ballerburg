@@ -17,4 +17,6 @@ INPUT(
 ./debug\cannon.o
 ./debug\map.o
 ./debug\king.o
+./debug\startmenu.o
+./debug\button.o
 );
