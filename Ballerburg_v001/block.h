@@ -9,6 +9,10 @@ class Sprite;
 class Sound;
 class SDL_Rect;
 
+
+/*!
+ * \brief Die Block Klasse bildet die Grundlage für die CastleBlock und MountainBlock Klassen.
+ */
 class Block
 {
 public:

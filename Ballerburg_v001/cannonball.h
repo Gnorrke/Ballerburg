@@ -28,6 +28,8 @@ public:
     void moveUp();
     void moveDown();
 
+    void stopMoving();
+
     bool hasCollided() { return collided; }
 
 private:
@@ -41,6 +43,7 @@ private:
     int posX, posY;
     bool collided;
     float velocityX, velocityY;
+    float accelerationX;
 
     Circle collisionCircle;
 

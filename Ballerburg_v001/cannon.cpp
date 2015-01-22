@@ -47,10 +47,7 @@ void Cannon::moveDown()
 void Cannon::shoot(Graphic& graphics)
 {
     ball = std::unique_ptr<Cannonball>(new Cannonball(graphics, posX, posY));
-
-
-    for (int var = 0; var < 10; ++var) {
-        ball->moveUp();
-        ball->moveRight();
-    }
+    ball->moveUp();
+    ball->moveRight();
+    ball->stopMoving();
 }

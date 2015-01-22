@@ -16,6 +16,8 @@ namespace {
     const float kGravity = 0.0012f;
     const float kMaxSpeedX = 0.150f;
     const float kMaxSpeedY = 0.150f;
+    const float kAcceleration = 0.001f;
+    const float kSlowDownFactor = 0.965f;
     const Circle kCollisionCircle(10, 10, 10);
 }
 
@@ -25,6 +27,7 @@ Cannonball::Cannonball(Graphic &graphic, int posX, int posY) :
     collided(false),
     velocityX(0.0f),
     velocityY(0.0f),
+    accelerationX(0.0f),
     collisionCircle(kCollisionCircle)
 {
     TRACE;
@@ -36,6 +39,8 @@ void Cannonball::update(int elapsedTime, Map& map)
     //Physik
     updateX(elapsedTime, map);
     updateY(elapsedTime, map);
+    accelerationX *= kSlowDownFactor;
+
 }
 
 void Cannonball::draw(Graphic& graphics)
@@ -45,17 +50,22 @@ void Cannonball::draw(Graphic& graphics)
 
 void Cannonball::moveRight()
 {
-    velocityX = 2 * kMaxSpeedX;
+    accelerationX = 4*kAcceleration;
 }
 
 void Cannonball::moveLeft()
 {
-    velocityX = 2 * -kMaxSpeedX;
+    accelerationX = -4*kAcceleration;
 }
 
 void Cannonball::moveUp()
 {
-    velocityY = 4 * -kMaxSpeedY;
+    velocityY = 6 * -kMaxSpeedY;
+}
+
+void Cannonball::stopMoving()
+{
+    accelerationX *= kSlowDownFactor;
 }
 
 void Cannonball::moveDown()
@@ -120,22 +130,42 @@ bool Cannonball::checkCollision(Circle &A, Map& B)
 
 void Cannonball::updateX(int elapsedTime, Map& map)
 {
-    if(!collided) {
+    if (!collided){
         if(checkCollision(collisionCircle, map)) {
             velocityX = 0.0f;
             collided = true;
-        }
-        else {
-            if (velocityX < 0.0f) {
-                velocityX = std::max(velocityX * elapsedTime, -kMaxSpeedX);
+        } else {
+            //update velocity
+            velocityX += accelerationX * elapsedTime;
+            if (accelerationX < 0.0f) {
+                velocityX = std::max(velocityX, -kMaxSpeedX);
             }
-            else {
-                velocityX = std::min(velocityX * elapsedTime, kMaxSpeedX);
+            else if (accelerationX > 0.0f) {
+                velocityX = std::min(velocityX, kMaxSpeedX);
             }
+            else velocityX *= kSlowDownFactor;
             posX += (int)round(velocityX * elapsedTime);
             collisionCircle.x = posX;
         }
     }
+
+    velocityX *= kSlowDownFactor;
+//    if(!collided) {
+//        if(checkCollision(collisionCircle, map)) {
+//            velocityX = 0.0f;
+//            collided = true;
+//        }
+//        else {
+//            if (velocityX < 0.0f) {
+//                velocityX = std::max(velocityX * elapsedTime, -kMaxSpeedX);
+//            }
+//            else {
+//                velocityX = std::min(velocityX * elapsedTime, kMaxSpeedX);
+//            }
+//            posX += (int)round(velocityX * elapsedTime);
+//            collisionCircle.x = posX;
+//        }
+//    }
 }
 
 
