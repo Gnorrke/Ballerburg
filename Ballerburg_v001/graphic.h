@@ -59,7 +59,10 @@ public:
      */
     void flip();
 
+    void drawLine(float x1, float y1, float x2, float y2);
+
 private:
+    void setPixel(float x, float y); /*!< Färbt einen Pixel schwarz */
     typedef std::map<std::string, SDL_Surface*> SpriteMap; /*!< Definition eines eigenen Types SpriteMap*/
 
     SpriteMap spriteSheets; /*!< std::map, die die Sprites organisiert */

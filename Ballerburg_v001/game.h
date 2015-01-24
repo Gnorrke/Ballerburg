@@ -33,10 +33,12 @@ public:
 
     static void startGame() { Game::running = true; Game::menuRunning = false; }
     static void endGame() { Game::running = false; Game::menuRunning = false;  }
+
+    //void Line( float x1, float y1, float x2, float y2, const Color& color)
 private:
     void gameLoop();
     void update(int elapsedTime, Map &map);
-    void draw(Graphic& graphics);
+    void draw(Graphic& graphics, Input &in, int canPosX, int canPosY);
 
     void runStartMenu(Input &input, SDL_Event &event, Graphic &graphics);
 

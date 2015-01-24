@@ -115,7 +115,7 @@ $(DESTDIR_TARGET):  $(OBJECTS)
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.StudienprojektBallerburg.Release  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ CONFIG+=debug -o Makefile.Release StudienprojektBallerburg.pro
+	@$(QMAKE) -spec win32-g++ -o Makefile.Release StudienprojektBallerburg.pro
 
 qmake_all: FORCE
 
@@ -176,8 +176,6 @@ release/main.o: main.cpp C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/game.o: game.cpp game.h \
-		graphic.h \
-		input.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
@@ -205,6 +203,8 @@ release/game.o: game.cpp game.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
+		graphic.h \
+		input.h \
 		sprite.h \
 		sound.h \
 		C:/Resources/SDL-1.2.15/include/sdl/SDL_mixer.h \
@@ -219,13 +219,14 @@ release/game.o: game.cpp game.h \
 		mountain.h \
 		mountainblock.h \
 		cannon.h \
+		button.h \
 		king.h \
+		startmenu.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_mixer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\game.o game.cpp
 
 release/graphic.o: graphic.cpp graphic.h \
 		game.h \
-		tracer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
@@ -252,7 +253,8 @@ release/graphic.o: graphic.cpp graphic.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
-		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
+		tracer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\graphic.o graphic.cpp
 
 release/sprite.o: sprite.cpp sprite.h \
@@ -730,11 +732,8 @@ release/king.o: king.cpp king.h \
 		game.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\king.o king.cpp
 
-release/startmenu.o: startmenu.cpp startmenu.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\startmenu.o startmenu.cpp
-
-release/button.o: button.cpp button.h \
-		input.h \
+release/startmenu.o: startmenu.cpp startmenu.h \
+		button.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
@@ -762,7 +761,40 @@ release/button.o: button.cpp button.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
 		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
-		sprite.h
+		sprite.h \
+		game.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\startmenu.o startmenu.cpp
+
+release/button.o: button.cpp button.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_main.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_stdinc.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_platform.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_config_win32.h \
+		C:/Resources/SDL-1.2.15/include/SDL/begin_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/close_code.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_audio.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_error.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_endian.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mutex.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_thread.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_rwops.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cdrom.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_cpuinfo.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_events.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_active.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keyboard.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_keysym.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_mouse.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_video.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_joystick.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_quit.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_loadso.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_timer.h \
+		C:/Resources/SDL-1.2.15/include/SDL/SDL_version.h \
+		sprite.h \
+		input.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\button.o button.cpp
 
 ####### Install

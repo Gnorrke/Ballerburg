@@ -62,7 +62,7 @@ public:
 private:
 
     double distance(int x1, int y1, int x2, int y2); /*!< Gibt die Distanz zwischen 2 Punkten zurück */
-    bool checkCollision(Circle& A, Map &B); /*!< überprüft, ob der Kollisionskreis mit einem Block aus der Map (\see) kollidiert ist
+    bool checkCollision(Circle& A, Map &B); /*!< überprüft, ob der Kollisionskreis mit einem Block aus der Map (\see) kollidiert ist */
 
     void updateX(int elapsedTime, Map &map);
     void updateY(int elapsedTime, Map &map);

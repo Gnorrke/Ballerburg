@@ -62,10 +62,12 @@ public:
      */
     void shoot(Graphic &graphics);
 
+    int getPosX() { return posX + 15; }
+    int getPosY() { return posY + 12; }
 private:
     float posX, posY; /*!< Die X- und Y-Koordinaten der Kanone */
 
-    std::unique_ptr<Cannonball> ball; /*!< Das Smartpointer, der die erzeugte Kanonenkugel hält
+    std::unique_ptr<Cannonball> ball; /*!< Das Smartpointer, der die erzeugte Kanonenkugel hält */
     std::unique_ptr<Sprite> cannon; /*!< Das Sprite der Kanone */
 };
 
