@@ -43,16 +43,6 @@ Mountain::Mountain(Graphic& graphics)
     mblocks.push_back(std::unique_ptr<MountainBlock>(new MountainBlock(graphics, 300, 220)));
 }
 
-Mountain::~Mountain()
-{
-
-}
-
-void Mountain::update(Input& input, Sound& sound)
-{
-    checkHit(input, sound);
-}
-
 void Mountain::draw(Graphic& graphics)
 {
     for(unsigned int i = 0; i < mblocks.size(); i++)
@@ -61,13 +51,6 @@ void Mountain::draw(Graphic& graphics)
     }
 }
 
-void Mountain::checkHit(Input& in, Sound& sound)
-{
-    for(unsigned int j = 0; j < mblocks.size(); j++)
-    {
-        if(!mblocks[j]->hit) mblocks[j]->onHit(in, sound);
-    }
-}
 
 std::vector<SDL_Rect> Mountain::getMap()
 {

@@ -18,20 +18,33 @@ class Block
 public:
     Block(int posX, int posY);
 
+    /*!
+     * \brief update - zerstört den Block, falls "hit" true ist
+     */
     void update();
+
+    /*!
+     * \brief draw - zeichnet den BLock
+     * \param graphics - das Graphic Objekt welches zur Darstellung aller Grafiken dient
+     */
     void draw(Graphic& graphics);
+
+    /*!
+     * \brief destroy - Zerstört das Objekt
+     */
     void destroy() { delete this; }
 
-    void onHit(Input& in, Sound& sound);
-    bool isHit(Input& in);
-
+    /*!
+     * \brief getCollisionRectangle - Gibt das Rechteck für die Kollisionsabfrage zurück
+     * \return SDL_Rect&
+     */
     SDL_Rect &getCollisionRectangle();
 
-    int posX, posY;
-    bool hit;
+    int posX, posY; /*!< X und Y Position des Blocks */
+    bool hit; /*!< Wurde de Block getroffen oder nicht */
 
-    std::unique_ptr<Sprite> blockSprite;
-    std::unique_ptr<SDL_Rect> collisionRectangle;
+    std::unique_ptr<Sprite> blockSprite; /*!< Hält das Sprite für den Block */
+    std::unique_ptr<SDL_Rect> collisionRectangle; /*!< Das Rechteck für die Kollisionsabfrage */
 
 };
 

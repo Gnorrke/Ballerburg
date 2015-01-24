@@ -13,17 +13,13 @@ class King
 {
 public:
     King(Graphic& graphics,int posX, int posY);
-    void update(Input &in,Sound& sound);
     void draw(Graphic& graphics);
     void destroy() { delete this; }
 
-    void onHit(Input& in, Sound &sound);
     void disable();
     SDL_Rect& getCollisionRectangle() { return *collisionRectangle; }
 
 private:
-    bool isHit(Input& in);
-
     int posX, posY;
     bool hit;
 

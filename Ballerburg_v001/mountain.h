@@ -15,10 +15,7 @@ class Mountain
 {
 public:
     Mountain(Graphic& graphics);
-    ~Mountain();
-    void update(Input &input, Sound &sound);
     void draw(Graphic& graphics);
-    void checkHit(Input &in, Sound &sound);
 
     std::vector<SDL_Rect> getMap();
 

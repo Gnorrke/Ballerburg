@@ -47,13 +47,10 @@ void Map::draw(Graphic &graphics)
     king2->draw(graphics);
 }
 
-void Map::update(Input &input, Sound &sound)
+void Map::update()
 {
-    testcastle->update(input, sound);
-    testcastle2->update(input, sound);
-    mountain->update(input, sound);
-    king1->update(input, sound);
-    king2->update(input,sound);
+    testcastle->update();
+    testcastle2->update();
 }
 
 void Map::deleteBlock(int index)

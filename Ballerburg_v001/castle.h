@@ -17,9 +17,8 @@ public:
     Castle(Graphic& graphics, int startposX);
     ~Castle();
 
-    void update(Input &input, Sound &sound);
+    void update();
     void draw(Graphic& graphics);
-    void checkHit(Input& in, Sound &sound);
 
     std::vector<SDL_Rect> getMap();
 

@@ -115,9 +115,8 @@ Castle::~Castle()
 
 }
 
-void Castle::update(Input& input, Sound& sound)
+void Castle::update()
 {
-    checkHit(input, sound);
     for(unsigned int i = 0; i < cblocks.size();i++)
     {
         if (!cblocks[i]->hit) cblocks[i]->update();
@@ -132,13 +131,6 @@ void Castle::draw(Graphic& graphics)
     }
 }
 
-void Castle::checkHit(Input &in, Sound& sound)
-{
-    for(unsigned int j = 0; j < cblocks.size();j++)
-    {
-        if (!cblocks[j]->hit) cblocks[j]->onHit(in, sound);
-    }
-}
 
 std::vector<SDL_Rect> Castle::getMap()
 {

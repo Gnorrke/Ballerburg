@@ -150,22 +150,6 @@ void Cannonball::updateX(int elapsedTime, Map& map)
     }
 
     velocityX *= kSlowDownFactor;
-//    if(!collided) {
-//        if(checkCollision(collisionCircle, map)) {
-//            velocityX = 0.0f;
-//            collided = true;
-//        }
-//        else {
-//            if (velocityX < 0.0f) {
-//                velocityX = std::max(velocityX * elapsedTime, -kMaxSpeedX);
-//            }
-//            else {
-//                velocityX = std::min(velocityX * elapsedTime, kMaxSpeedX);
-//            }
-//            posX += (int)round(velocityX * elapsedTime);
-//            collisionCircle.x = posX;
-//        }
-//    }
 }
 
 

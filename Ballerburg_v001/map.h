@@ -21,7 +21,7 @@ public:
     static Map* createMap(Graphic &graphics);
 
     void draw(Graphic& graphics);
-    void update(Input& input, Sound& sound);
+    void update();
 
     void deleteBlock(int index);
 

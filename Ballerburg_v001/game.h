@@ -35,7 +35,7 @@ public:
     static void endGame() { Game::running = false; Game::menuRunning = false;  }
 private:
     void gameLoop();
-    void update(int elapsedTime, Map &map, Input &input, Sound &sound);
+    void update(int elapsedTime, Map &map);
     void draw(Graphic& graphics);
 
     void runStartMenu(Input &input, SDL_Event &event, Graphic &graphics);

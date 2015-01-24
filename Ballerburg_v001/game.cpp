@@ -68,7 +68,7 @@ void Game::gameLoop()
         const int curTime = SDL_GetTicks();
         const unsigned int elapsedTime = curTime - lastUpdatedTime;
 
-        update(elapsedTime, *map, input, *sounds);
+        update(elapsedTime, *map);
         lastUpdatedTime = curTime;
 
         draw(graphics);
@@ -84,10 +84,10 @@ void Game::gameLoop()
     }
 }
 
-void::Game::update(int elapsedTime, Map& mapParam, Input& input, Sound& sound)
+void::Game::update(int elapsedTime, Map& mapParam)
 {
     background->update(elapsedTime);
-    map->update(input, sound);
+    map->update();
     cannon->update(elapsedTime, mapParam);
 }
 
