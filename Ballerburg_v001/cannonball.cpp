@@ -17,7 +17,7 @@ namespace {
     const float kMaxSpeedX = 0.2;
     const float kMaxSpeedY = 0.2f;
     const float kAcceleration = 0.001f;
-    const float kSlowDownFactor = 0.95f;
+    const float kSlowDownFactor = 0.96f;
     const Circle kCollisionCircle(10, 10, 10);
 }
 
@@ -48,29 +48,29 @@ void Cannonball::draw(Graphic& graphics)
     spriteDot->draw(graphics, posX, posY);
 }
 
-void Cannonball::moveRight()
+void Cannonball::moveRight(int x)
 {
-    accelerationX = 4*kAcceleration;
+    accelerationX = x * kAcceleration;
 }
 
-void Cannonball::moveLeft()
+void Cannonball::moveLeft(int x)
 {
-    accelerationX = -4*kAcceleration;
+    accelerationX = -x * kAcceleration;
 }
 
-void Cannonball::moveUp()
+void Cannonball::moveUp(int x)
 {
-    velocityY = 6 * -kMaxSpeedY;
+    velocityY = x * -kMaxSpeedY;
+}
+
+void Cannonball::moveDown(int x)
+{
+    velocityY = x * kMaxSpeedY;
 }
 
 void Cannonball::stopMoving()
 {
     accelerationX *= kSlowDownFactor;
-}
-
-void Cannonball::moveDown()
-{
-    velocityY = kMaxSpeedY;
 }
 
 double Cannonball::distance(int x1, int y1, int x2, int y2)

@@ -115,7 +115,7 @@ $(DESTDIR_TARGET):  $(OBJECTS)
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.StudienprojektBallerburg.Debug  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ -o Makefile.Debug StudienprojektBallerburg.pro
+	@$(QMAKE) -spec win32-g++ CONFIG+=debug -o Makefile.Debug StudienprojektBallerburg.pro
 
 qmake_all: FORCE
 

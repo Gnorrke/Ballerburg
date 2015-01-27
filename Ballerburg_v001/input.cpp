@@ -28,9 +28,6 @@ void Input::mouseEvent(const SDL_Event &event)
 {
     offsetX = event.motion.x;
     offsetY = event.motion.y;
-
-    //delete after Sprint #1
-    std::cout << "offsetX: " << offsetX << "  -  offsetY: " << offsetY  << std::endl;
 }
 
 bool Input::wasLeftMouseButtonPressed()
@@ -91,23 +88,23 @@ void Input::checkInput(SDL_Event& event)
 void Input::moveCannonball(Cannon &ball, Graphic& graphics)
 {
     if (isKeyHeld(SDLK_LEFT)) {
-        ball.moveLeft();
+        ball.moveLeft(1);
     }
 
     else if (isKeyHeld(SDLK_RIGHT)) {
-        ball.moveRight();
+        ball.moveRight(1);
     }
 
     else if (isKeyHeld(SDLK_UP)) {
-        ball.moveUp();
+        ball.moveUp(10);
     }
 
     else if (isKeyHeld(SDLK_DOWN)) {
-        ball.moveDown();
+        ball.moveDown(1);
     }
 
     else if (isKeyHeld(SDLK_SPACE)) {
-        ball.shoot(graphics);
+        ball.shoot(graphics, ball.getPosY(), ball.getPosX(), this->getoffsetY(), this->getoffsetX());
     }
 }
 

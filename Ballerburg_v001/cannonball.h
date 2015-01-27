@@ -36,19 +36,19 @@ public:
     /*!
      * \brief moveRight - bewegt die Kugel eine Bewegungseinheit nach rechts
      */
-    void moveRight();
+    void moveRight(int x);
     /*!
      * \brief moveLeft - bewegt die Kugel eine Bewegungseinheit nach links
      */
-    void moveLeft();
+    void moveLeft(int x);
     /*!
      * \brief moveUp - bewegt die Kugel eine Bewegungseinheit nach oben
      */
-    void moveUp();
+    void moveUp(int x);
     /*!
      * \brief moveDown - bewegt die Kugel eine Bewegungseinheit nach unten
      */
-    void moveDown();
+    void moveDown(int x);
     /*!
      * \brief stopMoving - stopt die Bewegung in x-Richtung
      */
@@ -64,17 +64,28 @@ private:
     double distance(int x1, int y1, int x2, int y2); /*!< Gibt die Distanz zwischen 2 Punkten zurück */
     bool checkCollision(Circle& A, Map &B); /*!< überprüft, ob der Kollisionskreis mit einem Block aus der Map (\see) kollidiert ist */
 
+    /*!
+     * \brief update - erneuert die Position der Kugel und prüft danach auf Kollisionen mit der Map in X Richtung
+     * \param elapsedTime - die Zeit seit dem letzten Frame
+     * \param map - die Map, welche auf Kollisionen mit der Kanonenkugel überprüft wird
+     */
     void updateX(int elapsedTime, Map &map);
+    /*!
+     * \brief update - erneuert die Position der Kugel und prüft danach auf Kollisionen mit der Map in Y Richtung
+     * \param elapsedTime - die Zeit seit dem letzten Frame
+     * \param map - die Map, welche auf Kollisionen mit der Kanonenkugel überprüft wird
+     */
     void updateY(int elapsedTime, Map &map);
 
-    int posX, posY;
-    bool collided;
-    float velocityX, velocityY;
-    float accelerationX;
 
-    Circle collisionCircle;
+    int posX, posY; /*!< Die X- und Y-Koordinaten des Kanonenkugel */
+    bool collided; /*!< True, wenn die Kugel  kollidiert ist */
+    float velocityX, velocityY; /*!< Bestimmt die X- und Y-Geschwindigkeit der Kugel */
+    float accelerationX; /*!< Der Beschleunigungsfaktor in X-Richtung */
 
-    std::unique_ptr<Sprite> spriteDot;
+    Circle collisionCircle; /*!< Die/Der Hitbox/Kollisionskreis der Kugel */
+
+    std::unique_ptr<Sprite> spriteDot; /*!< Das Sprite des Kugel */
 };
 
 #endif // CANNONBALL_H
