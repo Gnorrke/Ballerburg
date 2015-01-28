@@ -90,6 +90,7 @@ void Input::moveCannonball(SDL_Event& event, Cannon &ball, Graphic& graphics)
     if (event.button.button == SDL_BUTTON_LEFT) {
         mouseButtonWasPressed = true;
         ball.shoot(graphics, ball.getPosY(), ball.getPosX(), this->getoffsetY(), this->getoffsetX());
+
     }
 }
 

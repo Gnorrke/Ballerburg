@@ -9,11 +9,13 @@
 #include "input.h"
 #include "cannonball.h"
 
-Cannon::Cannon(Graphic& graphics, int posX, int posY) :
+Cannon::Cannon(Graphic& graphics, int posX, int posY,int nr) :
     posX(posX),
-    posY(posY)
+    posY(posY),
+    nr(nr)
 {
-    cannon = std::unique_ptr<Sprite>(new Sprite(graphics, "img/cannon.bmp", 0, 0, 25, 25));
+    if(nr == 0) cannon = std::unique_ptr<Sprite>(new Sprite(graphics, "img/cannon.bmp", 0, 0, 25, 25));
+    if(nr > 0) cannon = std::unique_ptr<Sprite>(new Sprite(graphics, "img/cannon2.bmp", 0, 0, 25, 25));
 }
 
 void Cannon::draw(Graphic &graphics)
@@ -34,13 +36,26 @@ void Cannon::shoot(Graphic& graphics, int x1, int x2, int y1, int y2)
     std::cout << "Power: " << power << std::endl;
 
     double angleRight = (calculateAngle(x1, x2, y1, y2) / 90.0f) * 50;
+    double angleLeft = (calculateAngle(-x1, x2, -y1, y2) / 90.0f) * 50;
     double angleUp = (abs(calculateAngle(x1, x2, y1, y2) - 90) / 90.0f) * 30;
+    std::cout << "angleLeft: " << angleLeft << std::endl;
     std::cout << "angleRight: " << angleRight << std::endl;
     std::cout << "angleUp: " << angleUp << std::endl;
 
 
     ball->moveUp(power + angleUp);
-    ball->moveRight(power + angleRight);
+    std::cout << power << std::endl;
+    if(nr == 0){
+
+               ball->moveRight(power + angleRight);
+               std::cout << "RIGHT" << std::endl;
+    }
+    if(nr == 1) {
+
+        ball->moveLeft(power + angleLeft);
+        std::cout << "LEFT" << std::endl;
+
+    }
 
     ball->stopMoving();
 }
@@ -63,4 +78,10 @@ int Cannon::calculatePower(int x1, int x2, int y1, int y2)
         //std::cout << sqrt( pow( y2 - x2, 2 ) + pow( x1 - y1, 2 )) / 25 << std::endl;
         return sqrt( pow( y2 - x2, 2 ) + pow( x1 - y1, 2 )) / 25;
     }
+}
+
+int Cannon::getNR(){
+
+    return nr;
+
 }

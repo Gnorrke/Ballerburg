@@ -24,7 +24,8 @@ SOURCES += main.cpp \
     map.cpp \
     king.cpp \
     startmenu.cpp \
-    button.cpp
+    button.cpp \
+    player.cpp
 
 LIBS += -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_mixer
 
@@ -52,6 +53,7 @@ HEADERS += \
     map.h \
     king.h \
     startmenu.h \
-    button.h
+    button.h \
+    player.h
 
 

@@ -11,6 +11,7 @@
 #include "cannon.h"
 #include "button.h"
 #include "king.h"
+#include "player.h"
 #include "startmenu.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_mixer.h"
@@ -21,6 +22,8 @@ int Game::kScreenWidth = 640;
 int Game::kScreenHeight = 360;
 bool Game::running = true;
 bool Game::menuRunning = true;
+Player player1(1);
+Player player2(2);
 
 Game::Game()
 {
@@ -41,7 +44,8 @@ void Game::gameLoop()
 
     background.reset(new Backdrop(graphics));
     map.reset(Map::createMap(graphics));
-    cannon.reset(new Cannon(graphics, 70, 235));
+    cannon.reset(new Cannon(graphics, 70, 235,0));
+    cannon2.reset(new Cannon(graphics, 440, 235,1));
     sounds.reset(new Sound());
     menu.reset(new StartMenu(graphics));
 
@@ -49,6 +53,11 @@ void Game::gameLoop()
     runStartMenu(input, event, graphics);
 
     // actual Game
+
+
+
+    player1.setTurn();
+
     int lastUpdatedTime = SDL_GetTicks();
     while (Game::running)
     {
@@ -59,8 +68,26 @@ void Game::gameLoop()
         while(SDL_PollEvent(&event))
         {
             input.checkInput(event);
-            input.moveCannonball(event, *cannon, graphics);
+            if(player1.getTurn()) input.moveCannonball(event, *cannon, graphics);
+            if(player2.getTurn()) input.moveCannonball(event, *cannon2, graphics);
         }
+
+        if(input.wasKeyPressed(SDLK_SPACE)){
+
+            if(player1.getTurn()){
+                player1.resetTurn();
+                player2.setTurn();
+
+            }
+            else{
+                player2.resetTurn();
+                player1.setTurn();
+            }
+
+
+        }
+
+
 
         //exit game
         if (input.wasKeyPressed(SDLK_ESCAPE) || event.type == SDL_QUIT) running = false;
@@ -71,7 +98,9 @@ void Game::gameLoop()
         update(elapsedTime, *map);
         lastUpdatedTime = curTime;
 
-        draw(graphics, input, cannon->getPosX(), cannon->getPosY());
+        if(player1.getTurn()) draw(graphics, input, cannon->getPosX(), cannon->getPosY());
+        if(player2.getTurn()) draw(graphics, input, cannon2->getPosX(), cannon2->getPosY());
+
 
         //Frame Cap
 
@@ -83,6 +112,9 @@ void Game::gameLoop()
         }
     }
 
+    std::cout << "TEST" << std::endl;
+    // StartMenu
+    runStartMenu(input, event, graphics);
     SDL_Delay(2000);
 }
 
@@ -91,6 +123,7 @@ void::Game::update(int elapsedTime, Map& mapParam)
     background->update(elapsedTime);
     map->update();
     cannon->update(elapsedTime, mapParam);
+    cannon2->update(elapsedTime, mapParam);
 }
 
 void Game::draw(Graphic &graphics, Input& in, int canPosX, int canPosY)
@@ -98,6 +131,7 @@ void Game::draw(Graphic &graphics, Input& in, int canPosX, int canPosY)
     graphics.cleanUp();
     background->draw(graphics);
     cannon->draw(graphics);
+    cannon2->draw(graphics);
     map->draw(graphics);
     graphics.drawLine(canPosY, canPosX, in.getoffsetY(), in.getoffsetX());
 
@@ -106,8 +140,24 @@ void Game::draw(Graphic &graphics, Input& in, int canPosX, int canPosY)
 
 void Game::runStartMenu(Input& input, SDL_Event& event, Graphic &graphics)
 {
-    // StartMenu
+     std::cout << "TEST" << std::endl;
+     menuRunning = true;
+     if(player1.getTurn()) {
+         std::cout << " palyer1 hat gewonnen " << std::endl;
+         menu->setWon();
+         menu->setWho(1);
+     }
+     if(player2.getTurn()){
+
+         std::cout << " palyer2 hat gewonnen " << std::endl;
+         menu->setWon();
+         menu->setWho(2);
+    }
+
+     // StartMenu
     while (Game::menuRunning) {
+
+
         input.beginNewFrame();
 
         while(SDL_PollEvent(&event))
@@ -127,4 +177,9 @@ void Game::runStartMenu(Input& input, SDL_Event& event, Graphic &graphics)
         }
     }
 }
+void Game::endGame(){
+    Game::running = false;
+    Game::menuRunning = false;
+}
+
 

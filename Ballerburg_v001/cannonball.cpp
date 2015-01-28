@@ -36,7 +36,7 @@ Cannonball::Cannonball(Graphic &graphic, int posX, int posY) :
 
 void Cannonball::update(int elapsedTime, Map& map)
 {
-     accelerationX *= kSlowDownFactor;
+    accelerationX *= kSlowDownFactor;
     velocityX *= kSlowDownFactor;
     //Physik
     updateX(elapsedTime, map);

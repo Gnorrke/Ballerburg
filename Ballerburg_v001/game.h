@@ -19,6 +19,7 @@ class Map;
 class Button;
 class King;
 class StartMenu;
+class Player;
 
 class Game
 {
@@ -32,8 +33,7 @@ public:
     static bool menuRunning;
 
     static void startGame() { Game::running = true; Game::menuRunning = false; }
-    static void endGame() { Game::running = false; Game::menuRunning = false;  }
-
+    static void endGame();
     //void Line( float x1, float y1, float x2, float y2, const Color& color)
 private:
     void gameLoop();
@@ -44,6 +44,7 @@ private:
 
     std::unique_ptr<Backdrop> background;
     std::unique_ptr<Cannon> cannon;
+    std::unique_ptr<Cannon> cannon2;
     std::unique_ptr<Sound> sounds;
     std::unique_ptr<Map> map;
     std::unique_ptr<StartMenu> menu;

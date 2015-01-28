@@ -25,7 +25,7 @@ public:
      * \param posX - die X Koordinate der Kanone
      * \param posY - die Y Koordinate der Kanone
      */
-    Cannon(Graphic &graphics, int posX, int posY);
+    Cannon(Graphic &graphics, int posX, int posY,int nr);
 
     /*!
      * \brief draw - zeichnet die Kanone
@@ -69,9 +69,11 @@ public:
     int calculateAngle(int x1, int x2, int y1, int y2);
     int calculatePower(int x1, int x2, int y1, int y2);
 
+    int getNR();
+
 private:
     float posX, posY; /*!< Die X- und Y-Koordinaten der Kanone */
-
+    int nr;
     std::unique_ptr<Cannonball> ball; /*!< Das Smartpointer, der die erzeugte Kanonenkugel hält */
     std::unique_ptr<Sprite> cannon; /*!< Das Sprite der Kanone */
 };

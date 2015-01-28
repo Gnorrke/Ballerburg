@@ -19,4 +19,5 @@ INPUT(
 ./release\king.o
 ./release\startmenu.o
 ./release\button.o
+./release\player.o
 );
