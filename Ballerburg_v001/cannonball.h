@@ -36,19 +36,19 @@ public:
     /*!
      * \brief moveRight - bewegt die Kugel eine Bewegungseinheit nach rechts
      */
-    void moveRight(int x);
+    void moveRight(double x);
     /*!
      * \brief moveLeft - bewegt die Kugel eine Bewegungseinheit nach links
      */
-    void moveLeft(int x);
+    void moveLeft(double x);
     /*!
      * \brief moveUp - bewegt die Kugel eine Bewegungseinheit nach oben
      */
-    void moveUp(int x);
+    void moveUp(double x);
     /*!
      * \brief moveDown - bewegt die Kugel eine Bewegungseinheit nach unten
      */
-    void moveDown(int x);
+    void moveDown(double x);
     /*!
      * \brief stopMoving - stopt die Bewegung in x-Richtung
      */

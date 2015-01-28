@@ -25,7 +25,7 @@ public:
     bool isKeyHeld(SDLKey key);
 
     void checkInput(SDL_Event &event);
-    void moveCannonball(Cannon& ball, Graphic &graphics);
+    void moveCannonball(SDL_Event &event, Cannon &ball, Graphic &graphics);
 
     int getoffsetX()const;
     int getoffsetY()const;

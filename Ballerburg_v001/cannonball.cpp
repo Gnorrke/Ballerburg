@@ -13,11 +13,11 @@
 
 namespace {
     const int kDotWidth = 20;
-    const float kGravity = 0.004f;
-    const float kMaxSpeedX = 0.2;
-    const float kMaxSpeedY = 0.2f;
-    const float kAcceleration = 0.001f;
-    const float kSlowDownFactor = 0.96f;
+    const float kGravity = 0.008f;
+    const float kMaxSpeedX = 0.35;
+    const float kMaxSpeedY = 0.15f;
+    const float kAcceleration = 0.003f;
+    const float kSlowDownFactor = 0.94f;
     const Circle kCollisionCircle(10, 10, 10);
 }
 
@@ -36,7 +36,8 @@ Cannonball::Cannonball(Graphic &graphic, int posX, int posY) :
 
 void Cannonball::update(int elapsedTime, Map& map)
 {
-    accelerationX *= kSlowDownFactor;
+     accelerationX *= kSlowDownFactor;
+    velocityX *= kSlowDownFactor;
     //Physik
     updateX(elapsedTime, map);
     updateY(elapsedTime, map);
@@ -48,22 +49,22 @@ void Cannonball::draw(Graphic& graphics)
     spriteDot->draw(graphics, posX, posY);
 }
 
-void Cannonball::moveRight(int x)
+void Cannonball::moveRight(double x)
 {
     accelerationX = x * kAcceleration;
 }
 
-void Cannonball::moveLeft(int x)
+void Cannonball::moveLeft(double x)
 {
     accelerationX = -x * kAcceleration;
 }
 
-void Cannonball::moveUp(int x)
+void Cannonball::moveUp(double x)
 {
     velocityY = x * -kMaxSpeedY;
 }
 
-void Cannonball::moveDown(int x)
+void Cannonball::moveDown(double x)
 {
     velocityY = x * kMaxSpeedY;
 }
@@ -143,13 +144,14 @@ void Cannonball::updateX(int elapsedTime, Map& map)
             else if (accelerationX > 0.0f) {
                 velocityX = std::min(velocityX, kMaxSpeedX);
             }
-            else velocityX *= kSlowDownFactor;
+            velocityX *= kSlowDownFactor;
             posX += (int)round(velocityX * elapsedTime);
             collisionCircle.x = posX;
         }
     }
-
     velocityX *= kSlowDownFactor;
+
+
 }
 
 

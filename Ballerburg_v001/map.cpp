@@ -6,6 +6,7 @@
 #include "sound.h"
 #include "animatedsprite.h"
 #include "king.h"
+#include "game.h"
 #include "sprite.h"
 #include <iostream>
 
@@ -68,8 +69,14 @@ void Map::deleteBlock(int index)
         testcastle->deleteBlock(index - sizeMountain);
     }
     else if (sizeMountain + sizeTestCastle <= index && index < sizeTestCastle + sizeMountain + sizeTestCastle2) testcastle2->deleteBlock(index - (sizeMountain + sizeTestCastle));
-    else if ((int) mapCollision.size() - 1 == index) king1->disable();
-    else if ((int) mapCollision.size() == index) king2->disable();
+    else if ((int) mapCollision.size() - 1 == index) {
+        king1->disable();
+        Game::endGame();
+    }
+    else if ((int) mapCollision.size() == index) {
+        king2->disable();
+        Game::endGame();
+    }
     std::cout << mapCollision.size() << std::endl;
     std::cout << mountain->getMap().size() + testcastle->getMap().size() + testcastle2->getMap().size()<< std::endl;
 }

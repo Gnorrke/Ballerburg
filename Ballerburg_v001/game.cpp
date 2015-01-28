@@ -59,7 +59,7 @@ void Game::gameLoop()
         while(SDL_PollEvent(&event))
         {
             input.checkInput(event);
-            input.moveCannonball(*cannon, graphics);
+            input.moveCannonball(event, *cannon, graphics);
         }
 
         //exit game
@@ -82,6 +82,8 @@ void Game::gameLoop()
             SDL_Delay(msPerFrame - elapsedTimeMS );
         }
     }
+
+    SDL_Delay(2000);
 }
 
 void::Game::update(int elapsedTime, Map& mapParam)

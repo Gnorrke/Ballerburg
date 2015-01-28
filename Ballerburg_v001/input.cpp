@@ -85,25 +85,10 @@ void Input::checkInput(SDL_Event& event)
     }
 }
 
-void Input::moveCannonball(Cannon &ball, Graphic& graphics)
+void Input::moveCannonball(SDL_Event& event, Cannon &ball, Graphic& graphics)
 {
-    if (isKeyHeld(SDLK_LEFT)) {
-        ball.moveLeft(1);
-    }
-
-    else if (isKeyHeld(SDLK_RIGHT)) {
-        ball.moveRight(1);
-    }
-
-    else if (isKeyHeld(SDLK_UP)) {
-        ball.moveUp(10);
-    }
-
-    else if (isKeyHeld(SDLK_DOWN)) {
-        ball.moveDown(1);
-    }
-
-    else if (isKeyHeld(SDLK_SPACE)) {
+    if (event.button.button == SDL_BUTTON_LEFT) {
+        mouseButtonWasPressed = true;
         ball.shoot(graphics, ball.getPosY(), ball.getPosX(), this->getoffsetY(), this->getoffsetX());
     }
 }
