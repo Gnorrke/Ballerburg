@@ -143,7 +143,7 @@ void Game::draw(Graphic &graphics, Input& in, int canPosX, int canPosY)
 void Game::runStartMenu(Input& input, SDL_Event& event, Graphic &graphics)
 {
      std::cout << "TEST" << std::endl;
-     menuRunning = true;
+     //menuRunning = true;
      if(player1.getTurn()) {
          std::cout << " palyer1 hat gewonnen " << std::endl;
          menu->setWon();
