@@ -56,11 +56,13 @@ void Game::gameLoop()
 
 
 
-    player1.setTurn();
+
 
     int lastUpdatedTime = SDL_GetTicks();
     while (Game::running)
     {
+        if(!player1.getTurn() && !player2.getTurn()) player1.setTurn();
+
         const int startTime = SDL_GetTicks();
         input.beginNewFrame();
 
