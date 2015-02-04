@@ -56,11 +56,13 @@ void Game::gameLoop()
 
 
 
-    player1.setTurn();
+
 
     int lastUpdatedTime = SDL_GetTicks();
     while (Game::running)
     {
+        if(!player1.getTurn() && !player2.getTurn()) player1.setTurn();
+
         const int startTime = SDL_GetTicks();
         input.beginNewFrame();
 
@@ -141,7 +143,7 @@ void Game::draw(Graphic &graphics, Input& in, int canPosX, int canPosY)
 void Game::runStartMenu(Input& input, SDL_Event& event, Graphic &graphics)
 {
      std::cout << "TEST" << std::endl;
-     menuRunning = true;
+     //menuRunning = true;
      if(player1.getTurn()) {
          std::cout << " palyer1 hat gewonnen " << std::endl;
          menu->setWon();

@@ -72,10 +72,12 @@ void Map::deleteBlock(int index)
     else if ((int) mapCollision.size() - 1 == index) {
         king1->disable();
         Game::running = false;
+        Game::menuRunning = true;
     }
     else if ((int) mapCollision.size() == index) {
         king2->disable();
         Game::running = false;
+        Game::menuRunning = true;
 
 
     }
