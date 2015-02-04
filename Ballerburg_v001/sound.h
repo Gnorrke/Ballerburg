@@ -3,6 +3,10 @@
 
 #include <memory>
 #include "sdl/SDL_mixer.h"
+
+/*!
+ * \brief Die Sound spielt die Hintergrund Musik und Sounds ab
+ */
 class Sound
 {
 public:

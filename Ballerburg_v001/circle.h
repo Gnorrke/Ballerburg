@@ -2,7 +2,7 @@
 #define CIRCLE_H
 
 /*!
- * \brief Dies ist eine kleine Klasse, die einen einfachen Kreis realisiert
+ * \brief Dies ist eine kleine Klasse, die einen einfachen Kreis realisiert. Hilfsklasse für die Kollisionsabfrage
  */
 
 class Circle

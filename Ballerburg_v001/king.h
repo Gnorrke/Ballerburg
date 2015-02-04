@@ -9,6 +9,11 @@ class Input;
 class Sound;
 class SDL_Rect;
 
+/*!
+ * \brief Die Klasse King stellt das Spielobjekt des Königs dar
+ *
+ * \author Max Niederauer
+ */
 class King
 {
 public:

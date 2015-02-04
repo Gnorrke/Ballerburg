@@ -9,6 +9,14 @@ class Cannonball;
 class Cannon;
 class Graphic;
 
+/*!
+ * \brief Die Klasse Input dient als zentrales Objekt, wenn es um die Eingaben von
+ * Tastatur und Maus geht.
+ *
+ * Alle Eingaben werden in entsprechenden Maps verwaltet und in jedem Frame neu organisiert.
+ *
+ * \author Max Niederauer
+ */
 class Input
 {
 public:

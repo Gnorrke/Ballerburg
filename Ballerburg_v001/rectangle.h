@@ -1,6 +1,9 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+/*!
+ * \brief Hilfsklasse für die Kollisionsabfrage
+ */
 class Rectangle {
 public:
     Rectangle(int x, int y, int width, int height) :

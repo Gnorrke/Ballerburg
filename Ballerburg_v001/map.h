@@ -15,6 +15,12 @@ class Block;
 class Mountain;
 class King;
 
+/*!
+ * \brief Die Klasse Map hält alle Blockobjekte und SPielobjkte und stellt
+ * diese für die Kollisionsabgfrage aufbereitet zur Verfügung.
+ *
+ * \author Max Niederauer
+ */
 class Map
 {
 public:

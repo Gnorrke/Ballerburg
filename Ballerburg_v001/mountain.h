@@ -11,6 +11,12 @@ class Input;
 class Sound;
 class SDL_Rect;
 
+/*!
+ * \brief Die Klasse Mountain stellt das Spielobjekt des Berges dar.
+ * Diese besteht aus mehreren Blöcken, welche in einem vector verwaltet werden
+ *
+ * \author Max Niederauer
+ */
 class Mountain
 {
 public:
